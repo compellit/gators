@@ -6,12 +6,12 @@ import pandas as pd
 import nltk
 
 from rhymetagger import RhymeTagger
-from utils import silaba_sampa_to_ipa, strip_syllable_dots
+from utils import normalize_rhymetagger_ipa
 
 
 RANDOM_SEED = 42
 TRAIN_FRACTION = 0.8
-MAX_ITER = 2000
+MAX_ITER = 200
 
 INPUT_PATH = "../data/gl-prepro-35k-silaba.tsv"
 SILABA_COLUMN = "phSilaba"
@@ -43,7 +43,7 @@ def create_corpus_from_df(dfpath):
             stanza = [
                 {
                     "text": row["running_text"].strip(),
-                    "ipa": strip_syllable_dots(silaba_sampa_to_ipa(row[SILABA_COLUMN])),
+                    "ipa": normalize_rhymetagger_ipa(row[SILABA_COLUMN]),
                 }
                 for _, row in stanza_df.iterrows()
             ]

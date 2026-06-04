@@ -1,6 +1,8 @@
 import unicodedata
 
 
+IPA_PUNCTUATION = ".,!?;:¡¿'’“”\"()[]{}«»"
+
 IPA_SILABA_SAMPA_REPLACEMENTS = [
     ("tʃ", "tS"),
     ("dʒ", "dZ"),
@@ -81,6 +83,13 @@ def silaba_sampa_to_ipa(text: str) -> str:
 
 def strip_syllable_dots(text: str) -> str:
     return text.replace(".", "")
+
+
+def normalize_rhymetagger_ipa(text: str) -> str:
+    value = strip_syllable_dots(silaba_sampa_to_ipa(text))
+    value = value.replace("_", "")
+    value = "".join(ch for ch in value if ch not in IPA_PUNCTUATION)
+    return " ".join(value.split())
 
 
 def collapse_open_close_vowels(text: str) -> str:

@@ -1,3 +1,4 @@
+import json
 import random
 import time
 from math import ceil
@@ -6,17 +7,18 @@ import pandas as pd
 import nltk
 
 from rhymetagger import RhymeTagger
-from utils import normalize_rhymetagger_ipa_from_final_nucleus
+from utils import normalize_rhymetagger_ipa_nucleus_only
 
 
 RANDOM_SEED = 42
 TRAIN_FRACTION = 0.8
 MAX_ITER = 200
+ORTHOGRAPHIC_NGRAM = 0
 
 INPUT_PATH = "../data/gl-prepro-35k-silaba.tsv"
 SILABA_COLUMN = "phSilaba"
-MODEL_PATH = "../models/gl-35k-silaba-final-nucleus-train80.rtmodel"
-TEST_POEM_IDS_PATH = "../models/gl-35k-silaba-final-nucleus-test-poem-ids.txt"
+MODEL_PATH = "../models/gl-35k-silaba-nucleus-only-train80.rtmodel"
+TEST_POEM_IDS_PATH = "../models/gl-35k-silaba-nucleus-only-test-poem-ids.txt"
 TSV_QUOTECHAR = "\x07"
 
 
@@ -43,7 +45,7 @@ def create_corpus_from_df(dfpath):
             stanza = [
                 {
                     "text": row["running_text"].strip(),
-                    "ipa": normalize_rhymetagger_ipa_from_final_nucleus(row[SILABA_COLUMN]),
+                    "ipa": normalize_rhymetagger_ipa_nucleus_only(row[SILABA_COLUMN]),
                 }
                 for _, row in stanza_df.iterrows()
             ]
@@ -68,6 +70,17 @@ def split_poems(poems, train_fraction=TRAIN_FRACTION, random_seed=RANDOM_SEED):
     return train_poems, test_poems
 
 
+def save_model_with_settings_fix(rt, model_path):
+    rt.save_model(model_path)
+
+    json_path = model_path if model_path.endswith(".json") else model_path + ".json"
+    with open(json_path) as f:
+        model = json.load(f)
+    model["settings"]["ngram"] = ORTHOGRAPHIC_NGRAM
+    with open(json_path, "w") as f:
+        json.dump(model, f)
+
+
 if __name__ == "__main__":
     ensure_nltk_tokenizers()
 
@@ -80,9 +93,10 @@ if __name__ == "__main__":
     print(f"Random seed: {RANDOM_SEED}")
     print(f"SILABA column: {SILABA_COLUMN}")
     print(f"Max iterations: {MAX_ITER}")
+    print(f"Orthographic ngram: {ORTHOGRAPHIC_NGRAM}")
 
     rt = RhymeTagger()
-    rt.new_model(lang="gl", transcribed=True, max_iter=MAX_ITER)
+    rt.new_model(lang="gl", transcribed=True, max_iter=MAX_ITER, ngram=ORTHOGRAPHIC_NGRAM)
 
     print(f"Start adding train poems to model: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())}")
     for poem in train_corpus:
@@ -90,7 +104,7 @@ if __name__ == "__main__":
 
     print(f"Start training: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())}")
     rt.train_model()
-    rt.save_model(MODEL_PATH)
+    save_model_with_settings_fix(rt, MODEL_PATH)
 
     with open(TEST_POEM_IDS_PATH, "w") as f:
         for poem in test_corpus:

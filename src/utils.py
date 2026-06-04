@@ -2,7 +2,9 @@ import unicodedata
 
 
 IPA_PUNCTUATION = ".,!?;:¡¿'’“”\"()[]{}«»"
-IPA_VOWELS_AND_SEMIVOWELS = set("aeiouáéíóúàèìòùâêîôûãẽĩõũäëïöüɑɐəɛɜɞɨɪɯɵøœɔʊʌæɒɶjw")
+IPA_SEMIVOWELS = set("jw")
+IPA_VOWELS = set("aeiouáéíóúàèìòùâêîôûãẽĩõũäëïöüɑɐəɛɜɞɨɪɯɵøœɔʊʌæɒɶ")
+IPA_VOWELS_AND_SEMIVOWELS = IPA_VOWELS | IPA_SEMIVOWELS
 
 IPA_SILABA_SAMPA_REPLACEMENTS = [
     ("tʃ", "tS"),
@@ -118,6 +120,40 @@ def normalize_rhymetagger_ipa_from_final_nucleus(text: str) -> str:
         return value
 
     tokens[-1] = strip_stressed_onset(tokens[-1])
+    return " ".join(tokens)
+
+
+def is_ipa_consonant(ch: str) -> bool:
+    return ch not in IPA_VOWELS_AND_SEMIVOWELS and ch not in {"ˈ", "ˌ", "ː", "ˑ"}
+
+
+def final_word_to_nucleus_only(ipa_word: str) -> str:
+    if not ipa_word:
+        return ipa_word
+
+    stress_idx = ipa_word.rfind("ˈ")
+    if stress_idx == -1:
+        prefix = ""
+        tail = ipa_word
+    else:
+        prefix = ipa_word[:stress_idx]
+        tail = ipa_word[stress_idx + 1:]
+
+    kept = [ch for ch in tail if ch in IPA_VOWELS_AND_SEMIVOWELS]
+
+    if not kept:
+        return ipa_word
+
+    return prefix + "ˈ" + "".join(kept)
+
+
+def normalize_rhymetagger_ipa_nucleus_only(text: str) -> str:
+    value = normalize_rhymetagger_ipa(text)
+    tokens = value.split()
+    if not tokens:
+        return value
+
+    tokens[-1] = final_word_to_nucleus_only(tokens[-1])
     return " ".join(tokens)
 
 

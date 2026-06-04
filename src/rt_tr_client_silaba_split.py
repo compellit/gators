@@ -6,7 +6,7 @@ from math import ceil
 import pandas as pd
 import nltk
 
-from rhymetagger import RhymeTagger
+from padded_rhymetagger import PaddedRhymeTagger
 from utils import normalize_rhymetagger_ipa_nucleus_only
 
 
@@ -14,11 +14,12 @@ RANDOM_SEED = 42
 TRAIN_FRACTION = 0.8
 MAX_ITER = 200
 ORTHOGRAPHIC_NGRAM = 0
+LENGTH_PENALTY = 1.0
 
 INPUT_PATH = "../data/gl-prepro-35k-silaba.tsv"
 SILABA_COLUMN = "phSilaba"
-MODEL_PATH = "../models/gl-35k-silaba-nucleus-only-train80.rtmodel"
-TEST_POEM_IDS_PATH = "../models/gl-35k-silaba-nucleus-only-test-poem-ids.txt"
+MODEL_PATH = "../models/gl-35k-silaba-nucleus-only-padded-train80.rtmodel"
+TEST_POEM_IDS_PATH = "../models/gl-35k-silaba-nucleus-only-padded-test-poem-ids.txt"
 TSV_QUOTECHAR = "\x07"
 
 
@@ -94,9 +95,16 @@ if __name__ == "__main__":
     print(f"SILABA column: {SILABA_COLUMN}")
     print(f"Max iterations: {MAX_ITER}")
     print(f"Orthographic ngram: {ORTHOGRAPHIC_NGRAM}")
+    print(f"Length penalty: {LENGTH_PENALTY}")
 
-    rt = RhymeTagger()
-    rt.new_model(lang="gl", transcribed=True, max_iter=MAX_ITER, ngram=ORTHOGRAPHIC_NGRAM)
+    rt = PaddedRhymeTagger()
+    rt.new_model(
+        lang="gl",
+        transcribed=True,
+        max_iter=MAX_ITER,
+        ngram=ORTHOGRAPHIC_NGRAM,
+        length_penalty=LENGTH_PENALTY,
+    )
 
     print(f"Start adding train poems to model: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())}")
     for poem in train_corpus:

@@ -4,16 +4,16 @@ from pathlib import Path
 
 import pandas as pd
 import nltk
-from rhymetagger import RhymeTagger
 
+from padded_rhymetagger import PaddedRhymeTagger
 from utils import normalize_rhymetagger_ipa_nucleus_only
 
 
 PROJECT_DIR = Path(__file__).resolve().parents[1]
 DEFAULT_DATA_PATH = PROJECT_DIR / "data" / "gl-prepro-35k-silaba.tsv"
-DEFAULT_MODEL_PATH = PROJECT_DIR / "models" / "gl-35k-silaba-nucleus-only-train80.rtmodel.json"
-DEFAULT_TEST_IDS_PATH = PROJECT_DIR / "models" / "gl-35k-silaba-nucleus-only-test-poem-ids.txt"
-DEFAULT_OUTPUT_PATH = PROJECT_DIR / "models" / "gl-35k-silaba-nucleus-only-test-rhymes.tsv"
+DEFAULT_MODEL_PATH = PROJECT_DIR / "models" / "gl-35k-silaba-nucleus-only-padded-train80.rtmodel.json"
+DEFAULT_TEST_IDS_PATH = PROJECT_DIR / "models" / "gl-35k-silaba-nucleus-only-padded-test-poem-ids.txt"
+DEFAULT_OUTPUT_PATH = PROJECT_DIR / "models" / "gl-35k-silaba-nucleus-only-padded-test-rhymes.tsv"
 SILABA_COLUMN = "phSilaba"
 TSV_QUOTECHAR = "\x07"
 
@@ -53,6 +53,7 @@ def main():
     parser.add_argument("--model-path", default=DEFAULT_MODEL_PATH)
     parser.add_argument("--output-path", default=DEFAULT_OUTPUT_PATH)
     parser.add_argument("--ngram", type=int, default=0)
+    parser.add_argument("--length-penalty", type=float, default=1.0)
     parser.add_argument("--window", type=int)
     parser.add_argument("--prob-ipa-min", type=float)
     parser.add_argument("--prob-ngram-min", type=float)
@@ -63,7 +64,7 @@ def main():
     poem_ids = [args.poem_id] if args.poem_id else read_test_poem_ids(DEFAULT_TEST_IDS_PATH)
     df = pd.read_csv(args.data_path, sep="\t", quotechar=TSV_QUOTECHAR)
 
-    rt = RhymeTagger()
+    rt = PaddedRhymeTagger()
     rt.load_model(str(args.model_path), verbose=False)
 
     output_rows = []
@@ -74,7 +75,10 @@ def main():
 
         poem, verses, final_ipa_tokens = build_poem(poem_df)
 
-        tag_kwargs = {"ngram": args.ngram}
+        tag_kwargs = {
+            "ngram": args.ngram,
+            "length_penalty": args.length_penalty,
+        }
         if args.window is not None:
             tag_kwargs["window"] = args.window
         if args.prob_ipa_min is not None:

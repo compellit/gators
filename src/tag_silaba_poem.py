@@ -6,14 +6,14 @@ import pandas as pd
 import nltk
 from rhymetagger import RhymeTagger
 
-from utils import normalize_rhymetagger_ipa
+from utils import normalize_rhymetagger_ipa_from_final_nucleus
 
 
 PROJECT_DIR = Path(__file__).resolve().parents[1]
 DEFAULT_DATA_PATH = PROJECT_DIR / "data" / "gl-prepro-35k-silaba.tsv"
-DEFAULT_MODEL_PATH = PROJECT_DIR / "models" / "gl-35k-silaba-train80.rtmodel.json"
-DEFAULT_TEST_IDS_PATH = PROJECT_DIR / "models" / "gl-35k-silaba-test-poem-ids.txt"
-DEFAULT_OUTPUT_PATH = PROJECT_DIR / "models" / "gl-35k-silaba-test-rhymes.tsv"
+DEFAULT_MODEL_PATH = PROJECT_DIR / "models" / "gl-35k-silaba-final-nucleus-train80.rtmodel.json"
+DEFAULT_TEST_IDS_PATH = PROJECT_DIR / "models" / "gl-35k-silaba-final-nucleus-test-poem-ids.txt"
+DEFAULT_OUTPUT_PATH = PROJECT_DIR / "models" / "gl-35k-silaba-final-nucleus-test-rhymes.tsv"
 SILABA_COLUMN = "phSilaba"
 TSV_QUOTECHAR = "\x07"
 
@@ -32,7 +32,7 @@ def build_poem(poem_df):
         stanza = []
         for row in stanza_df.itertuples():
             verse = row.running_text.strip()
-            ipa = normalize_rhymetagger_ipa(getattr(row, SILABA_COLUMN))
+            ipa = normalize_rhymetagger_ipa_from_final_nucleus(getattr(row, SILABA_COLUMN))
             verses.append(verse)
             final_ipa_tokens.append(nltk.word_tokenize(ipa)[-1])
             stanza.append(

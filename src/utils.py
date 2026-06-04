@@ -2,6 +2,7 @@ import unicodedata
 
 
 IPA_PUNCTUATION = ".,!?;:¡¿'’“”\"()[]{}«»"
+IPA_VOWELS_AND_SEMIVOWELS = set("aeiouáéíóúàèìòùâêîôûãẽĩõũäëïöüɑɐəɛɜɞɨɪɯɵøœɔʊʌæɒɶjw")
 
 IPA_SILABA_SAMPA_REPLACEMENTS = [
     ("tʃ", "tS"),
@@ -90,6 +91,34 @@ def normalize_rhymetagger_ipa(text: str) -> str:
     value = value.replace("_", "")
     value = "".join(ch for ch in value if ch not in IPA_PUNCTUATION)
     return " ".join(value.split())
+
+
+def strip_stressed_onset(ipa_word: str) -> str:
+    if not ipa_word:
+        return ipa_word
+
+    stress_idx = ipa_word.rfind("ˈ")
+    if stress_idx == -1:
+        stress_idx = 0
+        search_start = 0
+    else:
+        search_start = stress_idx + 1
+
+    for idx in range(search_start, len(ipa_word)):
+        if ipa_word[idx] in IPA_VOWELS_AND_SEMIVOWELS:
+            return ipa_word[:stress_idx] + "ˈ" + ipa_word[idx:]
+
+    return ipa_word
+
+
+def normalize_rhymetagger_ipa_from_final_nucleus(text: str) -> str:
+    value = normalize_rhymetagger_ipa(text)
+    tokens = value.split()
+    if not tokens:
+        return value
+
+    tokens[-1] = strip_stressed_onset(tokens[-1])
+    return " ".join(tokens)
 
 
 def collapse_open_close_vowels(text: str) -> str:

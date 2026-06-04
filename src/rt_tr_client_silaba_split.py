@@ -6,7 +6,7 @@ import pandas as pd
 import nltk
 
 from rhymetagger import RhymeTagger
-from utils import normalize_rhymetagger_ipa
+from utils import normalize_rhymetagger_ipa_from_final_nucleus
 
 
 RANDOM_SEED = 42
@@ -15,8 +15,8 @@ MAX_ITER = 200
 
 INPUT_PATH = "../data/gl-prepro-35k-silaba.tsv"
 SILABA_COLUMN = "phSilaba"
-MODEL_PATH = "../models/gl-35k-silaba-train80.rtmodel"
-TEST_POEM_IDS_PATH = "../models/gl-35k-silaba-test-poem-ids.txt"
+MODEL_PATH = "../models/gl-35k-silaba-final-nucleus-train80.rtmodel"
+TEST_POEM_IDS_PATH = "../models/gl-35k-silaba-final-nucleus-test-poem-ids.txt"
 TSV_QUOTECHAR = "\x07"
 
 
@@ -43,7 +43,7 @@ def create_corpus_from_df(dfpath):
             stanza = [
                 {
                     "text": row["running_text"].strip(),
-                    "ipa": normalize_rhymetagger_ipa(row[SILABA_COLUMN]),
+                    "ipa": normalize_rhymetagger_ipa_from_final_nucleus(row[SILABA_COLUMN]),
                 }
                 for _, row in stanza_df.iterrows()
             ]

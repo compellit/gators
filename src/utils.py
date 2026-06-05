@@ -139,7 +139,7 @@ def final_word_to_nucleus_only(ipa_word: str) -> str:
         prefix = ipa_word[:stress_idx]
         tail = ipa_word[stress_idx + 1:]
 
-    kept = [ch for ch in tail if ch in IPA_VOWELS_AND_SEMIVOWELS]
+    kept = [ch for ch in tail if ch in IPA_VOWELS]
 
     if not kept:
         return ipa_word

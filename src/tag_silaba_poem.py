@@ -23,17 +23,21 @@ def read_test_poem_ids(path):
         return [int(line.strip()) for line in f if line.strip()]
 
 
-def build_poem(poem_df):
+def build_poem(poem_df, stanza_column, text_column):
     poem = []
     verses = []
     final_ipa_tokens = []
+    prepro_values = []
+    gold_values = []
 
-    for _, stanza_df in poem_df.groupby("stanza_n", sort=False):
+    for _, stanza_df in poem_df.groupby(stanza_column, sort=False):
         stanza = []
         for row in stanza_df.itertuples():
-            verse = row.running_text.strip()
+            verse = getattr(row, text_column).strip()
             ipa = normalize_rhymetagger_ipa_nucleus_only(getattr(row, SILABA_COLUMN))
             verses.append(verse)
+            prepro_values.append(getattr(row, "prepro", ""))
+            gold_values.append(getattr(row, "rhyme", ""))
             final_ipa_tokens.append(nltk.word_tokenize(ipa)[-1])
             stanza.append(
                 {
@@ -43,7 +47,36 @@ def build_poem(poem_df):
             )
         poem.append(stanza)
 
-    return poem, verses, final_ipa_tokens
+    return poem, verses, prepro_values, gold_values, final_ipa_tokens
+
+
+def rhyme_to_letter(rhyme):
+    if not rhyme:
+        return ""
+
+    try:
+        final = int(rhyme)
+    except (TypeError, ValueError):
+        return str(rhyme)
+
+    if final <= 0:
+        return ""
+
+    alphabet = "abcdefghijklmnñopqrstuvwxyz"
+    base = len(alphabet)
+    index = final - 1
+
+    for length in range(1, final + 1):
+        count = base ** length
+        if index < count:
+            letters = []
+            for _ in range(length):
+                letters.append(alphabet[index % base])
+                index //= base
+            return "".join(reversed(letters))
+        index -= count
+
+    return ""
 
 
 def main():
@@ -52,7 +85,10 @@ def main():
     parser.add_argument("--data-path", default=DEFAULT_DATA_PATH)
     parser.add_argument("--model-path", default=DEFAULT_MODEL_PATH)
     parser.add_argument("--output-path", default=DEFAULT_OUTPUT_PATH)
-    parser.add_argument("--ngram", type=int, default=0)
+    parser.add_argument("--poem-column", default="poem_id")
+    parser.add_argument("--stanza-column", default="stanza_n")
+    parser.add_argument("--text-column", default="running_text")
+    parser.add_argument("--ngram", type=int, default=3)
     parser.add_argument("--length-penalty", type=float, default=1.0)
     parser.add_argument("--window", type=int)
     parser.add_argument("--prob-ipa-min", type=float)
@@ -61,19 +97,27 @@ def main():
     parser.add_argument("--show-ipa", action="store_true")
     args = parser.parse_args()
 
-    poem_ids = [args.poem_id] if args.poem_id else read_test_poem_ids(DEFAULT_TEST_IDS_PATH)
     df = pd.read_csv(args.data_path, sep="\t", quotechar=TSV_QUOTECHAR)
+    poem_ids = (
+        [args.poem_id]
+        if args.poem_id
+        else [int(poem_id) for poem_id in df[args.poem_column].dropna().unique()]
+    )
 
     rt = PaddedRhymeTagger()
     rt.load_model(str(args.model_path), verbose=False)
 
     output_rows = []
     for poem_id in poem_ids:
-        poem_df = df[df.poem_id == poem_id]
+        poem_df = df[df[args.poem_column] == poem_id]
         if poem_df.empty:
-            raise ValueError(f"No rows found for poem_id={poem_id}")
+            raise ValueError(f"No rows found for {args.poem_column}={poem_id}")
 
-        poem, verses, final_ipa_tokens = build_poem(poem_df)
+        poem, verses, prepro_values, gold_values, final_ipa_tokens = build_poem(
+            poem_df,
+            args.stanza_column,
+            args.text_column,
+        )
 
         tag_kwargs = {
             "ngram": args.ngram,
@@ -90,12 +134,18 @@ def main():
 
         rhymes = rt.tag(poem, transcribed=True, output_format=3, **tag_kwargs)
 
-        for line_n, (verse, rhyme, final_ipa) in enumerate(zip(verses, rhymes, final_ipa_tokens), start=1):
+        for line_n, (verse, prepro, rhyme, gold, final_ipa) in enumerate(
+            zip(verses, prepro_values, rhymes, gold_values, final_ipa_tokens),
+            start=1,
+        ):
             row = {
                 "poem_id": poem_id,
                 "line_n": line_n,
                 "verse": verse,
+                "prepro": prepro,
                 "rhyme": rhyme or "",
+                "letter": rhyme_to_letter(rhyme),
+                "gold": gold,
             }
             if args.show_ipa:
                 row["final_ipa"] = final_ipa

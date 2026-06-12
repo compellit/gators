@@ -1,6 +1,6 @@
 ### PyChmGrl template
 # personal excludes
-wk/
+#wk/
 test_auto.py
 
 # python other

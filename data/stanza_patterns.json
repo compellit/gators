@@ -1,0 +1,741 @@
+[
+  {
+    "stanza_type": "pareado",
+    "metre": [
+      3,
+      20
+    ],
+    "metre_kind": "range",
+    "repeat_metre": false,
+    "rhyme_kind": "both",
+    "patterns": [
+      "aa"
+    ],
+    "stanza_length": 2
+  },
+  {
+    "stanza_type": "haiku",
+    "metre": [
+      5,
+      7,
+      5
+    ],
+    "repeat_metre": false,
+    "patterns": [
+      "000"
+    ],
+    "stanza_length": 3
+  },
+  {
+    "stanza_type": "tercetillo",
+    "metre": [
+      8
+    ],
+    "metre_kind": "max",
+    "repeat_metre": true,
+    "rhyme_kind": "consonante",
+    "patterns": [
+      "a-a"
+    ],
+    "stanza_length": 3
+  },
+  {
+    "stanza_type": "terceto",
+    "metre": [
+      9
+    ],
+    "metre_kind": "min",
+    "repeat_metre": true,
+    "rhyme_kind": "consonante",
+    "patterns": [
+      "-aa",
+      "a-a",
+      "aa-"
+    ],
+    "stanza_length": 3
+  },
+  {
+    "stanza_type": "soleá",
+    "parent_type": "terceto",
+    "metre": [
+      8
+    ],
+    "repeat_metre": true,
+    "rhyme_kind": "asonante",
+    "patterns": [
+      "a-a"
+    ],
+    "stanza_length": 3
+  },
+  {
+    "stanza_type": "terceto_monorrimo",
+    "metre": [
+      9
+    ],
+    "metre_kind": "min",
+    "repeat_metre": true,
+    "rhyme_kind": "consonante",
+    "patterns": [
+      "aaa"
+    ],
+    "stanza_length": 3
+  },
+  {
+    "stanza_type": "cantar",
+    "metre": [
+      8
+    ],
+    "metre_kind": "max",
+    "repeat_metre": true,
+    "rhyme_kind": "asonante",
+    "patterns": [
+      "-a-a"
+    ],
+    "stanza_length": 4
+  },
+  {
+    "stanza_type": "cuaderna_vía",
+    "metre": [
+      14
+    ],
+    "repeat_metre": true,
+    "rhyme_kind": "consonante",
+    "patterns": [
+      "aaaa"
+    ],
+    "stanza_length": 4
+  },
+  {
+    "stanza_type": "cuarteta",
+    "metre": [
+      8
+    ],
+    "metre_kind": "max",
+    "repeat_metre": false,
+    "rhyme_kind": "consonante",
+    "patterns": [
+      "abab"
+    ],
+    "stanza_length": 4
+  },
+  {
+    "stanza_type": "cuarteto",
+    "metre": [
+      9
+    ],
+    "metre_kind": "min",
+    "repeat_metre": false,
+    "rhyme_kind": "consonante",
+    "patterns": [
+      "abba"
+    ],
+    "stanza_length": 4
+  },
+  {
+    "stanza_type": "cuarteto_lira",
+    "metre": [
+      7,
+      11
+    ],
+    "metre_kind": "mixed",
+    "rhyme_kind": "both",
+    "patterns": [
+      "abab",
+      "abba"
+    ],
+    "stanza_length": 4
+  },
+  {
+    "stanza_type": "estrofa_francisco_de_la_torre",
+    "parent_type": "cuarteto_lira",
+    "metre": [
+      11,
+      11,
+      11,
+      7
+    ],
+    "repeat_metre": false,
+    "patterns": [
+      "----"
+    ],
+    "stanza_length": 4
+  },
+  {
+    "stanza_type": "estrofa_sáfica",
+    "parent_type": "cuarteto_lira",
+    "metre": [
+      11,
+      11,
+      11,
+      5
+    ],
+    "repeat_metre": false,
+    "patterns": [
+      "----"
+    ],
+    "stanza_length": 4
+  },
+  {
+    "stanza_type": "endecha_real",
+    "metre": [
+      7,
+      7,
+      7,
+      11
+    ],
+    "repeat_metre": false,
+    "rhyme_kind": "asonante",
+    "patterns": [
+      "-a-a"
+    ],
+    "stanza_length": 4
+  },
+  {
+    "stanza_type": "redondilla",
+    "metre": [
+      8
+    ],
+    "metre_kind": "max",
+    "repeat_metre": false,
+    "rhyme_kind": "both",
+    "patterns": [
+      "abba"
+    ],
+    "stanza_length": 4
+  },
+  {
+    "stanza_type": "seguidilla",
+    "metre": [
+      7,
+      5,
+      7,
+      5
+    ],
+    "repeat_metre": false,
+    "metre_tolerance": 1,
+    "rhyme_kind": "both",
+    "patterns": [
+      "-a-a"
+    ],
+    "stanza_length": 4
+  },
+  {
+    "stanza_type": "seguidilla_xitana",
+    "metre": [
+      6,
+      6,
+      11,
+      6
+    ],
+    "repeat_metre": false,
+    "rhyme_kind": "asonante",
+    "patterns": [
+      "-a-a"
+    ],
+    "stanza_length": 4
+  },
+  {
+    "stanza_type": "serventesio",
+    "metre": [
+      9
+    ],
+    "metre_kind": "min",
+    "repeat_metre": false,
+    "rhyme_kind": "consonante",
+    "patterns": [
+      "abab"
+    ],
+    "stanza_length": 4
+  },
+  {
+    "stanza_type": "lira",
+    "metre": [
+      7,
+      11,
+      7,
+      7,
+      11
+    ],
+    "repeat_metre": false,
+    "rhyme_kind": "consonante",
+    "patterns": [
+      "ababb"
+    ],
+    "stanza_length": 5
+  },
+  {
+    "stanza_type": "quinteto",
+    "metre": [
+      9
+    ],
+    "metre_kind": "min",
+    "repeat_metre": false,
+    "rhyme_kind": "consonante",
+    "patterns": [
+      "aabab",
+      "aabba",
+      "abaab",
+      "ababa",
+      "abbab"
+    ],
+    "stanza_length": 5
+  },
+  {
+    "stanza_type": "quintilla",
+    "metre": [
+      8
+    ],
+    "metre_kind": "max",
+    "repeat_metre": false,
+    "rhyme_kind": "consonante",
+    "patterns": [
+      "aabab",
+      "aabba",
+      "abaab",
+      "ababa",
+      "abbab"
+    ],
+    "stanza_length": 5
+  },
+  {
+    "stanza_type": "sexteto",
+    "metre": [
+      9
+    ],
+    "metre_kind": "min",
+    "repeat_metre": true,
+    "rhyme_kind": "consonante",
+    "patterns": [
+      "*"
+    ],
+    "stanza_length": 6
+  },
+  {
+    "stanza_type": "sexta_rima",
+    "parent_type": "sexteto",
+    "metre": [
+      11
+    ],
+    "repeat_metre": true,
+    "rhyme_kind": "consonante",
+    "patterns": [
+      "aabcbc",
+      "aabccb",
+      "ababcc"
+    ],
+    "stanza_length": 6
+  },
+  {
+    "stanza_type": "sexteto_lira",
+    "parent_type": "sexteto",
+    "metre": [
+      7,
+      11
+    ],
+    "metre_kind": "mixed",
+    "rhyme_kind": "consonante",
+    "patterns": [
+      "*"
+    ],
+    "stanza_length": 6
+  },
+  {
+    "stanza_type": "sextilla",
+    "metre": [
+      8
+    ],
+    "metre_kind": "max",
+    "repeat_metre": true,
+    "rhyme_kind": "consonante",
+    "patterns": [
+      "*"
+    ],
+    "stanza_length": 6
+  },
+  {
+    "stanza_type": "estrofa_manriqueña",
+    "parent_type": "sextilla",
+    "metre": [
+      8,
+      8,
+      4,
+      8,
+      8,
+      4
+    ],
+    "repeat_metre": false,
+    "metre_tolerance": 1,
+    "rhyme_kind": "consonante",
+    "patterns": [
+      "abcabc"
+    ],
+    "stanza_length": 6
+  },
+  {
+    "stanza_type": "copla_mixta",
+    "metre": [
+      8
+    ],
+    "metre_kind": "max",
+    "repeat_metre": false,
+    "rhyme_kind": "consonante",
+    "patterns": [
+      "abbacca"
+    ],
+    "stanza_length": 7
+  },
+  {
+    "stanza_type": "seguidilla_composta",
+    "metre": [
+      7,
+      5,
+      7,
+      5,
+      5,
+      7,
+      5
+    ],
+    "repeat_metre": false,
+    "rhyme_kind": "both",
+    "patterns": [
+      "-a-ab-b"
+    ],
+    "stanza_length": 7
+  },
+  {
+    "stanza_type": "septeto",
+    "metre": [
+      9
+    ],
+    "metre_kind": "min",
+    "repeat_metre": true,
+    "patterns": [
+      "*"
+    ],
+    "stanza_length": 7
+  },
+  {
+    "stanza_type": "septeto_lira",
+    "parent_type": "septeto",
+    "metre": [
+      7,
+      11
+    ],
+    "metre_kind": "mixed",
+    "rhyme_kind": "consonante",
+    "patterns": [
+      "*"
+    ],
+    "stanza_length": 7
+  },
+  {
+    "stanza_type": "septilla",
+    "metre": [
+      8
+    ],
+    "metre_kind": "max",
+    "repeat_metre": true,
+    "patterns": [
+      "*"
+    ],
+    "stanza_length": 7
+  },
+  {
+    "stanza_type": "copla_arte_maior",
+    "parent_type": "oitava",
+    "metre": [
+      9
+    ],
+    "metre_kind": "min",
+    "repeat_metre": false,
+    "rhyme_kind": "consonante",
+    "patterns": [
+      "ababbaab",
+      "ababbaba",
+      "ababbcbc",
+      "ababbccb",
+      "abbaabab",
+      "abbaabba",
+      "abbaacac",
+      "abbaacca"
+    ],
+    "stanza_length": 8
+  },
+  {
+    "stanza_type": "copla_arte_menor",
+    "parent_type": "oitaviña",
+    "metre": [
+      8
+    ],
+    "metre_kind": "max",
+    "repeat_metre": false,
+    "rhyme_kind": "consonante",
+    "patterns": [
+      "abababab",
+      "abababba",
+      "ababacac",
+      "ababacca",
+      "ababbaab",
+      "ababbaba",
+      "ababbcbc",
+      "ababbccb",
+      "ababcaac",
+      "ababcaca",
+      "ababcbbc",
+      "ababcbcb",
+      "abbaabab",
+      "abbaabba",
+      "abbaacac",
+      "abbaacca",
+      "abbabaab",
+      "abbababa",
+      "abbabcbc",
+      "abbabccb",
+      "abbacaac",
+      "abbacaca",
+      "abbacbbc",
+      "abbacbcb"
+    ],
+    "stanza_length": 8
+  },
+  {
+    "stanza_type": "copla_castelá",
+    "parent_type": "oitaviña",
+    "metre": [
+      8
+    ],
+    "repeat_metre": false,
+    "rhyme_kind": "consonante",
+    "patterns": [
+      "ababcdcd",
+      "ababcddc",
+      "abbacdcd",
+      "abbacddc"
+    ],
+    "stanza_length": 8
+  },
+  {
+    "stanza_type": "oitaviña",
+    "metre": [
+      8
+    ],
+    "metre_kind": "max",
+    "repeat_metre": true,
+    "rhyme_kind": "both",
+    "patterns": [
+      "*"
+    ],
+    "stanza_length": 8
+  },
+  {
+    "stanza_type": "oitava",
+    "metre": [
+      9
+    ],
+    "metre_kind": "min",
+    "repeat_metre": false,
+    "patterns": [
+      "*"
+    ],
+    "stanza_length": 8
+  },
+  {
+    "stanza_type": "oitava_real",
+    "parent_type": "oitava",
+    "metre": [
+      11
+    ],
+    "repeat_metre": true,
+    "rhyme_kind": "consonante",
+    "patterns": [
+      "abababcc"
+    ],
+    "stanza_length": 8
+  },
+  {
+    "stanza_type": "novena",
+    "metre": null,
+    "repeat_metre": false,
+    "patterns": [
+      "*"
+    ],
+    "stanza_length": 9
+  },
+  {
+    "stanza_type": "copla_real",
+    "metre": [
+      8
+    ],
+    "repeat_metre": true,
+    "rhyme_kind": "consonante",
+    "patterns": [
+      "aababccdcd",
+      "aababccddc",
+      "aababcdccd",
+      "aababcdcdc",
+      "aababcddcd",
+      "aabbaccdcd",
+      "aabbaccddc",
+      "aabbacdccd",
+      "aabbacdcdc",
+      "aabbacddcd",
+      "abaabccdcd",
+      "abaabccddc",
+      "abaabcdccd",
+      "abaabcdcdc",
+      "abaabcddcd",
+      "ababaccdcd",
+      "ababaccddc",
+      "ababacdccd",
+      "ababacdcdc",
+      "ababacddcd",
+      "abbabccdcd",
+      "abbabccddc",
+      "abbabcdccd",
+      "abbabcdcdc",
+      "abbabcddcd"
+    ],
+    "stanza_length": 10,
+    "refines_type": "décima_antiga"
+  },
+  {
+    "stanza_type": "décima_antiga",
+    "metre": [
+      8
+    ],
+    "repeat_metre": true,
+    "rhyme_kind": "consonante",
+    "patterns": [
+      "abab111111",
+      "abba111111",
+      "111111abab",
+      "111111abba"
+    ],
+    "stanza_length": 10
+  },
+  {
+    "stanza_type": "espinela",
+    "metre": [
+      8
+    ],
+    "repeat_metre": true,
+    "rhyme_kind": "consonante",
+    "patterns": [
+      "abbaaccddc"
+    ],
+    "stanza_length": 10,
+    "refines_type": "décima_antiga"
+  },
+  {
+    "stanza_type": "ovillejo",
+    "metre": [
+      8,
+      4,
+      8,
+      4,
+      8,
+      4,
+      8,
+      8,
+      8,
+      8
+    ],
+    "repeat_metre": false,
+    "rhyme_kind": "consonante",
+    "patterns": [
+      "aabbcccddc"
+    ],
+    "stanza_length": 10
+  },
+  {
+    "stanza_type": "ovillejo",
+    "metre": [
+      8,
+      3,
+      8,
+      3,
+      8,
+      3,
+      8,
+      8,
+      8,
+      8
+    ],
+    "repeat_metre": false,
+    "rhyme_kind": "consonante",
+    "patterns": [
+      "aabbcccddc"
+    ],
+    "stanza_length": 10
+  },
+  {
+    "stanza_type": "seguidilla_chamberga",
+    "metre": [
+      7,
+      5,
+      7,
+      5,
+      3,
+      7,
+      3,
+      7,
+      3,
+      7
+    ],
+    "repeat_metre": false,
+    "rhymes": {
+      "a": "both",
+      "b": "asonante",
+      "c": "asonante",
+      "d": "asonante"
+    },
+    "patterns": [
+      "-a-abbccdd"
+    ],
+    "stanza_length": 10
+  },
+  {
+    "stanza_type": "romance",
+    "metre": [
+      8
+    ],
+    "repeat_metre": true,
+    "rhyme_kind": "asonante",
+    "patterns": [
+      "-a"
+    ],
+    "repeat_pattern": true,
+    "min_verses": 2,
+    "length_multiple": 2
+  },
+  {
+    "stanza_type": "romance_arte_maior",
+    "metre": [
+      9
+    ],
+    "metre_kind": "min",
+    "repeat_metre": true,
+    "rhyme_kind": "asonante",
+    "patterns": [
+      "-a"
+    ],
+    "repeat_pattern": true,
+    "min_verses": 2,
+    "length_multiple": 2
+  },
+  {
+    "stanza_type": "silva_arromanzada",
+    "metre": [
+      7,
+      11
+    ],
+    "metre_kind": "mixed",
+    "rhyme_kind": "asonante",
+    "patterns": [
+      "-a"
+    ],
+    "repeat_pattern": true,
+    "min_verses": 2,
+    "length_multiple": 2
+  }
+]

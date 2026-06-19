@@ -27,7 +27,7 @@
     "stanza_length": 3
   },
   {
-    "stanza_type": "tercetillo",
+    "stanza_type": "tercerilla",
     "metre": [
       8
     ],
@@ -55,7 +55,7 @@
     "stanza_length": 3
   },
   {
-    "stanza_type": "soleá",
+    "stanza_type": "soledad",
     "parent_type": "terceto",
     "metre": [
       8
@@ -119,6 +119,19 @@
     "stanza_length": 4
   },
   {
+    "stanza_type": "cuarteta_asonantada",
+    "metre": [
+      8
+    ],
+    "metre_kind": "max",
+    "repeat_metre": false,
+    "rhyme_kind": "asonante",
+    "patterns": [
+      "abab"
+    ],
+    "stanza_length": 4
+  },
+  {
     "stanza_type": "cuarteto",
     "metre": [
       9
@@ -176,6 +189,21 @@
     "stanza_length": 4
   },
   {
+    "stanza_type": "estrofa_alcaica",
+    "parent_type": "cuarteto_lira",
+    "metre": [
+      10,
+      10,
+      9,
+      10
+    ],
+    "repeat_metre": false,
+    "patterns": [
+      "----"
+    ],
+    "stanza_length": 4
+  },
+  {
     "stanza_type": "endecha_real",
     "metre": [
       7,
@@ -210,6 +238,22 @@
       5,
       7,
       5
+    ],
+    "repeat_metre": false,
+    "metre_tolerance": 1,
+    "rhyme_kind": "both",
+    "patterns": [
+      "-a-a"
+    ],
+    "stanza_length": 4
+  },
+  {
+    "stanza_type": "seguidilla_real",
+    "metre": [
+      6,
+      10,
+      6,
+      10
     ],
     "repeat_metre": false,
     "metre_tolerance": 1,
@@ -403,7 +447,7 @@
     "stanza_length": 7
   },
   {
-    "stanza_type": "septeto",
+    "stanza_type": "sétima",
     "metre": [
       9
     ],
@@ -415,8 +459,8 @@
     "stanza_length": 7
   },
   {
-    "stanza_type": "septeto_lira",
-    "parent_type": "septeto",
+    "stanza_type": "sétima_lira",
+    "parent_type": "sétima",
     "metre": [
       7,
       11
@@ -429,7 +473,7 @@
     "stanza_length": 7
   },
   {
-    "stanza_type": "septilla",
+    "stanza_type": "setina",
     "metre": [
       8
     ],
@@ -463,7 +507,7 @@
   },
   {
     "stanza_type": "copla_arte_menor",
-    "parent_type": "oitaviña",
+    "parent_type": "octavilla",
     "metre": [
       8
     ],
@@ -500,7 +544,7 @@
   },
   {
     "stanza_type": "copla_castelá",
-    "parent_type": "oitaviña",
+    "parent_type": "octavilla",
     "metre": [
       8
     ],
@@ -515,7 +559,7 @@
     "stanza_length": 8
   },
   {
-    "stanza_type": "oitaviña",
+    "stanza_type": "octavilla",
     "metre": [
       8
     ],

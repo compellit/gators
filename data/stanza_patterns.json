@@ -753,6 +753,21 @@
     "length_multiple": 2
   },
   {
+    "stanza_type": "romancillo",
+    "metre": [
+      8
+    ],
+    "metre_kind": "max",
+    "repeat_metre": true,
+    "rhyme_kind": "asonante",
+    "patterns": [
+      "-a"
+    ],
+    "repeat_pattern": true,
+    "min_verses": 2,
+    "length_multiple": 2
+  },
+  {
     "stanza_type": "romance_arte_maior",
     "metre": [
       9

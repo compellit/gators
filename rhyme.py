@@ -10,8 +10,77 @@ TSV_QUOTECHAR = "\x07"
 DEFAULT_INPUT_PATH = "/home/anxo/compellit/rhyme-gl-wk/data/gl-prepro-35k-silaba.tsv"
 DEFAULT_RESULTS_PATH = "/home/anxo/compellit/rhyme-gl-wk/data/test_results_rhyme.tsv"
 DEFAULT_STANZA_PATTERNS_PATH = "/home/anxo/compellit/rhyme-gl-wk/data/stanza_patterns.json"
+DEFAULT_POEM_PATTERNS_PATH = "/home/anxo/compellit/rhyme-gl-wk/data/poem_patterns.json"
 MIXED_METRE_DOMINANCE_THRESHOLD = 0.7
 PROBABILITY_TIE_TOLERANCE = 1e-12
+VERSE_TYPE_PATTERNS = [
+    {
+        "verse_type": "gaita_galega",
+        "syllables": 11,
+        "required": [4, 10],
+        "optional": [1, 7],
+    },
+    {
+        "verse_type": "gaita_galega",
+        "syllables": 10,
+        "required": [3, 9],
+        "optional": [1, 6],
+    },
+    {
+        "verse_type": "gaita_galega",
+        "syllables": 12,
+        "required": [5, 11],
+        "optional": [2, 8],
+    },
+    {
+        "verse_type": "gaita_galega",
+        "syllables": 5,
+        "required": [4],
+        "optional": [1],
+    },
+    {
+        "verse_type": "gaita_galega",
+        "syllables": 6,
+        "required": [5],
+        "optional": [2],
+    },
+    {
+        "verse_type": "endecasílabo_enfático",
+        "syllables": 11,
+        "required": [1, 6, 10],
+        "optional": [],
+    },
+    {
+        "verse_type": "endecasílabo_italiano",
+        "syllables": 11,
+        "required": [4, 8, 10],
+        "optional": [],
+    },
+    {
+        "verse_type": "endecasílabo_heroico",
+        "syllables": 11,
+        "required": [2, 6, 10],
+        "optional": [],
+    },
+    {
+        "verse_type": "endecasílabo_melódico",
+        "syllables": 11,
+        "required": [3, 6, 10],
+        "optional": [],
+    },
+    {
+        "verse_type": "endecasílabo_sáfico",
+        "syllables": 11,
+        "required": [1, 4, 6, 8, 10],
+        "optional": [],
+    },
+    {
+        "verse_type": "pentasílabo_adónico",
+        "syllables": 5,
+        "required": [1, 4],
+        "optional": [],
+    },
+]
 
 
 parser = argparse.ArgumentParser()
@@ -22,8 +91,11 @@ parser.add_argument("--verse-column", default="verse_text")
 parser.add_argument("--ph-column", default="phSilaba")
 parser.add_argument("--rhyme-column", default="rhyme")
 parser.add_argument("--syllable-column")
+parser.add_argument("--rhythm-column")
 parser.add_argument("--stanza-patterns-path", default=DEFAULT_STANZA_PATTERNS_PATH)
+parser.add_argument("--poem-patterns-path", default=DEFAULT_POEM_PATTERNS_PATH)
 parser.add_argument("--subtype-min-probability", type=float, default=0.8)
+parser.add_argument("--poem-type-min-probability", type=float, default=0.8)
 parser.add_argument("--results-path", default=DEFAULT_RESULTS_PATH)
 parser.add_argument("--poem-ids")
 args = parser.parse_args()
@@ -55,6 +127,23 @@ def parse_syllable_value(value):
     return int(match.group(0)) if match else None
 
 
+def parse_rhythm_value(value):
+    if pd.isna(value):
+        return []
+
+    return [int(match) for match in re.findall(r"\d+", str(value))]
+
+
+def normalize_refrain_text(value):
+    if pd.isna(value):
+        return ""
+
+    value = str(value).lower()
+    value = re.sub(r"\p{P}+", " ", value)
+    value = re.sub(r"\s+", " ", value).strip()
+    return value
+
+
 def choose_syllable_column(df, requested):
     if requested:
         if requested not in df.columns:
@@ -69,6 +158,107 @@ def choose_syllable_column(df, requested):
             return candidate
 
     return None
+
+
+def choose_rhythm_column(df, requested):
+    if requested:
+        if requested not in df.columns:
+            raise ValueError(
+                f"Rhythm column {requested!r} not found. "
+                f"Available columns: {list(df.columns)}"
+            )
+        return requested
+
+    for candidate in ("gprMet", "meterNbr", "gprMetNoA"):
+        if candidate in df.columns:
+            return candidate
+
+    return None
+
+
+def verse_type_matches(observed, required, optional):
+    observed = set(observed)
+    required = set(required)
+    optional = set(optional)
+    allowed = required | optional
+    return required.issubset(observed) and observed.issubset(allowed)
+
+
+def classify_verse_type(syllables, rhythm):
+    if syllables is None or not rhythm:
+        return {
+            "verse_type": None,
+            "observed_rhythm": rhythm,
+            "expected_rhythm": None,
+        }
+
+    candidates = [
+        pattern
+        for pattern in VERSE_TYPE_PATTERNS
+        if pattern["syllables"] == syllables
+    ]
+    if not candidates:
+        return {
+            "verse_type": None,
+            "observed_rhythm": rhythm,
+            "expected_rhythm": None,
+        }
+
+    for pattern in candidates:
+        if not verse_type_matches(
+            rhythm,
+            pattern["required"],
+            pattern["optional"],
+        ):
+            continue
+
+        return {
+            "verse_type": pattern["verse_type"],
+            "observed_rhythm": rhythm,
+            "expected_rhythm": {
+                "required": pattern["required"],
+                "optional": pattern["optional"],
+            },
+        }
+
+    return {
+        "verse_type": None,
+        "observed_rhythm": rhythm,
+        "expected_rhythm": None,
+    }
+
+
+def enforce_short_gaita_pairs(poem_data):
+    def is_short_gaita(verse):
+        data = poem_data.get(verse)
+        return (
+            data
+            and data["verse_type"] == "gaita_galega"
+            and data["metre"] is not None
+            and data["metre"] < 10
+        )
+
+    keep = set()
+    stanzas = {}
+    for verse, data in poem_data.items():
+        stanzas.setdefault(data["stanza"], []).append(verse)
+
+    for verses in stanzas.values():
+        verses = sorted(verses)
+        index = 0
+        while index < len(verses) - 1:
+            left = verses[index]
+            right = verses[index + 1]
+            if is_short_gaita(left) and is_short_gaita(right):
+                keep.update((left, right))
+                index += 2
+            else:
+                index += 1
+
+    for verse, data in poem_data.items():
+        if is_short_gaita(verse) and verse not in keep:
+            data["verse_type"] = None
+            data["expected_rhythm"] = None
 
 
 def load_stanza_patterns(path):
@@ -98,7 +288,9 @@ df = pd.read_csv(
 )
 df.columns = df.columns.str.strip()
 syllable_column = choose_syllable_column(df, args.syllable_column)
+rhythm_column = choose_rhythm_column(df, args.rhythm_column)
 stanza_patterns = load_stanza_patterns(args.stanza_patterns_path)
+poem_patterns = load_stanza_patterns(args.poem_patterns_path)
 result_rows = []
 for poem_id, poem in df.groupby(args.poem_column, sort=False):
     if poem_ids and id_key(poem_id) not in poem_ids:
@@ -115,15 +307,27 @@ for poem_id, poem in df.groupby(args.poem_column, sort=False):
             vowels = re.findall(r"[aeiouEO]", rhyme_tail)
             if len(vowels) > 2:
                 vowels = [vowels[0], vowels[-1]]
+            metre = (
+                parse_syllable_value(getattr(verse, syllable_column))
+                if syllable_column
+                else None
+            )
+            rhythm = (
+                parse_rhythm_value(getattr(verse, rhythm_column))
+                if rhythm_column
+                else []
+            )
+            verse_type = classify_verse_type(metre, rhythm)
             poem_data[verse_number] = {
                 "rhyme_tail": rhyme_tail,
                 "vowels": vowels,
                 "stanza": stanza_n,
-                "metre": (
-                    parse_syllable_value(getattr(verse, syllable_column))
-                    if syllable_column
-                    else None
+                "_normalized_verse_text": normalize_refrain_text(
+                    getattr(verse, args.verse_column)
                 ),
+                "retrouso": None,
+                "metre": metre,
+                **verse_type,
                 "asonante": None,
                 "consonante": None,
                 "_asonante_key": None,
@@ -155,8 +359,24 @@ for poem_id, poem in df.groupby(args.poem_column, sort=False):
                 "stanza_subtype": None,
                 "stanza_subtype_probability": None,
                 "stanza_subtype_probability_poem": None,
+                "poem_type": None,
+                "poem_type_probability": None,
+                "poem_subtype": None,
+                "poem_subtype_probability": None,
+                "poem_expected_pattern": None,
+                "poem_observed_pattern": None,
+                "poem_pattern_similarity": None,
+                "poem_metre_similarity": None,
+                "poem_rhyme_type_similarity": None,
+                "poem_stanza_type_similarity": None,
+                "poem_refrain_similarity": None,
+                "poem_stanza_length_similarity": None,
+                "poem_verse_count_similarity": None,
+                "poem_stanza_count_similarity": None,
                 "letter": None,
             }
+
+    enforce_short_gaita_pairs(poem_data)
 
     rhyme_pairs = {}
     for verse, data in poem_data.items():
@@ -986,6 +1206,356 @@ for poem_id, poem in df.groupby(args.poem_column, sort=False):
                 data["stanza_subtype_probability"] = output["stanza_subtype_probability"]
                 data["stanza_subtype_probability_poem"] = output["stanza_subtype_probability_poem"]
 
+    def detect_retrouso(poem_data):
+        by_text = {}
+        for verse, data in poem_data.items():
+            text = data["_normalized_verse_text"]
+            if text:
+                by_text.setdefault(text, []).append(verse)
+
+        for verses in by_text.values():
+            if len(verses) > 1:
+                for verse in verses:
+                    poem_data[verse]["retrouso"] = True
+
+        pair_positions = {}
+        verses = sorted(poem_data)
+        for left, right in zip(verses, verses[1:]):
+            left_text = poem_data[left]["_normalized_verse_text"]
+            right_text = poem_data[right]["_normalized_verse_text"]
+            if not left_text or not right_text:
+                continue
+            pair_positions.setdefault((left_text, right_text), []).append((left, right))
+
+        for pairs in pair_positions.values():
+            if len(pairs) > 1:
+                for left, right in pairs:
+                    poem_data[left]["retrouso"] = True
+                    poem_data[right]["retrouso"] = True
+
+    def poem_entry_allowed_for_length(entry, observed_length):
+        if observed_length < entry.get("min_verses", 0):
+            return False
+        if entry.get("length_multiple") and observed_length % entry["length_multiple"] != 0:
+            return False
+        return True
+
+    def poem_observed_pairs(poem_lines, observed_pattern):
+        return observed_pair_data(poem_lines, observed_pattern)
+
+    def count_similarity(observed, expected):
+        if expected is None:
+            return None
+        if observed == expected:
+            return 1
+        if observed <= 0 or expected <= 0:
+            return 0
+        return min(observed, expected) / max(observed, expected)
+
+    def stanza_labels(data):
+        labels = set()
+        if data.get("stanza_type") not in (None, ""):
+            labels.add(data["stanza_type"])
+        if data.get("stanza_subtype") not in (None, ""):
+            labels.add(data["stanza_subtype"])
+        return labels
+
+    def poem_stanza_type_similarity(stanzas, entry):
+        observed = [stanza[0][1] for stanza in stanzas.values()]
+
+        if entry.get("stanza_type"):
+            matches = sum(
+                1
+                for data in observed
+                if entry["stanza_type"] in stanza_labels(data)
+            )
+            return matches / len(observed) if observed else None
+
+        expected_sequence = entry.get("stanza_types")
+        if not expected_sequence:
+            return None
+
+        compared = max(len(observed), len(expected_sequence))
+        if entry.get("extra_stanza_type") and len(observed) > len(expected_sequence):
+            compared = len(observed)
+
+        if compared == 0:
+            return None
+
+        matches = 0
+        for index, data in enumerate(observed):
+            if index < len(expected_sequence):
+                expected = set(expected_sequence[index])
+            elif entry.get("extra_stanza_type"):
+                expected = {entry["extra_stanza_type"]}
+            else:
+                expected = set()
+
+            if stanza_labels(data) & expected:
+                matches += 1
+
+        return matches / compared
+
+    def poem_stanza_length_similarity(stanzas, entry):
+        expected_lengths = entry.get("stanza_lengths")
+        if not expected_lengths:
+            return None
+
+        observed_lengths = [len(stanza) for stanza in stanzas.values()]
+        if len(observed_lengths) < len(expected_lengths):
+            return 0
+
+        compared = max(len(observed_lengths), len(expected_lengths))
+        matches = 0
+        for index, observed_length in enumerate(observed_lengths):
+            if index < len(expected_lengths):
+                expected_length = expected_lengths[index]
+            elif entry.get("extra_stanza_length") is not None:
+                expected_length = entry["extra_stanza_length"]
+            else:
+                expected_length = None
+
+            if expected_length is not None and observed_length == expected_length:
+                matches += 1
+
+        return matches / compared if compared else None
+
+    def refrain_units(poem_lines, entry):
+        stanzas = get_stanzas({verse: data for verse, data in poem_lines})
+        if len(stanzas) > 1:
+            return [stanza for stanza in stanzas.values()]
+
+        multiple = entry.get("length_multiple")
+        if multiple:
+            return [
+                poem_lines[index:index + multiple]
+                for index in range(0, len(poem_lines), multiple)
+                if len(poem_lines[index:index + multiple]) == multiple
+            ]
+
+        return [poem_lines]
+
+    def poem_refrain_similarity(poem_lines, entry):
+        refrain = entry.get("refrain")
+        if not refrain:
+            return None
+
+        positions = refrain.get("positions") or []
+        units = refrain_units(poem_lines, entry)
+        if not positions or not units:
+            return None
+
+        compared = 0
+        matches = 0
+        texts_by_position = {position: [] for position in positions}
+
+        for unit in units:
+            for position in positions:
+                compared += 1
+                index = position - 1
+                if index >= len(unit):
+                    continue
+                _, data = unit[index]
+                if data.get("retrouso"):
+                    matches += 1
+                texts_by_position[position].append(data["_normalized_verse_text"])
+
+        if compared == 0:
+            return None
+
+        score = matches / compared
+        if refrain.get("repeat_across_stanzas"):
+            repeated_scores = []
+            for texts in texts_by_position.values():
+                texts = [text for text in texts if text]
+                if len(texts) < 2:
+                    repeated_scores.append(0)
+                else:
+                    most_common = max(texts.count(text) for text in set(texts))
+                    repeated_scores.append(most_common / len(texts))
+            score = min(score, sum(repeated_scores) / len(repeated_scores))
+
+        return score
+
+    def score_poem_entry(poem_data, entry):
+        poem_lines = sorted(poem_data.items())
+        observed_length = len(poem_lines)
+        if not poem_entry_allowed_for_length(entry, observed_length):
+            return None
+
+        finals = [data["final"] for _, data in poem_lines]
+        observed_pattern = make_pattern(finals)
+        observed_metre = [data["metre"] for _, data in poem_lines]
+        observed_pairs = poem_observed_pairs(poem_lines, observed_pattern)
+        stanzas = get_stanzas(poem_data)
+
+        metre_score = stanza_metre_similarity(observed_metre, entry)
+        stanza_type_score = poem_stanza_type_similarity(stanzas, entry)
+        stanza_length_score = poem_stanza_length_similarity(stanzas, entry)
+        refrain_score = poem_refrain_similarity(poem_lines, entry)
+        verse_count_score = count_similarity(observed_length, entry.get("verse_count"))
+        stanza_count_score = count_similarity(len(stanzas), entry.get("stanza_count"))
+
+        if entry.get("min_stanza_count") is not None:
+            stanza_count_score = (
+                1
+                if len(stanzas) >= entry["min_stanza_count"]
+                else len(stanzas) / entry["min_stanza_count"]
+            )
+
+        best = None
+        for pattern in entry.get("patterns", ["*"]):
+            expected_pattern = expand_pattern(pattern, observed_length)
+            if expected_pattern != "*" and len(expected_pattern) != observed_length:
+                continue
+            pattern_score = stanza_pattern_similarity(observed_pattern, expected_pattern)
+            expected_pairs = expected_pair_data(
+                expected_pattern,
+                entry.get("rhymes"),
+                entry.get("rhyme_kind"),
+            )
+            rhyme_score = rhyme_type_similarity(
+                observed_pairs,
+                expected_pairs,
+                entry.get("rhyme_kind"),
+            )
+
+            if entry.get("refrain", {}).get("required") and refrain_score != 1:
+                probability = 0
+            elif entry.get("stanza_lengths") and stanza_length_score != 1:
+                probability = 0
+            else:
+                components = [
+                    score
+                    for score in (
+                        pattern_score,
+                        metre_score,
+                        rhyme_score,
+                        stanza_type_score,
+                        refrain_score,
+                        stanza_length_score,
+                        verse_count_score,
+                        stanza_count_score,
+                    )
+                    if score is not None
+                ]
+                probability = sum(components) / len(components) if components else 1
+
+            result = {
+                "entry": entry,
+                "probability": probability,
+                "observed_pattern": observed_pattern,
+                "expected_pattern": expected_pattern,
+                "pattern_similarity": pattern_score,
+                "metre_similarity": metre_score,
+                "rhyme_type_similarity": rhyme_score,
+                "stanza_type_similarity": stanza_type_score,
+                "refrain_similarity": refrain_score,
+                "stanza_length_similarity": stanza_length_score,
+                "verse_count_similarity": verse_count_score,
+                "stanza_count_similarity": stanza_count_score,
+            }
+            if best is None or result["probability"] > best["probability"]:
+                best = result
+
+        return best
+
+    def annotate_poem_type(poem_data):
+        if not poem_patterns:
+            return
+
+        scores = [
+            score_poem_entry(poem_data, entry)
+            for entry in poem_patterns
+        ]
+        scores = [score for score in scores if score is not None]
+        if not scores:
+            return
+
+        def best_poem_entry(poem_type):
+            candidates = [
+                score
+                for score in scores
+                if score["entry"].get("poem_type") == poem_type
+                and not score["entry"].get("parent_type")
+                and not score["entry"].get("refines_type")
+            ]
+            if not candidates:
+                return None
+            return max(candidates, key=lambda score: score["probability"])
+
+        def best_child(parent_type, relation_key):
+            candidates = [
+                score
+                for score in scores
+                if score["entry"].get(relation_key) == parent_type
+            ]
+            if not candidates:
+                return None
+            best = max(candidates, key=lambda score: score["probability"])
+            if best["probability"] >= args.poem_type_min_probability:
+                return best
+            return None
+
+        winner = max(scores, key=lambda score: score["probability"])
+        entry = winner["entry"]
+        poem_type = entry["poem_type"]
+        probability = winner["probability"]
+        selected_probability = winner["probability"]
+        poem_subtype = None
+        poem_subtype_probability = None
+
+        if entry.get("parent_type"):
+            parent_score = best_poem_entry(entry["parent_type"])
+            poem_type = entry["parent_type"]
+            probability = (
+                parent_score["probability"]
+                if parent_score
+                else winner["probability"]
+            )
+            poem_subtype = entry["poem_type"]
+            poem_subtype_probability = winner["probability"]
+        else:
+            subtype = best_child(poem_type, "parent_type")
+            if subtype:
+                poem_subtype = subtype["entry"]["poem_type"]
+                poem_subtype_probability = subtype["probability"]
+
+        refinement = best_child(poem_type, "refines_type")
+        if refinement:
+            winner = refinement
+            entry = winner["entry"]
+            poem_type = entry["poem_type"]
+            probability = winner["probability"]
+            selected_probability = winner["probability"]
+            poem_subtype = None
+            poem_subtype_probability = None
+        elif entry.get("refines_type"):
+            poem_type = entry["poem_type"]
+            probability = winner["probability"]
+            selected_probability = winner["probability"]
+            poem_subtype = None
+            poem_subtype_probability = None
+
+        if selected_probability < args.poem_type_min_probability:
+            return
+
+        for data in poem_data.values():
+            data["poem_type"] = poem_type
+            data["poem_type_probability"] = probability
+            data["poem_subtype"] = poem_subtype
+            data["poem_subtype_probability"] = poem_subtype_probability
+            data["poem_expected_pattern"] = winner["expected_pattern"]
+            data["poem_observed_pattern"] = winner["observed_pattern"]
+            data["poem_pattern_similarity"] = winner["pattern_similarity"]
+            data["poem_metre_similarity"] = winner["metre_similarity"]
+            data["poem_rhyme_type_similarity"] = winner["rhyme_type_similarity"]
+            data["poem_stanza_type_similarity"] = winner["stanza_type_similarity"]
+            data["poem_refrain_similarity"] = winner["refrain_similarity"]
+            data["poem_stanza_length_similarity"] = winner["stanza_length_similarity"]
+            data["poem_verse_count_similarity"] = winner["verse_count_similarity"]
+            data["poem_stanza_count_similarity"] = winner["stanza_count_similarity"]
+
     def more_than_half_complete(groups):
         if not groups:
             return False
@@ -1173,6 +1743,8 @@ for poem_id, poem in df.groupby(args.poem_column, sort=False):
         *probability_penalties(consonante_groups),
     )
     annotate_stanza_types(poem_data)
+    detect_retrouso(poem_data)
+    annotate_poem_type(poem_data)
     final_numbers = renumber_final(poem_data)
     add_final_letters(poem_data, final_numbers)
     verse_number = 1
@@ -1187,9 +1759,25 @@ for poem_id, poem in df.groupby(args.poem_column, sort=False):
             poem_values.pop("stanza")
             poem_values.pop("_asonante_key")
             poem_values.pop("_consonante_key")
+            poem_values.pop("_normalized_verse_text")
             poem_values["rima"] = poem_values.pop("rhyme_tail")
             poem_values["vogais"] = ",".join(poem_values.pop("vowels"))
             letter = poem_values.pop("letter")
+            metre = poem_values.pop("metre")
+            poem_type = poem_values.pop("poem_type")
+            poem_type_probability = poem_values.pop("poem_type_probability")
+            poem_subtype = poem_values.pop("poem_subtype")
+            poem_subtype_probability = poem_values.pop("poem_subtype_probability")
+            poem_expected_pattern = poem_values.pop("poem_expected_pattern")
+            poem_observed_pattern = poem_values.pop("poem_observed_pattern")
+            poem_pattern_similarity = poem_values.pop("poem_pattern_similarity")
+            poem_metre_similarity = poem_values.pop("poem_metre_similarity")
+            poem_rhyme_type_similarity = poem_values.pop("poem_rhyme_type_similarity")
+            poem_stanza_type_similarity = poem_values.pop("poem_stanza_type_similarity")
+            poem_refrain_similarity = poem_values.pop("poem_refrain_similarity")
+            poem_stanza_length_similarity = poem_values.pop("poem_stanza_length_similarity")
+            poem_verse_count_similarity = poem_values.pop("poem_verse_count_similarity")
+            poem_stanza_count_similarity = poem_values.pop("poem_stanza_count_similarity")
             stanza_type = poem_values.pop("stanza_type")
             stanza_type_probability = poem_values.pop("stanza_type_probability")
             stanza_type_probability_poem = poem_values.pop("stanza_type_probability_poem")
@@ -1204,6 +1792,10 @@ for poem_id, poem in df.groupby(args.poem_column, sort=False):
                     args.poem_column: poem_id,
                     args.stanza_column: stanza_n,
                     "verse_n": verse_number,
+                    "poem_type": poem_type,
+                    "poem_type_probability": poem_type_probability,
+                    "poem_subtype": poem_subtype,
+                    "poem_subtype_probability": poem_subtype_probability,
                     "stanza_type": stanza_type,
                     "stanza_type_probability": stanza_type_probability,
                     "stanza_type_probability_poem": stanza_type_probability_poem,
@@ -1214,6 +1806,17 @@ for poem_id, poem in df.groupby(args.poem_column, sort=False):
                     **extra_columns,
                     "letter": letter,
                     args.rhyme_column or "rhyme": rhyme,
+                    "metre": metre,
+                    "poem_observed_pattern": poem_observed_pattern,
+                    "poem_expected_pattern": poem_expected_pattern,
+                    "poem_pattern_similarity": poem_pattern_similarity,
+                    "poem_metre_similarity": poem_metre_similarity,
+                    "poem_rhyme_type_similarity": poem_rhyme_type_similarity,
+                    "poem_stanza_type_similarity": poem_stanza_type_similarity,
+                    "poem_refrain_similarity": poem_refrain_similarity,
+                    "poem_stanza_length_similarity": poem_stanza_length_similarity,
+                    "poem_verse_count_similarity": poem_verse_count_similarity,
+                    "poem_stanza_count_similarity": poem_stanza_count_similarity,
                     **poem_values,
                 }
             )

@@ -6,7 +6,8 @@ preprocessed verse data.
 The main script is `rhyme.py`. It reads a TSV of verses, groups rows by poem and
 stanza, extracts rhyme tails from phonetic/syllabified text, detects assonant
 and consonant rhyme groups, chooses a final rhyme label per verse, and optionally
-scores stanza types using `data/stanza_patterns.json`.
+scores stanza types using `data/stanza_patterns.json` and poem types using
+`data/poem_patterns.json`.
 
 ## Requirements
 
@@ -57,6 +58,20 @@ Verse-type tags are assigned only for perfect rhythmic matches. For
 `gaita_galega` lines shorter than 10 syllables, the tag is kept only when the
 line can be assigned to a non-overlapping adjacent pair in the same stanza where
 both lines are shorter than 10 syllables and match a `gaita_galega` rhythm.
+
+Poem-type scoring uses `data/poem_patterns.json` by default. To use another
+file, pass:
+
+```bash
+--poem-patterns-path path/to/poem_patterns.json
+```
+
+Poem types are output only when the best poem-type probability is at least
+`0.8` by default. Change this with:
+
+```bash
+--poem-type-min-probability 0.75
+```
 
 ## Running
 
@@ -151,6 +166,17 @@ consonante_probability         combined consonant probability
 verse_type                     rhythmic verse type, only for perfect matches
 observed_rhythm                observed rhythmic accents from gprMet/meterNbr
 expected_rhythm                required and optional accents for verse_type
+retrouso                       repeated verse/refrain marker
+poem_type                      selected poem type
+poem_type_probability          poem type probability
+poem_observed_pattern          full-poem observed rhyme pattern
+poem_expected_pattern          expected full-poem rhyme pattern
+poem_pattern_similarity        poem rhyme-pattern component
+poem_metre_similarity          poem metre component
+poem_rhyme_type_similarity     poem rhyme-type component
+poem_stanza_type_similarity    poem stanza-type component
+poem_refrain_similarity        poem refrain/retrouso component
+poem_stanza_length_similarity  poem stanza-length component
 stanza_type                    selected broad stanza type
 stanza_type_probability        local stanza probability
 stanza_type_probability_poem   poem-level support for the selected type

@@ -207,6 +207,7 @@ python evaluate_rhyme_tags.py \
   --pred-column letter \
   --gold-column rhyme \
   --group-column poem_id \
+  --text-column lines \
   --pairs-path data/rhyme_pairs.tsv \
   --summary-path data/summary.tsv
 ```

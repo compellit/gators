@@ -92,6 +92,8 @@ parser.add_argument("--ph-column", default="phSilaba")
 parser.add_argument("--rhyme-column", default="rhyme")
 parser.add_argument("--syllable-column")
 parser.add_argument("--rhythm-column")
+parser.add_argument("--no-syllable-column", action="store_true")
+parser.add_argument("--no-rhythm-column", action="store_true")
 parser.add_argument("--stanza-patterns-path", default=DEFAULT_STANZA_PATTERNS_PATH)
 parser.add_argument("--poem-patterns-path", default=DEFAULT_POEM_PATTERNS_PATH)
 parser.add_argument("--subtype-min-probability", type=float, default=0.8)
@@ -144,7 +146,10 @@ def normalize_refrain_text(value):
     return value
 
 
-def choose_syllable_column(df, requested):
+def choose_syllable_column(df, requested, disabled=False):
+    if disabled:
+        return None
+
     if requested:
         if requested not in df.columns:
             raise ValueError(
@@ -160,7 +165,10 @@ def choose_syllable_column(df, requested):
     return None
 
 
-def choose_rhythm_column(df, requested):
+def choose_rhythm_column(df, requested, disabled=False):
+    if disabled:
+        return None
+
     if requested:
         if requested not in df.columns:
             raise ValueError(
@@ -287,8 +295,16 @@ df = pd.read_csv(
     escapechar="\\",
 )
 df.columns = df.columns.str.strip()
-syllable_column = choose_syllable_column(df, args.syllable_column)
-rhythm_column = choose_rhythm_column(df, args.rhythm_column)
+syllable_column = choose_syllable_column(
+    df,
+    args.syllable_column,
+    args.no_syllable_column,
+)
+rhythm_column = choose_rhythm_column(
+    df,
+    args.rhythm_column,
+    args.no_rhythm_column,
+)
 stanza_patterns = load_stanza_patterns(args.stanza_patterns_path)
 poem_patterns = load_stanza_patterns(args.poem_patterns_path)
 result_rows = []

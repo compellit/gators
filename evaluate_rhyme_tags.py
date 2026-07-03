@@ -43,6 +43,13 @@ def parse_args():
         default=None,
         help="Optional line identifier column to include in --pairs-path output.",
     )
+    parser.add_argument(
+        "--text-column",
+        help=(
+            "Optional verse text column to include in --pairs-path output. "
+            "Defaults to lines, verse_text, or prepro when available."
+        ),
+    )
     return parser.parse_args()
 
 
@@ -109,6 +116,21 @@ def choose_gold_column(fieldnames, requested):
     )
 
 
+def choose_text_column(fieldnames, requested):
+    if requested:
+        if requested not in fieldnames:
+            raise ValueError(
+                f"Missing column {requested!r}. Available columns: {', '.join(fieldnames)}"
+            )
+        return requested
+
+    for candidate in ("lines", "verse_text", "prepro"):
+        if candidate in fieldnames:
+            return candidate
+
+    return None
+
+
 def grouped_rows(rows, group_columns):
     groups = {}
     for row_index, row in enumerate(rows, start=1):
@@ -168,7 +190,14 @@ def metrics(counts):
     }
 
 
-def evaluate(rows, group_columns, pred_column, gold_column, line_id_column=None):
+def evaluate(
+    rows,
+    group_columns,
+    pred_column,
+    gold_column,
+    line_id_column=None,
+    text_column=None,
+):
     counts = empty_counts()
     pair_rows = []
 
@@ -212,6 +241,8 @@ def evaluate(rows, group_columns, pred_column, gold_column, line_id_column=None)
                 {
                     **{column: value for column, value in zip(group_columns, group_key)},
                     "line_pair": f"{left_id}-{right_id}",
+                    "left_text": left.get(text_column, "") if text_column else "",
+                    "right_text": right.get(text_column, "") if text_column else "",
                     "pred_pair": f"{left_pred}-{right_pred}",
                     "gold_pair": f"{left_gold}-{right_gold}",
                     "pred_same": int(pred_same),
@@ -274,6 +305,8 @@ def write_pairs(path, pair_rows, group_columns):
     fieldnames = [
         *group_columns,
         "line_pair",
+        "left_text",
+        "right_text",
         "pred_pair",
         "gold_pair",
         "pred_same",
@@ -297,6 +330,7 @@ def main():
     args = parse_args()
     fieldnames, rows = read_rows(args.input_path)
     gold_column = choose_gold_column(fieldnames, args.gold_column)
+    text_column = choose_text_column(fieldnames, args.text_column)
     for column in (args.pred_column, gold_column):
         if column not in fieldnames:
             raise ValueError(
@@ -315,6 +349,7 @@ def main():
         args.pred_column,
         gold_column,
         args.line_id_column,
+        text_column,
     )
     metric_values = metrics(counts)
     print_metrics(metric_values)

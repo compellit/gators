@@ -103,8 +103,7 @@ def read_labels(path: Path) -> list[str]:
 def arguments() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description=(
-            "Reletter every recurrence outside the line window and emit "
-            "tab-separated original and new labels."
+            "Reletter every recurrence outside the line window."
         )
     )
     parser.add_argument(
@@ -116,6 +115,12 @@ def arguments() -> argparse.Namespace:
         help="default: wk/letters_to_change.txt",
     )
     parser.add_argument("-o", "--output", type=Path)
+    parser.add_argument(
+        "-d",
+        "--dbg",
+        action="store_true",
+        help="emit tab-separated original and new labels",
+    )
     parser.add_argument("--window", type=int, default=5)
     return parser.parse_args()
 
@@ -133,7 +138,12 @@ def main() -> int:
 
     original = read_labels(args.input)
     changed = reletter(original, args.first_new_letter, args.window)
-    text = "".join(f"{old}\t{new}\n" for old, new in zip(original, changed))
+    if args.dbg:
+        text = "".join(
+            f"{old}\t{new}\n" for old, new in zip(original, changed)
+        )
+    else:
+        text = "".join(f"{label}\n" for label in changed)
 
     if args.output:
         args.output.write_text(text, encoding="utf-8")

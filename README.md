@@ -169,6 +169,8 @@ expected_rhythm                required and optional accents for verse_type
 retrouso                       repeated verse/refrain marker
 poem_type                      selected poem type
 poem_type_probability          poem type probability
+poem_subtype                   selected poem subtype, when any
+poem_subtype_probability       poem subtype probability
 poem_observed_pattern          full-poem observed rhyme pattern
 poem_expected_pattern          expected full-poem rhyme pattern
 poem_pattern_similarity        poem rhyme-pattern component

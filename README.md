@@ -179,7 +179,7 @@ poem_refrain_similarity        poem refrain/retrouso component
 poem_stanza_length_similarity  poem stanza-length component
 stanza_type                    selected broad stanza type
 stanza_type_probability        local stanza probability
-stanza_type_probability_poem   poem-level support for the selected type
+stanza_type_probability_poem   stanza probability taking both local and poem-level support into account
 stanza_subtype                 selected subtype, when any
 observed_pattern               final observed stanza rhyme pattern
 expected_pattern               best matching predefined pattern

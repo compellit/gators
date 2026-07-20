@@ -39,6 +39,14 @@ def parse_args():
         ),
     )
     parser.add_argument(
+        "--stanzas-path",
+        help=(
+            "Optional TSV path for one row per stanza-type comparison. Defaults "
+            "to stanzas.tsv beside --pairs-path, or in the current directory if "
+            "no --pairs-path is used. Written only when stanza evaluation is available."
+        ),
+    )
+    parser.add_argument(
         "--line-id-column",
         default=None,
         help="Optional line identifier column to include in --pairs-path output.",
@@ -49,6 +57,24 @@ def parse_args():
             "Optional verse text column to include in --pairs-path output. "
             "Defaults to lines, verse_text, or prepro when available."
         ),
+    )
+    parser.add_argument(
+        "--stanza-gold-column",
+        help=(
+            "Gold narrow stanza-type column. Defaults to stanzaTypeNarrow "
+            "when present."
+        ),
+    )
+    parser.add_argument(
+        "--stanza-pred-column",
+        help=(
+            "Predicted narrow stanza-type column. By default, uses stanza_subtype "
+            "when populated and falls back to stanza_type."
+        ),
+    )
+    parser.add_argument(
+        "--stanza-column",
+        help="Stanza identifier column. Defaults to stanzaNbr or stanza_n.",
     )
     return parser.parse_args()
 
@@ -190,6 +216,142 @@ def metrics(counts):
     }
 
 
+def choose_stanza_column(fieldnames, requested):
+    if requested:
+        if requested not in fieldnames:
+            raise ValueError(
+                f"Missing stanza column {requested!r}. "
+                f"Available columns: {', '.join(fieldnames)}"
+            )
+        return requested
+
+    for candidate in ("stanzaNbr", "stanza_n"):
+        if candidate in fieldnames:
+            return candidate
+
+    return None
+
+
+def evaluate_stanza_types(
+    rows,
+    group_columns,
+    stanza_column,
+    gold_column,
+    pred_column=None,
+):
+    stanzas = {}
+    for row in rows:
+        key = tuple(row[column] for column in group_columns)
+        key += (row[stanza_column],)
+        stanzas.setdefault(key, []).append(row)
+
+    total = 0
+    correct = 0
+    missing_predictions = 0
+    stanza_rows = []
+    for key, stanza in stanzas.items():
+        gold = next(
+            (
+                normalize_label(row[gold_column])
+                for row in stanza
+                if normalize_label(row[gold_column])
+            ),
+            "",
+        )
+        if not is_rhyme_label(gold):
+            continue
+
+        pred_type = ""
+        pred_subtype = ""
+        if pred_column:
+            pred = next(
+                (
+                    normalize_label(row[pred_column])
+                    for row in stanza
+                    if normalize_label(row[pred_column])
+                ),
+                "",
+            )
+        else:
+            pred_type = next(
+                (
+                    normalize_label(row.get("stanza_type"))
+                    for row in stanza
+                    if normalize_label(row.get("stanza_type"))
+                ),
+                "",
+            )
+            pred_subtype = next(
+                (
+                    normalize_label(row.get("stanza_subtype"))
+                    for row in stanza
+                    if normalize_label(row.get("stanza_subtype"))
+                ),
+                "",
+            )
+            pred = pred_subtype or pred_type
+        pred_matches = [value for value in (pred_subtype, pred_type, pred) if value]
+        stanza_match = bool(pred_type and gold == pred_type)
+        subtype_match = bool(pred_subtype and gold == pred_subtype)
+        custom_match = bool(pred_column and pred == gold)
+        is_correct = stanza_match or subtype_match or custom_match
+
+        verse_values = [
+            normalize_label(row.get("verse_n"))
+            for row in stanza
+            if normalize_label(row.get("verse_n"))
+        ]
+        verse_range = ""
+        if verse_values:
+            verse_range = (
+                verse_values[0]
+                if verse_values[0] == verse_values[-1]
+                else f"{verse_values[0]}-{verse_values[-1]}"
+            )
+        observed_pattern = next(
+            (row.get("observed_pattern", "") for row in stanza if row.get("observed_pattern", "")),
+            "",
+        )
+        expected_pattern = next(
+            (row.get("expected_pattern", "") for row in stanza if row.get("expected_pattern", "")),
+            "",
+        )
+
+        total += 1
+        if not pred_matches:
+            missing_predictions += 1
+        elif is_correct:
+            correct += 1
+
+        stanza_rows.append(
+            {
+                **{column: value for column, value in zip(group_columns, key[:-1])},
+                stanza_column: key[-1],
+                "line_count": len(stanza),
+                "verse_range": verse_range,
+                "gold_stanza": gold,
+                "pred_stanza": pred,
+                "pred_stanza_type": pred_type,
+                "pred_stanza_subtype": pred_subtype,
+                "stanza_match": str(stanza_match),
+                "subtype_match": str(subtype_match),
+                "missing_prediction": str(not pred_matches),
+                "observed_pattern": observed_pattern,
+                "expected_pattern": expected_pattern,
+            }
+        )
+
+    return (
+        {
+            "stanza_type_stanzas": total,
+            "stanza_type_correct": correct,
+            "stanza_type_missing_predictions": missing_predictions,
+            "stanza_type_accuracy": safe_divide(correct, total),
+        },
+        stanza_rows,
+    )
+
+
 def evaluate(
     rows,
     group_columns,
@@ -260,6 +422,14 @@ def print_metrics(values):
         print(f"{key}\t{values[key]}")
     for key in ("accuracy", "precision", "recall", "f1", "line_accuracy", "perfect_group_accuracy"):
         print(f"{key}\t{values[key]:.6f}")
+    if "stanza_type_accuracy" in values:
+        for key in (
+            "stanza_type_stanzas",
+            "stanza_type_correct",
+            "stanza_type_missing_predictions",
+        ):
+            print(f"{key}\t{values[key]}")
+        print(f"stanza_type_accuracy\t{values['stanza_type_accuracy']:.6f}")
 
 
 def write_summary(path, values, input_path, pairs_path=None):
@@ -279,6 +449,10 @@ def write_summary(path, values, input_path, pairs_path=None):
         "tn",
         "line_accuracy",
         "perfect_group_accuracy",
+        "stanza_type_stanzas",
+        "stanza_type_correct",
+        "stanza_type_missing_predictions",
+        "stanza_type_accuracy",
     ]
     row = {
         "input_path": input_path,
@@ -326,6 +500,35 @@ def write_pairs(path, pair_rows, group_columns):
         writer.writerows(pair_rows)
 
 
+def write_stanzas(path, stanza_rows, group_columns, stanza_column):
+    fieldnames = [
+        *group_columns,
+        stanza_column,
+        "line_count",
+        "verse_range",
+        "gold_stanza",
+        "pred_stanza",
+        "pred_stanza_type",
+        "pred_stanza_subtype",
+        "stanza_match",
+        "subtype_match",
+        "missing_prediction",
+        "observed_pattern",
+        "expected_pattern",
+    ]
+    with open(path, "w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=fieldnames,
+            delimiter="\t",
+            quoting=csv.QUOTE_NONE,
+            quotechar=TSV_QUOTECHAR,
+            escapechar="\\",
+        )
+        writer.writeheader()
+        writer.writerows(stanza_rows)
+
+
 def main():
     args = parse_args()
     fieldnames, rows = read_rows(args.input_path)
@@ -352,10 +555,46 @@ def main():
         text_column,
     )
     metric_values = metrics(counts)
+    stanza_column = choose_stanza_column(fieldnames, args.stanza_column)
+    stanza_rows = None
+    stanza_gold_column = args.stanza_gold_column or "stanzaTypeNarrow"
+    if args.stanza_gold_column and stanza_gold_column not in fieldnames:
+        raise ValueError(
+            f"Missing stanza gold column {stanza_gold_column!r}. "
+            f"Available columns: {', '.join(fieldnames)}"
+        )
+    if stanza_gold_column in fieldnames and stanza_column:
+        if args.stanza_pred_column:
+            if args.stanza_pred_column not in fieldnames:
+                raise ValueError(
+                    f"Missing stanza prediction column {args.stanza_pred_column!r}. "
+                    f"Available columns: {', '.join(fieldnames)}"
+                )
+        elif not {"stanza_type", "stanza_subtype"}.intersection(fieldnames):
+            raise ValueError(
+                "Stanza evaluation requires stanza_type or stanza_subtype, "
+                "or pass --stanza-pred-column."
+            )
+        stanza_metrics, stanza_rows = evaluate_stanza_types(
+            rows,
+            group_columns,
+            stanza_column,
+            stanza_gold_column,
+            args.stanza_pred_column,
+        )
+        metric_values.update(stanza_metrics)
     print_metrics(metric_values)
     if args.pairs_path:
         write_pairs(args.pairs_path, pair_rows, group_columns)
         print(f"pairs_path\t{args.pairs_path}")
+    if stanza_rows is not None:
+        stanzas_path = args.stanzas_path
+        if stanzas_path is None:
+            stanzas_dir = Path(args.pairs_path).parent if args.pairs_path else Path(".")
+            stanzas_path = str(stanzas_dir / "stanzas.tsv")
+        if stanzas_path:
+            write_stanzas(stanzas_path, stanza_rows, group_columns, stanza_column)
+            print(f"stanzas_path\t{stanzas_path}")
     summary_path = args.summary_path
     if summary_path is None:
         summary_dir = Path(args.pairs_path).parent if args.pairs_path else Path(".")

@@ -56,7 +56,6 @@
   },
   {
     "stanza_type": "soledad",
-    "parent_type": "terceto",
     "metre": [
       8
     ],
@@ -82,6 +81,7 @@
   },
   {
     "stanza_type": "cantar",
+    "refines_type": "romancillo",
     "metre": [
       8
     ],
@@ -182,6 +182,12 @@
       11,
       5
     ],
+    "verse_types": [
+      "endecasílabo_sáfico",
+      "endecasílabo_sáfico",
+      "endecasílabo_sáfico",
+      "pentasílabo_adónico"
+    ],
     "repeat_metre": false,
     "patterns": [
       "----"
@@ -233,6 +239,7 @@
   },
   {
     "stanza_type": "seguidilla",
+    "parent_type": "cantar",
     "metre": [
       7,
       5,
@@ -430,6 +437,7 @@
   },
   {
     "stanza_type": "seguidilla_composta",
+    "parent_type": "setina",
     "metre": [
       7,
       5,

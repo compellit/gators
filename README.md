@@ -217,3 +217,13 @@ python evaluate_rhyme_tags.py \
 The evaluator computes pairwise same-rhyme metrics inside each poem or requested
 group. This is useful because rhyme labels are arbitrary within a poem: what
 matters is whether two lines are predicted to rhyme with each other.
+
+When `stanzaTypeNarrow` is present, the evaluator also reports exact stanza-type
+accuracy once per stanza and writes per-stanza comparisons to `stanzas.tsv`
+beside `--pairs-path` by default. The stanza file includes `stanza_match`
+and `subtype_match` columns with `True` or `False` values, so broad type
+and subtype matches can be filtered separately. Stanzas whose gold label is blank,
+`none`, `null`, `nan`, `0`, or `-` are skipped rather than counted as errors.
+By default, the evaluator checks the gold stanza against both `stanza_type` and
+`stanza_subtype`. Use `--stanzas-path`, `--stanza-gold-column`,
+`--stanza-pred-column`, or `--stanza-column` to override these defaults.

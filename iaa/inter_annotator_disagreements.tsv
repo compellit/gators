@@ -1,0 +1,1342 @@
+group	line_pair	left_text	right_text	annotator_1_pair	annotator_2_pair	annotator_1_same	annotator_2_same
+11	6-8	Deslumbrando á luz do dia,	As longas trenzas caidas,	c-d	c-c	0	1
+11	6-11	Deslumbrando á luz do dia,	Ná branca espalda tendidas;	c-d	c-c	0	1
+11	6-12	Deslumbrando á luz do dia,	Apertadas e bruñidas	c-d	c-c	0	1
+11	7-8	Tan branco pé parecia.	As longas trenzas caidas,	c-d	c-c	0	1
+11	7-11	Tan branco pé parecia.	Ná branca espalda tendidas;	c-d	c-c	0	1
+11	7-12	Tan branco pé parecia.	Apertadas e bruñidas	c-d	c-c	0	1
+11	20-23	O coraçon sin falsia,	Nos doces labios á risa,	i-k	h-h	0	1
+11	20-24	O coraçon sin falsia,	Auguiña que ó vento enrisa,	i-k	h-h	0	1
+11	21-23	Que por antr' eles se via.	Nos doces labios á risa,	i-k	h-h	0	1
+11	21-24	Que por antr' eles se via.	Auguiña que ó vento enrisa,	i-k	h-h	0	1
+11	22-29	Levaba na frente á yalma,	Ó par da brisa temprada	j-m	i-i	0	1
+11	22-32	Levaba na frente á yalma,	Unha veiriña encantada.	j-m	i-i	0	1
+11	22-33	Levaba na frente á yalma,	Qu' ali mansa e sosegada	j-m	i-i	0	1
+11	25-29	Pousaba no fondo en calma.	Ó par da brisa temprada	j-m	i-i	0	1
+11	25-32	Pousaba no fondo en calma.	Unha veiriña encantada.	j-m	i-i	0	1
+11	25-33	Pousaba no fondo en calma.	Qu' ali mansa e sosegada	j-m	i-i	0	1
+11	26-29	Tal como gallarda palma	Ó par da brisa temprada	j-m	i-i	0	1
+11	26-32	Tal como gallarda palma	Unha veiriña encantada.	j-m	i-i	0	1
+11	26-33	Tal como gallarda palma	Qu' ali mansa e sosegada	j-m	i-i	0	1
+11	65-69	Cal mais á mais ven portada,	Brancas vinchas se levantan,	ab-ac	ab-ab	0	1
+11	65-70	Cal mais á mais ven portada,	As meniñas cantan... cantan.	ab-ac	ab-ab	0	1
+11	66-69	Xarros de louza vidrada,	Brancas vinchas se levantan,	ab-ac	ab-ab	0	1
+11	66-70	Xarros de louza vidrada,	As meniñas cantan... cantan.	ab-ac	ab-ab	0	1
+11	72-78	A espesa niebra enrarece,	Arredor tod' arrescende	ae-ag	ae-ae	0	1
+11	72-81	A espesa niebra enrarece,	Fogax de groria s' encende.	ae-ag	ae-ae	0	1
+11	72-82	A espesa niebra enrarece,	Mais á meniña n' atende	ae-ag	ae-ae	0	1
+11	73-78	O arboriño que frorece	Arredor tod' arrescende	ae-ag	ae-ae	0	1
+11	73-81	O arboriño que frorece	Fogax de groria s' encende.	ae-ag	ae-ae	0	1
+11	73-82	O arboriño que frorece	Mais á meniña n' atende	ae-ag	ae-ae	0	1
+12	36-42	¿Quén sabe, ó fin, s' estrela	Esa pranta que brota oxe d'a terra,	ñ-q	o-o	0	1
+12	36-44	¿Quén sabe, ó fin, s' estrela	Sobre canto de podre e ruin encerra,	ñ-q	o-o	0	1
+12	36-45	¿Quén sabe, ó fin, s' estrela	Arbol será de paz tras tanta guerra?	ñ-q	o-o	0	1
+12	38-42	Purísima é sinxela,	Esa pranta que brota oxe d'a terra,	ñ-q	o-o	0	1
+12	38-44	Purísima é sinxela,	Sobre canto de podre e ruin encerra,	ñ-q	o-o	0	1
+12	38-45	Purísima é sinxela,	Arbol será de paz tras tanta guerra?	ñ-q	o-o	0	1
+12	56-61	Namentres, noite, pasa,	Pasa, noite d'as fadas,	v-x	v-v	0	1
+12	57-63	Pasa, eses teus luceiros apagando:	Qu'as párpedas pechadas	w-x	w-w	0	1
+12	58-61	Linda é a lua; mais sua lus escasa	Pasa, noite d'as fadas,	v-x	v-v	0	1
+12	59-63	Agoiro fôra infando	Qu'as párpedas pechadas	w-x	w-w	0	1
+12	60-63	O berze d'o meu neno alumeando.	Qu'as párpedas pechadas	w-x	w-w	0	1
+12	61-63	Pasa, noite d'as fadas,	Qu'as párpedas pechadas	x-x	v-w	1	0
+12	66-71	¡Ouh, sol! Tí que atesouras	Pol-a xigante lomba	z-ab	y-y	0	1
+12	66-73	¡Ouh, sol! Tí que atesouras	Cal namorada pomba	z-ab	y-y	0	1
+12	68-71	Tí, qu' os outeiros douras	Pol-a xigante lomba	z-ab	y-y	0	1
+12	68-73	Tí, qu' os outeiros douras	Cal namorada pomba	z-ab	y-y	0	1
+13	18-22	Aló po la mañanciña,	Todas por él se morrian,	h-j	h-h	0	1
+13	18-23	Aló po la mañanciña,	S' ó tiñan cerca, sorrian,	h-j	h-h	0	1
+13	18-28	Aló po la mañanciña,	Aló pó la mañanciña,	h-l	h-h	0	1
+13	18-29	Aló po la mañanciña,	Con esta miña gaitiña	h-l	h-h	0	1
+13	18-31	Aló po la mañanciña,	Camiño da romeria,	h-m	h-h	0	1
+13	18-34	Aló po la mañanciña,	¡Querote! lle repetia...	h-m	h-h	0	1
+13	18-35	Aló po la mañanciña,	Y él c' á gaita respondia	h-m	h-h	0	1
+13	18-38	Aló po la mañanciña,	Aló po la mañanciña,	h-o	h-h	0	1
+13	18-39	Aló po la mañanciña,	Con esta miña gaitiña	h-o	h-h	0	1
+13	18-42	Aló po la mañanciña,	E por xunta d' el corrian,	h-q	h-h	0	1
+13	18-43	Aló po la mañanciña,	Cegas... cegas que non vian	h-q	h-h	0	1
+13	18-48	Aló po la mañanciña,	Aló po la mañanciña,	h-s	h-h	0	1
+13	18-49	Aló po la mañanciña,	Ó son da miña gaitiña	h-s	h-h	0	1
+13	19-22	Con esta miña gaitiña	Todas por él se morrian,	h-j	h-h	0	1
+13	19-23	Con esta miña gaitiña	S' ó tiñan cerca, sorrian,	h-j	h-h	0	1
+13	19-28	Con esta miña gaitiña	Aló pó la mañanciña,	h-l	h-h	0	1
+13	19-29	Con esta miña gaitiña	Con esta miña gaitiña	h-l	h-h	0	1
+13	19-31	Con esta miña gaitiña	Camiño da romeria,	h-m	h-h	0	1
+13	19-34	Con esta miña gaitiña	¡Querote! lle repetia...	h-m	h-h	0	1
+13	19-35	Con esta miña gaitiña	Y él c' á gaita respondia	h-m	h-h	0	1
+13	19-38	Con esta miña gaitiña	Aló po la mañanciña,	h-o	h-h	0	1
+13	19-39	Con esta miña gaitiña	Con esta miña gaitiña	h-o	h-h	0	1
+13	19-42	Con esta miña gaitiña	E por xunta d' el corrian,	h-q	h-h	0	1
+13	19-43	Con esta miña gaitiña	Cegas... cegas que non vian	h-q	h-h	0	1
+13	19-48	Con esta miña gaitiña	Aló po la mañanciña,	h-s	h-h	0	1
+13	19-49	Con esta miña gaitiña	Ó son da miña gaitiña	h-s	h-h	0	1
+13	22-28	Todas por él se morrian,	Aló pó la mañanciña,	j-l	h-h	0	1
+13	22-29	Todas por él se morrian,	Con esta miña gaitiña	j-l	h-h	0	1
+13	22-31	Todas por él se morrian,	Camiño da romeria,	j-m	h-h	0	1
+13	22-34	Todas por él se morrian,	¡Querote! lle repetia...	j-m	h-h	0	1
+13	22-35	Todas por él se morrian,	Y él c' á gaita respondia	j-m	h-h	0	1
+13	22-38	Todas por él se morrian,	Aló po la mañanciña,	j-o	h-h	0	1
+13	22-39	Todas por él se morrian,	Con esta miña gaitiña	j-o	h-h	0	1
+13	22-42	Todas por él se morrian,	E por xunta d' el corrian,	j-q	h-h	0	1
+13	22-43	Todas por él se morrian,	Cegas... cegas que non vian	j-q	h-h	0	1
+13	22-48	Todas por él se morrian,	Aló po la mañanciña,	j-s	h-h	0	1
+13	22-49	Todas por él se morrian,	Ó son da miña gaitiña	j-s	h-h	0	1
+13	23-28	S' ó tiñan cerca, sorrian,	Aló pó la mañanciña,	j-l	h-h	0	1
+13	23-29	S' ó tiñan cerca, sorrian,	Con esta miña gaitiña	j-l	h-h	0	1
+13	23-31	S' ó tiñan cerca, sorrian,	Camiño da romeria,	j-m	h-h	0	1
+13	23-34	S' ó tiñan cerca, sorrian,	¡Querote! lle repetia...	j-m	h-h	0	1
+13	23-35	S' ó tiñan cerca, sorrian,	Y él c' á gaita respondia	j-m	h-h	0	1
+13	23-38	S' ó tiñan cerca, sorrian,	Aló po la mañanciña,	j-o	h-h	0	1
+13	23-39	S' ó tiñan cerca, sorrian,	Con esta miña gaitiña	j-o	h-h	0	1
+13	23-42	S' ó tiñan cerca, sorrian,	E por xunta d' el corrian,	j-q	h-h	0	1
+13	23-43	S' ó tiñan cerca, sorrian,	Cegas... cegas que non vian	j-q	h-h	0	1
+13	23-48	S' ó tiñan cerca, sorrian,	Aló po la mañanciña,	j-s	h-h	0	1
+13	23-49	S' ó tiñan cerca, sorrian,	Ó son da miña gaitiña	j-s	h-h	0	1
+13	28-31	Aló pó la mañanciña,	Camiño da romeria,	l-m	h-h	0	1
+13	28-34	Aló pó la mañanciña,	¡Querote! lle repetia...	l-m	h-h	0	1
+13	28-35	Aló pó la mañanciña,	Y él c' á gaita respondia	l-m	h-h	0	1
+13	28-38	Aló pó la mañanciña,	Aló po la mañanciña,	l-o	h-h	0	1
+13	28-39	Aló pó la mañanciña,	Con esta miña gaitiña	l-o	h-h	0	1
+13	28-42	Aló pó la mañanciña,	E por xunta d' el corrian,	l-q	h-h	0	1
+13	28-43	Aló pó la mañanciña,	Cegas... cegas que non vian	l-q	h-h	0	1
+13	28-48	Aló pó la mañanciña,	Aló po la mañanciña,	l-s	h-h	0	1
+13	28-49	Aló pó la mañanciña,	Ó son da miña gaitiña	l-s	h-h	0	1
+13	29-31	Con esta miña gaitiña	Camiño da romeria,	l-m	h-h	0	1
+13	29-34	Con esta miña gaitiña	¡Querote! lle repetia...	l-m	h-h	0	1
+13	29-35	Con esta miña gaitiña	Y él c' á gaita respondia	l-m	h-h	0	1
+13	29-38	Con esta miña gaitiña	Aló po la mañanciña,	l-o	h-h	0	1
+13	29-39	Con esta miña gaitiña	Con esta miña gaitiña	l-o	h-h	0	1
+13	29-42	Con esta miña gaitiña	E por xunta d' el corrian,	l-q	h-h	0	1
+13	29-43	Con esta miña gaitiña	Cegas... cegas que non vian	l-q	h-h	0	1
+13	29-48	Con esta miña gaitiña	Aló po la mañanciña,	l-s	h-h	0	1
+13	29-49	Con esta miña gaitiña	Ó son da miña gaitiña	l-s	h-h	0	1
+13	31-38	Camiño da romeria,	Aló po la mañanciña,	m-o	h-h	0	1
+13	31-39	Camiño da romeria,	Con esta miña gaitiña	m-o	h-h	0	1
+13	31-42	Camiño da romeria,	E por xunta d' el corrian,	m-q	h-h	0	1
+13	31-43	Camiño da romeria,	Cegas... cegas que non vian	m-q	h-h	0	1
+13	31-48	Camiño da romeria,	Aló po la mañanciña,	m-s	h-h	0	1
+13	31-49	Camiño da romeria,	Ó son da miña gaitiña	m-s	h-h	0	1
+13	34-38	¡Querote! lle repetia...	Aló po la mañanciña,	m-o	h-h	0	1
+13	34-39	¡Querote! lle repetia...	Con esta miña gaitiña	m-o	h-h	0	1
+13	34-42	¡Querote! lle repetia...	E por xunta d' el corrian,	m-q	h-h	0	1
+13	34-43	¡Querote! lle repetia...	Cegas... cegas que non vian	m-q	h-h	0	1
+13	34-48	¡Querote! lle repetia...	Aló po la mañanciña,	m-s	h-h	0	1
+13	34-49	¡Querote! lle repetia...	Ó son da miña gaitiña	m-s	h-h	0	1
+13	35-38	Y él c' á gaita respondia	Aló po la mañanciña,	m-o	h-h	0	1
+13	35-39	Y él c' á gaita respondia	Con esta miña gaitiña	m-o	h-h	0	1
+13	35-42	Y él c' á gaita respondia	E por xunta d' el corrian,	m-q	h-h	0	1
+13	35-43	Y él c' á gaita respondia	Cegas... cegas que non vian	m-q	h-h	0	1
+13	35-48	Y él c' á gaita respondia	Aló po la mañanciña,	m-s	h-h	0	1
+13	35-49	Y él c' á gaita respondia	Ó son da miña gaitiña	m-s	h-h	0	1
+13	38-42	Aló po la mañanciña,	E por xunta d' el corrian,	o-q	h-h	0	1
+13	38-43	Aló po la mañanciña,	Cegas... cegas que non vian	o-q	h-h	0	1
+13	38-48	Aló po la mañanciña,	Aló po la mañanciña,	o-s	h-h	0	1
+13	38-49	Aló po la mañanciña,	Ó son da miña gaitiña	o-s	h-h	0	1
+13	39-42	Con esta miña gaitiña	E por xunta d' el corrian,	o-q	h-h	0	1
+13	39-43	Con esta miña gaitiña	Cegas... cegas que non vian	o-q	h-h	0	1
+13	39-48	Con esta miña gaitiña	Aló po la mañanciña,	o-s	h-h	0	1
+13	39-49	Con esta miña gaitiña	Ó son da miña gaitiña	o-s	h-h	0	1
+13	42-48	E por xunta d' el corrian,	Aló po la mañanciña,	q-s	h-h	0	1
+13	42-49	E por xunta d' el corrian,	Ó son da miña gaitiña	q-s	h-h	0	1
+13	43-48	Cegas... cegas que non vian	Aló po la mañanciña,	q-s	h-h	0	1
+13	43-49	Cegas... cegas que non vian	Ó son da miña gaitiña	q-s	h-h	0	1
+14	2-6	e déixate de ir á misa,	déixame garda-lo día;	b-d	b-b	0	1
+14	2-7	e déixate de ir á misa,	se eu fiare, ¿que diría	b-d	b-b	0	1
+14	3-6	pensa que non tés camisa	déixame garda-lo día;	b-d	b-b	0	1
+14	3-7	pensa que non tés camisa	se eu fiare, ¿que diría	b-d	b-b	0	1
+15	3-21	púxome o crego na misa do pobo	Bótalle ó pote unha léngoa de porco,	b-b	b-0	1	0
+15	3-23	púxome o crego na misa do pobo	bótalle ó pote unha léngoa de porco:	b-b	b-0	1	0
+15	5-21	Algo ha de haber de verdade no conto,	Bótalle ó pote unha léngoa de porco,	b-b	b-0	1	0
+15	5-23	Algo ha de haber de verdade no conto,	bótalle ó pote unha léngoa de porco:	b-b	b-0	1	0
+15	21-23	Bótalle ó pote unha léngoa de porco,	bótalle ó pote unha léngoa de porco:	b-b	0-0	1	0
+16	13-19	Ben saben qu' as anduriñas	Non dúbides, anduriña,	g-j	g-g	0	1
+16	13-20	Ben saben qu' as anduriñas	n-a terriña	g-j	g-g	0	1
+16	14-19	as espiñas	Non dúbides, anduriña,	g-j	g-g	0	1
+16	14-20	as espiñas	n-a terriña	g-j	g-g	0	1
+18	35-37	Cando, ay de min! te via	Cóida, miña meniña,	c-c	0-0	1	0
+18	39-43	Que donde moitos cospen,	Os teus frescos colores,	d-d	0-d	1	0
+18	39-47	Que donde moitos cospen,	Donde, meniña, donde	d-d	0-d	1	0
+18	43-69	Os teus frescos colores,	«Ben sabes, Farruquiño,	d-g	d-d	0	1
+18	47-69	Donde, meniña, donde	«Ben sabes, Farruquiño,	d-g	d-d	0	1
+18	49-53	Xá non te vin, meniña,	Xá non te vin fresquiña	f-f	0-0	1	0
+18	49-57	Xá non te vin, meniña,	Hóra de dór ferida	f-f	0-0	1	0
+18	49-61	Xá non te vin, meniña,	Eu ben, miña meniña,	f-f	0-0	1	0
+18	49-65	Xá non te vin, meniña,	Mais ánque dir, eu diga,	f-f	0-0	1	0
+18	53-57	Xá non te vin fresquiña	Hóra de dór ferida	f-f	0-0	1	0
+18	53-61	Xá non te vin fresquiña	Eu ben, miña meniña,	f-f	0-0	1	0
+18	53-65	Xá non te vin fresquiña	Mais ánque dir, eu diga,	f-f	0-0	1	0
+18	57-61	Hóra de dór ferida	Eu ben, miña meniña,	f-f	0-0	1	0
+18	57-65	Hóra de dór ferida	Mais ánque dir, eu diga,	f-f	0-0	1	0
+18	61-65	Eu ben, miña meniña,	Mais ánque dir, eu diga,	f-f	0-0	1	0
+18	63-67	Qu' á quel que ben te quixo	Respondenme sorrindo	g-g	0-e	1	0
+18	63-69	Qu' á quel que ben te quixo	«Ben sabes, Farruquiño,	g-g	0-d	1	0
+18	67-69	Respondenme sorrindo	«Ben sabes, Farruquiño,	g-g	e-d	1	0
+19	22-29	corpo de dama,	¡Fuxir da lama	g-0	g-g	0	1
+19	24-29	foxen da lama.	¡Fuxir da lama	g-0	g-g	0	1
+19	39-46	decindo cousas	que fan agora,	m-ñ	n-n	0	1
+19	39-48	decindo cousas	de adentro afora.	m-ñ	n-n	0	1
+19	43-46	daquelas voltas	que fan agora,	m-ñ	n-n	0	1
+19	43-48	daquelas voltas	de adentro afora.	m-ñ	n-n	0	1
+19	58-66	tantos furados	que aló na feira	r-r	s-t	1	0
+19	58-68	tantos furados	da faltriqueira,	r-r	s-t	1	0
+19	58-69	tantos furados	decindo: «As perdas	r-r	s-0	1	0
+19	60-66	nos punteados.	que aló na feira	r-r	s-t	1	0
+19	60-68	nos punteados.	da faltriqueira,	r-r	s-t	1	0
+19	60-69	nos punteados.	decindo: «As perdas	r-r	s-0	1	0
+19	66-69	que aló na feira	decindo: «As perdas	r-r	t-0	1	0
+19	67-70	rouboumo un majo	dos descoidados	s-s	0-u	1	0
+19	67-72	rouboumo un majo	dos apañados».	s-s	0-u	1	0
+19	68-69	da faltriqueira,	decindo: «As perdas	r-r	t-0	1	0
+19	113-118	Que cando durma	das herbas mudas,	0-ag	ak-ak	0	1
+19	113-120	Que cando durma	gaita de Xudas.	0-ag	ak-ak	0	1
+19	117-122	bailando enriba	que noutros días	0-ah	am-am	0	1
+19	117-124	bailando enriba	nas romerías,	0-ah	am-am	0	1
+2	71-74	Abades, monxas, beatas...	De contas d’amancebadas	x-x	0-0	1	0
+22	5-11	—¿Escura?...mais relumbra non sei que luz traidora...	—Mais aqui ond’este cómaro, hay un-ha cova fonda,	c-f	c-c	0	1
+22	5-12	—¿Escura?...mais relumbra non sei que luz traidora...	Ven, e santos ou deños, que nos atopen óra.	c-f	c-c	0	1
+22	6-11	—E un-ha estrela que brila, n’as auguas bulidoras.	—Mais aqui ond’este cómaro, hay un-ha cova fonda,	c-f	c-c	0	1
+22	6-12	—E un-ha estrela que brila, n’as auguas bulidoras.	Ven, e santos ou deños, que nos atopen óra.	c-f	c-c	0	1
+23	9-15	Asoprando,	Po los astros?	e-e	e-h	1	0
+23	9-18	Asoprando,	En canastros.	e-e	e-h	1	0
+23	9-20	Asoprando,	E mais cantos os levaron	e-e	e-j	1	0
+23	9-23	Asoprando,	Que aiá por baixo quedaron	e-e	e-j	1	0
+23	9-27	Asoprando,	Que pasaron,	e-e	e-n	1	0
+23	9-30	Asoprando,	Que pasmaron?	e-e	e-n	1	0
+23	12-15	Van soltando.	Po los astros?	e-e	e-h	1	0
+23	12-18	Van soltando.	En canastros.	e-e	e-h	1	0
+23	12-20	Van soltando.	E mais cantos os levaron	e-e	e-j	1	0
+23	12-23	Van soltando.	Que aiá por baixo quedaron	e-e	e-j	1	0
+23	12-27	Van soltando.	Que pasaron,	e-e	e-n	1	0
+23	12-30	Van soltando.	Que pasmaron?	e-e	e-n	1	0
+23	15-20	Po los astros?	E mais cantos os levaron	e-e	h-j	1	0
+23	15-23	Po los astros?	Que aiá por baixo quedaron	e-e	h-j	1	0
+23	15-27	Po los astros?	Que pasaron,	e-e	h-n	1	0
+23	15-30	Po los astros?	Que pasmaron?	e-e	h-n	1	0
+23	18-20	En canastros.	E mais cantos os levaron	e-e	h-j	1	0
+23	18-23	En canastros.	Que aiá por baixo quedaron	e-e	h-j	1	0
+23	18-27	En canastros.	Que pasaron,	e-e	h-n	1	0
+23	18-30	En canastros.	Que pasmaron?	e-e	h-n	1	0
+23	20-27	E mais cantos os levaron	Que pasaron,	e-e	j-n	1	0
+23	20-30	E mais cantos os levaron	Que pasmaron?	e-e	j-n	1	0
+23	23-27	Que aiá por baixo quedaron	Que pasaron,	e-e	j-n	1	0
+23	23-30	Que aiá por baixo quedaron	Que pasmaron?	e-e	j-n	1	0
+27	2-154	desperanzas ledas,	n-a parroquea ventana	a-f	a-a	0	1
+27	4-154	virxes d‘unha nena,	n-a parroquea ventana	a-f	a-a	0	1
+27	6-154	saindo d‘ aldea	n-a parroquea ventana	a-f	a-a	0	1
+27	8-154	fun á estranas terras.	n-a parroquea ventana	a-f	a-a	0	1
+27	10-154	non me coneceras	n-a parroquea ventana	a-f	a-a	0	1
+27	12-154	retornei pra ela...,	n-a parroquea ventana	a-f	a-a	0	1
+27	14-154	galayos e penas,	n-a parroquea ventana	a-f	a-a	0	1
+27	16-154	canas n-a cabeza!	n-a parroquea ventana	a-f	a-a	0	1
+27	18-154	sendo noite pêcha,	n-a parroquea ventana	a-f	a-a	0	1
+27	20-154	caladiña e negra.	n-a parroquea ventana	a-f	a-a	0	1
+27	22-154	de cavar n-as terras,	n-a parroquea ventana	a-f	a-a	0	1
+27	24-154	folganza compreta.	n-a parroquea ventana	a-f	a-a	0	1
+27	26-154	soaban n-a serra	n-a parroquea ventana	a-f	a-a	0	1
+27	28-154	d‘ a gaita parleira,	n-a parroquea ventana	a-f	a-a	0	1
+27	30-154	d‘ a trullada leda,	n-a parroquea ventana	a-f	a-a	0	1
+27	32-154	d‘os cás d‘as facendas,	n-a parroquea ventana	a-f	a-a	0	1
+27	34-154	presos â cadéa,	n-a parroquea ventana	a-f	a-a	0	1
+27	36-154	a calma solémnia.	n-a parroquea ventana	a-f	a-a	0	1
+27	38-154	cruceiro de pedra	n-a parroquea ventana	a-f	a-a	0	1
+27	40-154	amantes escenas;	n-a parroquea ventana	a-f	a-a	0	1
+27	42-154	y-âs apalpadelas,	n-a parroquea ventana	a-f	a-a	0	1
+27	44-154	y-as mans n-as silveiras,	n-a parroquea ventana	a-f	a-a	0	1
+27	46-154	d‘ a miña Sabela..	n-a parroquea ventana	a-f	a-a	0	1
+27	48-154	d‘o corral aberta;	n-a parroquea ventana	a-f	a-a	0	1
+27	50-154	poi-as escaleiras,	n-a parroquea ventana	a-f	a-a	0	1
+27	52-154	n-a solaina estensa.	n-a parroquea ventana	a-f	a-a	0	1
+27	54-154	pol-as rendixelas,	n-a parroquea ventana	a-f	a-a	0	1
+27	56-154	vin as mesmas trévoas..	n-a parroquea ventana	a-f	a-a	0	1
+27	58-154	pasoume unha idea;	n-a parroquea ventana	a-f	a-a	0	1
+27	60-154	palabras postreiras:	n-a parroquea ventana	a-f	a-a	0	1
+27	62-154	ser que cando veñas,	n-a parroquea ventana	a-f	a-a	0	1
+27	64-154	que non mais me vexas.»	n-a parroquea ventana	a-f	a-a	0	1
+27	66-154	non toleei d‘ aquela!	n-a parroquea ventana	a-f	a-a	0	1
+27	68-154	e dínme tal presa	n-a parroquea ventana	a-f	a-a	0	1
+27	70-154	nin feito por méigas,	n-a parroquea ventana	a-f	a-a	0	1
+27	72-154	de pallas acesas.	n-a parroquea ventana	a-f	a-a	0	1
+27	74-154	logo arrempuxéina;	n-a parroquea ventana	a-f	a-a	0	1
+27	76-154	chamando á Sabela,	n-a parroquea ventana	a-f	a-a	0	1
+27	78-154	y-a quietude mesma!	n-a parroquea ventana	a-f	a-a	0	1
+27	80-154	onde a luz puxera	n-a parroquea ventana	a-f	a-a	0	1
+27	82-154	cando sain d‘ aldea,	n-a parroquea ventana	a-f	a-a	0	1
+27	83-85	e nada tampouco...	pêcha... ¡e mal agoiro!	b-b	0-0	1	0
+27	84-154	hachábase pêcha,	n-a parroquea ventana	a-f	a-a	0	1
+27	86-154	de froles deserta...	n-a parroquea ventana	a-f	a-a	0	1
+27	88-154	nunca Dios me dera!	n-a parroquea ventana	a-f	a-a	0	1
+27	90-154	¿que farei sen ela?	n-a parroquea ventana	a-f	a-a	0	1
+27	92-154	e cal si quixera	n-a parroquea ventana	a-f	a-a	0	1
+27	94-154	pol-a miña prenda,	n-a parroquea ventana	a-f	a-a	0	1
+27	96-154	n‘ altura fixéina.	n-a parroquea ventana	a-f	a-a	0	1
+27	98-154	de loito coberta,	n-a parroquea ventana	a-f	a-a	0	1
+27	100-154	fulgor d‘as estrelas,	n-a parroquea ventana	a-f	a-a	0	1
+27	102-154	d‘as noites sereas,	n-a parroquea ventana	a-f	a-a	0	1
+27	104-154	de Dios a grandeza.	n-a parroquea ventana	a-f	a-a	0	1
+27	106-154	curazon, alenta,	n-a parroquea ventana	a-f	a-a	0	1
+27	108-154	non ansi estiveran	n-a parroquea ventana	a-f	a-a	0	1
+27	110-154	y-a noite tan negra;	n-a parroquea ventana	a-f	a-a	0	1
+27	112-154	dempois d‘ unha ausencia,	n-a parroquea ventana	a-f	a-a	0	1
+27	114-154	delor que m‘ apena,	n-a parroquea ventana	a-f	a-a	0	1
+27	116-154	meu ánxel, collera	n-a parroquea ventana	a-f	a-a	0	1
+27	118-154	n-a luz d‘ unha estrela.	n-a parroquea ventana	a-f	a-a	0	1
+27	120-154	demais pracenteiras,	n-a parroquea ventana	a-f	a-a	0	1
+27	122-154	nin pracer tivera,	n-a parroquea ventana	a-f	a-a	0	1
+27	124-154	n-a estension d‘ a veiga.	n-a parroquea ventana	a-f	a-a	0	1
+27	126-154	y-a miña sorpresa,	n-a parroquea ventana	a-f	a-a	0	1
+27	128-154	blanquexar a cirexa,	n-a parroquea ventana	a-f	a-a	0	1
+27	130-154	os mortos enterran,	n-a parroquea ventana	a-f	a-a	0	1
+27	132-154	duas luces intensas,	n-a parroquea ventana	a-f	a-a	0	1
+27	134-154	com‘ a neve mesma!	n-a parroquea ventana	a-f	a-a	0	1
+27	136-154	¿serán volvoretas?	n-a parroquea ventana	a-f	a-a	0	1
+27	138-154	non se pode vêlas.	n-a parroquea ventana	a-f	a-a	0	1
+27	140-154	siguindo lixeira,	n-a parroquea ventana	a-f	a-a	0	1
+27	142-154	e quixer collêla...	n-a parroquea ventana	a-f	a-a	0	1
+27	144-154	duas almas en pena?	n-a parroquea ventana	a-f	a-a	0	1
+27	146-154	n-a hora suprema	n-a parroquea ventana	a-f	a-a	0	1
+27	147-154	en que os mortos falan	n-a parroquea ventana	f-f	e-a	1	0
+27	148-154	y-as mortaxas deixan...,	n-a parroquea ventana	a-f	a-a	0	1
+27	150-154	Pode ser que as sexan!	n-a parroquea ventana	a-f	a-a	0	1
+27	151-154	¿Serán d‘ a compaña	n-a parroquea ventana	f-f	e-a	1	0
+27	152-154	duas q‘ â desfeita	n-a parroquea ventana	a-f	a-a	0	1
+27	153-157	andan, ou enfermos	brilás cal lostregos;	0-0	f-f	0	1
+27	154-156	n-a parroquea ventana	luces que n-as tréboas	f-a	a-a	0	1
+27	154-158	n-a parroquea ventana	¿sondes aparencia	f-a	a-a	0	1
+27	154-160	n-a parroquea ventana	duas almas en pena?	f-a	a-a	0	1
+27	154-162	n-a parroquea ventana	xa despareceran,	f-a	a-a	0	1
+27	154-164	n-a parroquea ventana	as luces aquelas.	f-a	a-a	0	1
+3	29-34	Pó-la mañan, cariña de rosas;	Que di á traidora?	0-b	b-b	0	1
+3	29-36	Pó-la mañan, cariña de rosas;	C' os negros desprezos qu' á falsa che dona,	0-b	b-b	0	1
+3	29-38	Pó-la mañan, cariña de rosas;	¿Por qué namorado, de pena saloucas?	0-b	b-b	0	1
+3	29-40	Pó-la mañan, cariña de rosas;	Ela é traidora.	0-b	b-b	0	1
+3	29-42	Pó-la mañan, cariña de rosas;	Qu' airiños me viran veleta mal posta.....	0-b	b-b	0	1
+3	29-44	Pó-la mañan, cariña de rosas;	Qu' agora me chaman,dempois me desbotan.	0-b	b-b	0	1
+3	29-46	Pó-la mañan, cariña de rosas;	Eres traidora.	0-b	b-b	0	1
+3	29-48	Pó-la mañan, cariña de rosas;	E s' outras renego de ti..... ¡pecadora!	0-b	b-b	0	1
+3	29-50	Pó-la mañan, cariña de rosas;	S' ó vento qu' as manda rebole antr' as ondas?	0-b	b-b	0	1
+3	29-52	Pó-la mañan, cariña de rosas;	Qu' és revoltosa.	0-b	b-b	0	1
+3	29-54	Pó-la mañan, cariña de rosas;	Tal bulra merece quen ama sin conta,	0-b	b-b	0	1
+3	29-56	Pó-la mañan, cariña de rosas;	Âs portas d' ó inferno seguindote fora.	0-b	b-b	0	1
+3	29-58	Pó-la mañan, cariña de rosas;	Tal és graciosa.	0-b	b-b	0	1
+3	29-60	Pó-la mañan, cariña de rosas;	Quixais qu' asi sea, mais ti, miña xoya,	0-b	b-b	0	1
+3	29-62	Pó-la mañan, cariña de rosas;	Qu' agora descrube, qu' agora s' entolda.	0-b	b-b	0	1
+3	29-64	Pó-la mañan, cariña de rosas;	Nena fermosa.	0-b	b-b	0	1
+30	29-33	—Pois sube abranguélas,	Subir tí puderas,	c-c	0-c	1	0
+30	29-35	—Pois sube abranguélas,	Ligeira e gordecha,	c-c	0-c	1	0
+32	1-5	Fada garrida de leves alas,	Con lindas galas,	a-a	-	1	0
+32	3-6	No doce abril;	Desconocida, presta e gentil:	b-b	-	1	0
+32	8-11	No espacio culto,	Do monte inculto,	c-c	-	1	0
+32	9-12	Dos pátrios agros costumas voar;	Te soes sin trazas evaporar:	d-d	-	1	0
+32	13-16	Das tuas alas o doce ruido,	Que n' o percibe o atento oído,	e-e	-	1	0
+32	15-18	O grato son;	O corazon:	f-f	-	1	0
+32	19-23	Oín mil veces na miña infancia,	Doce fragáncia,	g-g	-	1	0
+32	21-24	Da verde Erín	Cando pasabas por junta min.	h-h	-	1	0
+32	26-29	Nin sei a donde,	Nin como ou onde,	i-i	-	1	0
+32	27-30	Ou vas ou tornas, nin por qué lei;	Nin en q' antigo tempo t' hachéi.	j-j	-	1	0
+32	31-34	Se fui na gandra de Carboéiro,	Se nas alturas de Portoméiro,	k-k	-	1	0
+32	33-36	Ou de Buxán;	De Barrañán.	l-l	-	1	0
+32	37-41	N' os verdexantes cómaros do Esto,	De Corcoésto,	m-m	-	1	0
+32	39-42	Ou d' Angeriz;	Ou sobr' o cume do Gomariz.	n-n	-	1	0
+32	44-47	Na vaga bruma,	Na branca escuma,	ñ-ñ	-	1	0
+32	45-48	De prado verde na branda cor;	De casta estrela no resprandor.	o-o	-	1	0
+32	49-52	Nas negras copas armoniosas,	Se fui nas gandras espacïosas,	p-p	-	1	0
+32	51-54	Q' hai en Cartel;	De Recemel.	q-q	-	1	0
+32	55-59	Non sei... mais levo tua doce historia;	Porq' a memoria,	r-r	-	1	0
+32	57-60	Quen m' a insinóu;	Doces lembranzas de ti gardóu.	s-s	-	1	0
+32	62-65	Reminiscencia,	D' outra existencia	t-t	-	1	0
+32	62-68	Reminiscencia,	Dos nobres celtas,	t-t	-	1	0
+32	63-66	És d' outra vida que paséi já;	Misterïosa q' inda virá.	u-u	-	1	0
+32	65-68	D' outra existencia	Dos nobres celtas,	t-t	-	1	0
+32	67-70	Virgen dos celtas d' amigos astros,	Quezáis habitas nos verdes castros,	v-v	-	1	0
+32	69-72	Fortes e bóos;	Grandes avóos.	w-w	-	1	0
+32	71-76	Genio dos nosos	Detén un pouco,	x-x	-	1	0
+32	73-77	E pois no cárzle q' ó home encerra,	Na escura terra,	y-y	-	1	0
+32	75-78	Tregua ou solaz;	O teu gracioso paso fugaz.	z-z	-	1	0
+32	80-83	Dos teus garridos,	Do van collidos,	aa-aa	-	1	0
+32	81-84	Graciosos velos de ledo tul,	Dos pátrios ceos no brando azul.	ab-ab	-	1	0
+33	2-4	Ten n 'o cume un penedo furado,	Que é o asombro d'o mundo cristiano.	a-a	-	1	0
+33	2-6	Ten n 'o cume un penedo furado,	Seus parentes oférceno ó santo,	a-a	-	1	0
+33	2-8	Ten n 'o cume un penedo furado,	Alá o levan, a festa en chegando.	a-a	-	1	0
+33	2-10	Ten n 'o cume un penedo furado,	Que Ile colle d un lado á outro lado,	a-a	-	1	0
+33	2-12	Ten n 'o cume un penedo furado,	Pol-a gorxa de pedra pasándo-o:	a-a	-	1	0
+33	2-14	Ten n 'o cume un penedo furado,	D'o meu tangaraño:	a-a	-	1	0
+33	2-16	Ten n 'o cume un penedo furado,	Devólvemo sano.	a-a	-	1	0
+33	2-18	Ten n 'o cume un penedo furado,	Sin refolgo tomar nin descanso,	a-a	-	1	0
+33	2-20	Ten n 'o cume un penedo furado,	Queda xa desentangarañado.	a-a	-	1	0
+33	2-22	Ten n 'o cume un penedo furado,	San Benito quirido, meu santo,	a-a	-	1	0
+33	2-24	Ten n 'o cume un penedo furado,	Que xa tiven de fillos un fato,	a-a	-	1	0
+33	2-26	Ten n 'o cume un penedo furado,	D'a concencia ou d'os membros baldados,	a-a	-	1	0
+33	2-28	Ten n 'o cume un penedo furado,	Pr'os meus nenos n'o voso santuario.	a-a	-	1	0
+33	2-30	Ten n 'o cume un penedo furado,	Seis perniles de porco cebado,	a-a	-	1	0
+33	2-32	Ten n 'o cume un penedo furado,	Repitin aquel místico ensalmo:	a-a	-	1	0
+33	2-34	Ten n 'o cume un penedo furado,	Meus fillos vos trayo;	a-a	-	1	0
+33	2-36	Ten n 'o cume un penedo furado,	Volvédemos sanos.	a-a	-	1	0
+33	2-38	Ten n 'o cume un penedo furado,	Todas tres sin me dar resultado,	a-a	-	1	0
+33	2-40	Ten n 'o cume un penedo furado,	Morren todos entangarañados.	a-a	-	1	0
+33	2-42	Ten n 'o cume un penedo furado,	Novo Cristo d'os povos escravos,	a-a	-	1	0
+33	2-44	Ten n 'o cume un penedo furado,	De verdugos, de reis é tiranos,	a-a	-	1	0
+33	2-46	Ten n 'o cume un penedo furado,	Vés traguer o consolo agardado,	a-a	-	1	0
+33	2-48	Ten n 'o cume un penedo furado,	De ben probe e mizquiño agasallo,	a-a	-	1	0
+33	2-50	Ten n 'o cume un penedo furado,	Tí serás dende agora o meu santo,	a-a	-	1	0
+33	2-52	Ten n 'o cume un penedo furado,	Baixo ó teu proteutor patronado:	a-a	-	1	0
+33	2-54	Ten n 'o cume un penedo furado,	Meus nenos che trayo;	a-a	-	1	0
+33	2-56	Ten n 'o cume un penedo furado,	Devólvemos sanos.	a-a	-	1	0
+33	2-58	Ten n 'o cume un penedo furado,	O calor meciñal d'o teu bafo,	a-a	-	1	0
+33	2-60	Ten n 'o cume un penedo furado,	Quedarán desentangarañados.	a-a	-	1	0
+33	2-62	Ten n 'o cume un penedo furado,	Cal repôlos en horto pechado.	a-a	-	1	0
+33	2-64	Ten n 'o cume un penedo furado,	E tortiños están ¡mal pocados!	a-a	-	1	0
+33	2-66	Ten n 'o cume un penedo furado,	Aquel outro cacique d'o raño,	a-a	-	1	0
+33	2-68	Ten n 'o cume un penedo furado,	Dóise aquel d'un Sylock n'o espiñazo.	a-a	-	1	0
+33	2-70	Ten n 'o cume un penedo furado,	Que nin mesmo que os viran meigallos:	a-a	-	1	0
+33	2-72	Ten n 'o cume un penedo furado,	Esta gran xuventude de sapos!	a-a	-	1	0
+33	2-74	Ten n 'o cume un penedo furado,	D'os meus tangarañes!	a-a	-	1	0
+33	2-76	Ten n 'o cume un penedo furado,	Devólvemos sanos.	a-a	-	1	0
+33	2-78	Ten n 'o cume un penedo furado,	Como queiras farás o milagro;	a-a	-	1	0
+33	2-80	Ten n 'o cume un penedo furado,	Vivirán desentangarañados.	a-a	-	1	0
+33	4-6	Que é o asombro d'o mundo cristiano.	Seus parentes oférceno ó santo,	a-a	-	1	0
+33	4-8	Que é o asombro d'o mundo cristiano.	Alá o levan, a festa en chegando.	a-a	-	1	0
+33	4-10	Que é o asombro d'o mundo cristiano.	Que Ile colle d un lado á outro lado,	a-a	-	1	0
+33	4-12	Que é o asombro d'o mundo cristiano.	Pol-a gorxa de pedra pasándo-o:	a-a	-	1	0
+33	4-14	Que é o asombro d'o mundo cristiano.	D'o meu tangaraño:	a-a	-	1	0
+33	4-16	Que é o asombro d'o mundo cristiano.	Devólvemo sano.	a-a	-	1	0
+33	4-18	Que é o asombro d'o mundo cristiano.	Sin refolgo tomar nin descanso,	a-a	-	1	0
+33	4-20	Que é o asombro d'o mundo cristiano.	Queda xa desentangarañado.	a-a	-	1	0
+33	4-22	Que é o asombro d'o mundo cristiano.	San Benito quirido, meu santo,	a-a	-	1	0
+33	4-24	Que é o asombro d'o mundo cristiano.	Que xa tiven de fillos un fato,	a-a	-	1	0
+33	4-26	Que é o asombro d'o mundo cristiano.	D'a concencia ou d'os membros baldados,	a-a	-	1	0
+33	4-28	Que é o asombro d'o mundo cristiano.	Pr'os meus nenos n'o voso santuario.	a-a	-	1	0
+33	4-30	Que é o asombro d'o mundo cristiano.	Seis perniles de porco cebado,	a-a	-	1	0
+33	4-32	Que é o asombro d'o mundo cristiano.	Repitin aquel místico ensalmo:	a-a	-	1	0
+33	4-34	Que é o asombro d'o mundo cristiano.	Meus fillos vos trayo;	a-a	-	1	0
+33	4-36	Que é o asombro d'o mundo cristiano.	Volvédemos sanos.	a-a	-	1	0
+33	4-38	Que é o asombro d'o mundo cristiano.	Todas tres sin me dar resultado,	a-a	-	1	0
+33	4-40	Que é o asombro d'o mundo cristiano.	Morren todos entangarañados.	a-a	-	1	0
+33	4-42	Que é o asombro d'o mundo cristiano.	Novo Cristo d'os povos escravos,	a-a	-	1	0
+33	4-44	Que é o asombro d'o mundo cristiano.	De verdugos, de reis é tiranos,	a-a	-	1	0
+33	4-46	Que é o asombro d'o mundo cristiano.	Vés traguer o consolo agardado,	a-a	-	1	0
+33	4-48	Que é o asombro d'o mundo cristiano.	De ben probe e mizquiño agasallo,	a-a	-	1	0
+33	4-50	Que é o asombro d'o mundo cristiano.	Tí serás dende agora o meu santo,	a-a	-	1	0
+33	4-52	Que é o asombro d'o mundo cristiano.	Baixo ó teu proteutor patronado:	a-a	-	1	0
+33	4-54	Que é o asombro d'o mundo cristiano.	Meus nenos che trayo;	a-a	-	1	0
+33	4-56	Que é o asombro d'o mundo cristiano.	Devólvemos sanos.	a-a	-	1	0
+33	4-58	Que é o asombro d'o mundo cristiano.	O calor meciñal d'o teu bafo,	a-a	-	1	0
+33	4-60	Que é o asombro d'o mundo cristiano.	Quedarán desentangarañados.	a-a	-	1	0
+33	4-62	Que é o asombro d'o mundo cristiano.	Cal repôlos en horto pechado.	a-a	-	1	0
+33	4-64	Que é o asombro d'o mundo cristiano.	E tortiños están ¡mal pocados!	a-a	-	1	0
+33	4-66	Que é o asombro d'o mundo cristiano.	Aquel outro cacique d'o raño,	a-a	-	1	0
+33	4-68	Que é o asombro d'o mundo cristiano.	Dóise aquel d'un Sylock n'o espiñazo.	a-a	-	1	0
+33	4-70	Que é o asombro d'o mundo cristiano.	Que nin mesmo que os viran meigallos:	a-a	-	1	0
+33	4-72	Que é o asombro d'o mundo cristiano.	Esta gran xuventude de sapos!	a-a	-	1	0
+33	4-74	Que é o asombro d'o mundo cristiano.	D'os meus tangarañes!	a-a	-	1	0
+33	4-76	Que é o asombro d'o mundo cristiano.	Devólvemos sanos.	a-a	-	1	0
+33	4-78	Que é o asombro d'o mundo cristiano.	Como queiras farás o milagro;	a-a	-	1	0
+33	4-80	Que é o asombro d'o mundo cristiano.	Vivirán desentangarañados.	a-a	-	1	0
+33	6-8	Seus parentes oférceno ó santo,	Alá o levan, a festa en chegando.	a-a	-	1	0
+33	6-10	Seus parentes oférceno ó santo,	Que Ile colle d un lado á outro lado,	a-a	-	1	0
+33	6-12	Seus parentes oférceno ó santo,	Pol-a gorxa de pedra pasándo-o:	a-a	-	1	0
+33	6-14	Seus parentes oférceno ó santo,	D'o meu tangaraño:	a-a	-	1	0
+33	6-16	Seus parentes oférceno ó santo,	Devólvemo sano.	a-a	-	1	0
+33	6-18	Seus parentes oférceno ó santo,	Sin refolgo tomar nin descanso,	a-a	-	1	0
+33	6-20	Seus parentes oférceno ó santo,	Queda xa desentangarañado.	a-a	-	1	0
+33	6-22	Seus parentes oférceno ó santo,	San Benito quirido, meu santo,	a-a	-	1	0
+33	6-24	Seus parentes oférceno ó santo,	Que xa tiven de fillos un fato,	a-a	-	1	0
+33	6-26	Seus parentes oférceno ó santo,	D'a concencia ou d'os membros baldados,	a-a	-	1	0
+33	6-28	Seus parentes oférceno ó santo,	Pr'os meus nenos n'o voso santuario.	a-a	-	1	0
+33	6-30	Seus parentes oférceno ó santo,	Seis perniles de porco cebado,	a-a	-	1	0
+33	6-32	Seus parentes oférceno ó santo,	Repitin aquel místico ensalmo:	a-a	-	1	0
+33	6-34	Seus parentes oférceno ó santo,	Meus fillos vos trayo;	a-a	-	1	0
+33	6-36	Seus parentes oférceno ó santo,	Volvédemos sanos.	a-a	-	1	0
+33	6-38	Seus parentes oférceno ó santo,	Todas tres sin me dar resultado,	a-a	-	1	0
+33	6-40	Seus parentes oférceno ó santo,	Morren todos entangarañados.	a-a	-	1	0
+33	6-42	Seus parentes oférceno ó santo,	Novo Cristo d'os povos escravos,	a-a	-	1	0
+33	6-44	Seus parentes oférceno ó santo,	De verdugos, de reis é tiranos,	a-a	-	1	0
+33	6-46	Seus parentes oférceno ó santo,	Vés traguer o consolo agardado,	a-a	-	1	0
+33	6-48	Seus parentes oférceno ó santo,	De ben probe e mizquiño agasallo,	a-a	-	1	0
+33	6-50	Seus parentes oférceno ó santo,	Tí serás dende agora o meu santo,	a-a	-	1	0
+33	6-52	Seus parentes oférceno ó santo,	Baixo ó teu proteutor patronado:	a-a	-	1	0
+33	6-54	Seus parentes oférceno ó santo,	Meus nenos che trayo;	a-a	-	1	0
+33	6-56	Seus parentes oférceno ó santo,	Devólvemos sanos.	a-a	-	1	0
+33	6-58	Seus parentes oférceno ó santo,	O calor meciñal d'o teu bafo,	a-a	-	1	0
+33	6-60	Seus parentes oférceno ó santo,	Quedarán desentangarañados.	a-a	-	1	0
+33	6-62	Seus parentes oférceno ó santo,	Cal repôlos en horto pechado.	a-a	-	1	0
+33	6-64	Seus parentes oférceno ó santo,	E tortiños están ¡mal pocados!	a-a	-	1	0
+33	6-66	Seus parentes oférceno ó santo,	Aquel outro cacique d'o raño,	a-a	-	1	0
+33	6-68	Seus parentes oférceno ó santo,	Dóise aquel d'un Sylock n'o espiñazo.	a-a	-	1	0
+33	6-70	Seus parentes oférceno ó santo,	Que nin mesmo que os viran meigallos:	a-a	-	1	0
+33	6-72	Seus parentes oférceno ó santo,	Esta gran xuventude de sapos!	a-a	-	1	0
+33	6-74	Seus parentes oférceno ó santo,	D'os meus tangarañes!	a-a	-	1	0
+33	6-76	Seus parentes oférceno ó santo,	Devólvemos sanos.	a-a	-	1	0
+33	6-78	Seus parentes oférceno ó santo,	Como queiras farás o milagro;	a-a	-	1	0
+33	6-80	Seus parentes oférceno ó santo,	Vivirán desentangarañados.	a-a	-	1	0
+33	8-10	Alá o levan, a festa en chegando.	Que Ile colle d un lado á outro lado,	a-a	-	1	0
+33	8-12	Alá o levan, a festa en chegando.	Pol-a gorxa de pedra pasándo-o:	a-a	-	1	0
+33	8-14	Alá o levan, a festa en chegando.	D'o meu tangaraño:	a-a	-	1	0
+33	8-16	Alá o levan, a festa en chegando.	Devólvemo sano.	a-a	-	1	0
+33	8-18	Alá o levan, a festa en chegando.	Sin refolgo tomar nin descanso,	a-a	-	1	0
+33	8-20	Alá o levan, a festa en chegando.	Queda xa desentangarañado.	a-a	-	1	0
+33	8-22	Alá o levan, a festa en chegando.	San Benito quirido, meu santo,	a-a	-	1	0
+33	8-24	Alá o levan, a festa en chegando.	Que xa tiven de fillos un fato,	a-a	-	1	0
+33	8-26	Alá o levan, a festa en chegando.	D'a concencia ou d'os membros baldados,	a-a	-	1	0
+33	8-28	Alá o levan, a festa en chegando.	Pr'os meus nenos n'o voso santuario.	a-a	-	1	0
+33	8-30	Alá o levan, a festa en chegando.	Seis perniles de porco cebado,	a-a	-	1	0
+33	8-32	Alá o levan, a festa en chegando.	Repitin aquel místico ensalmo:	a-a	-	1	0
+33	8-34	Alá o levan, a festa en chegando.	Meus fillos vos trayo;	a-a	-	1	0
+33	8-36	Alá o levan, a festa en chegando.	Volvédemos sanos.	a-a	-	1	0
+33	8-38	Alá o levan, a festa en chegando.	Todas tres sin me dar resultado,	a-a	-	1	0
+33	8-40	Alá o levan, a festa en chegando.	Morren todos entangarañados.	a-a	-	1	0
+33	8-42	Alá o levan, a festa en chegando.	Novo Cristo d'os povos escravos,	a-a	-	1	0
+33	8-44	Alá o levan, a festa en chegando.	De verdugos, de reis é tiranos,	a-a	-	1	0
+33	8-46	Alá o levan, a festa en chegando.	Vés traguer o consolo agardado,	a-a	-	1	0
+33	8-48	Alá o levan, a festa en chegando.	De ben probe e mizquiño agasallo,	a-a	-	1	0
+33	8-50	Alá o levan, a festa en chegando.	Tí serás dende agora o meu santo,	a-a	-	1	0
+33	8-52	Alá o levan, a festa en chegando.	Baixo ó teu proteutor patronado:	a-a	-	1	0
+33	8-54	Alá o levan, a festa en chegando.	Meus nenos che trayo;	a-a	-	1	0
+33	8-56	Alá o levan, a festa en chegando.	Devólvemos sanos.	a-a	-	1	0
+33	8-58	Alá o levan, a festa en chegando.	O calor meciñal d'o teu bafo,	a-a	-	1	0
+33	8-60	Alá o levan, a festa en chegando.	Quedarán desentangarañados.	a-a	-	1	0
+33	8-62	Alá o levan, a festa en chegando.	Cal repôlos en horto pechado.	a-a	-	1	0
+33	8-64	Alá o levan, a festa en chegando.	E tortiños están ¡mal pocados!	a-a	-	1	0
+33	8-66	Alá o levan, a festa en chegando.	Aquel outro cacique d'o raño,	a-a	-	1	0
+33	8-68	Alá o levan, a festa en chegando.	Dóise aquel d'un Sylock n'o espiñazo.	a-a	-	1	0
+33	8-70	Alá o levan, a festa en chegando.	Que nin mesmo que os viran meigallos:	a-a	-	1	0
+33	8-72	Alá o levan, a festa en chegando.	Esta gran xuventude de sapos!	a-a	-	1	0
+33	8-74	Alá o levan, a festa en chegando.	D'os meus tangarañes!	a-a	-	1	0
+33	8-76	Alá o levan, a festa en chegando.	Devólvemos sanos.	a-a	-	1	0
+33	8-78	Alá o levan, a festa en chegando.	Como queiras farás o milagro;	a-a	-	1	0
+33	8-80	Alá o levan, a festa en chegando.	Vivirán desentangarañados.	a-a	-	1	0
+33	10-12	Que Ile colle d un lado á outro lado,	Pol-a gorxa de pedra pasándo-o:	a-a	-	1	0
+33	10-14	Que Ile colle d un lado á outro lado,	D'o meu tangaraño:	a-a	-	1	0
+33	10-16	Que Ile colle d un lado á outro lado,	Devólvemo sano.	a-a	-	1	0
+33	10-18	Que Ile colle d un lado á outro lado,	Sin refolgo tomar nin descanso,	a-a	-	1	0
+33	10-20	Que Ile colle d un lado á outro lado,	Queda xa desentangarañado.	a-a	-	1	0
+33	10-22	Que Ile colle d un lado á outro lado,	San Benito quirido, meu santo,	a-a	-	1	0
+33	10-24	Que Ile colle d un lado á outro lado,	Que xa tiven de fillos un fato,	a-a	-	1	0
+33	10-26	Que Ile colle d un lado á outro lado,	D'a concencia ou d'os membros baldados,	a-a	-	1	0
+33	10-28	Que Ile colle d un lado á outro lado,	Pr'os meus nenos n'o voso santuario.	a-a	-	1	0
+33	10-30	Que Ile colle d un lado á outro lado,	Seis perniles de porco cebado,	a-a	-	1	0
+33	10-32	Que Ile colle d un lado á outro lado,	Repitin aquel místico ensalmo:	a-a	-	1	0
+33	10-34	Que Ile colle d un lado á outro lado,	Meus fillos vos trayo;	a-a	-	1	0
+33	10-36	Que Ile colle d un lado á outro lado,	Volvédemos sanos.	a-a	-	1	0
+33	10-38	Que Ile colle d un lado á outro lado,	Todas tres sin me dar resultado,	a-a	-	1	0
+33	10-40	Que Ile colle d un lado á outro lado,	Morren todos entangarañados.	a-a	-	1	0
+33	10-42	Que Ile colle d un lado á outro lado,	Novo Cristo d'os povos escravos,	a-a	-	1	0
+33	10-44	Que Ile colle d un lado á outro lado,	De verdugos, de reis é tiranos,	a-a	-	1	0
+33	10-46	Que Ile colle d un lado á outro lado,	Vés traguer o consolo agardado,	a-a	-	1	0
+33	10-48	Que Ile colle d un lado á outro lado,	De ben probe e mizquiño agasallo,	a-a	-	1	0
+33	10-50	Que Ile colle d un lado á outro lado,	Tí serás dende agora o meu santo,	a-a	-	1	0
+33	10-52	Que Ile colle d un lado á outro lado,	Baixo ó teu proteutor patronado:	a-a	-	1	0
+33	10-54	Que Ile colle d un lado á outro lado,	Meus nenos che trayo;	a-a	-	1	0
+33	10-56	Que Ile colle d un lado á outro lado,	Devólvemos sanos.	a-a	-	1	0
+33	10-58	Que Ile colle d un lado á outro lado,	O calor meciñal d'o teu bafo,	a-a	-	1	0
+33	10-60	Que Ile colle d un lado á outro lado,	Quedarán desentangarañados.	a-a	-	1	0
+33	10-62	Que Ile colle d un lado á outro lado,	Cal repôlos en horto pechado.	a-a	-	1	0
+33	10-64	Que Ile colle d un lado á outro lado,	E tortiños están ¡mal pocados!	a-a	-	1	0
+33	10-66	Que Ile colle d un lado á outro lado,	Aquel outro cacique d'o raño,	a-a	-	1	0
+33	10-68	Que Ile colle d un lado á outro lado,	Dóise aquel d'un Sylock n'o espiñazo.	a-a	-	1	0
+33	10-70	Que Ile colle d un lado á outro lado,	Que nin mesmo que os viran meigallos:	a-a	-	1	0
+33	10-72	Que Ile colle d un lado á outro lado,	Esta gran xuventude de sapos!	a-a	-	1	0
+33	10-74	Que Ile colle d un lado á outro lado,	D'os meus tangarañes!	a-a	-	1	0
+33	10-76	Que Ile colle d un lado á outro lado,	Devólvemos sanos.	a-a	-	1	0
+33	10-78	Que Ile colle d un lado á outro lado,	Como queiras farás o milagro;	a-a	-	1	0
+33	10-80	Que Ile colle d un lado á outro lado,	Vivirán desentangarañados.	a-a	-	1	0
+33	11-15	Din a nay y-a madriña d'o renco	Doente ch'o deixo	b-b	-	1	0
+33	11-17	Din a nay y-a madriña d'o renco	Y-ésto dito tres veces arreo,	b-b	-	1	0
+33	12-14	Pol-a gorxa de pedra pasándo-o:	D'o meu tangaraño:	a-a	-	1	0
+33	12-16	Pol-a gorxa de pedra pasándo-o:	Devólvemo sano.	a-a	-	1	0
+33	12-18	Pol-a gorxa de pedra pasándo-o:	Sin refolgo tomar nin descanso,	a-a	-	1	0
+33	12-20	Pol-a gorxa de pedra pasándo-o:	Queda xa desentangarañado.	a-a	-	1	0
+33	12-22	Pol-a gorxa de pedra pasándo-o:	San Benito quirido, meu santo,	a-a	-	1	0
+33	12-24	Pol-a gorxa de pedra pasándo-o:	Que xa tiven de fillos un fato,	a-a	-	1	0
+33	12-26	Pol-a gorxa de pedra pasándo-o:	D'a concencia ou d'os membros baldados,	a-a	-	1	0
+33	12-28	Pol-a gorxa de pedra pasándo-o:	Pr'os meus nenos n'o voso santuario.	a-a	-	1	0
+33	12-30	Pol-a gorxa de pedra pasándo-o:	Seis perniles de porco cebado,	a-a	-	1	0
+33	12-32	Pol-a gorxa de pedra pasándo-o:	Repitin aquel místico ensalmo:	a-a	-	1	0
+33	12-34	Pol-a gorxa de pedra pasándo-o:	Meus fillos vos trayo;	a-a	-	1	0
+33	12-36	Pol-a gorxa de pedra pasándo-o:	Volvédemos sanos.	a-a	-	1	0
+33	12-38	Pol-a gorxa de pedra pasándo-o:	Todas tres sin me dar resultado,	a-a	-	1	0
+33	12-40	Pol-a gorxa de pedra pasándo-o:	Morren todos entangarañados.	a-a	-	1	0
+33	12-42	Pol-a gorxa de pedra pasándo-o:	Novo Cristo d'os povos escravos,	a-a	-	1	0
+33	12-44	Pol-a gorxa de pedra pasándo-o:	De verdugos, de reis é tiranos,	a-a	-	1	0
+33	12-46	Pol-a gorxa de pedra pasándo-o:	Vés traguer o consolo agardado,	a-a	-	1	0
+33	12-48	Pol-a gorxa de pedra pasándo-o:	De ben probe e mizquiño agasallo,	a-a	-	1	0
+33	12-50	Pol-a gorxa de pedra pasándo-o:	Tí serás dende agora o meu santo,	a-a	-	1	0
+33	12-52	Pol-a gorxa de pedra pasándo-o:	Baixo ó teu proteutor patronado:	a-a	-	1	0
+33	12-54	Pol-a gorxa de pedra pasándo-o:	Meus nenos che trayo;	a-a	-	1	0
+33	12-56	Pol-a gorxa de pedra pasándo-o:	Devólvemos sanos.	a-a	-	1	0
+33	12-58	Pol-a gorxa de pedra pasándo-o:	O calor meciñal d'o teu bafo,	a-a	-	1	0
+33	12-60	Pol-a gorxa de pedra pasándo-o:	Quedarán desentangarañados.	a-a	-	1	0
+33	12-62	Pol-a gorxa de pedra pasándo-o:	Cal repôlos en horto pechado.	a-a	-	1	0
+33	12-64	Pol-a gorxa de pedra pasándo-o:	E tortiños están ¡mal pocados!	a-a	-	1	0
+33	12-66	Pol-a gorxa de pedra pasándo-o:	Aquel outro cacique d'o raño,	a-a	-	1	0
+33	12-68	Pol-a gorxa de pedra pasándo-o:	Dóise aquel d'un Sylock n'o espiñazo.	a-a	-	1	0
+33	12-70	Pol-a gorxa de pedra pasándo-o:	Que nin mesmo que os viran meigallos:	a-a	-	1	0
+33	12-72	Pol-a gorxa de pedra pasándo-o:	Esta gran xuventude de sapos!	a-a	-	1	0
+33	12-74	Pol-a gorxa de pedra pasándo-o:	D'os meus tangarañes!	a-a	-	1	0
+33	12-76	Pol-a gorxa de pedra pasándo-o:	Devólvemos sanos.	a-a	-	1	0
+33	12-78	Pol-a gorxa de pedra pasándo-o:	Como queiras farás o milagro;	a-a	-	1	0
+33	12-80	Pol-a gorxa de pedra pasándo-o:	Vivirán desentangarañados.	a-a	-	1	0
+33	14-16	D'o meu tangaraño:	Devólvemo sano.	a-a	-	1	0
+33	14-18	D'o meu tangaraño:	Sin refolgo tomar nin descanso,	a-a	-	1	0
+33	14-20	D'o meu tangaraño:	Queda xa desentangarañado.	a-a	-	1	0
+33	14-22	D'o meu tangaraño:	San Benito quirido, meu santo,	a-a	-	1	0
+33	14-24	D'o meu tangaraño:	Que xa tiven de fillos un fato,	a-a	-	1	0
+33	14-26	D'o meu tangaraño:	D'a concencia ou d'os membros baldados,	a-a	-	1	0
+33	14-28	D'o meu tangaraño:	Pr'os meus nenos n'o voso santuario.	a-a	-	1	0
+33	14-30	D'o meu tangaraño:	Seis perniles de porco cebado,	a-a	-	1	0
+33	14-32	D'o meu tangaraño:	Repitin aquel místico ensalmo:	a-a	-	1	0
+33	14-34	D'o meu tangaraño:	Meus fillos vos trayo;	a-a	-	1	0
+33	14-36	D'o meu tangaraño:	Volvédemos sanos.	a-a	-	1	0
+33	14-38	D'o meu tangaraño:	Todas tres sin me dar resultado,	a-a	-	1	0
+33	14-40	D'o meu tangaraño:	Morren todos entangarañados.	a-a	-	1	0
+33	14-42	D'o meu tangaraño:	Novo Cristo d'os povos escravos,	a-a	-	1	0
+33	14-44	D'o meu tangaraño:	De verdugos, de reis é tiranos,	a-a	-	1	0
+33	14-46	D'o meu tangaraño:	Vés traguer o consolo agardado,	a-a	-	1	0
+33	14-48	D'o meu tangaraño:	De ben probe e mizquiño agasallo,	a-a	-	1	0
+33	14-50	D'o meu tangaraño:	Tí serás dende agora o meu santo,	a-a	-	1	0
+33	14-52	D'o meu tangaraño:	Baixo ó teu proteutor patronado:	a-a	-	1	0
+33	14-54	D'o meu tangaraño:	Meus nenos che trayo;	a-a	-	1	0
+33	14-56	D'o meu tangaraño:	Devólvemos sanos.	a-a	-	1	0
+33	14-58	D'o meu tangaraño:	O calor meciñal d'o teu bafo,	a-a	-	1	0
+33	14-60	D'o meu tangaraño:	Quedarán desentangarañados.	a-a	-	1	0
+33	14-62	D'o meu tangaraño:	Cal repôlos en horto pechado.	a-a	-	1	0
+33	14-64	D'o meu tangaraño:	E tortiños están ¡mal pocados!	a-a	-	1	0
+33	14-66	D'o meu tangaraño:	Aquel outro cacique d'o raño,	a-a	-	1	0
+33	14-68	D'o meu tangaraño:	Dóise aquel d'un Sylock n'o espiñazo.	a-a	-	1	0
+33	14-70	D'o meu tangaraño:	Que nin mesmo que os viran meigallos:	a-a	-	1	0
+33	14-72	D'o meu tangaraño:	Esta gran xuventude de sapos!	a-a	-	1	0
+33	14-74	D'o meu tangaraño:	D'os meus tangarañes!	a-a	-	1	0
+33	14-76	D'o meu tangaraño:	Devólvemos sanos.	a-a	-	1	0
+33	14-78	D'o meu tangaraño:	Como queiras farás o milagro;	a-a	-	1	0
+33	14-80	D'o meu tangaraño:	Vivirán desentangarañados.	a-a	-	1	0
+33	15-17	Doente ch'o deixo	Y-ésto dito tres veces arreo,	b-b	-	1	0
+33	16-18	Devólvemo sano.	Sin refolgo tomar nin descanso,	a-a	-	1	0
+33	16-20	Devólvemo sano.	Queda xa desentangarañado.	a-a	-	1	0
+33	16-22	Devólvemo sano.	San Benito quirido, meu santo,	a-a	-	1	0
+33	16-24	Devólvemo sano.	Que xa tiven de fillos un fato,	a-a	-	1	0
+33	16-26	Devólvemo sano.	D'a concencia ou d'os membros baldados,	a-a	-	1	0
+33	16-28	Devólvemo sano.	Pr'os meus nenos n'o voso santuario.	a-a	-	1	0
+33	16-30	Devólvemo sano.	Seis perniles de porco cebado,	a-a	-	1	0
+33	16-32	Devólvemo sano.	Repitin aquel místico ensalmo:	a-a	-	1	0
+33	16-34	Devólvemo sano.	Meus fillos vos trayo;	a-a	-	1	0
+33	16-36	Devólvemo sano.	Volvédemos sanos.	a-a	-	1	0
+33	16-38	Devólvemo sano.	Todas tres sin me dar resultado,	a-a	-	1	0
+33	16-40	Devólvemo sano.	Morren todos entangarañados.	a-a	-	1	0
+33	16-42	Devólvemo sano.	Novo Cristo d'os povos escravos,	a-a	-	1	0
+33	16-44	Devólvemo sano.	De verdugos, de reis é tiranos,	a-a	-	1	0
+33	16-46	Devólvemo sano.	Vés traguer o consolo agardado,	a-a	-	1	0
+33	16-48	Devólvemo sano.	De ben probe e mizquiño agasallo,	a-a	-	1	0
+33	16-50	Devólvemo sano.	Tí serás dende agora o meu santo,	a-a	-	1	0
+33	16-52	Devólvemo sano.	Baixo ó teu proteutor patronado:	a-a	-	1	0
+33	16-54	Devólvemo sano.	Meus nenos che trayo;	a-a	-	1	0
+33	16-56	Devólvemo sano.	Devólvemos sanos.	a-a	-	1	0
+33	16-58	Devólvemo sano.	O calor meciñal d'o teu bafo,	a-a	-	1	0
+33	16-60	Devólvemo sano.	Quedarán desentangarañados.	a-a	-	1	0
+33	16-62	Devólvemo sano.	Cal repôlos en horto pechado.	a-a	-	1	0
+33	16-64	Devólvemo sano.	E tortiños están ¡mal pocados!	a-a	-	1	0
+33	16-66	Devólvemo sano.	Aquel outro cacique d'o raño,	a-a	-	1	0
+33	16-68	Devólvemo sano.	Dóise aquel d'un Sylock n'o espiñazo.	a-a	-	1	0
+33	16-70	Devólvemo sano.	Que nin mesmo que os viran meigallos:	a-a	-	1	0
+33	16-72	Devólvemo sano.	Esta gran xuventude de sapos!	a-a	-	1	0
+33	16-74	Devólvemo sano.	D'os meus tangarañes!	a-a	-	1	0
+33	16-76	Devólvemo sano.	Devólvemos sanos.	a-a	-	1	0
+33	16-78	Devólvemo sano.	Como queiras farás o milagro;	a-a	-	1	0
+33	16-80	Devólvemo sano.	Vivirán desentangarañados.	a-a	-	1	0
+33	18-20	Sin refolgo tomar nin descanso,	Queda xa desentangarañado.	a-a	-	1	0
+33	18-22	Sin refolgo tomar nin descanso,	San Benito quirido, meu santo,	a-a	-	1	0
+33	18-24	Sin refolgo tomar nin descanso,	Que xa tiven de fillos un fato,	a-a	-	1	0
+33	18-26	Sin refolgo tomar nin descanso,	D'a concencia ou d'os membros baldados,	a-a	-	1	0
+33	18-28	Sin refolgo tomar nin descanso,	Pr'os meus nenos n'o voso santuario.	a-a	-	1	0
+33	18-30	Sin refolgo tomar nin descanso,	Seis perniles de porco cebado,	a-a	-	1	0
+33	18-32	Sin refolgo tomar nin descanso,	Repitin aquel místico ensalmo:	a-a	-	1	0
+33	18-34	Sin refolgo tomar nin descanso,	Meus fillos vos trayo;	a-a	-	1	0
+33	18-36	Sin refolgo tomar nin descanso,	Volvédemos sanos.	a-a	-	1	0
+33	18-38	Sin refolgo tomar nin descanso,	Todas tres sin me dar resultado,	a-a	-	1	0
+33	18-40	Sin refolgo tomar nin descanso,	Morren todos entangarañados.	a-a	-	1	0
+33	18-42	Sin refolgo tomar nin descanso,	Novo Cristo d'os povos escravos,	a-a	-	1	0
+33	18-44	Sin refolgo tomar nin descanso,	De verdugos, de reis é tiranos,	a-a	-	1	0
+33	18-46	Sin refolgo tomar nin descanso,	Vés traguer o consolo agardado,	a-a	-	1	0
+33	18-48	Sin refolgo tomar nin descanso,	De ben probe e mizquiño agasallo,	a-a	-	1	0
+33	18-50	Sin refolgo tomar nin descanso,	Tí serás dende agora o meu santo,	a-a	-	1	0
+33	18-52	Sin refolgo tomar nin descanso,	Baixo ó teu proteutor patronado:	a-a	-	1	0
+33	18-54	Sin refolgo tomar nin descanso,	Meus nenos che trayo;	a-a	-	1	0
+33	18-56	Sin refolgo tomar nin descanso,	Devólvemos sanos.	a-a	-	1	0
+33	18-58	Sin refolgo tomar nin descanso,	O calor meciñal d'o teu bafo,	a-a	-	1	0
+33	18-60	Sin refolgo tomar nin descanso,	Quedarán desentangarañados.	a-a	-	1	0
+33	18-62	Sin refolgo tomar nin descanso,	Cal repôlos en horto pechado.	a-a	-	1	0
+33	18-64	Sin refolgo tomar nin descanso,	E tortiños están ¡mal pocados!	a-a	-	1	0
+33	18-66	Sin refolgo tomar nin descanso,	Aquel outro cacique d'o raño,	a-a	-	1	0
+33	18-68	Sin refolgo tomar nin descanso,	Dóise aquel d'un Sylock n'o espiñazo.	a-a	-	1	0
+33	18-70	Sin refolgo tomar nin descanso,	Que nin mesmo que os viran meigallos:	a-a	-	1	0
+33	18-72	Sin refolgo tomar nin descanso,	Esta gran xuventude de sapos!	a-a	-	1	0
+33	18-74	Sin refolgo tomar nin descanso,	D'os meus tangarañes!	a-a	-	1	0
+33	18-76	Sin refolgo tomar nin descanso,	Devólvemos sanos.	a-a	-	1	0
+33	18-78	Sin refolgo tomar nin descanso,	Como queiras farás o milagro;	a-a	-	1	0
+33	18-80	Sin refolgo tomar nin descanso,	Vivirán desentangarañados.	a-a	-	1	0
+33	20-22	Queda xa desentangarañado.	San Benito quirido, meu santo,	a-a	-	1	0
+33	20-24	Queda xa desentangarañado.	Que xa tiven de fillos un fato,	a-a	-	1	0
+33	20-26	Queda xa desentangarañado.	D'a concencia ou d'os membros baldados,	a-a	-	1	0
+33	20-28	Queda xa desentangarañado.	Pr'os meus nenos n'o voso santuario.	a-a	-	1	0
+33	20-30	Queda xa desentangarañado.	Seis perniles de porco cebado,	a-a	-	1	0
+33	20-32	Queda xa desentangarañado.	Repitin aquel místico ensalmo:	a-a	-	1	0
+33	20-34	Queda xa desentangarañado.	Meus fillos vos trayo;	a-a	-	1	0
+33	20-36	Queda xa desentangarañado.	Volvédemos sanos.	a-a	-	1	0
+33	20-38	Queda xa desentangarañado.	Todas tres sin me dar resultado,	a-a	-	1	0
+33	20-40	Queda xa desentangarañado.	Morren todos entangarañados.	a-a	-	1	0
+33	20-42	Queda xa desentangarañado.	Novo Cristo d'os povos escravos,	a-a	-	1	0
+33	20-44	Queda xa desentangarañado.	De verdugos, de reis é tiranos,	a-a	-	1	0
+33	20-46	Queda xa desentangarañado.	Vés traguer o consolo agardado,	a-a	-	1	0
+33	20-48	Queda xa desentangarañado.	De ben probe e mizquiño agasallo,	a-a	-	1	0
+33	20-50	Queda xa desentangarañado.	Tí serás dende agora o meu santo,	a-a	-	1	0
+33	20-52	Queda xa desentangarañado.	Baixo ó teu proteutor patronado:	a-a	-	1	0
+33	20-54	Queda xa desentangarañado.	Meus nenos che trayo;	a-a	-	1	0
+33	20-56	Queda xa desentangarañado.	Devólvemos sanos.	a-a	-	1	0
+33	20-58	Queda xa desentangarañado.	O calor meciñal d'o teu bafo,	a-a	-	1	0
+33	20-60	Queda xa desentangarañado.	Quedarán desentangarañados.	a-a	-	1	0
+33	20-62	Queda xa desentangarañado.	Cal repôlos en horto pechado.	a-a	-	1	0
+33	20-64	Queda xa desentangarañado.	E tortiños están ¡mal pocados!	a-a	-	1	0
+33	20-66	Queda xa desentangarañado.	Aquel outro cacique d'o raño,	a-a	-	1	0
+33	20-68	Queda xa desentangarañado.	Dóise aquel d'un Sylock n'o espiñazo.	a-a	-	1	0
+33	20-70	Queda xa desentangarañado.	Que nin mesmo que os viran meigallos:	a-a	-	1	0
+33	20-72	Queda xa desentangarañado.	Esta gran xuventude de sapos!	a-a	-	1	0
+33	20-74	Queda xa desentangarañado.	D'os meus tangarañes!	a-a	-	1	0
+33	20-76	Queda xa desentangarañado.	Devólvemos sanos.	a-a	-	1	0
+33	20-78	Queda xa desentangarañado.	Como queiras farás o milagro;	a-a	-	1	0
+33	20-80	Queda xa desentangarañado.	Vivirán desentangarañados.	a-a	-	1	0
+33	22-24	San Benito quirido, meu santo,	Que xa tiven de fillos un fato,	a-a	-	1	0
+33	22-26	San Benito quirido, meu santo,	D'a concencia ou d'os membros baldados,	a-a	-	1	0
+33	22-28	San Benito quirido, meu santo,	Pr'os meus nenos n'o voso santuario.	a-a	-	1	0
+33	22-30	San Benito quirido, meu santo,	Seis perniles de porco cebado,	a-a	-	1	0
+33	22-32	San Benito quirido, meu santo,	Repitin aquel místico ensalmo:	a-a	-	1	0
+33	22-34	San Benito quirido, meu santo,	Meus fillos vos trayo;	a-a	-	1	0
+33	22-36	San Benito quirido, meu santo,	Volvédemos sanos.	a-a	-	1	0
+33	22-38	San Benito quirido, meu santo,	Todas tres sin me dar resultado,	a-a	-	1	0
+33	22-40	San Benito quirido, meu santo,	Morren todos entangarañados.	a-a	-	1	0
+33	22-42	San Benito quirido, meu santo,	Novo Cristo d'os povos escravos,	a-a	-	1	0
+33	22-44	San Benito quirido, meu santo,	De verdugos, de reis é tiranos,	a-a	-	1	0
+33	22-46	San Benito quirido, meu santo,	Vés traguer o consolo agardado,	a-a	-	1	0
+33	22-48	San Benito quirido, meu santo,	De ben probe e mizquiño agasallo,	a-a	-	1	0
+33	22-50	San Benito quirido, meu santo,	Tí serás dende agora o meu santo,	a-a	-	1	0
+33	22-52	San Benito quirido, meu santo,	Baixo ó teu proteutor patronado:	a-a	-	1	0
+33	22-54	San Benito quirido, meu santo,	Meus nenos che trayo;	a-a	-	1	0
+33	22-56	San Benito quirido, meu santo,	Devólvemos sanos.	a-a	-	1	0
+33	22-58	San Benito quirido, meu santo,	O calor meciñal d'o teu bafo,	a-a	-	1	0
+33	22-60	San Benito quirido, meu santo,	Quedarán desentangarañados.	a-a	-	1	0
+33	22-62	San Benito quirido, meu santo,	Cal repôlos en horto pechado.	a-a	-	1	0
+33	22-64	San Benito quirido, meu santo,	E tortiños están ¡mal pocados!	a-a	-	1	0
+33	22-66	San Benito quirido, meu santo,	Aquel outro cacique d'o raño,	a-a	-	1	0
+33	22-68	San Benito quirido, meu santo,	Dóise aquel d'un Sylock n'o espiñazo.	a-a	-	1	0
+33	22-70	San Benito quirido, meu santo,	Que nin mesmo que os viran meigallos:	a-a	-	1	0
+33	22-72	San Benito quirido, meu santo,	Esta gran xuventude de sapos!	a-a	-	1	0
+33	22-74	San Benito quirido, meu santo,	D'os meus tangarañes!	a-a	-	1	0
+33	22-76	San Benito quirido, meu santo,	Devólvemos sanos.	a-a	-	1	0
+33	22-78	San Benito quirido, meu santo,	Como queiras farás o milagro;	a-a	-	1	0
+33	22-80	San Benito quirido, meu santo,	Vivirán desentangarañados.	a-a	-	1	0
+33	24-26	Que xa tiven de fillos un fato,	D'a concencia ou d'os membros baldados,	a-a	-	1	0
+33	24-28	Que xa tiven de fillos un fato,	Pr'os meus nenos n'o voso santuario.	a-a	-	1	0
+33	24-30	Que xa tiven de fillos un fato,	Seis perniles de porco cebado,	a-a	-	1	0
+33	24-32	Que xa tiven de fillos un fato,	Repitin aquel místico ensalmo:	a-a	-	1	0
+33	24-34	Que xa tiven de fillos un fato,	Meus fillos vos trayo;	a-a	-	1	0
+33	24-36	Que xa tiven de fillos un fato,	Volvédemos sanos.	a-a	-	1	0
+33	24-38	Que xa tiven de fillos un fato,	Todas tres sin me dar resultado,	a-a	-	1	0
+33	24-40	Que xa tiven de fillos un fato,	Morren todos entangarañados.	a-a	-	1	0
+33	24-42	Que xa tiven de fillos un fato,	Novo Cristo d'os povos escravos,	a-a	-	1	0
+33	24-44	Que xa tiven de fillos un fato,	De verdugos, de reis é tiranos,	a-a	-	1	0
+33	24-46	Que xa tiven de fillos un fato,	Vés traguer o consolo agardado,	a-a	-	1	0
+33	24-48	Que xa tiven de fillos un fato,	De ben probe e mizquiño agasallo,	a-a	-	1	0
+33	24-50	Que xa tiven de fillos un fato,	Tí serás dende agora o meu santo,	a-a	-	1	0
+33	24-52	Que xa tiven de fillos un fato,	Baixo ó teu proteutor patronado:	a-a	-	1	0
+33	24-54	Que xa tiven de fillos un fato,	Meus nenos che trayo;	a-a	-	1	0
+33	24-56	Que xa tiven de fillos un fato,	Devólvemos sanos.	a-a	-	1	0
+33	24-58	Que xa tiven de fillos un fato,	O calor meciñal d'o teu bafo,	a-a	-	1	0
+33	24-60	Que xa tiven de fillos un fato,	Quedarán desentangarañados.	a-a	-	1	0
+33	24-62	Que xa tiven de fillos un fato,	Cal repôlos en horto pechado.	a-a	-	1	0
+33	24-64	Que xa tiven de fillos un fato,	E tortiños están ¡mal pocados!	a-a	-	1	0
+33	24-66	Que xa tiven de fillos un fato,	Aquel outro cacique d'o raño,	a-a	-	1	0
+33	24-68	Que xa tiven de fillos un fato,	Dóise aquel d'un Sylock n'o espiñazo.	a-a	-	1	0
+33	24-70	Que xa tiven de fillos un fato,	Que nin mesmo que os viran meigallos:	a-a	-	1	0
+33	24-72	Que xa tiven de fillos un fato,	Esta gran xuventude de sapos!	a-a	-	1	0
+33	24-74	Que xa tiven de fillos un fato,	D'os meus tangarañes!	a-a	-	1	0
+33	24-76	Que xa tiven de fillos un fato,	Devólvemos sanos.	a-a	-	1	0
+33	24-78	Que xa tiven de fillos un fato,	Como queiras farás o milagro;	a-a	-	1	0
+33	24-80	Que xa tiven de fillos un fato,	Vivirán desentangarañados.	a-a	-	1	0
+33	25-29	Xorobados d'o corpo ou d'a y-alma	E despois de deixarvos n'as aras	c-c	-	1	0
+33	26-28	D'a concencia ou d'os membros baldados,	Pr'os meus nenos n'o voso santuario.	a-a	-	1	0
+33	26-30	D'a concencia ou d'os membros baldados,	Seis perniles de porco cebado,	a-a	-	1	0
+33	26-32	D'a concencia ou d'os membros baldados,	Repitin aquel místico ensalmo:	a-a	-	1	0
+33	26-34	D'a concencia ou d'os membros baldados,	Meus fillos vos trayo;	a-a	-	1	0
+33	26-36	D'a concencia ou d'os membros baldados,	Volvédemos sanos.	a-a	-	1	0
+33	26-38	D'a concencia ou d'os membros baldados,	Todas tres sin me dar resultado,	a-a	-	1	0
+33	26-40	D'a concencia ou d'os membros baldados,	Morren todos entangarañados.	a-a	-	1	0
+33	26-42	D'a concencia ou d'os membros baldados,	Novo Cristo d'os povos escravos,	a-a	-	1	0
+33	26-44	D'a concencia ou d'os membros baldados,	De verdugos, de reis é tiranos,	a-a	-	1	0
+33	26-46	D'a concencia ou d'os membros baldados,	Vés traguer o consolo agardado,	a-a	-	1	0
+33	26-48	D'a concencia ou d'os membros baldados,	De ben probe e mizquiño agasallo,	a-a	-	1	0
+33	26-50	D'a concencia ou d'os membros baldados,	Tí serás dende agora o meu santo,	a-a	-	1	0
+33	26-52	D'a concencia ou d'os membros baldados,	Baixo ó teu proteutor patronado:	a-a	-	1	0
+33	26-54	D'a concencia ou d'os membros baldados,	Meus nenos che trayo;	a-a	-	1	0
+33	26-56	D'a concencia ou d'os membros baldados,	Devólvemos sanos.	a-a	-	1	0
+33	26-58	D'a concencia ou d'os membros baldados,	O calor meciñal d'o teu bafo,	a-a	-	1	0
+33	26-60	D'a concencia ou d'os membros baldados,	Quedarán desentangarañados.	a-a	-	1	0
+33	26-62	D'a concencia ou d'os membros baldados,	Cal repôlos en horto pechado.	a-a	-	1	0
+33	26-64	D'a concencia ou d'os membros baldados,	E tortiños están ¡mal pocados!	a-a	-	1	0
+33	26-66	D'a concencia ou d'os membros baldados,	Aquel outro cacique d'o raño,	a-a	-	1	0
+33	26-68	D'a concencia ou d'os membros baldados,	Dóise aquel d'un Sylock n'o espiñazo.	a-a	-	1	0
+33	26-70	D'a concencia ou d'os membros baldados,	Que nin mesmo que os viran meigallos:	a-a	-	1	0
+33	26-72	D'a concencia ou d'os membros baldados,	Esta gran xuventude de sapos!	a-a	-	1	0
+33	26-74	D'a concencia ou d'os membros baldados,	D'os meus tangarañes!	a-a	-	1	0
+33	26-76	D'a concencia ou d'os membros baldados,	Devólvemos sanos.	a-a	-	1	0
+33	26-78	D'a concencia ou d'os membros baldados,	Como queiras farás o milagro;	a-a	-	1	0
+33	26-80	D'a concencia ou d'os membros baldados,	Vivirán desentangarañados.	a-a	-	1	0
+33	28-30	Pr'os meus nenos n'o voso santuario.	Seis perniles de porco cebado,	a-a	-	1	0
+33	28-32	Pr'os meus nenos n'o voso santuario.	Repitin aquel místico ensalmo:	a-a	-	1	0
+33	28-34	Pr'os meus nenos n'o voso santuario.	Meus fillos vos trayo;	a-a	-	1	0
+33	28-36	Pr'os meus nenos n'o voso santuario.	Volvédemos sanos.	a-a	-	1	0
+33	28-38	Pr'os meus nenos n'o voso santuario.	Todas tres sin me dar resultado,	a-a	-	1	0
+33	28-40	Pr'os meus nenos n'o voso santuario.	Morren todos entangarañados.	a-a	-	1	0
+33	28-42	Pr'os meus nenos n'o voso santuario.	Novo Cristo d'os povos escravos,	a-a	-	1	0
+33	28-44	Pr'os meus nenos n'o voso santuario.	De verdugos, de reis é tiranos,	a-a	-	1	0
+33	28-46	Pr'os meus nenos n'o voso santuario.	Vés traguer o consolo agardado,	a-a	-	1	0
+33	28-48	Pr'os meus nenos n'o voso santuario.	De ben probe e mizquiño agasallo,	a-a	-	1	0
+33	28-50	Pr'os meus nenos n'o voso santuario.	Tí serás dende agora o meu santo,	a-a	-	1	0
+33	28-52	Pr'os meus nenos n'o voso santuario.	Baixo ó teu proteutor patronado:	a-a	-	1	0
+33	28-54	Pr'os meus nenos n'o voso santuario.	Meus nenos che trayo;	a-a	-	1	0
+33	28-56	Pr'os meus nenos n'o voso santuario.	Devólvemos sanos.	a-a	-	1	0
+33	28-58	Pr'os meus nenos n'o voso santuario.	O calor meciñal d'o teu bafo,	a-a	-	1	0
+33	28-60	Pr'os meus nenos n'o voso santuario.	Quedarán desentangarañados.	a-a	-	1	0
+33	28-62	Pr'os meus nenos n'o voso santuario.	Cal repôlos en horto pechado.	a-a	-	1	0
+33	28-64	Pr'os meus nenos n'o voso santuario.	E tortiños están ¡mal pocados!	a-a	-	1	0
+33	28-66	Pr'os meus nenos n'o voso santuario.	Aquel outro cacique d'o raño,	a-a	-	1	0
+33	28-68	Pr'os meus nenos n'o voso santuario.	Dóise aquel d'un Sylock n'o espiñazo.	a-a	-	1	0
+33	28-70	Pr'os meus nenos n'o voso santuario.	Que nin mesmo que os viran meigallos:	a-a	-	1	0
+33	28-72	Pr'os meus nenos n'o voso santuario.	Esta gran xuventude de sapos!	a-a	-	1	0
+33	28-74	Pr'os meus nenos n'o voso santuario.	D'os meus tangarañes!	a-a	-	1	0
+33	28-76	Pr'os meus nenos n'o voso santuario.	Devólvemos sanos.	a-a	-	1	0
+33	28-78	Pr'os meus nenos n'o voso santuario.	Como queiras farás o milagro;	a-a	-	1	0
+33	28-80	Pr'os meus nenos n'o voso santuario.	Vivirán desentangarañados.	a-a	-	1	0
+33	30-32	Seis perniles de porco cebado,	Repitin aquel místico ensalmo:	a-a	-	1	0
+33	30-34	Seis perniles de porco cebado,	Meus fillos vos trayo;	a-a	-	1	0
+33	30-36	Seis perniles de porco cebado,	Volvédemos sanos.	a-a	-	1	0
+33	30-38	Seis perniles de porco cebado,	Todas tres sin me dar resultado,	a-a	-	1	0
+33	30-40	Seis perniles de porco cebado,	Morren todos entangarañados.	a-a	-	1	0
+33	30-42	Seis perniles de porco cebado,	Novo Cristo d'os povos escravos,	a-a	-	1	0
+33	30-44	Seis perniles de porco cebado,	De verdugos, de reis é tiranos,	a-a	-	1	0
+33	30-46	Seis perniles de porco cebado,	Vés traguer o consolo agardado,	a-a	-	1	0
+33	30-48	Seis perniles de porco cebado,	De ben probe e mizquiño agasallo,	a-a	-	1	0
+33	30-50	Seis perniles de porco cebado,	Tí serás dende agora o meu santo,	a-a	-	1	0
+33	30-52	Seis perniles de porco cebado,	Baixo ó teu proteutor patronado:	a-a	-	1	0
+33	30-54	Seis perniles de porco cebado,	Meus nenos che trayo;	a-a	-	1	0
+33	30-56	Seis perniles de porco cebado,	Devólvemos sanos.	a-a	-	1	0
+33	30-58	Seis perniles de porco cebado,	O calor meciñal d'o teu bafo,	a-a	-	1	0
+33	30-60	Seis perniles de porco cebado,	Quedarán desentangarañados.	a-a	-	1	0
+33	30-62	Seis perniles de porco cebado,	Cal repôlos en horto pechado.	a-a	-	1	0
+33	30-64	Seis perniles de porco cebado,	E tortiños están ¡mal pocados!	a-a	-	1	0
+33	30-66	Seis perniles de porco cebado,	Aquel outro cacique d'o raño,	a-a	-	1	0
+33	30-68	Seis perniles de porco cebado,	Dóise aquel d'un Sylock n'o espiñazo.	a-a	-	1	0
+33	30-70	Seis perniles de porco cebado,	Que nin mesmo que os viran meigallos:	a-a	-	1	0
+33	30-72	Seis perniles de porco cebado,	Esta gran xuventude de sapos!	a-a	-	1	0
+33	30-74	Seis perniles de porco cebado,	D'os meus tangarañes!	a-a	-	1	0
+33	30-76	Seis perniles de porco cebado,	Devólvemos sanos.	a-a	-	1	0
+33	30-78	Seis perniles de porco cebado,	Como queiras farás o milagro;	a-a	-	1	0
+33	30-80	Seis perniles de porco cebado,	Vivirán desentangarañados.	a-a	-	1	0
+33	32-34	Repitin aquel místico ensalmo:	Meus fillos vos trayo;	a-a	-	1	0
+33	32-36	Repitin aquel místico ensalmo:	Volvédemos sanos.	a-a	-	1	0
+33	32-38	Repitin aquel místico ensalmo:	Todas tres sin me dar resultado,	a-a	-	1	0
+33	32-40	Repitin aquel místico ensalmo:	Morren todos entangarañados.	a-a	-	1	0
+33	32-42	Repitin aquel místico ensalmo:	Novo Cristo d'os povos escravos,	a-a	-	1	0
+33	32-44	Repitin aquel místico ensalmo:	De verdugos, de reis é tiranos,	a-a	-	1	0
+33	32-46	Repitin aquel místico ensalmo:	Vés traguer o consolo agardado,	a-a	-	1	0
+33	32-48	Repitin aquel místico ensalmo:	De ben probe e mizquiño agasallo,	a-a	-	1	0
+33	32-50	Repitin aquel místico ensalmo:	Tí serás dende agora o meu santo,	a-a	-	1	0
+33	32-52	Repitin aquel místico ensalmo:	Baixo ó teu proteutor patronado:	a-a	-	1	0
+33	32-54	Repitin aquel místico ensalmo:	Meus nenos che trayo;	a-a	-	1	0
+33	32-56	Repitin aquel místico ensalmo:	Devólvemos sanos.	a-a	-	1	0
+33	32-58	Repitin aquel místico ensalmo:	O calor meciñal d'o teu bafo,	a-a	-	1	0
+33	32-60	Repitin aquel místico ensalmo:	Quedarán desentangarañados.	a-a	-	1	0
+33	32-62	Repitin aquel místico ensalmo:	Cal repôlos en horto pechado.	a-a	-	1	0
+33	32-64	Repitin aquel místico ensalmo:	E tortiños están ¡mal pocados!	a-a	-	1	0
+33	32-66	Repitin aquel místico ensalmo:	Aquel outro cacique d'o raño,	a-a	-	1	0
+33	32-68	Repitin aquel místico ensalmo:	Dóise aquel d'un Sylock n'o espiñazo.	a-a	-	1	0
+33	32-70	Repitin aquel místico ensalmo:	Que nin mesmo que os viran meigallos:	a-a	-	1	0
+33	32-72	Repitin aquel místico ensalmo:	Esta gran xuventude de sapos!	a-a	-	1	0
+33	32-74	Repitin aquel místico ensalmo:	D'os meus tangarañes!	a-a	-	1	0
+33	32-76	Repitin aquel místico ensalmo:	Devólvemos sanos.	a-a	-	1	0
+33	32-78	Repitin aquel místico ensalmo:	Como queiras farás o milagro;	a-a	-	1	0
+33	32-80	Repitin aquel místico ensalmo:	Vivirán desentangarañados.	a-a	-	1	0
+33	34-36	Meus fillos vos trayo;	Volvédemos sanos.	a-a	-	1	0
+33	34-38	Meus fillos vos trayo;	Todas tres sin me dar resultado,	a-a	-	1	0
+33	34-40	Meus fillos vos trayo;	Morren todos entangarañados.	a-a	-	1	0
+33	34-42	Meus fillos vos trayo;	Novo Cristo d'os povos escravos,	a-a	-	1	0
+33	34-44	Meus fillos vos trayo;	De verdugos, de reis é tiranos,	a-a	-	1	0
+33	34-46	Meus fillos vos trayo;	Vés traguer o consolo agardado,	a-a	-	1	0
+33	34-48	Meus fillos vos trayo;	De ben probe e mizquiño agasallo,	a-a	-	1	0
+33	34-50	Meus fillos vos trayo;	Tí serás dende agora o meu santo,	a-a	-	1	0
+33	34-52	Meus fillos vos trayo;	Baixo ó teu proteutor patronado:	a-a	-	1	0
+33	34-54	Meus fillos vos trayo;	Meus nenos che trayo;	a-a	-	1	0
+33	34-56	Meus fillos vos trayo;	Devólvemos sanos.	a-a	-	1	0
+33	34-58	Meus fillos vos trayo;	O calor meciñal d'o teu bafo,	a-a	-	1	0
+33	34-60	Meus fillos vos trayo;	Quedarán desentangarañados.	a-a	-	1	0
+33	34-62	Meus fillos vos trayo;	Cal repôlos en horto pechado.	a-a	-	1	0
+33	34-64	Meus fillos vos trayo;	E tortiños están ¡mal pocados!	a-a	-	1	0
+33	34-66	Meus fillos vos trayo;	Aquel outro cacique d'o raño,	a-a	-	1	0
+33	34-68	Meus fillos vos trayo;	Dóise aquel d'un Sylock n'o espiñazo.	a-a	-	1	0
+33	34-70	Meus fillos vos trayo;	Que nin mesmo que os viran meigallos:	a-a	-	1	0
+33	34-72	Meus fillos vos trayo;	Esta gran xuventude de sapos!	a-a	-	1	0
+33	34-74	Meus fillos vos trayo;	D'os meus tangarañes!	a-a	-	1	0
+33	34-76	Meus fillos vos trayo;	Devólvemos sanos.	a-a	-	1	0
+33	34-78	Meus fillos vos trayo;	Como queiras farás o milagro;	a-a	-	1	0
+33	34-80	Meus fillos vos trayo;	Vivirán desentangarañados.	a-a	-	1	0
+33	35-37	Doentel-os deixo,	Por tres veces chorosa roguéivolo;	d-d	-	1	0
+33	36-38	Volvédemos sanos.	Todas tres sin me dar resultado,	a-a	-	1	0
+33	36-40	Volvédemos sanos.	Morren todos entangarañados.	a-a	-	1	0
+33	36-42	Volvédemos sanos.	Novo Cristo d'os povos escravos,	a-a	-	1	0
+33	36-44	Volvédemos sanos.	De verdugos, de reis é tiranos,	a-a	-	1	0
+33	36-46	Volvédemos sanos.	Vés traguer o consolo agardado,	a-a	-	1	0
+33	36-48	Volvédemos sanos.	De ben probe e mizquiño agasallo,	a-a	-	1	0
+33	36-50	Volvédemos sanos.	Tí serás dende agora o meu santo,	a-a	-	1	0
+33	36-52	Volvédemos sanos.	Baixo ó teu proteutor patronado:	a-a	-	1	0
+33	36-54	Volvédemos sanos.	Meus nenos che trayo;	a-a	-	1	0
+33	36-56	Volvédemos sanos.	Devólvemos sanos.	a-a	-	1	0
+33	36-58	Volvédemos sanos.	O calor meciñal d'o teu bafo,	a-a	-	1	0
+33	36-60	Volvédemos sanos.	Quedarán desentangarañados.	a-a	-	1	0
+33	36-62	Volvédemos sanos.	Cal repôlos en horto pechado.	a-a	-	1	0
+33	36-64	Volvédemos sanos.	E tortiños están ¡mal pocados!	a-a	-	1	0
+33	36-66	Volvédemos sanos.	Aquel outro cacique d'o raño,	a-a	-	1	0
+33	36-68	Volvédemos sanos.	Dóise aquel d'un Sylock n'o espiñazo.	a-a	-	1	0
+33	36-70	Volvédemos sanos.	Que nin mesmo que os viran meigallos:	a-a	-	1	0
+33	36-72	Volvédemos sanos.	Esta gran xuventude de sapos!	a-a	-	1	0
+33	36-74	Volvédemos sanos.	D'os meus tangarañes!	a-a	-	1	0
+33	36-76	Volvédemos sanos.	Devólvemos sanos.	a-a	-	1	0
+33	36-78	Volvédemos sanos.	Como queiras farás o milagro;	a-a	-	1	0
+33	36-80	Volvédemos sanos.	Vivirán desentangarañados.	a-a	-	1	0
+33	38-40	Todas tres sin me dar resultado,	Morren todos entangarañados.	a-a	-	1	0
+33	38-42	Todas tres sin me dar resultado,	Novo Cristo d'os povos escravos,	a-a	-	1	0
+33	38-44	Todas tres sin me dar resultado,	De verdugos, de reis é tiranos,	a-a	-	1	0
+33	38-46	Todas tres sin me dar resultado,	Vés traguer o consolo agardado,	a-a	-	1	0
+33	38-48	Todas tres sin me dar resultado,	De ben probe e mizquiño agasallo,	a-a	-	1	0
+33	38-50	Todas tres sin me dar resultado,	Tí serás dende agora o meu santo,	a-a	-	1	0
+33	38-52	Todas tres sin me dar resultado,	Baixo ó teu proteutor patronado:	a-a	-	1	0
+33	38-54	Todas tres sin me dar resultado,	Meus nenos che trayo;	a-a	-	1	0
+33	38-56	Todas tres sin me dar resultado,	Devólvemos sanos.	a-a	-	1	0
+33	38-58	Todas tres sin me dar resultado,	O calor meciñal d'o teu bafo,	a-a	-	1	0
+33	38-60	Todas tres sin me dar resultado,	Quedarán desentangarañados.	a-a	-	1	0
+33	38-62	Todas tres sin me dar resultado,	Cal repôlos en horto pechado.	a-a	-	1	0
+33	38-64	Todas tres sin me dar resultado,	E tortiños están ¡mal pocados!	a-a	-	1	0
+33	38-66	Todas tres sin me dar resultado,	Aquel outro cacique d'o raño,	a-a	-	1	0
+33	38-68	Todas tres sin me dar resultado,	Dóise aquel d'un Sylock n'o espiñazo.	a-a	-	1	0
+33	38-70	Todas tres sin me dar resultado,	Que nin mesmo que os viran meigallos:	a-a	-	1	0
+33	38-72	Todas tres sin me dar resultado,	Esta gran xuventude de sapos!	a-a	-	1	0
+33	38-74	Todas tres sin me dar resultado,	D'os meus tangarañes!	a-a	-	1	0
+33	38-76	Todas tres sin me dar resultado,	Devólvemos sanos.	a-a	-	1	0
+33	38-78	Todas tres sin me dar resultado,	Como queiras farás o milagro;	a-a	-	1	0
+33	38-80	Todas tres sin me dar resultado,	Vivirán desentangarañados.	a-a	-	1	0
+33	40-42	Morren todos entangarañados.	Novo Cristo d'os povos escravos,	a-a	-	1	0
+33	40-44	Morren todos entangarañados.	De verdugos, de reis é tiranos,	a-a	-	1	0
+33	40-46	Morren todos entangarañados.	Vés traguer o consolo agardado,	a-a	-	1	0
+33	40-48	Morren todos entangarañados.	De ben probe e mizquiño agasallo,	a-a	-	1	0
+33	40-50	Morren todos entangarañados.	Tí serás dende agora o meu santo,	a-a	-	1	0
+33	40-52	Morren todos entangarañados.	Baixo ó teu proteutor patronado:	a-a	-	1	0
+33	40-54	Morren todos entangarañados.	Meus nenos che trayo;	a-a	-	1	0
+33	40-56	Morren todos entangarañados.	Devólvemos sanos.	a-a	-	1	0
+33	40-58	Morren todos entangarañados.	O calor meciñal d'o teu bafo,	a-a	-	1	0
+33	40-60	Morren todos entangarañados.	Quedarán desentangarañados.	a-a	-	1	0
+33	40-62	Morren todos entangarañados.	Cal repôlos en horto pechado.	a-a	-	1	0
+33	40-64	Morren todos entangarañados.	E tortiños están ¡mal pocados!	a-a	-	1	0
+33	40-66	Morren todos entangarañados.	Aquel outro cacique d'o raño,	a-a	-	1	0
+33	40-68	Morren todos entangarañados.	Dóise aquel d'un Sylock n'o espiñazo.	a-a	-	1	0
+33	40-70	Morren todos entangarañados.	Que nin mesmo que os viran meigallos:	a-a	-	1	0
+33	40-72	Morren todos entangarañados.	Esta gran xuventude de sapos!	a-a	-	1	0
+33	40-74	Morren todos entangarañados.	D'os meus tangarañes!	a-a	-	1	0
+33	40-76	Morren todos entangarañados.	Devólvemos sanos.	a-a	-	1	0
+33	40-78	Morren todos entangarañados.	Como queiras farás o milagro;	a-a	-	1	0
+33	40-80	Morren todos entangarañados.	Vivirán desentangarañados.	a-a	-	1	0
+33	42-44	Novo Cristo d'os povos escravos,	De verdugos, de reis é tiranos,	a-a	-	1	0
+33	42-46	Novo Cristo d'os povos escravos,	Vés traguer o consolo agardado,	a-a	-	1	0
+33	42-48	Novo Cristo d'os povos escravos,	De ben probe e mizquiño agasallo,	a-a	-	1	0
+33	42-50	Novo Cristo d'os povos escravos,	Tí serás dende agora o meu santo,	a-a	-	1	0
+33	42-52	Novo Cristo d'os povos escravos,	Baixo ó teu proteutor patronado:	a-a	-	1	0
+33	42-54	Novo Cristo d'os povos escravos,	Meus nenos che trayo;	a-a	-	1	0
+33	42-56	Novo Cristo d'os povos escravos,	Devólvemos sanos.	a-a	-	1	0
+33	42-58	Novo Cristo d'os povos escravos,	O calor meciñal d'o teu bafo,	a-a	-	1	0
+33	42-60	Novo Cristo d'os povos escravos,	Quedarán desentangarañados.	a-a	-	1	0
+33	42-62	Novo Cristo d'os povos escravos,	Cal repôlos en horto pechado.	a-a	-	1	0
+33	42-64	Novo Cristo d'os povos escravos,	E tortiños están ¡mal pocados!	a-a	-	1	0
+33	42-66	Novo Cristo d'os povos escravos,	Aquel outro cacique d'o raño,	a-a	-	1	0
+33	42-68	Novo Cristo d'os povos escravos,	Dóise aquel d'un Sylock n'o espiñazo.	a-a	-	1	0
+33	42-70	Novo Cristo d'os povos escravos,	Que nin mesmo que os viran meigallos:	a-a	-	1	0
+33	42-72	Novo Cristo d'os povos escravos,	Esta gran xuventude de sapos!	a-a	-	1	0
+33	42-74	Novo Cristo d'os povos escravos,	D'os meus tangarañes!	a-a	-	1	0
+33	42-76	Novo Cristo d'os povos escravos,	Devólvemos sanos.	a-a	-	1	0
+33	42-78	Novo Cristo d'os povos escravos,	Como queiras farás o milagro;	a-a	-	1	0
+33	42-80	Novo Cristo d'os povos escravos,	Vivirán desentangarañados.	a-a	-	1	0
+33	44-46	De verdugos, de reis é tiranos,	Vés traguer o consolo agardado,	a-a	-	1	0
+33	44-48	De verdugos, de reis é tiranos,	De ben probe e mizquiño agasallo,	a-a	-	1	0
+33	44-50	De verdugos, de reis é tiranos,	Tí serás dende agora o meu santo,	a-a	-	1	0
+33	44-52	De verdugos, de reis é tiranos,	Baixo ó teu proteutor patronado:	a-a	-	1	0
+33	44-54	De verdugos, de reis é tiranos,	Meus nenos che trayo;	a-a	-	1	0
+33	44-56	De verdugos, de reis é tiranos,	Devólvemos sanos.	a-a	-	1	0
+33	44-58	De verdugos, de reis é tiranos,	O calor meciñal d'o teu bafo,	a-a	-	1	0
+33	44-60	De verdugos, de reis é tiranos,	Quedarán desentangarañados.	a-a	-	1	0
+33	44-62	De verdugos, de reis é tiranos,	Cal repôlos en horto pechado.	a-a	-	1	0
+33	44-64	De verdugos, de reis é tiranos,	E tortiños están ¡mal pocados!	a-a	-	1	0
+33	44-66	De verdugos, de reis é tiranos,	Aquel outro cacique d'o raño,	a-a	-	1	0
+33	44-68	De verdugos, de reis é tiranos,	Dóise aquel d'un Sylock n'o espiñazo.	a-a	-	1	0
+33	44-70	De verdugos, de reis é tiranos,	Que nin mesmo que os viran meigallos:	a-a	-	1	0
+33	44-72	De verdugos, de reis é tiranos,	Esta gran xuventude de sapos!	a-a	-	1	0
+33	44-74	De verdugos, de reis é tiranos,	D'os meus tangarañes!	a-a	-	1	0
+33	44-76	De verdugos, de reis é tiranos,	Devólvemos sanos.	a-a	-	1	0
+33	44-78	De verdugos, de reis é tiranos,	Como queiras farás o milagro;	a-a	-	1	0
+33	44-80	De verdugos, de reis é tiranos,	Vivirán desentangarañados.	a-a	-	1	0
+33	46-48	Vés traguer o consolo agardado,	De ben probe e mizquiño agasallo,	a-a	-	1	0
+33	46-50	Vés traguer o consolo agardado,	Tí serás dende agora o meu santo,	a-a	-	1	0
+33	46-52	Vés traguer o consolo agardado,	Baixo ó teu proteutor patronado:	a-a	-	1	0
+33	46-54	Vés traguer o consolo agardado,	Meus nenos che trayo;	a-a	-	1	0
+33	46-56	Vés traguer o consolo agardado,	Devólvemos sanos.	a-a	-	1	0
+33	46-58	Vés traguer o consolo agardado,	O calor meciñal d'o teu bafo,	a-a	-	1	0
+33	46-60	Vés traguer o consolo agardado,	Quedarán desentangarañados.	a-a	-	1	0
+33	46-62	Vés traguer o consolo agardado,	Cal repôlos en horto pechado.	a-a	-	1	0
+33	46-64	Vés traguer o consolo agardado,	E tortiños están ¡mal pocados!	a-a	-	1	0
+33	46-66	Vés traguer o consolo agardado,	Aquel outro cacique d'o raño,	a-a	-	1	0
+33	46-68	Vés traguer o consolo agardado,	Dóise aquel d'un Sylock n'o espiñazo.	a-a	-	1	0
+33	46-70	Vés traguer o consolo agardado,	Que nin mesmo que os viran meigallos:	a-a	-	1	0
+33	46-72	Vés traguer o consolo agardado,	Esta gran xuventude de sapos!	a-a	-	1	0
+33	46-74	Vés traguer o consolo agardado,	D'os meus tangarañes!	a-a	-	1	0
+33	46-76	Vés traguer o consolo agardado,	Devólvemos sanos.	a-a	-	1	0
+33	46-78	Vés traguer o consolo agardado,	Como queiras farás o milagro;	a-a	-	1	0
+33	46-80	Vés traguer o consolo agardado,	Vivirán desentangarañados.	a-a	-	1	0
+33	48-50	De ben probe e mizquiño agasallo,	Tí serás dende agora o meu santo,	a-a	-	1	0
+33	48-52	De ben probe e mizquiño agasallo,	Baixo ó teu proteutor patronado:	a-a	-	1	0
+33	48-54	De ben probe e mizquiño agasallo,	Meus nenos che trayo;	a-a	-	1	0
+33	48-56	De ben probe e mizquiño agasallo,	Devólvemos sanos.	a-a	-	1	0
+33	48-58	De ben probe e mizquiño agasallo,	O calor meciñal d'o teu bafo,	a-a	-	1	0
+33	48-60	De ben probe e mizquiño agasallo,	Quedarán desentangarañados.	a-a	-	1	0
+33	48-62	De ben probe e mizquiño agasallo,	Cal repôlos en horto pechado.	a-a	-	1	0
+33	48-64	De ben probe e mizquiño agasallo,	E tortiños están ¡mal pocados!	a-a	-	1	0
+33	48-66	De ben probe e mizquiño agasallo,	Aquel outro cacique d'o raño,	a-a	-	1	0
+33	48-68	De ben probe e mizquiño agasallo,	Dóise aquel d'un Sylock n'o espiñazo.	a-a	-	1	0
+33	48-70	De ben probe e mizquiño agasallo,	Que nin mesmo que os viran meigallos:	a-a	-	1	0
+33	48-72	De ben probe e mizquiño agasallo,	Esta gran xuventude de sapos!	a-a	-	1	0
+33	48-74	De ben probe e mizquiño agasallo,	D'os meus tangarañes!	a-a	-	1	0
+33	48-76	De ben probe e mizquiño agasallo,	Devólvemos sanos.	a-a	-	1	0
+33	48-78	De ben probe e mizquiño agasallo,	Como queiras farás o milagro;	a-a	-	1	0
+33	48-80	De ben probe e mizquiño agasallo,	Vivirán desentangarañados.	a-a	-	1	0
+33	49-53	Quer con Dios teñas pauto, ou c'o Demo,	—Tribuno d'os servos.	e-e	-	1	0
+33	49-55	Quer con Dios teñas pauto, ou c'o Demo,	Doentes ch'os deixo,	e-e	-	1	0
+33	50-52	Tí serás dende agora o meu santo,	Baixo ó teu proteutor patronado:	a-a	-	1	0
+33	50-54	Tí serás dende agora o meu santo,	Meus nenos che trayo;	a-a	-	1	0
+33	50-56	Tí serás dende agora o meu santo,	Devólvemos sanos.	a-a	-	1	0
+33	50-58	Tí serás dende agora o meu santo,	O calor meciñal d'o teu bafo,	a-a	-	1	0
+33	50-60	Tí serás dende agora o meu santo,	Quedarán desentangarañados.	a-a	-	1	0
+33	50-62	Tí serás dende agora o meu santo,	Cal repôlos en horto pechado.	a-a	-	1	0
+33	50-64	Tí serás dende agora o meu santo,	E tortiños están ¡mal pocados!	a-a	-	1	0
+33	50-66	Tí serás dende agora o meu santo,	Aquel outro cacique d'o raño,	a-a	-	1	0
+33	50-68	Tí serás dende agora o meu santo,	Dóise aquel d'un Sylock n'o espiñazo.	a-a	-	1	0
+33	50-70	Tí serás dende agora o meu santo,	Que nin mesmo que os viran meigallos:	a-a	-	1	0
+33	50-72	Tí serás dende agora o meu santo,	Esta gran xuventude de sapos!	a-a	-	1	0
+33	50-74	Tí serás dende agora o meu santo,	D'os meus tangarañes!	a-a	-	1	0
+33	50-76	Tí serás dende agora o meu santo,	Devólvemos sanos.	a-a	-	1	0
+33	50-78	Tí serás dende agora o meu santo,	Como queiras farás o milagro;	a-a	-	1	0
+33	50-80	Tí serás dende agora o meu santo,	Vivirán desentangarañados.	a-a	-	1	0
+33	52-54	Baixo ó teu proteutor patronado:	Meus nenos che trayo;	a-a	-	1	0
+33	52-56	Baixo ó teu proteutor patronado:	Devólvemos sanos.	a-a	-	1	0
+33	52-58	Baixo ó teu proteutor patronado:	O calor meciñal d'o teu bafo,	a-a	-	1	0
+33	52-60	Baixo ó teu proteutor patronado:	Quedarán desentangarañados.	a-a	-	1	0
+33	52-62	Baixo ó teu proteutor patronado:	Cal repôlos en horto pechado.	a-a	-	1	0
+33	52-64	Baixo ó teu proteutor patronado:	E tortiños están ¡mal pocados!	a-a	-	1	0
+33	52-66	Baixo ó teu proteutor patronado:	Aquel outro cacique d'o raño,	a-a	-	1	0
+33	52-68	Baixo ó teu proteutor patronado:	Dóise aquel d'un Sylock n'o espiñazo.	a-a	-	1	0
+33	52-70	Baixo ó teu proteutor patronado:	Que nin mesmo que os viran meigallos:	a-a	-	1	0
+33	52-72	Baixo ó teu proteutor patronado:	Esta gran xuventude de sapos!	a-a	-	1	0
+33	52-74	Baixo ó teu proteutor patronado:	D'os meus tangarañes!	a-a	-	1	0
+33	52-76	Baixo ó teu proteutor patronado:	Devólvemos sanos.	a-a	-	1	0
+33	52-78	Baixo ó teu proteutor patronado:	Como queiras farás o milagro;	a-a	-	1	0
+33	52-80	Baixo ó teu proteutor patronado:	Vivirán desentangarañados.	a-a	-	1	0
+33	53-55	—Tribuno d'os servos.	Doentes ch'os deixo,	e-e	-	1	0
+33	54-56	Meus nenos che trayo;	Devólvemos sanos.	a-a	-	1	0
+33	54-58	Meus nenos che trayo;	O calor meciñal d'o teu bafo,	a-a	-	1	0
+33	54-60	Meus nenos che trayo;	Quedarán desentangarañados.	a-a	-	1	0
+33	54-62	Meus nenos che trayo;	Cal repôlos en horto pechado.	a-a	-	1	0
+33	54-64	Meus nenos che trayo;	E tortiños están ¡mal pocados!	a-a	-	1	0
+33	54-66	Meus nenos che trayo;	Aquel outro cacique d'o raño,	a-a	-	1	0
+33	54-68	Meus nenos che trayo;	Dóise aquel d'un Sylock n'o espiñazo.	a-a	-	1	0
+33	54-70	Meus nenos che trayo;	Que nin mesmo que os viran meigallos:	a-a	-	1	0
+33	54-72	Meus nenos che trayo;	Esta gran xuventude de sapos!	a-a	-	1	0
+33	54-74	Meus nenos che trayo;	D'os meus tangarañes!	a-a	-	1	0
+33	54-76	Meus nenos che trayo;	Devólvemos sanos.	a-a	-	1	0
+33	54-78	Meus nenos che trayo;	Como queiras farás o milagro;	a-a	-	1	0
+33	54-80	Meus nenos che trayo;	Vivirán desentangarañados.	a-a	-	1	0
+33	56-58	Devólvemos sanos.	O calor meciñal d'o teu bafo,	a-a	-	1	0
+33	56-60	Devólvemos sanos.	Quedarán desentangarañados.	a-a	-	1	0
+33	56-62	Devólvemos sanos.	Cal repôlos en horto pechado.	a-a	-	1	0
+33	56-64	Devólvemos sanos.	E tortiños están ¡mal pocados!	a-a	-	1	0
+33	56-66	Devólvemos sanos.	Aquel outro cacique d'o raño,	a-a	-	1	0
+33	56-68	Devólvemos sanos.	Dóise aquel d'un Sylock n'o espiñazo.	a-a	-	1	0
+33	56-70	Devólvemos sanos.	Que nin mesmo que os viran meigallos:	a-a	-	1	0
+33	56-72	Devólvemos sanos.	Esta gran xuventude de sapos!	a-a	-	1	0
+33	56-74	Devólvemos sanos.	D'os meus tangarañes!	a-a	-	1	0
+33	56-76	Devólvemos sanos.	Devólvemos sanos.	a-a	-	1	0
+33	56-78	Devólvemos sanos.	Como queiras farás o milagro;	a-a	-	1	0
+33	56-80	Devólvemos sanos.	Vivirán desentangarañados.	a-a	-	1	0
+33	58-60	O calor meciñal d'o teu bafo,	Quedarán desentangarañados.	a-a	-	1	0
+33	58-62	O calor meciñal d'o teu bafo,	Cal repôlos en horto pechado.	a-a	-	1	0
+33	58-64	O calor meciñal d'o teu bafo,	E tortiños están ¡mal pocados!	a-a	-	1	0
+33	58-66	O calor meciñal d'o teu bafo,	Aquel outro cacique d'o raño,	a-a	-	1	0
+33	58-68	O calor meciñal d'o teu bafo,	Dóise aquel d'un Sylock n'o espiñazo.	a-a	-	1	0
+33	58-70	O calor meciñal d'o teu bafo,	Que nin mesmo que os viran meigallos:	a-a	-	1	0
+33	58-72	O calor meciñal d'o teu bafo,	Esta gran xuventude de sapos!	a-a	-	1	0
+33	58-74	O calor meciñal d'o teu bafo,	D'os meus tangarañes!	a-a	-	1	0
+33	58-76	O calor meciñal d'o teu bafo,	Devólvemos sanos.	a-a	-	1	0
+33	58-78	O calor meciñal d'o teu bafo,	Como queiras farás o milagro;	a-a	-	1	0
+33	58-80	O calor meciñal d'o teu bafo,	Vivirán desentangarañados.	a-a	-	1	0
+33	59-61	Os meus nenos entangarañidos	Todos éles naceron saniños	f-f	-	1	0
+33	60-62	Quedarán desentangarañados.	Cal repôlos en horto pechado.	a-a	-	1	0
+33	60-64	Quedarán desentangarañados.	E tortiños están ¡mal pocados!	a-a	-	1	0
+33	60-66	Quedarán desentangarañados.	Aquel outro cacique d'o raño,	a-a	-	1	0
+33	60-68	Quedarán desentangarañados.	Dóise aquel d'un Sylock n'o espiñazo.	a-a	-	1	0
+33	60-70	Quedarán desentangarañados.	Que nin mesmo que os viran meigallos:	a-a	-	1	0
+33	60-72	Quedarán desentangarañados.	Esta gran xuventude de sapos!	a-a	-	1	0
+33	60-74	Quedarán desentangarañados.	D'os meus tangarañes!	a-a	-	1	0
+33	60-76	Quedarán desentangarañados.	Devólvemos sanos.	a-a	-	1	0
+33	60-78	Quedarán desentangarañados.	Como queiras farás o milagro;	a-a	-	1	0
+33	60-80	Quedarán desentangarañados.	Vivirán desentangarañados.	a-a	-	1	0
+33	62-64	Cal repôlos en horto pechado.	E tortiños están ¡mal pocados!	a-a	-	1	0
+33	62-66	Cal repôlos en horto pechado.	Aquel outro cacique d'o raño,	a-a	-	1	0
+33	62-68	Cal repôlos en horto pechado.	Dóise aquel d'un Sylock n'o espiñazo.	a-a	-	1	0
+33	62-70	Cal repôlos en horto pechado.	Que nin mesmo que os viran meigallos:	a-a	-	1	0
+33	62-72	Cal repôlos en horto pechado.	Esta gran xuventude de sapos!	a-a	-	1	0
+33	62-74	Cal repôlos en horto pechado.	D'os meus tangarañes!	a-a	-	1	0
+33	62-76	Cal repôlos en horto pechado.	Devólvemos sanos.	a-a	-	1	0
+33	62-78	Cal repôlos en horto pechado.	Como queiras farás o milagro;	a-a	-	1	0
+33	62-80	Cal repôlos en horto pechado.	Vivirán desentangarañados.	a-a	-	1	0
+33	64-66	E tortiños están ¡mal pocados!	Aquel outro cacique d'o raño,	a-a	-	1	0
+33	64-68	E tortiños están ¡mal pocados!	Dóise aquel d'un Sylock n'o espiñazo.	a-a	-	1	0
+33	64-70	E tortiños están ¡mal pocados!	Que nin mesmo que os viran meigallos:	a-a	-	1	0
+33	64-72	E tortiños están ¡mal pocados!	Esta gran xuventude de sapos!	a-a	-	1	0
+33	64-74	E tortiños están ¡mal pocados!	D'os meus tangarañes!	a-a	-	1	0
+33	64-76	E tortiños están ¡mal pocados!	Devólvemos sanos.	a-a	-	1	0
+33	64-78	E tortiños están ¡mal pocados!	Como queiras farás o milagro;	a-a	-	1	0
+33	64-80	E tortiños están ¡mal pocados!	Vivirán desentangarañados.	a-a	-	1	0
+33	66-68	Aquel outro cacique d'o raño,	Dóise aquel d'un Sylock n'o espiñazo.	a-a	-	1	0
+33	66-70	Aquel outro cacique d'o raño,	Que nin mesmo que os viran meigallos:	a-a	-	1	0
+33	66-72	Aquel outro cacique d'o raño,	Esta gran xuventude de sapos!	a-a	-	1	0
+33	66-74	Aquel outro cacique d'o raño,	D'os meus tangarañes!	a-a	-	1	0
+33	66-76	Aquel outro cacique d'o raño,	Devólvemos sanos.	a-a	-	1	0
+33	66-78	Aquel outro cacique d'o raño,	Como queiras farás o milagro;	a-a	-	1	0
+33	66-80	Aquel outro cacique d'o raño,	Vivirán desentangarañados.	a-a	-	1	0
+33	67-71	Este ten un Marat n'as costelas,	N'unha gran xuventude d'estrelas	g-g	-	1	0
+33	67-73	Este ten un Marat n'as costelas,	¡Que logre un xiquera	g-g	-	1	0
+33	68-70	Dóise aquel d'un Sylock n'o espiñazo.	Que nin mesmo que os viran meigallos:	a-a	-	1	0
+33	68-72	Dóise aquel d'un Sylock n'o espiñazo.	Esta gran xuventude de sapos!	a-a	-	1	0
+33	68-74	Dóise aquel d'un Sylock n'o espiñazo.	D'os meus tangarañes!	a-a	-	1	0
+33	68-76	Dóise aquel d'un Sylock n'o espiñazo.	Devólvemos sanos.	a-a	-	1	0
+33	68-78	Dóise aquel d'un Sylock n'o espiñazo.	Como queiras farás o milagro;	a-a	-	1	0
+33	68-80	Dóise aquel d'un Sylock n'o espiñazo.	Vivirán desentangarañados.	a-a	-	1	0
+33	70-72	Que nin mesmo que os viran meigallos:	Esta gran xuventude de sapos!	a-a	-	1	0
+33	70-74	Que nin mesmo que os viran meigallos:	D'os meus tangarañes!	a-a	-	1	0
+33	70-76	Que nin mesmo que os viran meigallos:	Devólvemos sanos.	a-a	-	1	0
+33	70-78	Que nin mesmo que os viran meigallos:	Como queiras farás o milagro;	a-a	-	1	0
+33	70-80	Que nin mesmo que os viran meigallos:	Vivirán desentangarañados.	a-a	-	1	0
+33	71-73	N'unha gran xuventude d'estrelas	¡Que logre un xiquera	g-g	-	1	0
+33	72-74	Esta gran xuventude de sapos!	D'os meus tangarañes!	a-a	-	1	0
+33	72-76	Esta gran xuventude de sapos!	Devólvemos sanos.	a-a	-	1	0
+33	72-78	Esta gran xuventude de sapos!	Como queiras farás o milagro;	a-a	-	1	0
+33	72-80	Esta gran xuventude de sapos!	Vivirán desentangarañados.	a-a	-	1	0
+33	74-76	D'os meus tangarañes!	Devólvemos sanos.	a-a	-	1	0
+33	74-78	D'os meus tangarañes!	Como queiras farás o milagro;	a-a	-	1	0
+33	74-80	D'os meus tangarañes!	Vivirán desentangarañados.	a-a	-	1	0
+33	76-78	Devólvemos sanos.	Como queiras farás o milagro;	a-a	-	1	0
+33	76-80	Devólvemos sanos.	Vivirán desentangarañados.	a-a	-	1	0
+33	78-80	Como queiras farás o milagro;	Vivirán desentangarañados.	a-a	-	1	0
+34	1-3	Baite noi-	do—Vent' auro-	a-a	-	1	0
+34	1-5	Baite noi-	do—C' ó teu ros-	a-a	-	1	0
+34	2-4	te—Bay fuxin-	ra—Vent' abrin-	b-b	-	1	0
+34	2-6	te—Bay fuxin-	tro—Que sorrin-	b-b	-	1	0
+34	3-5	do—Vent' auro-	do—C' ó teu ros-	a-a	-	1	0
+34	4-6	ra—Vent' abrin-	tro—Que sorrin-	b-b	-	1	0
+34	7-8	do—A sombr' espanta!!!	Canta!...	c-c	-	1	0
+34	9-11	Paxariño can-	la—Qu' ó sol se levan-	d-d	-	1	0
+34	10-13	ta—De pónliñ' en pón-	de—Pó-lo verde mon-	e-e	-	1	0
+34	10-15	ta—De pónliñ' en pón-	vas—Alegrand' as fon-	e-e	-	1	0
+34	12-14	ta—Pó-lo monte ver-	te—Alegrand' as hér-	f-f	-	1	0
+34	12-16	ta—Pó-lo monte ver-	tes!...	f-f	-	1	0
+34	13-15	de—Pó-lo verde mon-	vas—Alegrand' as fon-	e-e	-	1	0
+34	14-16	te—Alegrand' as hér-	tes!...	f-f	-	1	0
+34	17-19	Canta, paxariño alegre,	Canta porqu' ó millo medre,	g-g	-	1	0
+34	18-20	Canta!	Canta!	h-h	-	1	0
+34	18-22	Canta!	Canta!	h-h	-	1	0
+34	20-22	Canta!	Canta!	h-h	-	1	0
+34	21-23	Canta por qu' á luz t' escoite	Canta que fuxeu á noite.	i-i	-	1	0
+34	24-26	Noite escura	E moito dura	j-j	-	1	0
+34	24-28	Noite escura	De tristura,	j-j	-	1	0
+34	26-28	E moito dura	De tristura,	j-j	-	1	0
+34	27-29	C' ó seu manto	Con meigallos	k-k	-	1	0
+34	30-32	E temores,	De dolores,	l-l	-	1	0
+34	35-39	Cubridora	O ceu colora	m-m	-	1	0
+34	35-41	Cubridora	Que namora	m-m	-	1	0
+34	36-37	En todo mal.	Sal!!...	n-n	-	1	0
+34	39-41	O ceu colora	Que namora	m-m	-	1	0
+34	43-45	D' ouro e prata	D' escalrata.	ñ-ñ	-	1	0
+34	44-46	Teñidiño	C' uns vestidos	o-o	-	1	0
+34	47-49	De diamante	O sol amante	q-q	-	1	0
+34	48-50	Que lle borda	Antr' as ondas	p-p	-	1	0
+34	51-52	De cristal.	Sal!...	r-r	-	1	0
+34	51-53	De cristal.	Señora en todo mal,	r-r	-	1	0
+34	51-56	De cristal.	Nas cunchiñas do areal.	r-r	-	1	0
+34	52-53	Sal!...	Señora en todo mal,	r-r	-	1	0
+34	52-56	Sal!...	Nas cunchiñas do areal.	r-r	-	1	0
+34	53-56	Señora en todo mal,	Nas cunchiñas do areal.	r-r	-	1	0
+34	55-58	Xa brila	Do dia	s-s	-	1	0
+34	55-59	Xa brila	Vist' á terra d' alegria,	s-s	-	1	0
+34	55-61	Xa brila	Derrete con amor á escarcha fria.	s-s	-	1	0
+34	58-59	Do dia	Vist' á terra d' alegria,	s-s	-	1	0
+34	58-61	Do dia	Derrete con amor á escarcha fria.	s-s	-	1	0
+34	59-61	Vist' á terra d' alegria,	Derrete con amor á escarcha fria.	s-s	-	1	0
+34	60-62	Qu' ó sol	Branc' auro-	t-t	-	1	0
+34	60-66	Qu' ó sol	do—D' os que dor-	t-t	-	1	0
+34	60-68	Qu' ó sol	do—O teu folgor!...	t-t	-	1	0
+34	60-69	Qu' ó sol	Cor...	t-t	-	1	0
+34	62-66	Branc' auro-	do—D' os que dor-	t-t	-	1	0
+34	62-68	Branc' auro-	do—O teu folgor!...	t-t	-	1	0
+34	62-69	Branc' auro-	Cor...	t-t	-	1	0
+34	63-65	ra—Ven chegan-	ñas—Bay chaman-	u-u	-	1	0
+34	63-67	ra—Ven chegan-	men—Esperan-	u-u	-	1	0
+34	65-67	ñas—Bay chaman-	men—Esperan-	u-u	-	1	0
+34	66-68	do—D' os que dor-	do—O teu folgor!...	t-t	-	1	0
+34	66-69	do—D' os que dor-	Cor...	t-t	-	1	0
+34	68-69	do—O teu folgor!...	Cor...	t-t	-	1	0
+34	70-73	D' alba hermosa	Cariñosa,	v-v	-	1	0
+34	71-75	Lles estende	Tamen suspende,	w-w	-	1	0
+34	71-77	Lles estende	No mar se tende	w-w	-	1	0
+34	71-80	Lles estende	Dempois leve	w-w	-	1	0
+34	74-76	Dond' ó sol	Cand' aló	x-x	-	1	0
+34	75-77	Tamen suspende,	No mar se tende	w-w	-	1	0
+34	75-80	Tamen suspende,	Dempois leve	w-w	-	1	0
+34	77-80	No mar se tende	Dempois leve	w-w	-	1	0
+34	79-81	Larada viva	Fuxitiva	y-y	-	1	0
+34	83-84	Resprandor.	Cantor	z-z	-	1	0
+34	86-88	Paxariño alegre	Canta por qu' ó millo medre	aa-aa	-	1	0
+34	91-93	Alegre namorado	Que xa sal ó sol dourado.	ac-ac	-	1	0
+34	91-95	Alegre namorado	Ben lavado	ac-ac	-	1	0
+34	91-97	Alegre namorado	Ben peitado,	ac-ac	-	1	0
+34	91-99	Alegre namorado	Acompañado	ac-ac	-	1	0
+34	91-102	Alegre namorado	S' espricando	ac-ac	-	1	0
+34	93-95	Que xa sal ó sol dourado.	Ben lavado	ac-ac	-	1	0
+34	93-97	Que xa sal ó sol dourado.	Ben peitado,	ac-ac	-	1	0
+34	93-99	Que xa sal ó sol dourado.	Acompañado	ac-ac	-	1	0
+34	93-102	Que xa sal ó sol dourado.	S' espricando	ac-ac	-	1	0
+34	95-97	Ben lavado	Ben peitado,	ac-ac	-	1	0
+34	95-99	Ben lavado	Acompañado	ac-ac	-	1	0
+34	95-102	Ben lavado	S' espricando	ac-ac	-	1	0
+34	97-99	Ben peitado,	Acompañado	ac-ac	-	1	0
+34	97-102	Ben peitado,	S' espricando	ac-ac	-	1	0
+34	99-102	Acompañado	S' espricando	ac-ac	-	1	0
+34	100-101	A porta está!...	Xá!...	ad-ad	-	1	0
+34	103-104	Que t' esprica	Repinica,	ae-ae	-	1	0
+34	103-105	Que t' esprica	Repinica,	ae-ae	-	1	0
+34	104-105	Repinica,	Repinica,	ae-ae	-	1	0
+34	106-107	N' alborada	Ben amada	af-af	-	1	0
+34	108-112	Das meniñas	D' as belliñas	ag-ag	-	1	0
+34	108-113	Das meniñas	Alegriñas,	ag-ag	-	1	0
+34	109-111	Cantadeiras,	Rebuldeiras,	ah-ah	-	1	0
+34	112-113	D' as belliñas	Alegriñas,	ag-ag	-	1	0
+34	115-117	Ben ruar.	Todas, rapaciñas do lugar,	ai-ai	-	1	0
+34	115-119	Ben ruar.	Y á aurora xa vos vén á dispertar:	ai-ai	-	1	0
+34	115-121	Ben ruar.	Arriba toleirona mocidád!	ai-ai	-	1	0
+34	115-123	Ben ruar.	charemos—cantaremos ó ala... lá!!!..	ai-ai	-	1	0
+34	116-120	Arriba!	Arriba!	aj-aj	-	1	0
+34	117-119	Todas, rapaciñas do lugar,	Y á aurora xa vos vén á dispertar:	ai-ai	-	1	0
+34	117-121	Todas, rapaciñas do lugar,	Arriba toleirona mocidád!	ai-ai	-	1	0
+34	117-123	Todas, rapaciñas do lugar,	charemos—cantaremos ó ala... lá!!!..	ai-ai	-	1	0
+34	119-121	Y á aurora xa vos vén á dispertar:	Arriba toleirona mocidád!	ai-ai	-	1	0
+34	119-123	Y á aurora xa vos vén á dispertar:	charemos—cantaremos ó ala... lá!!!..	ai-ai	-	1	0
+34	121-123	Arriba toleirona mocidád!	charemos—cantaremos ó ala... lá!!!..	ai-ai	-	1	0
+4	33-35	E s’ela tiña santidá e concencia,	Son fillo d’el e d’ela...	g-g	0-0	1	0
+6	39-44	Adios, adios que me vou,	Adiós Virxe d’ Asunción,	m-ñ	m-m	0	1
+6	39-46	Adios, adios que me vou,	Lévobos no coraçon,	m-ñ	m-m	0	1
+6	39-48	Adios, adios que me vou,	Miña Virxe d’ Asunción.	m-ñ	m-m	0	1
+6	41-44	Donde meu pay s' enterrou,	Adiós Virxe d’ Asunción,	m-ñ	m-m	0	1
+6	41-46	Donde meu pay s' enterrou,	Lévobos no coraçon,	m-ñ	m-m	0	1
+6	41-48	Donde meu pay s' enterrou,	Miña Virxe d’ Asunción.	m-ñ	m-m	0	1
+6	43-44	Terriña que nos criou.	Adiós Virxe d’ Asunción,	m-ñ	m-m	0	1
+6	43-46	Terriña que nos criou.	Lévobos no coraçon,	m-ñ	m-m	0	1
+6	43-48	Terriña que nos criou.	Miña Virxe d’ Asunción.	m-ñ	m-m	0	1
+7	1-6	Meu santo San Antonio	Anqu' os pés teña coxos,	0-0	a-a	0	1
+7	2-9	Dáime un homiño	Santo bendito!	a-c	b-b	0	1
+7	2-11	Dáime un homiño	Festa sin trigo.	a-c	b-b	0	1
+7	2-15	Dáime un homiño	Mais en tend' un homiño	a-c	b-b	0	1
+7	4-9	D' un gran de millo.	Santo bendito!	a-c	b-b	0	1
+7	4-11	D' un gran de millo.	Festa sin trigo.	a-c	b-b	0	1
+7	4-15	D' un gran de millo.	Mais en tend' un homiño	a-c	b-b	0	1
+7	45-48	Un-ha vaquiña vella	Facé que tal suceda,	ñ-ñ	0-0	1	0
+7	47-54	Ay! meu santiño,	Que zamb' ou trenco,	o-q	q-q	0	1
+7	47-56	Ay! meu santiño,	Para un remedio.	o-q	q-q	0	1
+7	49-54	Cal vó lo pido.	Que zamb' ou trenco,	o-q	q-q	0	1
+7	49-56	Cal vó lo pido.	Para un remedio.	o-q	q-q	0	1
+7	50-54	San Antonio bendito,	Que zamb' ou trenco,	o-q	q-q	0	1
+7	50-56	San Antonio bendito,	Para un remedio.	o-q	q-q	0	1
+8	10-17	Brando cantar d' os vareos paxariños	Nunca ó rumor do mundo corrompido	e-g	e-e	0	1
+8	10-19	Brando cantar d' os vareos paxariños	Nin brillo d' os honores fementido	e-g	e-e	0	1
+8	10-21	Brando cantar d' os vareos paxariños	Ceo azul, sol d' amor, campo frorido,	e-g	e-e	0	1
+8	12-17	Douraba fontes, lagos e campiños.	Nunca ó rumor do mundo corrompido	e-g	e-e	0	1
+8	12-19	Douraba fontes, lagos e campiños.	Nin brillo d' os honores fementido	e-g	e-e	0	1
+8	12-21	Douraba fontes, lagos e campiños.	Ceo azul, sol d' amor, campo frorido,	e-g	e-e	0	1
+8	14-17	Ir e vir dos cabirtos xuntadiños,	Nunca ó rumor do mundo corrompido	e-g	e-e	0	1
+8	14-19	Ir e vir dos cabirtos xuntadiños,	Nin brillo d' os honores fementido	e-g	e-e	0	1
+8	14-21	Ir e vir dos cabirtos xuntadiños,	Ceo azul, sol d' amor, campo frorido,	e-g	e-e	0	1
+8	79-82	Qu' era prob' e dorido antr' os doridos	Tiña por leito ó chan humedecido	ac-ae	ac-ac	0	1
+8	79-84	Qu' era prob' e dorido antr' os doridos	Qu' entraba pó las fendas arresido.	ac-ae	ac-ac	0	1
+8	79-86	Qu' era prob' e dorido antr' os doridos	Que dan de porta en porta ô qu' é perdido	ac-ae	ac-ac	0	1
+8	80-82	E afrixido antr' os tristes afrixidos.	Tiña por leito ó chan humedecido	ac-ae	ac-ac	0	1
+8	80-84	E afrixido antr' os tristes afrixidos.	Qu' entraba pó las fendas arresido.	ac-ae	ac-ac	0	1
+8	80-86	E afrixido antr' os tristes afrixidos.	Que dan de porta en porta ô qu' é perdido	ac-ae	ac-ac	0	1
+8	111-113	Segun á xente de poder decia	Cando d'os porcos á matanza viña	añ-ao	an-an	0	1
+8	111-115	Segun á xente de poder decia	O despertar da fresca mañanciña !...	añ-ao	an-an	0	1
+8	111-117	Segun á xente de poder decia	Olendo á cocho pó los aires iña!	añ-ao	an-an	0	1
+8	111-119	Segun á xente de poder decia	¡Qu' ir e vir dend' o banco hastr' a cociña!	añ-ao	an-an	0	1
+8	112-113	Anqu' ela ben folgaba e ben comia.	Cando d'os porcos á matanza viña	añ-ao	an-an	0	1
+8	112-115	Anqu' ela ben folgaba e ben comia.	O despertar da fresca mañanciña !...	añ-ao	an-an	0	1
+8	112-117	Anqu' ela ben folgaba e ben comia.	Olendo á cocho pó los aires iña!	añ-ao	an-an	0	1
+8	112-119	Anqu' ela ben folgaba e ben comia.	¡Qu' ir e vir dend' o banco hastr' a cociña!	añ-ao	an-an	0	1
+8	122-131	Fígado con cebola ben frixida	Por tod' á vecindá se repetia	ar-av	aq-aq	0	1
+8	122-133	Fígado con cebola ben frixida	Que suceso tan grande ó requeria.	ar-av	aq-aq	0	1
+8	122-135	Fígado con cebola ben frixida	Solo na chouza de Vidal n' habia	ar-av	aq-aq	0	1
+8	122-136	Fígado con cebola ben frixida	Nin porco, nin mondongo, nin risiña,	ar-aw	aq-aq	0	1
+8	122-137	Fígado con cebola ben frixida	Qu' era todo nubrado e tristesiña.	ar-aw	aq-aq	0	1
+8	124-131	Qu' inda á un morto ben morto dera vida	Por tod' á vecindá se repetia	ar-av	aq-aq	0	1
+8	124-133	Qu' inda á un morto ben morto dera vida	Que suceso tan grande ó requeria.	ar-av	aq-aq	0	1
+8	124-135	Qu' inda á un morto ben morto dera vida	Solo na chouza de Vidal n' habia	ar-av	aq-aq	0	1
+8	124-136	Qu' inda á un morto ben morto dera vida	Nin porco, nin mondongo, nin risiña,	ar-aw	aq-aq	0	1
+8	124-137	Qu' inda á un morto ben morto dera vida	Qu' era todo nubrado e tristesiña.	ar-aw	aq-aq	0	1
+8	126-131	Raxo en sorsa c' un cheiro que convida,	Por tod' á vecindá se repetia	ar-av	aq-aq	0	1
+8	126-133	Raxo en sorsa c' un cheiro que convida,	Que suceso tan grande ó requeria.	ar-av	aq-aq	0	1
+8	126-135	Raxo en sorsa c' un cheiro que convida,	Solo na chouza de Vidal n' habia	ar-av	aq-aq	0	1
+8	126-136	Raxo en sorsa c' un cheiro que convida,	Nin porco, nin mondongo, nin risiña,	ar-aw	aq-aq	0	1
+8	126-137	Raxo en sorsa c' un cheiro que convida,	Qu' era todo nubrado e tristesiña.	ar-aw	aq-aq	0	1
+8	131-136	Por tod' á vecindá se repetia	Nin porco, nin mondongo, nin risiña,	av-aw	aq-aq	0	1
+8	131-137	Por tod' á vecindá se repetia	Qu' era todo nubrado e tristesiña.	av-aw	aq-aq	0	1
+8	133-136	Que suceso tan grande ó requeria.	Nin porco, nin mondongo, nin risiña,	av-aw	aq-aq	0	1
+8	133-137	Que suceso tan grande ó requeria.	Qu' era todo nubrado e tristesiña.	av-aw	aq-aq	0	1
+8	135-136	Solo na chouza de Vidal n' habia	Nin porco, nin mondongo, nin risiña,	av-aw	aq-aq	0	1
+8	135-137	Solo na chouza de Vidal n' habia	Qu' era todo nubrado e tristesiña.	av-aw	aq-aq	0	1
+8	211-215	Qu' entre ximidos e dolores nace,	Y un Dios ó mesmo demo se tornara	by-by	bx-0	1	0
+8	213-215	Có seu mirar risoño nos comprace.	Y un Dios ó mesmo demo se tornara	by-by	bx-0	1	0
+8	240-242	Y ó coiro tan graxento relusia	—Alabado sea Dios!—Dios ch' ó bendiga!	ci-cj	ch-ch	0	1
+8	240-244	Y ó coiro tan graxento relusia	Mentras qu' ó cocho á paso de formiga	ci-cj	ch-ch	0	1
+8	240-246	Y ó coiro tan graxento relusia	A falarlle á Vidal cada un s' obriga	ci-cj	ch-ch	0	1
+8	241-242	Que mesmo de manteiga paresia.	—Alabado sea Dios!—Dios ch' ó bendiga!	ci-cj	ch-ch	0	1
+8	241-244	Que mesmo de manteiga paresia.	Mentras qu' ó cocho á paso de formiga	ci-cj	ch-ch	0	1
+8	241-246	Que mesmo de manteiga paresia.	A falarlle á Vidal cada un s' obriga	ci-cj	ch-ch	0	1
+8	264-267	Nin groria ten nin porgatorio ardente,	O cheiriño do porco ll' enlouquece,	cq-cs	cp-cp	0	1
+8	264-269	Nin groria ten nin porgatorio ardente,	Aquel qu' ante seus ollos aparece,	cq-cs	cp-cp	0	1
+8	264-271	Nin groria ten nin porgatorio ardente,	No rostro d' os presentes resplandece	cq-cs	cp-cp	0	1
+8	265-267	El dormirá insensible eternamente.	O cheiriño do porco ll' enlouquece,	cq-cs	cp-cp	0	1
+8	265-269	El dormirá insensible eternamente.	Aquel qu' ante seus ollos aparece,	cq-cs	cp-cp	0	1
+8	265-271	El dormirá insensible eternamente.	No rostro d' os presentes resplandece	cq-cs	cp-cp	0	1
+8	275-283	Mentras qu' á xente aturrullada mira...	Pero Vidal ó xordo se facia,	cv-cy	ct-ct	0	1
+8	275-285	Mentras qu' á xente aturrullada mira...	Y ô arbór primeiro do siguente dia	cv-cy	ct-ct	0	1
+8	275-287	Mentras qu' á xente aturrullada mira...	Que á pouco de cargado se rompia,	cv-cy	ct-ct	0	1
+8	277-283	Que nunca tal naquel lugar se vira,	Pero Vidal ó xordo se facia,	cv-cy	ct-ct	0	1
+8	277-285	Que nunca tal naquel lugar se vira,	Y ô arbór primeiro do siguente dia	cv-cy	ct-ct	0	1
+8	277-287	Que nunca tal naquel lugar se vira,	Que á pouco de cargado se rompia,	cv-cy	ct-ct	0	1
+8	279-283	Dás voltas que dá ó mundo s' adimira	Pero Vidal ó xordo se facia,	cv-cy	ct-ct	0	1
+8	279-285	Dás voltas que dá ó mundo s' adimira	Y ô arbór primeiro do siguente dia	cv-cy	ct-ct	0	1
+8	279-287	Dás voltas que dá ó mundo s' adimira	Que á pouco de cargado se rompia,	cv-cy	ct-ct	0	1

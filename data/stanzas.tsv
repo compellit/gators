@@ -37,17 +37,17 @@ workId	stanzaNbr	line_count	verse_range	gold_stanza	pred_stanza	pred_stanza_type
 2	32	3	94-96	tercerilla	tercerilla	tercerilla		True	False	False	a-a	a-a
 2	33	3	97-99	tercerilla	tercerilla	tercerilla		True	False	False	a-a	a-a
 6	1	4	1-4	cantar	seguidilla	cantar	seguidilla	True	False	False	-a-a	-a-a
-6	2	4	5-8	cantar	redondilla	redondilla		False	False	False	a---	abba
-6	3	4	9-12	cantar	seguidilla_real	seguidilla_real		False	False	False	ab-b	-a-a
-6	4	4	13-16	cantar	seguidilla_real	seguidilla_real		False	False	False	-a-a	-a-a
-6	5	4	17-20	cantar	redondilla	redondilla		False	False	False	----	abba
-6	6	4	21-24	cantar	redondilla	redondilla		False	False	False	----	abba
-6	7	4	25-28	cantar	seguidilla_real	seguidilla_real		False	False	False	ab-b	-a-a
+6	2	4	5-8	cantar	seguidilla	cantar	seguidilla	True	False	False	ab-b	-a-a
+6	3	4	9-12	cantar	seguidilla	cantar	seguidilla	True	False	False	ab-b	-a-a
+6	4	4	13-16	cantar	seguidilla	cantar	seguidilla	True	False	False	-a-a	-a-a
+6	5	4	17-20	cantar	seguidilla	cantar	seguidilla	True	False	False	-a-a	-a-a
+6	6	4	21-24	cantar	seguidilla	cantar	seguidilla	True	False	False	-a-a	-a-a
+6	7	4	25-28	cantar	seguidilla	cantar	seguidilla	True	False	False	ab-b	-a-a
 6	8	5	29-33	quintilla	quintilla	quintilla		True	False	False	ababa	ababa
 6	9	5	34-38	quintilla	quintilla	quintilla		True	False	False	ababa	ababa
 6	10	5	39-43	quintilla	quintilla	quintilla		True	False	False	ababa	ababa
 6	11	5	44-48	quintilla	quintilla	quintilla		True	False	False	ababa	ababa
-6	12	4	49-52	cantar	seguidilla_real	seguidilla_real		False	False	False	abcb	-a-a
+6	12	4	49-52	cantar	seguidilla	cantar	seguidilla	True	False	False	abcb	-a-a
 6	13	4	53-56	cantar	seguidilla	cantar	seguidilla	True	False	False	abcb	-a-a
 6	14	4	57-60	cantar	seguidilla	cantar	seguidilla	True	False	False	ab-b	-a-a
 6	15	4	61-64	cantar	seguidilla	cantar	seguidilla	True	False	False	ab-b	-a-a
@@ -64,49 +64,47 @@ workId	stanzaNbr	line_count	verse_range	gold_stanza	pred_stanza	pred_stanza_type
 8	3	8	17-24	oitava_real	oitava_real	oitava	oitava_real	False	True	False	abababcc	*
 8	4	8	25-32	oitava_real	oitava_real	oitava	oitava_real	False	True	False	a-ababcc	*
 8	5	8	33-40	oitava_real	oitava_real	oitava	oitava_real	False	True	False	abababcc	*
-8	6	8	41-48	oitava_real	oitava	oitava		False	False	False	a-aba-bb	*
+8	6	8	41-48	oitava_real	oitava_real	oitava	oitava_real	False	True	False	abababcc	*
 8	7	8	49-56	oitava_real	oitava_real	oitava	oitava_real	False	True	False	ababab--	*
 8	8	8	57-64	oitava_real	oitava_real	oitava	oitava_real	False	True	False	abababcc	*
 8	9	8	65-72	oitava_real	oitava_real	oitava	oitava_real	False	True	False	abababcc	*
 8	10	8	73-80	oitava_real	oitava_real	oitava	oitava_real	False	True	False	abababcc	*
 8	11	8	81-88	oitava_real	oitava_real	oitava	oitava_real	False	True	False	abababcc	*
 8	12	8	89-96	oitava_real	oitava_real	oitava	oitava_real	False	True	False	abababcc	*
-8	13	8	97-104	oitava_real	oitava_real	oitava	oitava_real	False	True	False	ab-babcc	*
-8	14	8	105-112	oitava_real	oitava_real	oitava	oitava_real	False	True	False	abababc-	*
+8	13	8	97-104	oitava_real	oitava_real	oitava	oitava_real	False	True	False	abababcc	*
+8	14	8	105-112	oitava_real	oitava_real	oitava	oitava_real	False	True	False	abababcc	*
 8	15	8	113-120	oitava_real	oitava_real	oitava	oitava_real	False	True	False	abababac	*
 8	16	9	121-129	novena	novena	novena		True	False	False	abcbcbcdd	*
-8	17	8	130-137	oitava_real	oitava_real	oitava	oitava_real	False	True	False	ababacdd	*
-8	18	8	138-145	oitava_real	oitava_real	oitava	oitava_real	False	True	False	ababab--	*
-8	19	8	146-153	oitava_real	oitava_real	oitava	oitava_real	False	True	False	a-ababcc	*
+8	17	8	130-137	oitava_real	oitava_real	oitava	oitava_real	False	True	False	a-a-abcc	*
+8	18	8	138-145	oitava_real	oitava_real	oitava	oitava_real	False	True	False	abababcc	*
+8	19	8	146-153	oitava_real	oitava_real	oitava	oitava_real	False	True	False	ababacdd	*
 8	20	8	154-161	oitava_real	oitava_real	oitava	oitava_real	False	True	False	abababcc	*
-8	21	8	162-169	oitava_real	oitava_real	oitava	oitava_real	False	True	False	ababacdd	*
+8	21	8	162-169	oitava_real	oitava_real	oitava	oitava_real	False	True	False	abababcc	*
 8	22	8	170-177	oitava_real	oitava_real	oitava	oitava_real	False	True	False	abababcc	*
-8	23	8	178-185	oitava_real	oitava_real	oitava	oitava_real	False	True	False	aba-abcc	*
+8	23	8	178-185	oitava_real	oitava_real	oitava	oitava_real	False	True	False	abababcc	*
 8	24	8	186-193	oitava_real	oitava_real	oitava	oitava_real	False	True	False	abababcc	*
 8	25	8	194-201	oitava_real	oitava_real	oitava	oitava_real	False	True	False	abababcc	*
 8	26	8	202-209	oitava_real	oitava_real	oitava	oitava_real	False	True	False	abacacdd	*
 8	27	8	210-217	oitava_real	oitava	oitava		False	False	False	ababa-cc	*
 8	28	8	218-225	oitava_real	oitava_real	oitava	oitava_real	False	True	False	abababcc	*
-8	29	8	226-233	oitava_real	oitava_real	oitava	oitava_real	False	True	False	abcbabcc	*
+8	29	8	226-233	oitava_real	oitava_real	oitava	oitava_real	False	True	False	abababcc	*
 8	30	8	234-241	oitava_real	oitava_real	oitava	oitava_real	False	True	False	ababab--	*
 8	31	8	242-249	oitava_real	oitava_real	oitava	oitava_real	False	True	False	abababcc	*
-8	32	8	250-257	oitava_real	oitava_real	oitava	oitava_real	False	True	False	abababcc	*
+8	32	8	250-257	oitava_real	oitava	oitava		False	False	False	-ababacc	*
 8	33	8	258-265	oitava_real	oitava_real	oitava	oitava_real	False	True	False	abababcc	*
 8	34	8	266-273	oitava_real	oitava_real	oitava	oitava_real	False	True	False	abababcc	*
 8	35	8	274-281	oitava_real	oitava_real	oitava	oitava_real	False	True	False	abababcc	*
-8	36	8	282-289	oitava_real	oitava_real	oitava	oitava_real	False	True	False	a-a-a-bb	*
+8	36	8	282-289	oitava_real	oitava_real	oitava	oitava_real	False	True	False	abababcc	*
 8	37	8	290-297	oitava_real	oitava_real	oitava	oitava_real	False	True	False	abababcc	*
-8	38	8	298-305	oitava_real	oitava	oitava		False	False	False	abcacadd	*
+8	38	8	298-305	oitava_real	oitava	oitava		False	False	False	abcacbdd	*
 8	39	8	306-313	oitava_real	oitava_real	oitava	oitava_real	False	True	False	abababcc	*
-9	1	4	1-4	serventesio	serventesio	serventesio		True	False	False	abab	abab
-9	2	2	5-6	pareado	pareado	pareado		True	False	False	aa	aa
-9	3	2	7-8	pareado	pareado	pareado		True	False	False	aa	aa
+9	1	8	1-8	serventesio	oitava	oitava		False	False	False	ababccdd	*
 10	1	24	1-24	romance	romance	romance		True	False	False	-a-a-a-a---a-a-a-a-a---a	-a-a-a-a-a-a-a-a-a-a-a-a
-11	1	7	1-7	setina	setina	setina		True	False	False	abbaa--	*
-11	2	7	8-14	setina	setina	setina		True	False	False	aaabbaa	*
-11	3	7	15-21	setina	setina	setina		True	False	False	abbaac-	*
+11	1	7	1-7	setina	setina	setina		True	False	False	abbaacc	*
+11	2	7	8-14	setina	setina	setina		True	False	False	abbaacc	*
+11	3	7	15-21	setina	setina	setina		True	False	False	abbaacd	*
 11	4	7	22-28	setina	setina	setina		True	False	False	abbaacc	*
-11	5	7	29-35	setina	setina	setina		True	False	False	a--aabb	*
+11	5	7	29-35	setina	setina	setina		True	False	False	abbaacc	*
 11	6	7	36-42	setina	setina	setina		True	False	False	abbaacc	*
 11	7	7	43-49	setina	setina	setina		True	False	False	abbaacc	*
 11	8	7	50-56	setina	setina	setina		True	False	False	abbaacc	*
@@ -114,7 +112,7 @@ workId	stanzaNbr	line_count	verse_range	gold_stanza	pred_stanza	pred_stanza_type
 11	10	7	64-70	setina	setina	setina		True	False	False	abbaacc	*
 11	11	7	71-77	setina	setina	setina		True	False	False	abb-acc	*
 11	12	7	78-84	setina	setina	setina		True	False	False	abbaacc	*
-11	13	7	85-91	setina	setina	setina		True	False	False	abbaa--	*
+11	13	7	85-91	setina	setina	setina		True	False	False	abbaacc	*
 11	14	7	92-98	setina	setina	setina		True	False	False	abbaacc	*
 11	15	7	99-105	setina	setina	setina		True	False	False	abbaacc	*
 11	16	7	106-112	setina	setina	setina		True	False	False	abbaacc	*
@@ -123,7 +121,7 @@ workId	stanzaNbr	line_count	verse_range	gold_stanza	pred_stanza	pred_stanza_type
 12	3	5	11-15	lira	lira	lira		True	False	False	ababb	ababb
 12	4	5	16-20	lira	lira	lira		True	False	False	ababb	ababb
 12	5	5	21-25	lira	lira	lira		True	False	False	ababb	ababb
-12	6	5	26-30	lira	lira	lira		True	False	False	abab-	ababb
+12	6	5	26-30	lira	lira	lira		True	False	False	ababb	ababb
 12	7	5	31-35	lira	lira	lira		True	False	False	ababb	ababb
 12	8	5	36-40	lira	lira	lira		True	False	False	ababb	ababb
 12	9	5	41-45	lira	lira	lira		True	False	False	ababb	ababb
@@ -136,10 +134,10 @@ workId	stanzaNbr	line_count	verse_range	gold_stanza	pred_stanza	pred_stanza_type
 12	16	5	76-80	lira	lira	lira		True	False	False	ababb	ababb
 12	17	5	81-85	lira	lira	lira		True	False	False	ababb	ababb
 13	1	10	1-10	espinela	espinela	espinela		True	False	False	abbaaccddc	abbaaccddc
-13	2	10	11-20	espinela	espinela	espinela		True	False	False	a--aabbccb	abbaaccddc
+13	2	10	11-20	espinela	espinela	espinela		True	False	False	abbaaccddc	abbaaccddc
 13	3	10	21-30	espinela	espinela	espinela		True	False	False	abbaaccddc	abbaaccddc
-13	4	10	31-40	espinela	espinela	espinela		True	False	False	abba-ccddc	abbaaccddc
-13	5	10	41-50	espinela	espinela	espinela		True	False	False	a-baabbccb	abbaaccddc
+13	4	10	31-40	espinela	espinela	espinela		True	False	False	aaabbccddc	abbaaccddc
+13	5	10	41-50	espinela	espinela	espinela		True	False	False	abbaaccddc	abbaaccddc
 13	6	10	51-60	espinela	espinela	espinela		True	False	False	abbaaccddc	abbaaccddc
 14	1	4	1-4	redondilla	redondilla	redondilla		True	False	False	abba	abba
 14	2	4	5-8	redondilla	redondilla	redondilla		True	False	False	abba	abba
@@ -153,7 +151,7 @@ workId	stanzaNbr	line_count	verse_range	gold_stanza	pred_stanza	pred_stanza_type
 14	10	4	37-40	redondilla	redondilla	redondilla		True	False	False	abba	abba
 14	11	4	41-44	redondilla	redondilla	redondilla		True	False	False	abba	abba
 14	12	4	45-48	redondilla	redondilla	redondilla		True	False	False	abba	abba
-14	13	4	49-52	redondilla	redondilla	redondilla		True	False	False	-aa-	abba
+14	13	4	49-52	redondilla	redondilla	redondilla		True	False	False	abba	abba
 14	14	4	53-56	redondilla	redondilla	redondilla		True	False	False	abba	abba
 14	15	4	57-60	redondilla	redondilla	redondilla		True	False	False	abba	abba
 14	16	4	61-64	redondilla	redondilla	redondilla		True	False	False	abab	abba
@@ -162,9 +160,9 @@ workId	stanzaNbr	line_count	verse_range	gold_stanza	pred_stanza	pred_stanza_type
 16	3	6	13-18	sextilla	sextilla	sextilla		True	False	False	aabccb	*
 16	4	6	19-24	sextilla	sextilla	sextilla		True	False	False	aabccb	*
 17	1	6	1-6	sextilla	sextilla	sextilla		True	False	False	aabccb	*
-17	2	6	7-12	sextilla	sextilla	sextilla		True	False	False	aabccb	*
+17	2	6	7-12	sextilla	sextilla	sextilla		True	False	False	aa-bbc	*
 17	3	6	13-18	sextilla	sextilla	sextilla		True	False	False	aabccb	*
-18	1	40	1-40	romancillo	romancillo	romancillo		True	False	False	-a-a-a-ababa-a-a-a-a-a-a---a-a-a-aaaccda	-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a
+18	1	40	1-40	romancillo	romancillo	romancillo		True	False	False	-a-a-a-ababa-a-a-a-a-a-a-a-a-a-a-acac-da	-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a
 18	2	32	41-72	romancillo	romancillo	romancillo		True	False	False	abcbabcbdb-bdb-bdb-bdbebdbebeb-b	-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a
 19	1	4	1-4	seguidilla	seguidilla	cantar	seguidilla	False	True	False	-a-a	-a-a
 19	2	4	5-8	seguidilla	seguidilla	cantar	seguidilla	False	True	False	-a-a	-a-a
@@ -203,9 +201,9 @@ workId	stanzaNbr	line_count	verse_range	gold_stanza	pred_stanza	pred_stanza_type
 19	35	4	137-140	seguidilla	seguidilla	cantar	seguidilla	False	True	False	abac	-a-a
 19	36	4	141-144	seguidilla	seguidilla	cantar	seguidilla	False	True	False	a-ab	-a-a
 23	1	6	1-6	estrofa_manriqueña	estrofa_manriqueña	sextilla	estrofa_manriqueña	False	True	False	abcabc	*
-23	2	6	7-12	estrofa_manriqueña	estrofa_manriqueña	sextilla	estrofa_manriqueña	False	True	False	abba-b	abcabc
+23	2	6	7-12	estrofa_manriqueña	estrofa_manriqueña	sextilla	estrofa_manriqueña	False	True	False	abcabc	abcabc
 23	3	6	13-18	estrofa_manriqueña	estrofa_manriqueña	sextilla	estrofa_manriqueña	False	True	False	abcabc	abcabc
-23	4	6	19-24	estrofa_manriqueña	estrofa_manriqueña	sextilla	estrofa_manriqueña	False	True	False	ab-aba	abcabc
+23	4	6	19-24	estrofa_manriqueña	estrofa_manriqueña	sextilla	estrofa_manriqueña	False	True	False	abcabc	*
 23	5	6	25-30	estrofa_manriqueña	estrofa_manriqueña	sextilla	estrofa_manriqueña	False	True	False	abcabc	*
 23	6	6	31-36	estrofa_manriqueña	estrofa_manriqueña	sextilla	estrofa_manriqueña	False	True	False	abcabc	*
 23	7	6	37-42	estrofa_manriqueña	estrofa_manriqueña	sextilla	estrofa_manriqueña	False	True	False	ab-ab-	*
@@ -222,12 +220,12 @@ workId	stanzaNbr	line_count	verse_range	gold_stanza	pred_stanza	pred_stanza_type
 23	18	6	103-108	estrofa_manriqueña	estrofa_manriqueña	sextilla	estrofa_manriqueña	False	True	False	abcabc	*
 23	19	6	109-114	estrofa_manriqueña	estrofa_manriqueña	sextilla	estrofa_manriqueña	False	True	False	abcabc	abcabc
 23	20	6	115-120	estrofa_manriqueña	estrofa_manriqueña	sextilla	estrofa_manriqueña	False	True	False	abcabc	*
-23	21	6	121-126	estrofa_manriqueña	estrofa_manriqueña	sextilla	estrofa_manriqueña	False	True	False	abcabc	*
+23	21	6	121-126	estrofa_manriqueña	estrofa_manriqueña	sextilla	estrofa_manriqueña	False	True	False	-ab-ab	*
 24	1	4	1-4	serventesio	serventesio	serventesio		True	False	False	abab	abab
-24	2	4	5-8	serventesio	estrofa_francisco_de_la_torre	cuarteto_lira	estrofa_francisco_de_la_torre	False	False	False	a-a-	----
-24	3	4	9-12	serventesio	romance_arte_maior	romance_arte_maior		False	False	False	abab	-a-a
+24	2	4	5-8	serventesio	serventesio	serventesio		True	False	False	abab	abab
+24	3	4	9-12	serventesio	serventesio	serventesio		True	False	False	abab	abab
 25	1	14	1-14	romancillo	romancillo	romancillo		True	False	False	ab-bab-b-b-b-b	-a-a-a-a-a-a-a
-26	1	16	1-16	romancillo	romancillo	romancillo		True	False	False	-a---a-a-a---a-a	-a-a-a-a-a-a-a-a
+26	1	16	1-16	romancillo	romancillo	romancillo		True	False	False	-a-a-a-a-a-a-a-a	-a-a-a-a-a-a-a-a
 26	2	14	17-30	romancillo	romancillo	romancillo		True	False	False	-a-a-ababa-a-a	-a-a-a-a-a-a-a
 26	3	2	31-32	romancillo	romancillo	romancillo		True	False	False	-a	-a
 27	1	8	1-8	romancillo	romancillo	romancillo		True	False	False	-a-a-a-a	-a-a-a-a
@@ -238,7 +236,7 @@ workId	stanzaNbr	line_count	verse_range	gold_stanza	pred_stanza	pred_stanza_type
 27	6	10	37-46	romancillo	romancillo	romancillo		True	False	False	-a-a-a-a-a	-a-a-a-a-a
 27	7	6	47-52	romancillo	romancillo	romancillo		True	False	False	-a-a-a	-a-a-a
 27	8	4	53-56	romancillo	romancillo	romancillo		True	False	False	-a-a	-a-a
-27	9	8	57-64	romancillo	romancillo	romancillo		True	False	False	-aaa-a-a	-a-a-a-a
+27	9	8	57-64	romancillo	romancillo	romancillo		True	False	False	-a-a-a-a	-a-a-a-a
 27	10	8	65-72	romancillo	romancillo	romancillo		True	False	False	-a-a-a-a	-a-a-a-a
 27	11	14	73-86	romancillo	romancillo	romancillo		True	False	False	-a-a-a-a-ababa	-a-a-a-a-a-a-a
 27	12	10	87-96	romancillo	romancillo	romancillo		True	False	False	-a-aba-aba	-a-a-a-a-a
@@ -254,5 +252,5 @@ workId	stanzaNbr	line_count	verse_range	gold_stanza	pred_stanza	pred_stanza_type
 27	22	4	161-164	romancillo	romancillo	romancillo		True	False	False	-a-a	-a-a
 30	1	10	1-10	romancillo	romancillo	romancillo		True	False	False	-a-aba-aba	-a-a-a-a-a
 30	2	16	11-26	romancillo	romancillo	romancillo		True	False	False	-a-a-a-a-a-a-a-a	-a-a-a-a-a-a-a-a
-30	3	12	27-38	romancillo	romancillo	romancillo		True	False	False	-aba-ababa--	-a-a-a-a-a-a
+30	3	12	27-38	romancillo	romancillo	romancillo		True	False	False	-aba-ababa-a	-a-a-a-a-a-a
 30	4	6	39-44	romancillo	romancillo	romancillo		True	False	False	-a-a-a	-a-a-a

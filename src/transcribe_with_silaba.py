@@ -1,5 +1,7 @@
 import argparse
 import csv
+import subprocess
+import tempfile
 from pathlib import Path
 from types import SimpleNamespace
 import re
@@ -22,8 +24,14 @@ OUTPUT_PATH = PROJECT_DIR / "data" / "gl-prepro-35k-silaba.tsv"
 TEXT_COLUMN = "running_text"
 OUTPUT_COLUMN = "phSilaba"
 TSV_QUOTECHAR = "\x07"
+GUMPER_PREPROCESSOR_PATH = WORKSPACE_DIR / "galapre" / "preprocessing" / "g2s_client_running_text.py"
+GUMPER_PREPROCESSED_RELATIVE_PATH = Path("out_001") / "input_pp_out_norm_spa_001.txt"
 PREPRO_LETTER = "A-Za-zÁÉÍÓÚÜÑÏáéíóúüñïÂÊÎÔÛâêîôû"
 PREPRO_APOSTROPHE = "'’‘"
+NONSTANDARD_VOWEL_TRANSLATION = str.maketrans(
+    "âêîôûÂÊÎÔÛàèìòùÀÈÌÒÙ",
+    "aeiouAEIOUaeiouAEIOU",
+)
 
 WORD_RE = re.compile(r"[A-Za-zÁÉÍÓÚÜÑÏáéíóúüñï]+(?:['’‘][A-Za-zÁÉÍÓÚÜÑÏáéíóúüñï]+)?")
 TOKEN_RE = re.compile(r"[A-Za-zÁÉÍÓÚÜÑÏáéíóúüñï]+(?:['’‘][A-Za-zÁÉÍÓÚÜÑÏáéíóúüñï]+)?|\d+(?:[.,]\d+)?|[^\w\s]")
@@ -77,6 +85,7 @@ def transcribe_token(token, silaba, cache):
 
 
 def transcribe_text(text, silaba, cache):
+    text = text.translate(NONSTANDARD_VOWEL_TRANSLATION)
     tokens = TOKEN_RE.findall(text)
     transcribed_tokens = [transcribe_token(token, silaba, cache) for token in tokens]
     return merge_tokens(transcribed_tokens)
@@ -90,8 +99,46 @@ def prepro_text(text):
     text = text.translate(str.maketrans("", "", PREPRO_APOSTROPHE))
     text = re.sub(rf"\b([bcdfghjklmnñpqrstvwxzBCDFGHJKLMNÑPQRSTVWXZ])\s+(?=[{PREPRO_LETTER}])", r"\1", text)
     text = text.replace("-", "")
-    text = text.translate(str.maketrans("âêîôûÂÊÎÔÛàèìòùÀÈÌÒÙ", "aeiouAEIOUáéíóúÁÉÍÓÚ"))
+    text = text.translate(NONSTANDARD_VOWEL_TRANSLATION)
     return text
+
+
+def run_gumper_preprocessing(texts, preprocessor_path):
+    preprocessor_path = Path(preprocessor_path)
+    if not preprocessor_path.exists():
+        raise FileNotFoundError(f"Gumper preprocessing script not found: {preprocessor_path}")
+
+    with tempfile.TemporaryDirectory(prefix="silaba-gumper-prepro-") as tmp:
+        work_dir = Path(tmp)
+        input_path = work_dir / "input.txt"
+        input_path.write_text("\n".join(str(text).strip() for text in texts) + "\n", encoding="utf-8")
+
+        subprocess.run(
+            [
+                sys.executable,
+                str(preprocessor_path),
+                str(input_path),
+                "-p",
+                "-d",
+                "-n",
+                "-s",
+                "-b",
+                "001",
+                "-m",
+            ],
+            check=True,
+            cwd=preprocessor_path.parent,
+        )
+
+        output_path = work_dir / GUMPER_PREPROCESSED_RELATIVE_PATH
+        lines = output_path.read_text(encoding="utf-8").splitlines()
+
+    if len(lines) != len(texts):
+        raise RuntimeError(
+            "Gumper preprocessing count mismatch: "
+            f"got {len(lines)} rows for {len(texts)} input rows"
+        )
+    return lines
 
 
 def main():
@@ -100,13 +147,34 @@ def main():
     parser.add_argument("--output-path", default=OUTPUT_PATH)
     parser.add_argument("--text-column", default=TEXT_COLUMN)
     parser.add_argument("--output-column", default=OUTPUT_COLUMN)
-    parser.add_argument("--prepro", action="store_true")
+    parser.add_argument(
+        "--prepro",
+        action="store_true",
+        help="Preprocess the text with the same running-text preprocessing used by Gumper.",
+    )
+    parser.add_argument(
+        "--silaba-prepro",
+        action="store_true",
+        help="Use the older Silaba-specific transcription cleanup instead of Gumper preprocessing.",
+    )
+    parser.add_argument(
+        "--gumper-preprocessor-path",
+        type=Path,
+        default=GUMPER_PREPROCESSOR_PATH,
+        help="Path to preprocessing/g2s_client_running_text.py.",
+    )
     args = parser.parse_args()
+
+    if args.prepro and args.silaba_prepro:
+        raise SystemExit("Choose only one preprocessing mode: --prepro or --silaba-prepro.")
 
     df = pd.read_csv(args.input_path, sep="\t")
     df.dropna(subset=[args.text_column], inplace=True)
     transcription_column = args.text_column
     if args.prepro:
+        df["prepro"] = run_gumper_preprocessing(df[args.text_column], args.gumper_preprocessor_path)
+        transcription_column = "prepro"
+    elif args.silaba_prepro:
         df["prepro"] = df[args.text_column].apply(prepro_text)
         transcription_column = "prepro"
 

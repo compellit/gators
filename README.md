@@ -197,6 +197,9 @@ evaluation or interfaces. Unrhymed lines are written as `-`.
 
 ## Evaluation
 
+See [`EVALUATION.md`](EVALUATION.md) for the complete metric definitions,
+formulas, stanza-scoring procedure, output schemas, and interpretation notes.
+
 Use `evaluate_rhyme_tags.py` to compare predicted labels against a gold column.
 By default it uses `letter` as the prediction column and chooses `gold` or
 `rhyme` as the gold column.

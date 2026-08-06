@@ -172,9 +172,7 @@ def empty_counts():
         "tn": 0,
         "fn": 0,
         "pairs": 0,
-        "line_matches": 0,
         "lines": 0,
-        "perfect_groups": 0,
         "groups": 0,
     }
 
@@ -211,8 +209,6 @@ def metrics(counts):
         "precision": precision,
         "recall": recall,
         "f1": f1,
-        "line_accuracy": safe_divide(counts["line_matches"], counts["lines"]),
-        "perfect_group_accuracy": safe_divide(counts["perfect_groups"], counts["groups"]),
     }
 
 
@@ -367,18 +363,6 @@ def evaluate(
         counts["groups"] += 1
         counts["lines"] += len(group)
 
-        group_perfect = True
-        for _, row in group:
-            pred = normalize_label(row[pred_column])
-            gold = normalize_label(row[gold_column])
-            if pred == gold:
-                counts["line_matches"] += 1
-            else:
-                group_perfect = False
-
-        if group_perfect:
-            counts["perfect_groups"] += 1
-
         for (left_index, left), (right_index, right) in combinations(group, 2):
             pred_same = same_rhyme(left[pred_column], right[pred_column])
             gold_same = same_rhyme(left[gold_column], right[gold_column])
@@ -420,7 +404,7 @@ def print_metrics(values):
     integer_keys = ("groups", "lines", "pairs", "tp", "fp", "fn", "tn")
     for key in integer_keys:
         print(f"{key}\t{values[key]}")
-    for key in ("accuracy", "precision", "recall", "f1", "line_accuracy", "perfect_group_accuracy"):
+    for key in ("accuracy", "precision", "recall", "f1"):
         print(f"{key}\t{values[key]:.6f}")
     if "stanza_type_accuracy" in values:
         for key in (
@@ -447,8 +431,6 @@ def write_summary(path, values, input_path, pairs_path=None):
         "fp",
         "fn",
         "tn",
-        "line_accuracy",
-        "perfect_group_accuracy",
         "stanza_type_stanzas",
         "stanza_type_correct",
         "stanza_type_missing_predictions",

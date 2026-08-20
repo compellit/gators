@@ -1590,7 +1590,35 @@ for poem_id, poem in df.groupby(args.poem_column, sort=False):
         return best
 
     def annotate_poem_type(poem_data):
+        def annotate_fallback_type():
+            stanza_types = []
+            for stanza in get_stanzas(poem_data).values():
+                stanza_type = next(
+                    (
+                        data.get("stanza_type")
+                        for _, data in stanza
+                        if data.get("stanza_type") not in (None, "")
+                    ),
+                    None,
+                )
+                stanza_types.append(stanza_type)
+
+            if len(stanza_types) == 1 and stanza_types[0]:
+                poem_type = stanza_types[0]
+            elif (
+                len(stanza_types) > 1
+                and stanza_types[0]
+                and all(value == stanza_types[0] for value in stanza_types)
+            ):
+                poem_type = f"Serie de {stanza_types[0]}"
+            else:
+                poem_type = "-"
+
+            for data in poem_data.values():
+                data["poem_type"] = poem_type
+
         if not poem_patterns:
+            annotate_fallback_type()
             return
 
         scores = [
@@ -1599,6 +1627,7 @@ for poem_id, poem in df.groupby(args.poem_column, sort=False):
         ]
         scores = [score for score in scores if score is not None]
         if not scores:
+            annotate_fallback_type()
             return
 
         def best_poem_entry(poem_type):
@@ -1671,6 +1700,7 @@ for poem_id, poem in df.groupby(args.poem_column, sort=False):
             poem_subtype_probability = None
 
         if selected_probability < args.poem_type_min_probability:
+            annotate_fallback_type()
             return
 
         for data in poem_data.values():

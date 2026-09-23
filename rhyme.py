@@ -7,11 +7,12 @@ import string
 from pathlib import Path
 
 TSV_QUOTECHAR = "\x07"
-DEFAULT_INPUT_PATH = "/home/anxo/compellit/rhyme-gl-wk/data/gl-prepro-35k-silaba.tsv"
-DEFAULT_RESULTS_PATH = "/home/anxo/compellit/rhyme-gl-wk/data/test_results_rhyme.tsv"
-DEFAULT_STANZA_PATTERNS_PATH = "/home/anxo/compellit/rhyme-gl-wk/data/stanza_patterns.json"
-DEFAULT_POEM_PATTERNS_PATH = "/home/anxo/compellit/rhyme-gl-wk/data/poem_patterns.json"
-MIXED_METRE_DOMINANCE_THRESHOLD = 0.7
+PROJECT_DIR = Path(__file__).resolve().parent
+DEFAULT_INPUT_PATH = str(PROJECT_DIR / "data" / "gl-prepro-35k-silaba.tsv")
+DEFAULT_RESULTS_PATH = str(PROJECT_DIR / "data" / "test_results_rhyme.tsv")
+DEFAULT_STANZA_PATTERNS_PATH = str(PROJECT_DIR / "data" / "stanza_patterns.json")
+DEFAULT_POEM_PATTERNS_PATH = str(PROJECT_DIR / "data" / "poem_patterns.json")
+MIXED_METRE_DOMINANCE_THRESHOLD = 0.8
 PROBABILITY_TIE_TOLERANCE = 1e-12
 VERSE_TYPE_PATTERNS = [
     {
@@ -99,6 +100,8 @@ parser.add_argument("--poem-patterns-path", default=DEFAULT_POEM_PATTERNS_PATH)
 parser.add_argument("--subtype-min-probability", type=float, default=0.8)
 parser.add_argument("--poem-type-min-probability", type=float, default=0.8)
 parser.add_argument("--results-path", default=DEFAULT_RESULTS_PATH)
+parser.add_argument("--stanza-scores-path")
+parser.add_argument("--poem-scores-path")
 parser.add_argument("--poem-ids")
 args = parser.parse_args()
 
@@ -119,6 +122,19 @@ def clean_output_value(value):
         return int(value)
 
     return value
+
+
+def relation_targets(entry, relation_key):
+    value = entry.get(relation_key)
+    if value is None:
+        return []
+    if isinstance(value, list):
+        return value
+    return [value]
+
+
+def relation_matches(entry, relation_key, target):
+    return target in relation_targets(entry, relation_key)
 
 
 def parse_syllable_value(value):
@@ -308,6 +324,8 @@ rhythm_column = choose_rhythm_column(
 stanza_patterns = load_stanza_patterns(args.stanza_patterns_path)
 poem_patterns = load_stanza_patterns(args.poem_patterns_path)
 result_rows = []
+stanza_score_rows = []
+poem_score_rows = []
 for poem_id, poem in df.groupby(args.poem_column, sort=False):
     if poem_ids and id_key(poem_id) not in poem_ids:
         continue
@@ -588,16 +606,13 @@ for poem_id, poem in df.groupby(args.poem_column, sort=False):
             return pattern
         if len(pattern) == observed_length:
             return pattern
-        repeats = observed_length // len(pattern)
-        return pattern * repeats
+        repeats = (observed_length + len(pattern) - 1) // len(pattern)
+        return (pattern * repeats)[:observed_length]
 
     def entry_allowed_for_length(entry, observed_length):
         if entry.get("repeat_pattern"):
             pattern_length = len(entry["patterns"][0].replace(" ", ""))
-            return (
-                observed_length >= entry.get("min_verses", pattern_length)
-                and observed_length % entry.get("length_multiple", pattern_length) == 0
-            )
+            return observed_length >= entry.get("min_verses", pattern_length)
 
         return observed_length == entry.get("stanza_length")
 
@@ -888,6 +903,7 @@ for poem_id, poem in df.groupby(args.poem_column, sort=False):
                 "pattern_similarity": pattern_score,
                 "metre_similarity": metre_score,
                 "rhyme_type_similarity": rhyme_score,
+                "verse_type_similarity": verse_type_score,
             }
             if best is None or result["probability"] > best["probability"]:
                 best = result
@@ -979,18 +995,32 @@ for poem_id, poem in df.groupby(args.poem_column, sort=False):
             if abs(value - best_value) <= PROBABILITY_TIE_TOLERANCE
         ]
 
+    def subtype_selection_component(score):
+        return score["entry"].get("subtype_selection_component") or "probability"
+
+    def subtype_selection_value(score):
+        return score.get(subtype_selection_component(score))
+
+    def subtype_selection_threshold(score):
+        return score["entry"].get(
+            "subtype_selection_threshold",
+            args.subtype_min_probability,
+        )
+
+    def subtype_is_selected(score):
+        value = subtype_selection_value(score)
+        return value is not None and value >= subtype_selection_threshold(score)
+
     def choose_subtype(parent_type, scores):
         candidates = [
             score
             for score in scores
             if score["entry"].get("parent_type") == parent_type
+            and subtype_is_selected(score)
         ]
         if not candidates:
             return None
-        best = max(candidates, key=lambda score: score["probability"])
-        if best["probability"] >= args.subtype_min_probability:
-            return best
-        return None
+        return max(candidates, key=subtype_selection_value)
 
     def choose_refinement(stanza_type, scores, poem_probabilities=None):
         poem_probabilities = poem_probabilities or {}
@@ -1007,7 +1037,7 @@ for poem_id, poem in df.groupby(args.poem_column, sort=False):
         candidates = [
             score
             for score in scores
-            if score["entry"].get("refines_type") == stanza_type
+            if relation_matches(score["entry"], "refines_type", stanza_type)
         ]
         if not candidates:
             return None
@@ -1161,11 +1191,11 @@ for poem_id, poem in df.groupby(args.poem_column, sort=False):
 
     def score_probability_keys(score):
         entry = score["entry"]
-        keys = [
+        keys = {
             entry.get("stanza_type"),
             entry.get("parent_type"),
-            entry.get("refines_type"),
-        ]
+        }
+        keys.update(relation_targets(entry, "refines_type"))
         return {key for key in keys if key is not None}
 
     def poem_probability_defaults(scores_by_stanza, stanza_count):
@@ -1271,7 +1301,7 @@ for poem_id, poem in df.groupby(args.poem_column, sort=False):
             return
 
         stanza_scores = []
-        for stanza in get_stanzas(poem_data).values():
+        for stanza_n, stanza in get_stanzas(poem_data).items():
             scores = [
                 score_stanza_entry(stanza, entry)
                 for entry in stanza_patterns
@@ -1279,7 +1309,7 @@ for poem_id, poem in df.groupby(args.poem_column, sort=False):
             scores = [score for score in scores if score is not None]
             if not scores:
                 continue
-            stanza_scores.append((stanza, scores))
+            stanza_scores.append((stanza_n, stanza, scores))
 
         if not stanza_scores:
             return
@@ -1289,22 +1319,22 @@ for poem_id, poem in df.groupby(args.poem_column, sort=False):
                 scores,
                 key=lambda score: score["probability"],
             )
-            for _, scores in stanza_scores
+            for _, _, scores in stanza_scores
         ]
         first_round_outputs_by_stanza = [
             [
                 resolve_stanza_output(scores, winner)
                 for winner in winners
             ]
-            for (_, scores), winners in zip(stanza_scores, first_round_winners_by_stanza)
+            for (_, _, scores), winners in zip(stanza_scores, first_round_winners_by_stanza)
         ]
         poem_probabilities = poem_stanza_probabilities(
             first_round_outputs_by_stanza,
-            [scores for _, scores in stanza_scores],
+            [scores for _, _, scores in stanza_scores],
             len(stanza_scores),
         )
 
-        for stanza, scores in stanza_scores:
+        for stanza_n, stanza, scores in stanza_scores:
             winner = max(
                 scores,
                 key=lambda score: second_round_score(score, poem_probabilities),
@@ -1316,6 +1346,60 @@ for poem_id, poem in df.groupby(args.poem_column, sort=False):
                 adjust=True,
             )
             winner = output["winner"]
+
+            for score in scores:
+                entry = score["entry"]
+                stanza_type = entry["stanza_type"]
+                poem_probability = poem_probability_for(
+                    stanza_type,
+                    poem_probabilities,
+                    len(stanza),
+                )
+                stanza_score_rows.append(
+                    {
+                        args.poem_column: poem_id,
+                        args.stanza_column: stanza_n,
+                        "verse_count": len(stanza),
+                        "stanza_type": stanza_type,
+                        "parent_type": entry.get("parent_type"),
+                        "refines_type": entry.get("refines_type"),
+                        "probability": score["probability"],
+                        "probability_poem": poem_probability,
+                        "probability_with_poem": adjusted_probability(
+                            score["probability"],
+                            stanza_type,
+                            poem_probabilities,
+                            len(stanza),
+                        ),
+                        "pattern_similarity": score["pattern_similarity"],
+                        "metre_similarity": score["metre_similarity"],
+                        "rhyme_type_similarity": score["rhyme_type_similarity"],
+                        "verse_type_similarity": score.get("verse_type_similarity"),
+                        "subtype_selection_component": (
+                            subtype_selection_component(score)
+                            if entry.get("parent_type")
+                            else None
+                        ),
+                        "subtype_selection_value": (
+                            subtype_selection_value(score)
+                            if entry.get("parent_type")
+                            else None
+                        ),
+                        "subtype_selection_threshold": (
+                            subtype_selection_threshold(score)
+                            if entry.get("parent_type")
+                            else None
+                        ),
+                        "observed_pattern": score["observed_pattern"],
+                        "expected_pattern": score["expected_pattern"],
+                        "observed_metre": score["observed_metre"],
+                        "expected_metre": score["expected_metre"],
+                        "selected": stanza_type in {
+                            output["stanza_type"],
+                            output["stanza_subtype"],
+                        },
+                    }
+                )
 
             for _, data in stanza:
                 data["observed_pattern"] = winner["observed_pattern"]
@@ -1575,6 +1659,8 @@ for poem_id, poem in df.groupby(args.poem_column, sort=False):
                 "probability": probability,
                 "observed_pattern": observed_pattern,
                 "expected_pattern": expected_pattern,
+                "observed_metre": observed_metre,
+                "expected_metre": entry.get("metre"),
                 "pattern_similarity": pattern_score,
                 "metre_similarity": metre_score,
                 "rhyme_type_similarity": rhyme_score,
@@ -1590,6 +1676,37 @@ for poem_id, poem in df.groupby(args.poem_column, sort=False):
         return best
 
     def annotate_poem_type(poem_data):
+        def record_poem_scores(scores, selected_labels=()):
+            selected_labels = set(selected_labels)
+            stanza_count = len(get_stanzas(poem_data))
+            for score in scores:
+                entry = score["entry"]
+                poem_score_rows.append(
+                    {
+                        args.poem_column: poem_id,
+                        "verse_count": len(poem_data),
+                        "stanza_count": stanza_count,
+                        "poem_type": entry["poem_type"],
+                        "parent_type": entry.get("parent_type"),
+                        "refines_type": entry.get("refines_type"),
+                        "probability": score["probability"],
+                        "selection_threshold": args.poem_type_min_probability,
+                        "pattern_similarity": score["pattern_similarity"],
+                        "metre_similarity": score["metre_similarity"],
+                        "rhyme_type_similarity": score["rhyme_type_similarity"],
+                        "stanza_type_similarity": score["stanza_type_similarity"],
+                        "refrain_similarity": score["refrain_similarity"],
+                        "stanza_length_similarity": score["stanza_length_similarity"],
+                        "verse_count_similarity": score["verse_count_similarity"],
+                        "stanza_count_similarity": score["stanza_count_similarity"],
+                        "observed_pattern": score["observed_pattern"],
+                        "expected_pattern": score["expected_pattern"],
+                        "observed_metre": score["observed_metre"],
+                        "expected_metre": score["expected_metre"],
+                        "selected": entry["poem_type"] in selected_labels,
+                    }
+                )
+
         def annotate_fallback_type():
             stanza_types = []
             for stanza in get_stanzas(poem_data).values():
@@ -1646,7 +1763,7 @@ for poem_id, poem in df.groupby(args.poem_column, sort=False):
             candidates = [
                 score
                 for score in scores
-                if score["entry"].get(relation_key) == parent_type
+                if relation_matches(score["entry"], relation_key, parent_type)
             ]
             if not candidates:
                 return None
@@ -1700,9 +1817,19 @@ for poem_id, poem in df.groupby(args.poem_column, sort=False):
             poem_subtype_probability = None
 
         if selected_probability < args.poem_type_min_probability:
+            record_poem_scores(scores)
             annotate_fallback_type()
             return
 
+        record_poem_scores(
+            scores,
+            [
+                label
+                for label in (poem_type, poem_subtype)
+                if label is not None
+            ],
+        )
+        forced_stanza_type = entry.get("set_stanza_type")
         for data in poem_data.values():
             data["poem_type"] = poem_type
             data["poem_type_probability"] = probability
@@ -1718,6 +1845,13 @@ for poem_id, poem in df.groupby(args.poem_column, sort=False):
             data["poem_stanza_length_similarity"] = winner["stanza_length_similarity"]
             data["poem_verse_count_similarity"] = winner["verse_count_similarity"]
             data["poem_stanza_count_similarity"] = winner["stanza_count_similarity"]
+            if forced_stanza_type:
+                data["stanza_type"] = forced_stanza_type
+                data["stanza_type_probability"] = probability
+                data["stanza_type_probability_poem"] = probability
+                data["stanza_subtype"] = None
+                data["stanza_subtype_probability"] = None
+                data["stanza_subtype_probability_poem"] = None
 
     def more_than_half_complete(groups):
         if not groups:
@@ -2001,4 +2135,28 @@ results.to_csv(
     escapechar="\\",
 )
 print(f"Wrote {len(result_rows)} rows to {args.results_path}")
+
+if args.stanza_scores_path:
+    stanza_scores = pd.DataFrame(stanza_score_rows).map(clean_output_value)
+    stanza_scores.to_csv(
+        args.stanza_scores_path,
+        sep="\t",
+        index=False,
+        quoting=csv.QUOTE_NONE,
+        quotechar=TSV_QUOTECHAR,
+        escapechar="\\",
+    )
+    print(f"Wrote {len(stanza_score_rows)} rows to {args.stanza_scores_path}")
+
+if args.poem_scores_path:
+    poem_scores = pd.DataFrame(poem_score_rows).map(clean_output_value)
+    poem_scores.to_csv(
+        args.poem_scores_path,
+        sep="\t",
+        index=False,
+        quoting=csv.QUOTE_NONE,
+        quotechar=TSV_QUOTECHAR,
+        escapechar="\\",
+    )
+    print(f"Wrote {len(poem_score_rows)} rows to {args.poem_scores_path}")
     

@@ -8,8 +8,8 @@ from pathlib import Path
 
 TSV_QUOTECHAR = "\x07"
 PROJECT_DIR = Path(__file__).resolve().parent
-DEFAULT_INPUT_PATH = str(PROJECT_DIR / "data" / "gl-prepro-35k-silaba.tsv")
-DEFAULT_RESULTS_PATH = str(PROJECT_DIR / "data" / "test_results_rhyme.tsv")
+DEFAULT_INPUT_PATH = str(PROJECT_DIR / "evaluation" / "gl-prepro-35k-silaba.tsv")
+DEFAULT_RESULTS_PATH = str(PROJECT_DIR / "evaluation" / "test_results_rhyme.tsv")
 DEFAULT_STANZA_PATTERNS_PATH = str(PROJECT_DIR / "data" / "stanza_patterns.json")
 DEFAULT_POEM_PATTERNS_PATH = str(PROJECT_DIR / "data" / "poem_patterns.json")
 MIXED_METRE_DOMINANCE_THRESHOLD = 0.8

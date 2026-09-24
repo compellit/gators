@@ -9,6 +9,24 @@ and consonant rhyme groups, chooses a final rhyme label per verse, and optionall
 scores stanza types using `data/stanza_patterns.json` and poem types using
 `data/poem_patterns.json`.
 
+## Repository layout
+
+```text
+rhyme.py      main rhyme-analysis command
+src/          transcription and model-training modules
+scripts/      evaluation and workflow entry points
+data/         stanza and poem pattern definitions
+models/       trained models and their held-out test sets
+evaluation/   evaluation corpora and generated reports
+docs/         scoring and evaluation documentation
+iaa/          inter-annotator agreement tooling and reports
+wk/           legacy research utilities
+```
+
+Bundled commands resolve repository files relative to their own location, so
+they can be run from any working directory. Input and output paths remain
+overridable through command-line options.
+
 ## Requirements
 
 Install the Python dependencies used by `rhyme.py`:
@@ -17,12 +35,26 @@ Install the Python dependencies used by `rhyme.py`:
 pip install pandas regex
 ```
 
+Some research utilities under `src/` additionally require `nltk`,
+`rhymetagger`, Cotovia, or the sibling Silaba project. Set `SILABA_GL_DIR` when
+Silaba is not located beside this repository. The optional Gumper preprocessor
+can be selected with `--gumper-preprocessor-path` or
+`GUMPER_PREPROCESSOR_PATH`.
+
+Run the bundled Silaba evaluation workflow with:
+
+```bash
+./scripts/run_silaba_evaluation.sh
+```
+
+Set `RHYME_EVALUATION_DIR` to write those evaluation artifacts elsewhere.
+
 ## Input Data
 
 By default, `rhyme.py` reads:
 
 ```text
-data/gl-prepro-35k-silaba.tsv
+evaluation/gl-prepro-35k-silaba.tsv
 ```
 
 The default column names are:
@@ -84,15 +116,15 @@ python rhyme.py
 This writes the default output:
 
 ```text
-data/test_results_rhyme.tsv
+evaluation/test_results_rhyme.tsv
 ```
 
 To choose explicit input and output paths:
 
 ```bash
 python rhyme.py \
-  --input-path data/gl-prepro-35k-silaba.tsv \
-  --results-path data/test_results_rhyme.tsv
+  --input-path evaluation/gl-prepro-35k-silaba.tsv \
+  --results-path evaluation/test_results_rhyme.tsv
 ```
 
 To process only selected poems:
@@ -139,9 +171,7 @@ path.
 
 The stanza-pattern scoring design is documented in:
 
-```text
-STANZA_PATTERN_SCORING.md
-```
+[`docs/STANZA_PATTERN_SCORING.md`](docs/STANZA_PATTERN_SCORING.md)
 
 ## Output
 
@@ -197,24 +227,24 @@ evaluation or interfaces. Unrhymed lines are written as `-`.
 
 ## Evaluation
 
-See [`EVALUATION.md`](EVALUATION.md) for the complete metric definitions,
+See [`docs/EVALUATION.md`](docs/EVALUATION.md) for the complete metric definitions,
 formulas, stanza-scoring procedure, output schemas, and interpretation notes.
 
-Use `evaluate_rhyme_tags.py` to compare predicted labels against a gold column.
+Use `scripts/evaluate_rhyme_tags.py` to compare predicted labels against a gold column.
 By default it uses `letter` as the prediction column and chooses `gold` or
 `rhyme` as the gold column.
 
 Example:
 
 ```bash
-python evaluate_rhyme_tags.py \
-  data/test_results_rhyme.tsv \
+python scripts/evaluate_rhyme_tags.py \
+  evaluation/test_results_rhyme.tsv \
   --pred-column letter \
   --gold-column rhyme \
   --group-column poem_id \
   --text-column lines \
-  --pairs-path data/rhyme_pairs.tsv \
-  --summary-path data/summary.tsv
+  --pairs-path evaluation/rhyme_pairs.tsv \
+  --summary-path evaluation/summary.tsv
 ```
 
 The evaluator computes pairwise same-rhyme metrics inside each poem or requested

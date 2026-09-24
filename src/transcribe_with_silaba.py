@@ -1,5 +1,6 @@
 import argparse
 import csv
+import os
 import subprocess
 import tempfile
 from pathlib import Path
@@ -12,19 +13,24 @@ import pandas as pd
 
 PROJECT_DIR = Path(__file__).resolve().parents[1]
 WORKSPACE_DIR = PROJECT_DIR.parent
-SILABA_DIR = WORKSPACE_DIR / "silaba_gl"
+SILABA_DIR = Path(os.environ.get("SILABA_GL_DIR", WORKSPACE_DIR / "silaba_gl"))
 
 sys.path.insert(0, str(SILABA_DIR))
 
 from silaba_py import Silaba, SilabaError  # noqa: E402
 
 
-INPUT_PATH = PROJECT_DIR / "data" / "gl-prepro-35k.tsv"
-OUTPUT_PATH = PROJECT_DIR / "data" / "gl-prepro-35k-silaba.tsv"
+INPUT_PATH = PROJECT_DIR / "evaluation" / "gl-prepro-35k.tsv"
+OUTPUT_PATH = PROJECT_DIR / "evaluation" / "gl-prepro-35k-silaba.tsv"
 TEXT_COLUMN = "running_text"
 OUTPUT_COLUMN = "phSilaba"
 TSV_QUOTECHAR = "\x07"
-GUMPER_PREPROCESSOR_PATH = WORKSPACE_DIR / "galapre" / "preprocessing" / "g2s_client_running_text.py"
+GUMPER_PREPROCESSOR_PATH = Path(
+    os.environ.get(
+        "GUMPER_PREPROCESSOR_PATH",
+        WORKSPACE_DIR / "galapre" / "preprocessing" / "g2s_client_running_text.py",
+    )
+)
 GUMPER_PREPROCESSED_RELATIVE_PATH = Path("out_001") / "input_pp_out_norm_spa_001.txt"
 PREPRO_LETTER = "A-Za-zÁÉÍÓÚÜÑÏáéíóúüñïÂÊÎÔÛâêîôû"
 PREPRO_APOSTROPHE = "'’‘"

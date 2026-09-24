@@ -1,6 +1,6 @@
 # Evaluation
 
-`evaluate_rhyme_tags.py` evaluates predicted rhyme labels and, when the required
+`scripts/evaluate_rhyme_tags.py` evaluates predicted rhyme labels and, when the required
 columns are available, predicted stanza types. Rhyme detection is evaluated as a
 set of relationships between lines rather than by comparing the label assigned
 to each line literally.
@@ -93,16 +93,16 @@ produced by `rhyme.py` do not contribute to it.
 From the `rhyme-gl-wk` directory:
 
 ```bash
-python evaluate_rhyme_tags.py \
-  data/test_results_rhyme.tsv \
+python scripts/evaluate_rhyme_tags.py \
+  evaluation/test_results_rhyme.tsv \
   --pred-column letter \
   --gold-column rhyme \
   --group-column workId \
   --line-id-column verse_n \
   --text-column gumperLine \
-  --pairs-path data/rhyme_pairs.tsv \
-  --stanzas-path data/stanzas.tsv \
-  --summary-path data/summary.tsv
+  --pairs-path evaluation/rhyme_pairs.tsv \
+  --stanzas-path evaluation/stanzas.tsv \
+  --summary-path evaluation/summary.tsv
 ```
 
 Important options:
@@ -165,8 +165,8 @@ stanza_type_accuracy
 fields mean stanza evaluation was unavailable for that run.
 
 Because the summary is append-only, rerunning the same command adds another row
-and can produce duplicates. `data/summary_stanza.tsv` is a legacy experiment
-log; new evaluations store both rhyme and stanza metrics in `data/summary.tsv`.
+and can produce duplicates. `evaluation/summary_stanza.tsv` is a legacy experiment
+log; new evaluations store both rhyme and stanza metrics in `evaluation/summary.tsv`.
 
 ## Comparing systems
 

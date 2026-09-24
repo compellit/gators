@@ -3,11 +3,16 @@ import random
 import re
 import string
 import subprocess
+import tempfile
+from pathlib import Path
 #from TTS.utils.synthesizer import Synthesizer
 
 import pandas as pd
 
 PUNCLIST = [';', '?', '¿', ',', ':', '.', '!', '¡']
+PROJECT_DIR = Path(__file__).resolve().parents[1]
+DEFAULT_INPUT_PATH = PROJECT_DIR / "evaluation" / "gl-prepro-35k.tsv"
+DEFAULT_OUTPUT_PATH = PROJECT_DIR / "evaluation" / "gl-prepro-35k-cotovia-3.tsv"
 
 
 def sanitize_filename(filename):
@@ -71,12 +76,13 @@ def remove_tra3_tags(phontrans):
 
 
 def to_cotovia(text_segments):
-    # Input and output Cotovía files
+    # Cotovia writes its output beside its input, so isolate every call.
+    work_dir = Path(tempfile.mkdtemp(prefix="rhyme-cotovia-"))
     res = ''.join(random.choices(string.ascii_lowercase + string.digits, k=5))
-    COTOVIA_IN_TXT_PATH = res + '.txt'
-    COTOVIA_IN_TXT_PATH_ISO = 'iso8859-1' + res + '.txt'
-    COTOVIA_OUT_PRE_PATH = 'iso8859-1' + res + '.tra'
-    COTOVIA_OUT_PRE_PATH_UTF8 = 'utf8' + res + '.tra'
+    COTOVIA_IN_TXT_PATH = work_dir / f"{res}.txt"
+    COTOVIA_IN_TXT_PATH_ISO = work_dir / f"iso8859-1{res}.txt"
+    COTOVIA_OUT_PRE_PATH = work_dir / f"iso8859-1{res}.tra"
+    COTOVIA_OUT_PRE_PATH_UTF8 = work_dir / f"utf8{res}.tra"
 
     with open(COTOVIA_IN_TXT_PATH, 'w') as f:
         for seg in text_segments:
@@ -89,8 +95,8 @@ def to_cotovia(text_segments):
     subprocess.run(["iconv", "-f", "utf-8", "-t", "iso8859-1", COTOVIA_IN_TXT_PATH, "-o", COTOVIA_IN_TXT_PATH_ISO],
                    stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
     # call cotovia with -t3 option
-    subprocess.run(["cotovia", "-i", COTOVIA_IN_TXT_PATH_ISO, "-t3", "-n"], stdout=subprocess.DEVNULL,
-                   stderr=subprocess.STDOUT)
+    subprocess.run(["cotovia", "-i", str(COTOVIA_IN_TXT_PATH_ISO), "-t3", "-n"], cwd=work_dir,
+                   stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
     # iso8859-1 to utf-8
     subprocess.run(["iconv", "-f", "iso8859-1", "-t", "utf-8", COTOVIA_OUT_PRE_PATH, "-o", COTOVIA_OUT_PRE_PATH_UTF8],
                    stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
@@ -103,9 +109,9 @@ def to_cotovia(text_segments):
     except:
         print("ERROR: Couldn't read cotovia output")
 
-    subprocess.run(
-        ["rm", COTOVIA_IN_TXT_PATH, COTOVIA_IN_TXT_PATH_ISO, COTOVIA_OUT_PRE_PATH, COTOVIA_OUT_PRE_PATH_UTF8],
-        stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
+    for path in work_dir.iterdir():
+        path.unlink()
+    work_dir.rmdir()
 
     return segs
 
@@ -128,13 +134,13 @@ def merge_punc(text_segs, puncs):
 
 
 def accent_convert(phontrans):
-    transcript = re.sub('a\^', 'á', phontrans)
-    transcript = re.sub('e\^', 'é', transcript)
-    transcript = re.sub('i\^', 'í', transcript)
-    transcript = re.sub('o\^', 'ó', transcript)
-    transcript = re.sub('u\^', 'ú', transcript)
-    transcript = re.sub('E\^', 'É', transcript)
-    transcript = re.sub('O\^', 'Ó', transcript)
+    transcript = re.sub(r'a\^', 'á', phontrans)
+    transcript = re.sub(r'e\^', 'é', transcript)
+    transcript = re.sub(r'i\^', 'í', transcript)
+    transcript = re.sub(r'o\^', 'ó', transcript)
+    transcript = re.sub(r'u\^', 'ú', transcript)
+    transcript = re.sub(r'E\^', 'É', transcript)
+    transcript = re.sub(r'O\^', 'Ó', transcript)
     return transcript
 
 
@@ -148,41 +154,18 @@ def text_preprocess(text):
 
 
 def main():
-    # parser = argparse.ArgumentParser(description='Cotovia phoneme transcription.')
-    # parser.add_argument('text', type=str, help='Text to synthetize')
-    # parser.add_argument('model_path', type=str, help='Absolute path to the model checkpoint.pth')
-    # parser.add_argument('config_path', type=str, help='Absolute path to the model config.json')
-    # 
-    # args = parser.parse_args()
+    parser = argparse.ArgumentParser(description="Transcribe a TSV corpus with Cotovia.")
+    parser.add_argument("--input-path", type=Path, default=DEFAULT_INPUT_PATH)
+    parser.add_argument("--output-path", type=Path, default=DEFAULT_OUTPUT_PATH)
+    parser.add_argument("--text-column", default="running_text")
+    parser.add_argument("--output-column", default="phCotovia")
+    args = parser.parse_args()
 
-    df = pd.read_csv("data/gl-prepro-35k.tsv", sep="\t")
+    df = pd.read_csv(args.input_path, sep="\t")
     df.dropna(inplace=True)
-    df["phCotovia"] = df["running_text"].apply(text_preprocess)
-    df.to_csv("data/gl-prepro-35k-cotovia-3.tsv", sep="\t", index=False)
-    # with open("data/gl-prepro-35k-cotovia-2.tsv", "w") as f:
-    #     for idx, row in df.iterrows():
-    #         if idx <= 12466:
-    #             continue
-    #         f.write(text_preprocess(row["running_text"]) + "\n")
-    #         f.flush()
-
-    # print("Text before preprocessing: ", args.text)
-    # text = text_preprocess(args.text)
-    # print("Text after preprocessing: ", text)
-    # synthesizer = Synthesizer(
-    #     args.model_path, args.config_path, None, None, None, None,
-    # )
-
-    # Step 1: Extract the first word from the text
-    # first_word = args.text.split()[0] if args.text.split() else "audio"
-    # first_word = sanitize_filename(first_word)  # Sanitize to make it a valid filename
-
-    # Step 2: Use synthesizer's built-in function to synthesize and save the audio
-    # wavs = synthesizer.tts(text)
-    # filename = f"{first_word}.wav"
-    # synthesizer.save_wav(wavs, filename)
-
-    # print(f"Audio file saved as: {filename}")
+    df[args.output_column] = df[args.text_column].apply(text_preprocess)
+    args.output_path.parent.mkdir(parents=True, exist_ok=True)
+    df.to_csv(args.output_path, sep="\t", index=False)
 
 
 if __name__ == "__main__":

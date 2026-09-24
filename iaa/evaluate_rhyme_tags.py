@@ -1,1 +1,1 @@
-../evaluate_rhyme_tags.py
+../scripts/evaluate_rhyme_tags.py

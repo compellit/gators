@@ -10,7 +10,7 @@ from utils import normalize_rhymetagger_ipa_nucleus_only
 
 
 PROJECT_DIR = Path(__file__).resolve().parents[1]
-DEFAULT_DATA_PATH = PROJECT_DIR / "data" / "gl-prepro-35k-silaba.tsv"
+DEFAULT_DATA_PATH = PROJECT_DIR / "evaluation" / "gl-prepro-35k-silaba.tsv"
 DEFAULT_MODEL_PATH = PROJECT_DIR / "models" / "gl-35k-silaba-nucleus-only-padded-train80.rtmodel.json"
 DEFAULT_TEST_IDS_PATH = PROJECT_DIR / "models" / "gl-35k-silaba-nucleus-only-padded-test-poem-ids.txt"
 DEFAULT_OUTPUT_PATH = PROJECT_DIR / "models" / "gl-35k-silaba-nucleus-only-padded-test-rhymes.tsv"

@@ -4,7 +4,7 @@ From the `rhyme-gl-wk` directory, run:
 
 ```bash
 python iaa/evaluate_inter_annotator.py \
-  data/test_corpus.tsv data/test_corpus-pr.tsv \
+  evaluation/test_corpus.tsv evaluation/test_corpus-pr.tsv \
   --annotator-1-column " rhyme" \
   --annotator-2-column rhLtr \
   --pairs-path iaa/inter_annotator_disagreements.tsv \
@@ -40,7 +40,7 @@ rhyme class. Thus, `ABAB` and `CDCD` agree fully.
 | `different_different` | Pairs marked different-rhyme by both annotators. |
 | `pairwise_precision_2_vs_1` | `same_same / (same_same + annotator_2_only_same)`. |
 | `pairwise_recall_2_vs_1` | `same_same / (same_same + annotator_1_only_same)`. |
-| `pairwise_f1` | Harmonic mean of precision and recall. It is symmetric under swapping annotators and is most comparable to `evaluate_rhyme_tags.py`. |
+| `pairwise_f1` | Harmonic mean of precision and recall. It is symmetric under swapping annotators and is most comparable to `scripts/evaluate_rhyme_tags.py`. |
 | `pairwise_jaccard` | Same-rhyme intersection over union: `same_same / union_rhyme_pairs`. |
 | `binary_pair_accuracy` | `(same_same + different_different) / all_line_pairs`. This can be inflated by frequent different-rhyme pairs. |
 | `cohen_kappa` | Binary pair agreement corrected for agreement expected from the annotators' marginal decision rates. |

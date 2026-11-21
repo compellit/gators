@@ -4,8 +4,7 @@ Rhyme is evaluated pairwise: rhyme letters are arbitrary names, so what is
 compared is whether two lines of the same poem rhyme together (ABAB and CDCD
 agree fully). Only pairs that the prediction or the gold marks as rhyming are
 counted, so there are no true negatives; precision, recall and F1 do not
-need them. The share of counted pairs that are correct, tp / (tp + fp + fn),
-is the Jaccard index. See docs/EVALUATION.md.
+need them. See docs/EVALUATION.md.
 
 Stanza types: a stanza is correct when its gold type equals the predicted
 stanza type or subtype; a stanza without a predicted type counts as wrong.
@@ -119,7 +118,6 @@ def main():
         "lines": len(results),
         "pairs": len(pair_rows),
         **counts,
-        "jaccard": ratio(counts["tp"], len(pair_rows)),
         "precision": precision,
         "recall": recall,
         "f1": ratio(2 * precision * recall, precision + recall),

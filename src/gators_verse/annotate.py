@@ -41,43 +41,49 @@ def clean_output_value(value):
 
 
 def make_poem_data(poem, stanza_column, text_column, transcription_column, syllable_column, stress_column):
-    """Build poem_data (see patterns.py) for one poem's rows."""
+    """Build poem_data (see patterns.py) for one poem's rows.
+
+    A stanza is a run of consecutive rows with the same stanza number; stanzas
+    are numbered 1, 2... in reading order.
+    """
     poem_data = {}
-    verse_number = 0
-    for stanza_n, stanza in poem.groupby(stanza_column, sort=False):
-        for _, row in stanza.iterrows():
-            verse_number += 1
-            transcription = row[transcription_column]
-            rhyme_tail, vowels = rhyme_ending(transcription if isinstance(transcription, str) else "")
-            metre = parse_syllable_value(row[syllable_column]) if syllable_column else None
-            rhythm = parse_rhythm_value(row[stress_column]) if stress_column else []
-            poem_data[verse_number] = {
-                "row": row.name,
-                "stanza": stanza_n,
-                "rhyme_tail": rhyme_tail,
-                "vowels": vowels,
-                "metre": metre,
-                **classify_verse_type(metre, rhythm),
-                "_normalized_verse_text": normalize_refrain_text(row[text_column]),
-                "asonante": None,
-                "consonante": None,
-                "_asonante_key": None,
-                "_consonante_key": None,
-                "final": None,
-                "chosen_source": None,
-                "letter": None,
-                "retrouso": None,
-                "observed_pattern": None,
-                "expected_pattern": None,
-                "stanza_type": None,
-                "stanza_type_probability": None,
-                "stanza_subtype": None,
-                "stanza_subtype_probability": None,
-                "poem_type": None,
-                "poem_type_probability": None,
-                "poem_subtype": None,
-                "poem_subtype_probability": None,
-            }
+    stanza_n = 0
+    previous_stanza = None
+    for verse_number, (_, row) in enumerate(poem.iterrows(), start=1):
+        if verse_number == 1 or row[stanza_column] != previous_stanza:
+            stanza_n += 1
+            previous_stanza = row[stanza_column]
+        transcription = row[transcription_column]
+        rhyme_tail, vowels = rhyme_ending(transcription if isinstance(transcription, str) else "")
+        metre = parse_syllable_value(row[syllable_column]) if syllable_column else None
+        rhythm = parse_rhythm_value(row[stress_column]) if stress_column else []
+        poem_data[verse_number] = {
+            "row": row.name,
+            "stanza": stanza_n,
+            "rhyme_tail": rhyme_tail,
+            "vowels": vowels,
+            "metre": metre,
+            **classify_verse_type(metre, rhythm),
+            "_normalized_verse_text": normalize_refrain_text(row[text_column]),
+            "asonante": None,
+            "consonante": None,
+            "_asonante_key": None,
+            "_consonante_key": None,
+            "final": None,
+            "chosen_source": None,
+            "letter": None,
+            "retrouso": None,
+            "observed_pattern": None,
+            "expected_pattern": None,
+            "stanza_type": None,
+            "stanza_type_probability": None,
+            "stanza_subtype": None,
+            "stanza_subtype_probability": None,
+            "poem_type": None,
+            "poem_type_probability": None,
+            "poem_subtype": None,
+            "poem_subtype_probability": None,
+        }
     return poem_data
 
 

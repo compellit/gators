@@ -23,7 +23,10 @@ from pathlib import Path
 
 import pandas as pd
 
-NO_RHYME_VALUES = {"", "-", "0", "nan", "none", "null"}
+# Unrhymed lines: "-" in gators-verse output, "0" in the gold; "" for an empty cell.
+NO_RHYME_VALUES = {"", "-", "0"}
+# Gold stanza types of stanzas that are not annotated in the gold.
+NOT_ANNOTATED_STANZA_VALUES = {"", "none"}
 TSV_OPTIONS = {"sep": "\t", "quoting": csv.QUOTE_NONE}
 
 
@@ -69,7 +72,7 @@ def evaluate_stanzas(results):
     stanza_rows = []
     for (poem_id, stanza_n), stanza in results.groupby(["poem_id", "stanza_n"], sort=False):
         gold = first_value(stanza["gold_stanza_type"])
-        if gold in NO_RHYME_VALUES:
+        if gold in NOT_ANNOTATED_STANZA_VALUES:
             continue
         pred_type = first_value(stanza["stanza_type"])
         pred_subtype = first_value(stanza["stanza_subtype"])

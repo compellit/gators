@@ -1,0 +1,256 @@
+poem_id	stanza_n	line_count	gold_stanza	pred_stanza_type	pred_stanza_subtype	correct	rhyme_pattern	expected_pattern
+1	1	4	cuarteto	cuarteto		1	abba	abba
+1	2	4	cuarteto	romance_arte_maior		0	-aab	-a-a
+1	3	3	terceto	terceto		1	aba	a-a
+1	4	3	terceto	terceto		1	aba	a-a
+2	1	3	tercerilla	tercerilla		1	a-a	a-a
+2	2	3	tercerilla	tercerilla		1	a-a	a-a
+2	3	3	tercerilla	tercerilla		1	a-a	a-a
+2	4	3	tercerilla	tercerilla		1	---	a-a
+2	5	3	tercerilla	tercerilla		1	a-a	a-a
+2	6	3	tercerilla	tercerilla		1	a-a	a-a
+2	7	3	tercerilla	tercerilla		1	a-a	a-a
+2	8	3	tercerilla	tercerilla		1	a-a	a-a
+2	9	3	tercerilla	tercerilla		1	a-a	a-a
+2	10	3	tercerilla	tercerilla		1	a-a	a-a
+2	11	3	tercerilla	tercerilla		1	a-a	a-a
+2	12	3	tercerilla	tercerilla		1	a-a	a-a
+2	13	3	tercerilla	tercerilla		1	a-a	a-a
+2	14	3	tercerilla	tercerilla		1	a-a	a-a
+2	15	3	tercerilla	tercerilla		1	a-a	a-a
+2	16	3	tercerilla	tercerilla		1	a-a	a-a
+2	17	3	tercerilla	tercerilla		1	a-a	a-a
+2	18	3	tercerilla	tercerilla		1	a-a	a-a
+2	19	3	tercerilla	tercerilla		1	a-a	a-a
+2	20	3	tercerilla	tercerilla		1	a-a	a-a
+2	21	3	tercerilla	tercerilla		1	a-a	a-a
+2	22	3	tercerilla	tercerilla		1	a-a	a-a
+2	23	3	tercerilla	tercerilla		1	a-a	a-a
+2	24	3	tercerilla	tercerilla		1	aba	a-a
+2	25	3	tercerilla	tercerilla		1	aba	a-a
+2	26	3	tercerilla	tercerilla		1	a-a	a-a
+2	27	3	tercerilla	tercerilla		1	aba	a-a
+2	28	3	tercerilla	tercerilla		1	aba	a-a
+2	29	3	tercerilla	tercerilla		1	aba	a-a
+2	30	3	tercerilla	tercerilla		1	aba	a-a
+2	31	3	tercerilla	tercerilla		1	a-a	a-a
+2	32	3	tercerilla	tercerilla		1	a-a	a-a
+2	33	3	tercerilla	tercerilla		1	a-a	a-a
+6	1	4	cantar	cantar		1	-a-a	-a-a
+6	2	4	cantar	cantar		1	ab-b	-a-a
+6	3	4	cantar	cantar		1	ab-b	-a-a
+6	4	4	cantar	cantar		1	-a-a	-a-a
+6	5	4	cantar	cantar		1	-a-a	-a-a
+6	6	4	cantar	cantar		1	-a-a	-a-a
+6	7	4	cantar	cantar		1	ab-b	-a-a
+6	8	5	quintilla	quintilla		1	ababa	ababa
+6	9	5	quintilla	quintilla		1	ababa	ababa
+6	10	5	quintilla	quintilla		1	ababa	ababa
+6	11	5	quintilla	quintilla		1	ababa	ababa
+6	12	4	cantar	cantar		1	abcb	-a-a
+6	13	4	cantar	cantar		1	abcb	-a-a
+6	14	4	cantar	cantar		1	ab-b	-a-a
+6	15	4	cantar	cantar		1	ab-b	-a-a
+7	1	7	seguidilla_composta	setina	seguidilla_composta	1	-a-ab-b	-a-ab-b
+7	2	7	seguidilla_composta	setina	seguidilla_composta	1	-abacbc	-a-ab-b
+7	3	7	seguidilla_composta	setina	seguidilla_composta	1	ab-bc-c	-a-ab-b
+7	4	7	seguidilla_composta	setina	seguidilla_composta	1	-a-ab-b	*
+7	5	7	seguidilla_composta	setina	seguidilla_composta	1	-abab-b	-a-ab-b
+7	6	7	seguidilla_composta	setina	seguidilla_composta	1	ab-bc-c	-a-ab-b
+7	7	7	seguidilla_composta	setina	seguidilla_composta	1	-abacbc	-a-ab-b
+7	8	7	seguidilla_composta	setina	seguidilla_composta	1	ab-bcbc	*
+8	1	8	oitava_real	oitava	oitava_real	1	abababcc	*
+8	2	8	oitava_real	oitava	oitava_real	1	abababcc	*
+8	3	8	oitava_real	oitava	oitava_real	1	abababcc	*
+8	4	8	oitava_real	oitava	oitava_real	1	a-ababcc	*
+8	5	8	oitava_real	oitava	oitava_real	1	abababcc	*
+8	6	8	oitava_real	oitava	oitava_real	1	abababcc	*
+8	7	8	oitava_real	oitava	oitava_real	1	ababab--	*
+8	8	8	oitava_real	oitava	oitava_real	1	abababcc	*
+8	9	8	oitava_real	oitava	oitava_real	1	abababcc	*
+8	10	8	oitava_real	oitava	oitava_real	1	abababcc	*
+8	11	8	oitava_real	oitava	oitava_real	1	abababcc	*
+8	12	8	oitava_real	oitava	oitava_real	1	abababcc	*
+8	13	8	oitava_real	oitava	oitava_real	1	abababcc	*
+8	14	8	oitava_real	oitava	oitava_real	1	abababcc	*
+8	15	8	oitava_real	oitava	oitava_real	1	abababac	*
+8	16	9	novena	novena		1	abcbcbcdd	*
+8	17	8	oitava_real	oitava	oitava_real	1	a-a-abcc	*
+8	18	8	oitava_real	oitava	oitava_real	1	abababcc	*
+8	19	8	oitava_real	oitava	oitava_real	1	ababacdd	*
+8	20	8	oitava_real	oitava	oitava_real	1	abababcc	*
+8	21	8	oitava_real	oitava	oitava_real	1	abababcc	*
+8	22	8	oitava_real	oitava	oitava_real	1	abababcc	*
+8	23	8	oitava_real	oitava	oitava_real	1	abababcc	*
+8	24	8	oitava_real	oitava	oitava_real	1	abababcc	*
+8	25	8	oitava_real	oitava	oitava_real	1	abababcc	*
+8	26	8	oitava_real	oitava	oitava_real	1	abacacdd	*
+8	27	8	oitava_real	oitava		0	ababa-cc	*
+8	28	8	oitava_real	oitava	oitava_real	1	abababcc	*
+8	29	8	oitava_real	oitava	oitava_real	1	abababcc	*
+8	30	8	oitava_real	oitava	oitava_real	1	ababab--	*
+8	31	8	oitava_real	oitava	oitava_real	1	abababcc	*
+8	32	8	oitava_real	oitava	oitava_real	1	abababcc	*
+8	33	8	oitava_real	oitava	oitava_real	1	abababcc	*
+8	34	8	oitava_real	oitava	oitava_real	1	abababcc	*
+8	35	8	oitava_real	oitava	oitava_real	1	abababcc	*
+8	36	8	oitava_real	oitava	oitava_real	1	abababcc	*
+8	37	8	oitava_real	oitava	oitava_real	1	abababcc	*
+8	38	8	oitava_real	oitava	oitava_real	1	aba-abcc	*
+8	39	8	oitava_real	oitava	oitava_real	1	abababcc	*
+9	1	8	serventesio	oitava		0	ababccdd	*
+10	1	24	romance	romance		1	-a-a-a-a---a-a-a-a-a---a	-a-a-a-a-a-a-a-a-a-a-a-a
+11	1	7	setina	setina		1	abbaacc	*
+11	2	7	setina	setina		1	abbaacc	*
+11	3	7	setina	setina		1	abbaacd	*
+11	4	7	setina	setina		1	abbaacc	*
+11	5	7	setina	setina		1	a--aabb	*
+11	6	7	setina	setina		1	abbaacc	*
+11	7	7	setina	setina		1	abbaacc	*
+11	8	7	setina	setina		1	abbaacc	*
+11	9	7	setina	setina		1	abbaacc	*
+11	10	7	setina	setina		1	abbaacc	*
+11	11	7	setina	setina		1	abb-acc	*
+11	12	7	setina	setina		1	abbaacc	*
+11	13	7	setina	setina		1	abbaacc	*
+11	14	7	setina	setina		1	abbaacc	*
+11	15	7	setina	setina		1	abbaacc	*
+11	16	7	setina	setina		1	abbaacc	*
+12	1	5	lira	lira		1	ababb	ababb
+12	2	5	lira	lira		1	ababb	ababb
+12	3	5	lira	lira		1	ababb	ababb
+12	4	5	lira	lira		1	ababb	ababb
+12	5	5	lira	lira		1	ababb	ababb
+12	6	5	lira	lira		1	ababb	ababb
+12	7	5	lira	lira		1	ababb	ababb
+12	8	5	lira	lira		1	ababb	ababb
+12	9	5	lira	lira		1	ababb	ababb
+12	10	5	lira	lira		1	ababb	ababb
+12	11	5	lira	lira		1	ababb	ababb
+12	12	5	lira	lira		1	ababb	ababb
+12	13	5	lira	lira		1	ababb	ababb
+12	14	5	lira	lira		1	ababb	ababb
+12	15	5	lira	lira		1	ababb	ababb
+12	16	5	lira	lira		1	ababb	ababb
+12	17	5	lira	lira		1	ababb	ababb
+13	1	10	espinela	espinela		1	abbaaccddc	abbaaccddc
+13	2	10	espinela	espinela		1	abbaaccddc	abbaaccddc
+13	3	10	espinela	espinela		1	abbaaccddc	abbaaccddc
+13	4	10	espinela	romance		0	aaabbccddc	-a-a-a-a-a
+13	5	10	espinela	espinela		1	abbaaccddc	abbaaccddc
+13	6	10	espinela	espinela		1	abbaaccddc	abbaaccddc
+14	1	4	redondilla	redondilla		1	abba	abba
+14	2	4	redondilla	redondilla		1	abba	abba
+14	3	4	redondilla	redondilla		1	abba	abba
+14	4	4	redondilla	redondilla		1	abba	abba
+14	5	4	redondilla	redondilla		1	abba	abba
+14	6	4	redondilla	redondilla		1	abba	abba
+14	7	4	redondilla	redondilla		1	abba	abba
+14	8	4	redondilla	redondilla		1	abba	abba
+14	9	4	redondilla	redondilla		1	abba	abba
+14	10	4	redondilla	redondilla		1	abba	abba
+14	11	4	redondilla	redondilla		1	abba	abba
+14	12	4	redondilla	redondilla		1	abba	abba
+14	13	4	redondilla	redondilla		1	abba	abba
+14	14	4	redondilla	redondilla		1	abba	abba
+14	15	4	redondilla	redondilla		1	abba	abba
+14	16	4	cuarteta	cuarteta		1	abab	abab
+16	1	6	sextilla	sextilla		1	aabccb	*
+16	2	6	sextilla	sextilla		1	aabccb	*
+16	3	6	sextilla	sextilla		1	aabccb	*
+16	4	6	sextilla	sextilla		1	aabccb	*
+17	1	6	sextilla	sextilla		1	aabccb	*
+17	2	6	sextilla	sextilla		1	aabccb	*
+17	3	6	sextilla	sextilla		1	aabccb	*
+18	1	40	romancillo	romancillo		1	-a-a-a-ababa-a-a-a-a-a-a-a-a-a-a-acacada	-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a
+18	2	32	romancillo	romancillo		1	abcbabcbdb-bdb-bdb-bdbebdbebeb-b	-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a
+19	1	4	cantar	cantar		1	-a-a	-a-a
+19	2	4	cantar	cantar		1	-a-a	-a-a
+19	3	4	cantar	cantar		1	ab-b	-a-a
+19	4	4	cantar	cantar		1	abcb	-a-a
+19	5	4	cantar	cantar		1	-a-a	-a-a
+19	6	4	cantar	cantar		1	abab	-a-a
+19	7	4	cantar	cantar		1	-aba	-a-a
+19	8	4	cantar	cantar		1	-aba	-a-a
+19	9	4	cantar	cantar		1	-aba	-a-a
+19	10	4	cantar	cantar		1	abcb	-a-a
+19	11	4	cantar	cantar		1	-aba	-a-a
+19	12	4	cantar	cantar		1	-a-a	-a-a
+19	13	4	cantar	cantar		1	-a-a	-a-a
+19	14	4	cantar	cantar		1	-a-a	-a-a
+19	15	4	cantar	cantar		1	-a-a	-a-a
+19	16	4	cantar	cantar		1	-a-a	-a-a
+19	17	4	cantar	cantar		1	-aba	-a-a
+19	18	4	cantar	cantar		1	ab-b	-a-a
+19	19	4	cantar	cantar		1	-a-a	-a-a
+19	20	4	cantar	cantar		1	-a-a	-a-a
+19	21	4	cantar	cantar		1	ab-b	-a-a
+19	22	4	cantar	cantar		1	abcb	-a-a
+19	23	4	cantar	cantar		1	-a-a	-a-a
+19	24	4	cantar	cantar		1	-aba	-a-a
+19	25	4	cantar	cantar		1	-aba	-a-a
+19	26	4	cantar	cantar		1	ab-b	-a-a
+19	27	4	cantar	cantar		1	ab-b	-a-a
+19	28	4	cantar	cantar		1	-a-a	-a-a
+19	29	4	cantar	cantar		1	-a-a	-a-a
+19	30	4	cantar	cantar		1	-a-a	-a-a
+19	31	4	cantar	cantar		1	-a-a	-a-a
+19	32	4	cantar	cantar		1	-a-a	-a-a
+19	33	4	cantar	cantar		1	-aba	-a-a
+19	34	4	cantar	cantar		1	-aba	-a-a
+19	35	4	cantar	romancillo		0	abac	-a-a
+19	36	4	cantar	romancillo		0	a-ab	-a-a
+23	1	6	estrofa_manriqueña	sextilla	estrofa_manriqueña	1	abcabc	*
+23	2	6	estrofa_manriqueña	sextilla	estrofa_manriqueña	1	abcabc	abcabc
+23	3	6	estrofa_manriqueña	sextilla	estrofa_manriqueña	1	abcabc	abcabc
+23	4	6	estrofa_manriqueña	sextilla	estrofa_manriqueña	1	abcabc	*
+23	5	6	estrofa_manriqueña	sextilla	estrofa_manriqueña	1	abcabc	*
+23	6	6	estrofa_manriqueña	sextilla	estrofa_manriqueña	1	abcabc	*
+23	7	6	estrofa_manriqueña	sextilla	estrofa_manriqueña	1	ab-ab-	*
+23	8	6	estrofa_manriqueña	sextilla	estrofa_manriqueña	1	abcabc	*
+23	9	6	estrofa_manriqueña	sextilla	estrofa_manriqueña	1	abcabc	abcabc
+23	10	6	estrofa_manriqueña	sextilla	estrofa_manriqueña	1	abcabc	*
+23	11	6	estrofa_manriqueña	sextilla	estrofa_manriqueña	1	abcabc	*
+23	12	6	estrofa_manriqueña	sextilla	estrofa_manriqueña	1	abcabc	*
+23	13	6	estrofa_manriqueña	sextilla	estrofa_manriqueña	1	abcabc	*
+23	14	6	estrofa_manriqueña	sextilla	estrofa_manriqueña	1	abcabc	*
+23	15	6	estrofa_manriqueña	sextilla	estrofa_manriqueña	1	abcabc	*
+23	16	6	estrofa_manriqueña	sextilla		0	-ab-ab	*
+23	17	6	estrofa_manriqueña	sextilla	estrofa_manriqueña	1	aab-ab	abcabc
+23	18	6	estrofa_manriqueña	sextilla	estrofa_manriqueña	1	abcabc	*
+23	19	6	estrofa_manriqueña	sextilla	estrofa_manriqueña	1	abcabc	abcabc
+23	20	6	estrofa_manriqueña	sextilla	estrofa_manriqueña	1	abcabc	*
+23	21	6	estrofa_manriqueña	sextilla	estrofa_manriqueña	1	abcabc	*
+24	1	4	serventesio	serventesio		1	abab	abab
+24	2	4	serventesio	serventesio		1	abab	abab
+24	3	4	serventesio	serventesio		1	abab	abab
+25	1	14	romancillo	romancillo		1	ab-bab-b-b-b-b	-a-a-a-a-a-a-a
+26	1	16	romancillo	romancillo		1	-a-a-a-a-a-a-a-a	-a-a-a-a-a-a-a-a
+26	2	14	romancillo	romancillo		1	-a-a-ababa-a-a	-a-a-a-a-a-a-a
+26	3	2	romancillo			0		
+27	1	8	romancillo	romancillo		1	-a-a-a-a	-a-a-a-a
+27	2	8	romancillo	romancillo		1	-a-a-a-a	-a-a-a-a
+27	3	4	romancillo	romancillo		1	-a-a	-a-a
+27	4	4	romancillo	romancillo		1	-a-a	-a-a
+27	5	12	romancillo	romancillo		1	-a-a-a-a-a-a	-a-a-a-a-a-a
+27	6	10	romancillo	romancillo		1	-a-a-a-a-a	-a-a-a-a-a
+27	7	6	romancillo	romancillo		1	-a-a-a	-a-a-a
+27	8	4	romancillo	romancillo		1	-a-a	-a-a
+27	9	8	romancillo	romancillo		1	-a-a-a-a	-a-a-a-a
+27	10	8	romancillo	romancillo		1	-a-a-a-a	-a-a-a-a
+27	11	14	romancillo	romancillo		1	-a-a-a-a-ababa	-a-a-a-a-a-a-a
+27	12	10	romancillo	romancillo		1	-a-aba-aba	-a-a-a-a-a
+27	13	8	romancillo	romancillo		1	-a-a-a-a	-a-a-a-a
+27	14	14	romancillo	romancillo		1	ab-bab-b-b-b-b	-a-a-a-a-a-a-a
+27	15	6	romancillo	romancillo		1	-a-a-a	-a-a-a
+27	16	10	romancillo	romancillo		1	-a-a-a-a-a	-a-a-a-a-a
+27	17	4	romancillo	romancillo		1	ab-b	-a-a
+27	18	6	romancillo	romancillo		1	ab-b-b	-a-a-a
+27	19	6	romancillo	romancillo		1	-aba-a	-a-a-a
+27	20	4	romancillo	romancillo		1	abca	-a-a
+27	21	6	romancillo	romancillo		1	-aba-a	-a-a-a
+27	22	4	romancillo	romancillo		1	-a-a	-a-a
+30	1	10	romancillo	romancillo		1	-a-aba-aba	-a-a-a-a-a
+30	2	16	romancillo	romancillo		1	-a-a-a-a-a-a-a-a	-a-a-a-a-a-a-a-a
+30	3	12	romancillo	romancillo		1	-aba-ababa-a	-a-a-a-a-a-a
+30	4	6	romancillo	romancillo		1	-a-a-a	-a-a-a

@@ -1,0 +1,2189 @@
+line_id	poem_id	stanza_n	text	gold_rhyme	gold_stanza_type	metrical_syllables	stressed_syllables
+1	1	1	Muitos qu'ás tuas ordes pelearon,	A	cuarteto	11.0	1 4 6 10
+2	1	1	E as suas roxas faixas che deberon,	B	cuarteto	11.0	2 4 6 10
+3	1	1	En cuanto os sumos grados atingueron,	B	cuarteto	11.0	4 6 10
+4	1	1	Po-los pátridos eidos suspiraron.	A	cuarteto	11.0	3 6 10
+5	1	2	Alguns, brandos afectos acucíaron	A	cuarteto	11.0	2 3 6 10
+6	1	2	Do seu deixado lar, e esmoreceron;	B	cuarteto	11.0	2 4 6 10
+7	1	2	Outros á uns lindos ollos se renderon;	B	cuarteto	11.0	1 3 4 6 10
+8	1	2	Todos â doce patria retornaron.	A	cuarteto	11.0	1 4 6 10
+9	1	3	Tan sô tí, Weyler forte, non tornastes	C	terceto	11.0	2 3 4 6 10
+10	1	3	Da dura luita e militar desterro,	D	terceto	11.0	2 4 8 10
+11	1	3	E o vasto incendio intrépido afrontastes.	C	terceto	11.0	2 4 6 10
+12	1	4	E contra a tua obra alta e sin erro,	D	terceto	11.0	4 6 7 10
+13	1	4	E contra a nobre gloria que alcanzastes	C	terceto	11.0	4 6 10
+14	1	4	¡Nada podrán envidia, e fogo e ferro!	D	terceto	11.0	4 6 8 10
+15	2	1	Sinto n’o peito us afogos	a	tercerilla	8.0	1 4 7
+16	2	1	Que parece que m’o morden	0	tercerilla	8.0	3 7
+17	2	1	Sete ducias de cans dogos.	a	tercerilla	8.0	1 3 6 7
+18	2	2	Dis que son remordementos	b	tercerilla	8.0	1 3 7
+19	2	2	D’os meus pecados á miles,	0	tercerilla	8.0	2 4 7
+20	2	2	D’as miñas culpas á centos.	b	tercerilla	8.0	2 4 7
+21	2	3	Culpas d’home mal cristiano	c	tercerilla	8.0	1 3 5 7
+22	2	3	Pecados d’herexe, tales	0	tercerilla	8.0	2 5 7
+23	2	3	Que non lles val zuruxano.	c	tercerilla	8.0	2 4 7
+24	2	4	Pra me curar bebin agoas,	d	tercerilla	8.0	4 6 7
+25	2	4	Pisei herbas, recei tríos,	0	tercerilla	8.0	2 3 6 7
+26	2	4	Biquei Santos, vertin bágoas.	d	tercerilla	8.0	2 3 6 7
+27	2	5	Non hai festa ou romaría	e	tercerilla	8.0	1 2 3 7
+28	2	5	Onde empanado non fose.	0	tercerilla	8.0	4 7
+29	2	5	¡Nunca topei milloría!	e	tercerilla	8.0	1 3 7
+30	2	6	Pra me librar d’este estrago	f	tercerilla	8.0	4 7
+31	2	6	Fun ver o Cristo d’Ourense,	0	tercerilla	8.0	1 2 4 7
+32	2	6	Tomei a manta en Santiago.	f	tercerilla	8.0	2 4 7
+33	2	7	Quedei de noite ó recío,	g	tercerilla	8.0	2 4 7
+34	2	7	Coséronme os Evanxelios,	0	tercerilla	8.0	2 7
+35	2	7	Solagáronme n’o río...	g	tercerilla	8.0	3 7
+36	2	8	¡Pr’os males de qu’eu me doyo,	h	tercerilla	8.0	2 5 7
+37	2	8	Dicen os que ben o saben	0	tercerilla	8.0	1 5 7
+38	2	8	Que hai un curandeiro soyo!	h	tercerilla	8.0	1 5 7
+39	2	9	O curandeiro está en Roma.	i	tercerilla	8.0	4 7
+40	2	9	Vou ver se me dá a saúde...	0	tercerilla	8.0	1 2 5 7
+41	2	9	Vou ver se o pulso me toma.	i	tercerilla	8.0	1 2 4 7
+42	2	10	Xa miña nai m’o dicía:	j	tercerilla	8.0	1 2 4 7
+43	2	10	”¿Onde has d’ir, boi que non aras,	0	tercerilla	8.0	1 2 3 4 6 7
+44	2	10	”Senon á cortaduría?	j	tercerilla	8.0	2 7
+45	2	11	”Tanto saber traite cego;	k	tercerilla	8.0	1 4 7
+46	2	11	”Mais, ou morres condanado	0	tercerilla	8.0	3 7
+47	2	11	”Ou tés que volver ó rego.	k	tercerilla	8.0	2 5 7
+48	2	12	”Olla que o tempiño foxe,	l	tercerilla	8.0	1 5 7
+49	2	12	”Y-é ben pra mañan non gardes	0	tercerilla	8.0	1 3 5 7
+50	2	12	”O que poidas facer oxe.	l	tercerilla	8.0	3 5 7
+51	2	13	”Que a morte non nos avisa,	m	tercerilla	8.0	2 4 7
+52	2	13	”E se ha levarnos cubertos,	0	tercerilla	8.0	2 4 6
+53	2	13	”Que non nos colla en camisa.„	m	tercerilla	9.0	2 4 6
+54	2	14	¡Tiña de ser! ¡Diol-o quixo!	n	tercerilla	8.0	2 4 5 7
+55	2	14	¡Él, que crióu d’un arroto	0	tercerilla	8.0	1 4 5 7
+56	2	14	Todal-as cousas, sin lixo!	n	tercerilla	8.0	1 5 7
+57	2	15	Nunca outra tal s’ha de vere:	ñ	tercerilla	8.0	1 4 5 7
+58	2	15	¡Curros camiño de Roma	0	tercerilla	8.0	1 4 7
+59	2	15	Entoando o Miserere!	ñ	tercerilla	8.0	4 7
+60	2	16	¿Pero hei ser sempre un brasfemo,	o	tercerilla	8.0	2 3 7
+61	2	16	Un xudío, un relaxado	0	tercerilla	8.0	2 7
+62	2	16	De Dios azoute? ¡Ora o Demo!...	o	tercerilla	8.0	2 4 5 7
+63	2	17	¿Quén, necesitado d’elas,	p	tercerilla	8.0	2 5 7
+64	2	17	Non merca saúde e groria	0	tercerilla	8.0	1 2 5 7
+65	2	17	Por unhas cantas cadelas?	p	tercerilla	8.0	2 4 7
+66	2	18	Todo vai caro n’a vida.	q	tercerilla	8.0	1 3 4 7
+67	2	18	A groria é que anda barata	0	tercerilla	8.0	2 4 7
+68	2	18	Como a sardiña manida.	q	tercerilla	8.0	4 7
+69	2	19	Certa literata fea	r	tercerilla	8.0	1 5 7
+70	2	19	Mercóuna dando á Aristarco	0	tercerilla	8.0	2 4 7
+71	2	19	Un bico tras d’unha cea.	r	tercerilla	8.0	2 5 7
+72	2	20	Á un usureiro con sorte	s	tercerilla	8.0	1 4 7
+73	2	20	Custóulle... perdoar inxurias...	0	tercerilla	8.0	2 5 7
+74	2	20	N’as boquëadas d’a morte.	s	tercerilla	8.0	4 7
+75	2	21	¡Y-é que n’este tempo infame	t	tercerilla	8.0	1 3 5 7
+76	2	21	A Crítica anda saída	0	tercerilla	8.0	2 4 7
+77	2	21	Y-os Santos morren de fame!	t	tercerilla	8.0	2 4 7
+78	2	22	O inferno á min non m’atrapa:	u	tercerilla	8.0	2 4 7
+79	2	22	Cómpreme unha pouca groria	0	tercerilla	8.0	1 3 5 7
+80	2	22	E voulla comprar ó Papa.	u	tercerilla	8.0	2 5 7
+81	2	23	É un viaxe de recreo.	v	tercerilla	8.0	1 3 7
+82	2	23	¿Quén folga de vir comigo	0	tercerilla	8.0	1 2 5 7
+83	2	23	De Leon XIII ó xubileo?	v	tercerilla	8.0	2 3 7
+84	2	24	Con nosco irán moitas xentes:	w	tercerilla	8.0	2 4 5 7
+85	2	24	Abades, monxas, beatas...	x	tercerilla	8.0	2 4 7
+86	2	24	¡Xuro á Dios qu’hemos d’ir quentes!	w	tercerilla	8.0	1 3 4 6 7
+87	2	25	¡Qué rosario, compañeiros,	y	tercerilla	8.0	1 3 7
+88	2	25	De contas d’amancebadas	x	tercerilla	8.0	2 7
+89	2	25	Con deces de putañeiros!	y	tercerilla	8.0	2 7
+90	2	26	Mais todos van compunxidos,	z	tercerilla	8.0	2 4 7
+91	2	26	Todos como eu apenados,	0	tercerilla	8.0	1 4 7
+92	2	26	Chorosos y-arrepentidos.	z	tercerilla	8.0	2 7
+93	2	27	¡Milagre santo e profundo,	aa	tercerilla	8.0	2 4 7
+94	2	27	Fillo d’o nobre deseo	ab	tercerilla	8.0	1 4 7
+95	2	27	De ver á Dios... e ver mundo!	aa	tercerilla	8.0	2 4 6 7
+96	2	28	Como xa a gracia non baixa,	ac	tercerilla	8.0	3 4 6 7
+97	2	28	Non hai modo d’ir pr’o ceo	ab	tercerilla	8.0	1 2 3 5 6 7
+98	2	28	Se o tren non nos fai rebaixa.	ac	tercerilla	8.0	2 3 5 7
+99	2	29	Esa rebaixa está feita.	ad	tercerilla	8.0	1 4 6 7
+100	2	29	¡Todo de quen pra salvarse	ae	tercerilla	8.0	1 4 7
+101	2	29	Tal acasión n’aproveita!	ad	tercerilla	8.0	1 4 7
+102	2	30	Mentres o camiño dura	af	tercerilla	8.0	5 7
+103	2	30	Hei de vos cantar cantares	ae	tercerilla	8.0	1 5 7
+104	2	30	D’unha non vista hermosura.	af	tercerilla	8.0	1 3 4 7
+105	2	31	Trïadas, miñas trïadas	ag	tercerilla	8.0	1 6
+106	2	31	Que levades os tres fíos	0	tercerilla	8.0	3 6 7
+107	2	31	D’as frechas envenenadas:	ag	tercerilla	8.0	2 7
+108	2	32	Miñas triadas valentes,	ah	tercerilla	8.0	3 7
+109	2	32	¡Rachade os aires fungando	0	tercerilla	8.0	2 4 7
+110	2	32	Como fungan as serpentes!	ah	tercerilla	8.0	3 7
+111	2	33	Ladrade, mordede, ríde:	ai	tercerilla	8.0	2 5 7
+112	2	33	Onde haxa virtú, bicade,	0	tercerilla	8.0	2 5 7
+113	2	33	Onde haxa vicio, feride.	ai	tercerilla	8.0	2 4 7
+114	3	1	¿Qué ten ó mozo ?	0	none	5.0	1 2 4
+115	3	1	Ay! ¿qué terá ?	a	none	5.0	1 2 4
+116	3	1	Ponm' agora unha cara d' inverno ,	0	none	10.0	1 3 6 9
+117	3	1	Despois na fiada ¡sonrisas de tal! .....	A	none	11.0	2 5 8 11
+118	3	1	Quer que baile con él n' o muiño,	0	none	10.0	1 3 6 9
+119	3	1	Y aló pó-la vila, nin fala quixais .....	A	none	12.0	2 5 8 10
+120	3	1	¿Qué ten ó mozo?	0	none	5.0	1 2 4
+121	3	1	Pois ..... ¿qué terá ?	a	none	5.0	1 2 4
+122	3	2	Unhas veces , canciño de cego,	0	none	10.0	1 3 6 9
+123	3	2	Por' ond' eu andare seguindome vay,	a	none	11.0	3 5 8 11
+124	3	2	Nin hay sitio dond' eu non atope	0	none	10.0	2 3 6 7 9
+125	3	2	Un Bras con cirolas , y os zocos na man.	A	none	12.0	1 2 5 8 11
+126	3	2	Ay! qué mociño......	0	none	5.0	1 2 4
+127	3	2	Ay! qué rapaz !	a	none	5.0	1 2 4
+128	3	3	N' outro instante ¡mirá que fachenda ! .....	0	none	11.0	1 3 6 9
+129	3	3	Atruxos qu' asombran ó mesmo lugar.	A	none	12.0	2 5 8 11
+130	3	3	Brrr!!! parece que pasa soberbo ,	0	none	9.0	1 3 6 9
+131	3	3	Mandando nos homes su real maxestá.	A	none	13.0	2 5 8 11
+132	3	3	Mociño ¿ és tolo ?	0	none	6.0	2 4 5
+133	3	3	Ay! ¿s' ó serás ?	a	none	6.0	1 4
+134	3	4	Eu non podo entender meu amore,	0	none	10.0	1 3 6 9
+135	3	4	Qu' airiños te levan, q' airiños te trân,	A	none	10.0	2 5 8 11
+136	3	4	Nin tampouco cal xeito te cadra,	0	none	10.0	3 6 9
+137	3	4	Tratándose, mozo, d'ó teu namorar.	A	none	12.0	2 5 8 11
+138	3	4	Ay ! Dios me libre,	0	none	5.0	1 2 4
+139	3	4	De ti, bon Bras !	a	none	5.0	2 3 4
+140	3	5	Que no meu entender t' acomparo,	0	none	10.0	3 6 9
+141	3	5	Ô mesiño de Marzo marzal:	A	none	10.0	3 6 9
+142	3	5	Pó-la mañan, cariña de rosas;	0	none	10.0	4 6 9
+143	3	5	Pó-la tarde, cara de can.	A	none	9.0	3 5 8
+144	3	5	¡Mala xuntanza	0	none	5.0	1 4
+145	3	5	Facemos! ¡Ay!!	a	none	5.0	2 4
+146	3	6	¿Qué di á meiguiña,	0	none	5.0	1 2 4
+147	3	6	Que di á traidora?	b	none	5.0	1 2 4
+148	3	6	Corazon qu' enloitado te crubes ,	0	none	10.0	3 6 9
+149	3	6	C' os negros desprezos qu' á falsa che dona,	B	none	12.0	2 5 8 11
+150	3	6	¿Por que vives sofrindo por ela?	0	none	10.0	2 3 6 9
+151	3	6	¿Por qué namorado, de pena saloucas?	B	none	12.0	2 5 8 11
+152	3	6	S' ela é bonita,	0	none	5.0	1 2 4
+153	3	6	Ela é traidora.	b	none	5.0	1 2 4
+154	3	7	Di con mengua de min que non sabe,	0	none	10.0	1 3 6 8 9
+155	3	7	Qu' airiños me viran veleta mal posta.....	B	none	12.0	2 5 8 10 11
+156	3	7	Que ch' ó digan, rapaza, os teus ollos ,	0	none	10.0	3 6 8 9
+157	3	7	Qu' agora me chaman,dempois me desbotan.	B	none	12.0	2 5 8 11
+158	3	7	Qu' anqu' és bonita,	0	none	5.0	2 4
+159	3	7	Eres traidora.	b	none	5.0	1 4
+160	3	8	S' unhas veces amante che falo,	0	none	10.0	1 3 6 9
+161	3	8	E s' outras renego de ti..... ¡pecadora!	B	none	12.0	2 5 8 11
+162	3	8	¿Cales auguas repousan serenas,	0	none	10.0	1 3 6 9
+163	3	8	S' ó vento qu' as manda rebole antr' as ondas?	B	none	13.0	2 5 8 11
+164	3	8	E ti ben sabes	0	none	5.0	2 3 4
+165	3	8	Qu' és revoltosa.	b	none	5.0	1 4
+166	3	9	Son canciño de cego en quererte.....	c	none	10.0	1 3 6 9
+167	3	9	Tal bulra merece quen ama sin conta,	B	none	12.0	2 5 8 11
+168	3	9	Pois c' os zocos na man ou sin eles	c	none	12.0	3 6 9
+169	3	9	Âs portas d' ó inferno seguindote fora.	B	none	12.0	2 5 8 11
+170	3	9	Tal estou tolo,	0	none	5.0	1 3 4
+171	3	9	Tal és graciosa.	b	none	5.0	1 2 4
+172	3	10	Que de Marzo marzal teño á cara ! ....	0	none	10.0	3 6 7 9
+173	3	10	Quixais qu' asi sea, mais ti, miña xoya,	B	none	12.0	2 4 5 8 11
+174	3	10	Tamen és cal rayola de Marzo,	0	none	10.0	2 3 6 9
+175	3	10	Qu' agora descrube, qu' agora s' entolda.	B	none	12.0	2 5 8 11
+176	3	10	Iguales semos,	0	none	5.0	2 4
+177	3	10	Nena fermosa.	b	none	5.0	1 4
+178	4	1	—Se astuto s’é que sabes,	a	none	7.0	2 4 6
+179	4	1	Víngate d’as ofensas s’é que podes,	B	none	11.0	1 6 8 10
+180	4	1	Ô que che sirva, págalle,	a	none	7.0	4 6
+181	4	1	Mais a quen non che de, nunca lle dones;	B	none	11.0	4 6 7 10
+182	4	1	Porque á moral d’os santos	0	none	7.0	4 6
+183	4	1	Non reza sempre c’á moral d’os homes.	B	none	11.0	1 2 4 8 10
+184	4	2	Esto un gallego montañés e rudo	0	none	11.0	1 2 4 8 10
+185	4	2	Farto d’humillaciós, e de rencores,	B	none	11.0	1 6 10
+186	4	2	Ô agonizar ll’aconsellaba á un fillo,	c	none	11.0	4 8 9 10
+187	4	2	Herdeiro d’os seus mals e de seu nome.	B	none	11.0	2 5 6 9 10
+188	4	3	—Sé inxenuo e leal sempre,	0	none	7.0	1 2 5 6
+189	4	3	Perdoa a quen t’ofenda	d	none	7.0	2 6
+190	4	3	Fay ben de cote á amigos y enemigos	c	none	11.0	1 2 4 6 10
+191	4	3	Y â porta franca, sin temor, espera,	D	none	11.0	2 4 8 10
+192	4	3	N’hay mais que un Dios y un-ha moral que salve	0	none	11.0	1 3 4 5 8 10
+193	4	3	Ôs tristes fillos d’Eva.	d	none	7.0	2 4 6
+194	4	4	Esto á probe viuda	0	none	7.0	1 4 6
+195	4	4	D’o montañés, morrendo antr’a miseria	D	none	11.0	4 6 10
+196	4	4	Resinada ô seu fillo lle dicia...	0	none	11.0	3 5 6 10
+197	4	4	Y á Dios o esprito ll’entregou serena.	D	none	11.0	2 4 8 10
+198	4	5	E fixolle él as honras,	0	none	7.0	2 4 6
+199	4	5	Mais tan só con xemidos e con bagoas;	E	none	11.0	2 3 6 10
+200	4	5	Crego non houbo ô rededor, que â probe	0	none	11.0	1 3 4 8 10
+201	4	5	O enterro de limosna lle cantara.	E	none	11.0	2 6 10
+202	4	6	N’un corruncho d’o adro	0	none	7.0	1 3 6
+203	4	6	Ond’as ortigas ásperas medraban,	E	none	11.0	4 6 10
+204	4	6	Sin cruz, señal, nin lousa	0	none	7.0	2 4 6
+205	4	6	Ali quedou perdida e sepultada;	E	none	11.0	2 4 6 10
+206	4	6	E triste ó fillo e soyo,	f	none	7.0	2 4 6
+207	4	6	Tornou sañudo á solitaria casa.	E	none	11.0	2 4 8 10
+208	4	7	—Meu pai doum’un consello, iña pensando,	0	none	11.0	2 3 4 6 7 10
+209	4	7	E miña nay dóum’outro;	f	none	7.0	4 5 6
+210	4	7	E s’ela tiña santidá e concencia,	g	none	11.0	2 4 8 10
+211	4	7	Esprencia el tiña e sabidá d’abondo.	F	none	11.0	2 3 4 8 10
+212	4	8	Son fillo d’el e d’ela...	g	none	7.0	1 2 4 6
+213	4	8	Partirey pois á hirencia de dous modos;	F	none	11.0	3 4 6 9 10
+214	4	8	Ña nay, fareille ben á quen cho fixo...	0	none	11.0	2 4 6 10
+215	4	8	Meu pay, vinganza piden os teus osos.	F	none	11.0	2 4 6 9 10
+216	5	1	Un-ha vez tiven un cravo	a	none	8.0	1 3 4 6 7
+217	5	1	Cravado no corazon,	b	none	7.0	2 7
+218	5	1	Y eu non m’acordo xa s’era aquel cravo,	A	none	11.0	1 2 4 6 7 9 10
+219	5	1	D’ouro, de ferro, ou d’amor.	b	none	8.0	1 4 7
+220	5	1	Soyo sei que me fixo un mal tan fondo,	0	none	11.0	1 3 6 7 8 10
+221	5	1	Que tanto m’atormentou,	b	none	8.0	2 7
+222	5	1	Qu’eu dia e noite sin cesar choraba	0	none	11.0	1 2 4 8 10
+223	5	1	Cal chorou Madanela n’a pasion.	B	none	11.0	3 6 10
+224	5	1	—Señor, que todo ó podedes,	0	none	8.0	2 4 7
+225	5	1	Pedinlle un-ha vez á Dios,	b	none	8.0	2 3 5 7
+226	5	1	Daime valor par’arrincar d’un golpe	0	none	11.0	1 4 8 9 10
+227	5	1	Cravo de tal condicion.	b	none	7.0	1 4 7
+228	5	1	E doumo Dios e arrinqueino,	c	none	8.0	2 4 7
+229	5	1	Mais... ¿quen pensara?... Despois	b	none	7.0	2 4 7
+230	5	1	Xa non sentin mais tormentos	c	none	8.0	1 2 4 5 7
+231	5	1	Nin soupen qu’era delor;	b	none	8.0	2 4 7
+232	5	1	Soupen sô, que non sei que me faltaba	0	none	11.0	1 3 5 6 7 10
+233	5	1	En donde o cravo faltou,	b	none	8.0	4 7
+234	5	1	E seica, seica tiven soidades	0	none	10.0	2 4 6 9 10
+235	5	1	D’aquela pena... ¡Bon Diosl	b	none	8.0	2 4 6 7
+236	5	1	Este barro mortal qu’envolve o esprito	0	none	11.0	1 3 6 8 10
+237	5	1	¡Quen-o entenderá, Señor!...	b	none	8.0	1 5 7
+238	6	1	Adios rios, adios fontes,	0	cantar	8.0	2 3 6 7
+239	6	1	Adios regatos pequenos,	a	cantar	8.0	2 4 7
+240	6	1	Adios vista dos meus ollos	0	cantar	8.0	2 3 6 7
+241	6	1	Non sei cando nos veremos.	a	cantar	8.0	1 2 3 7
+242	6	2	Miña terra, miña terra,	b	cantar	8.0	3 7
+243	6	2	Terra donde m' eu criey,	c	cantar	8.0	1 5 7
+244	6	2	Ortiña que quero tanto,	0	cantar	8.0	2 5 7
+245	6	2	Figueiriñas que prantey.	c	cantar	8.0	3 7
+246	6	3	Prados, rios, arboredas,	b	cantar	8.0	1 3 7
+247	6	3	Pinares que move ó vento,	d	cantar	8.0	2 5 7
+248	6	3	Paxariños piadores,	0	cantar	8.0	3 7
+249	6	3	Casiña dó meu contento.	d	cantar	8.0	2 5 7
+250	6	4	Muhiño d' os castañares,	0	cantar	8.0	2 7
+251	6	4	Noites craras de luar,	e	cantar	8.0	1 3 7
+252	6	4	Campaniñas trimbadoras	0	cantar	8.0	3 7
+253	6	4	Dá igrexiña dó lugar.	e	cantar	8.0	3 7
+254	6	5	Amoriñas d' ás silveiras	0	cantar	8.0	3 7
+255	6	5	Qu' eu lle dab' ó meu amor,	f	cantar	7.0	3 5 7
+256	6	5	Camiñiños antr' ó millo,	0	cantar	8.0	3 7
+257	6	5	Adios para sempr' adios!	f	cantar	7.0	2 5 7
+258	6	6	Adios groria! adios contento!	0	cantar	8.0	2 3 5 7
+259	6	6	Deixo á casa onde nacin,	g	cantar	7.0	1 3 7
+260	6	6	Deixo á aldea que conoço,	0	cantar	8.0	1 3 7
+261	6	6	Por un mundo que non vin!	g	cantar	8.0	2 3 6 7
+262	6	7	Deixo amigos por estraños,	h	cantar	8.0	1 3 7
+263	6	7	Deixo á veiga pó lo mar,	i	cantar	8.0	1 3 7
+264	6	7	Deixo, en fin, canto ben quero...	0	cantar	8.0	1 3 6 7
+265	6	7	¡Que pudera non deixar!...	i	quintilla	8.0	1 3 5 7
+266	6	8	Mais son prob' e mal pecado,	h	quintilla	8.0	2 3 5 7
+267	6	8	A miña terra n' é miña,	j	quintilla	9.0	2 4 6 7
+268	6	8	Qu' hastra lle dán de prestado	h	quintilla	7.0	4 7
+269	6	8	A veira por que camiña	j	quintilla	8.0	2 7
+270	6	8	O que naceu desdichado.	h	quintilla	8.0	4 7
+271	6	9	Téñovos pois que deixar,	k	quintilla	8.0	1 4 7
+272	6	9	Hortiña que tanto amei,	l	quintilla	7.0	2 5 7
+273	6	9	Fogueiriña dó meu lár,	k	quintilla	8.0	3 7
+274	6	9	Arboriños que prantei,	l	quintilla	7.0	3 7
+275	6	9	Fontiña do cabañar.	k	quintilla	8.0	2 7
+276	6	10	Adios, adios que me vou,	m	quintilla	8.0	2 4 7
+277	6	10	Herbiñas do camposanto,	n	quintilla	8.0	2 7
+278	6	10	Donde meu pay s' enterrou,	m	quintilla	8.0	4 7
+279	6	10	Herbiñas que biquey tanto,	n	quintilla	8.0	2 6 7
+280	6	10	Terriña que nos criou.	m	quintilla	7.0	2 7
+281	6	11	Adiós Virxe d’ Asunción,	ñ	quintilla	9.0	2 3 7
+282	6	11	Branca com’ un serafín	o	quintilla	8.0	1 4 7
+283	6	11	Lévobos no coraçon,	ñ	quintilla	7.0	1 7
+284	6	11	Pedídelle á Dios por min	o	quintilla	8.0	2 5 7
+285	6	11	Miña Virxe d’ Asunción.	ñ	quintilla	9.0	3 7
+286	6	12	Xa s’ oyen lonxe, moy lonxe	p	cantar	9.0	1 2 4 6 7
+287	6	12	As campanas do pomar,	q	cantar	8.0	3 7
+288	6	12	Para min ¡ay! coitadiño	r	cantar	8.0	3 4 7
+289	6	12	Nunca mais han de tocar.	q	cantar	8.0	1 3 4 7
+290	6	13	Xa s’ oyen lonxe, mais lonxe,	p	cantar	9.0	1 2 4 6 7
+291	6	13	Cada balada e un dolor,	s	cantar	8.0	1 4 5 7
+292	6	13	Voume soyo, sin arrimo,	r	cantar	8.0	1 3 7
+293	6	13	Miña terra, adiós! adiós!	s	cantar	8.0	3 5 7
+294	6	14	Adios tamén, queridiña...	t	cantar	8.0	2 4 7
+295	6	14	Adios por sempre quizais!...	u	cantar	8.0	2 4 7
+296	6	14	Dígoch' este adios chorando	0	cantar	8.0	1 3 5 7
+297	6	14	Desd' á veiriña do mar.	u	cantar	8.0	4 7
+298	6	15	Non m' olvides, queridiña,	t	cantar	9.0	1 3 7
+299	6	15	Si morro de soidás...	u	cantar	7.0	2 7
+300	6	15	Tantas legoas mar adentro...	0	cantar	8.0	1 3 5 7
+301	6	15	¡Miña casiña! meu lar!	u	cantar	8.0	4 7
+302	7	1	Meu santo San Antonio	0	seguidilla_composta	7.0	2 6
+303	7	1	Dáime un homiño	a	seguidilla_composta	5.0	1 2 4
+304	7	1	Anqu' ó tamaño teña	0	seguidilla_composta	7.0	4 6
+305	7	1	D' un gran de millo.	a	seguidilla_composta	5.0	1 2 4
+306	7	1	Dáimo, meu santo,	b	seguidilla_composta	5.0	1 4
+307	7	1	Anqu' os pés teña coxos,	0	seguidilla_composta	7.0	3 4 6
+308	7	1	Mancos os brazos.	b	seguidilla_composta	5.0	1 4
+309	7	2	Un-ha muller sin home...	0	seguidilla_composta	7.0	1 4 6
+310	7	2	Santo bendito!	c	seguidilla_composta	5.0	1 4
+311	7	2	E corpiño sin alma,	d	seguidilla_composta	7.0	1 3 6
+312	7	2	Festa sin trigo.	c	seguidilla_composta	5.0	1 4
+313	7	2	Pau viradoiro,	e	seguidilla_composta	5.0	1 4
+314	7	2	Qu' onda queira que vaya	d	seguidilla_composta	7.0	3 6
+315	7	2	Troncho que troncho.	e	seguidilla_composta	5.0	1 4
+316	7	3	Mais en tend' un homiño	c	seguidilla_composta	7.0	3 6
+317	7	3	¡Virxe do Carme!	f	seguidilla_composta	5.0	1 4
+318	7	3	Non hay mundo que chegue	0	seguidilla_composta	7.0	1 2 3 6
+319	7	3	Para un folgarse.	f	seguidilla_composta	5.0	2 4
+320	7	3	Que zamb' ou trenco,	g	seguidilla_composta	5.0	2 4
+321	7	3	Sempr' é bó ter un home	0	seguidilla_composta	7.0	1 2 3 4 5 6
+322	7	3	Para un remedio.	g	seguidilla_composta	5.0	2 4
+323	7	4	Eu sey d' un que cobiça	0	seguidilla_composta	7.0	1 2 3 6
+324	7	4	Causa miralo,	h	seguidilla_composta	5.0	1 4
+325	7	4	Lanzaliño de corpo,	0	seguidilla_composta	7.0	3 6
+326	7	4	Roxo e encarnado.	h	seguidilla_composta	5.0	1 4
+327	7	4	Carniñas de manteiga,	i	seguidilla_composta	7.0	2 6
+328	7	4	E palabras tan doces	0	seguidilla_composta	7.0	3 5 6
+329	7	4	Cal mentireiras.	i	seguidilla_composta	5.0	4
+330	7	5	Por él peno de dia,	0	seguidilla_composta	7.0	2 3 6
+331	7	5	De noite peno,	j	seguidilla_composta	5.0	2 4
+332	7	5	Pensando nós seus ollos	k	seguidilla_composta	7.0	2 5 6
+333	7	5	Color de céo.	j	seguidilla_composta	5.0	2 4
+334	7	5	Mais el xá doito,	k	seguidilla_composta	5.0	2 3 4
+335	7	5	D' amoriños entende,	0	seguidilla_composta	7.0	3 6
+336	7	5	De casar pouco.	k	seguidilla_composta	5.0	3 4
+337	7	6	Facé, meu San Antonio,	k	seguidilla_composta	7.0	2 6
+338	7	6	Qu' onda min veña,	l	seguidilla_composta	5.0	3 4
+339	7	6	Para casar conmigo,	0	seguidilla_composta	7.0	4 6
+340	7	6	Nena solteira.	l	seguidilla_composta	5.0	1 4
+341	7	6	Que levo en dote	m	seguidilla_composta	5.0	2 4
+342	7	6	Un-ha cullér de ferro,	0	seguidilla_composta	7.0	1 4 6
+343	7	6	Cátro de boxe.	m	seguidilla_composta	5.0	1 4
+344	7	7	Un hirmanciño novo	0	seguidilla_composta	7.0	1 4 6
+345	7	7	Que xá ten dentes,	n	seguidilla_composta	5.0	2 3 4
+346	7	7	Un-ha vaquiña vella	ñ	seguidilla_composta	7.0	1 4 6
+347	7	7	Que non dá leite...	n	seguidilla_composta	5.0	2 3 4
+348	7	7	Ay! meu santiño,	o	seguidilla_composta	5.0	1 4
+349	7	7	Facé que tal suceda,	ñ	seguidilla_composta	7.0	2 4 6
+350	7	7	Cal vó lo pido.	o	seguidilla_composta	5.0	4
+351	7	8	San Antonio bendito,	o	seguidilla_composta	7.0	3 6
+352	7	8	Dádeme un home,	p	seguidilla_composta	5.0	1 3 4
+353	7	8	Anque me mate,	0	seguidilla_composta	5.0	4
+354	7	8	Anque m' esfole.	p	seguidilla_composta	6.0	4
+355	7	8	Que zamb' ou trenco,	q	seguidilla_composta	5.0	2 4
+356	7	8	Sempr' é bó ter un home	p	seguidilla_composta	7.0	1 2 3 4 5 6
+357	7	8	Para un remedio.	q	seguidilla_composta	5.0	2 4
+358	8	1	Aló no currunchiño mais hermoso	A	oitava_real	11.0	2 6 8 10
+359	8	1	Qu' á luz do sol na terr' alumeara,	B	oitava_real	11.0	2 4 6 10
+360	8	1	Veiga frorida e prado deleitoso	A	oitava_real	11.0	1 4 6 10
+361	8	1	Qu' á os campiños do Eden s' acomparara,	B	oitava_real	11.0	3 6 10
+362	8	1	Aló ond' ó Sar soberbo e caudaloso	A	oitava_real	11.0	2 4 6 10
+363	8	1	Parece que se dorme e que se para	B	oitava_real	11.0	2 6 10
+364	8	1	(Tan maino corr' antre á robreda escura)	C	oitava_real	11.0	1 2 4 8 10
+365	8	1	Ali naceu Vidal ó sin ventura	C	oitava_real	11.0	2 4 6 10
+366	8	2	Que reposo! que luz!... que garruleiro	D	oitava_real	11.0	3 6 10
+367	8	2	Brando cantar d' os vareos paxariños	E	oitava_real	11.0	1 4 6 10
+368	8	2	Cand' ó salir do sol pó lo quinteiro	D	oitava_real	11.0	4 6 10
+369	8	2	Douraba fontes, lagos e campiños.	E	oitava_real	11.0	2 4 6 10
+370	8	2	Que libre respirar... que placenteiro.	D	oitava_real	11.0	1 2 6 7 10
+371	8	2	Ir e vir dos cabirtos xuntadiños,	E	oitava_real	11.0	1 3 6 10
+372	8	2	Que frescas, que polidas, que galanas,	F	oitava_real	11.0	1 2 4 6 8 10
+373	8	2	Iban có gando as feitas aldeanas.	F	oitava_real	11.0	1 4 6 10
+374	8	3	Nunca ó rumor do mundo corrompido	G	oitava_real	11.0	1 4 6 10
+375	8	3	Nunca da louca socied' as vaidades	H	oitava_real	11.0	1 4 8 10
+376	8	3	Nin brillo d' os honores fementido	G	oitava_real	11.0	2 6 10
+377	8	3	Foran trubar tan doces soledades,	H	oitava_real	11.0	1 4 5 6 10
+378	8	3	Ceo azul, sol d' amor, campo frorido,	G	oitava_real	11.0	1 3 4 6 7 10
+379	8	3	Santa paz sin remorso nin saudades.	H	oitava_real	11.0	3 6 10
+380	8	3	Horas que van mainiñas camiñando,	I	oitava_real	11.0	1 4 6 10
+381	8	3	Tal alí tempo e vida iban pasando.	I	oitava_real	11.0	1 3 4 6 7 10
+382	8	4	Como ó ventiño da mañan pirmeiro	J	oitava_real	11.0	4 8 10
+383	8	4	No seyo d' as rosiñas se dormia	K	oitava_real	11.0	2 6 10
+384	8	4	E cal dempois toliño e rebuldeiro	J	oitava_real	11.0	4 6 10
+385	8	4	Pó lo espaço inmensisimo subia,	K	oitava_real	11.0	3 6 10
+386	8	4	E volvendo á baixar murmuradeiro	J	oitava_real	11.0	3 6 10
+387	8	4	Por enriba d' as chouzas rebulia	K	oitava_real	10.0	3 6 10
+388	8	4	Nas aliñas levand' ó fumo leve	L	oitava_real	11.0	3 6 8 10
+389	8	4	Qu' en trubias ondas á subir s' atreve:	L	oitava_real	11.0	2 4 8 10
+390	8	5	E como ô mediodia, fast' o rio	M	oitava_real	10.0	6 8 10
+391	8	5	Brisas, aires, pradiños e arborado	N	oitava_real	11.0	1 3 6 10
+392	8	5	Pousaban calorosos e sin brio	M	oitava_real	11.0	2 6 10
+393	8	5	Cal viaxeiro sedento e fatigado,	N	oitava_real	11.0	3 6 10
+394	8	5	E como da seran ó alento frio	M	oitava_real	11.0	6 8 10
+395	8	5	De arulos misteriosos impregnado	N	oitava_real	11.0	2 6 10
+396	8	5	Con pasiño lixeiro s' achegaba	Ñ	oitava_real	11.0	3 6 10
+397	8	5	Y aire, rio, e floriñas axitaba:	Ñ	oitava_real	11.0	1 3 6 10
+398	8	6	Pasiño á paso á traballada xente	O	oitava_real	11.0	2 4 8 10
+399	8	6	D' os campos ás chousiñas se volvia	P	oitava_real	10.0	2 6 10
+400	8	6	Mentras no lar o pote sarpullente	O	oitava_real	11.0	4 6 10
+401	8	6	C' as ricas berzas á cachon fervia.	P	oitava_real	11.0	2 4 8 10
+402	8	6	As fabas y as balocas xuntamente	O	oitava_real	11.0	2 6 8 10
+403	8	6	Có touciño sabroso nel se via	P	oitava_real	11.0	3 6 8 10
+404	8	6	En compañ' amigabre e farturenta	Q	oitava_real	11.0	3 6 10
+405	8	6	Qu' alegra, que convida e que sustenta.	Q	oitava_real	11.0	2 6 10
+406	8	7	Dempois da frugal cea, ô cariñoso	R	oitava_real	11.0	2 5 6 10
+407	8	7	Resplandor do luar claro e soave	S	oitava_real	11.0	3 6 7 10
+408	8	7	Iban gozar ô enxido de reposo	R	oitava_real	11.0	1 4 6 10
+409	8	7	Có abó, qu' á longa historia contar sabe.	S	oitava_real	11.0	2 4 6 9 10
+410	8	7	O rosario da Virxe proveitoso	R	oitava_real	11.0	3 6 10
+411	8	7	Logo rezaban con asento grave	S	oitava_real	11.0	1 4 8 10
+412	8	7	Y alma e corpo tranquilo se dormia	T	oitava_real	11.0	1 3 6 10
+413	8	7	Esperando ó folgor do novo dia.	T	oitava_real	11.0	3 6 8 10
+414	8	8	Tod' era paz e amor, y augua serena,	U	oitava_real	11.0	1 2 4 6 7 10
+415	8	8	Tod' era craro azul no firmamento,	V	oitava_real	11.0	1 2 4 6 10
+416	8	8	Nin oubo ali á soberba qu' envenena,	U	oitava_real	11.0	2 4 6 10
+417	8	8	Nin vano goce, nin fatal tormento,	V	oitava_real	11.0	2 4 8 10
+418	8	8	Nin louco rebuldar, nin fonda pena,	U	oitava_real	11.0	2 6 8 10
+419	8	8	Nin baixo aborrecido pensamento	V	oitava_real	11.0	2 6 10
+420	8	8	Vidiña tan risoña atormentaba,	W	oitava_real	11.0	2 4 6 10
+421	8	8	Pois doce e mainamente se folgaba.	W	oitava_real	11.0	1 2 4 6 10
+422	8	9	Naide naquel lugar probe se vira	X	oitava_real	11.0	1 4 6 7 10
+423	8	9	Qu' uns ben y outros non mal foran vivindo,	Y	oitava_real	10.0	1 2 3 5 6 7 10
+424	8	9	Y un qu' afroxa de mais y outro qu' estira	X	oitava_real	11.0	1 3 6 7 10
+425	8	9	Foranse acomodando e repartindo,	Y	oitava_real	11.0	1 6 10
+426	8	9	Ningun da negra fame á man sentira	X	oitava_real	11.0	2 4 6 8 10
+427	8	9	O seu peito fortísimo oprimindo	Y	oitava_real	11.0	2 3 6 10
+428	8	9	Nó mais que á desdichada criatura	Z	oitava_real	11.0	1 2 6 10
+429	8	9	Que se chamou Vidal ó sin ventura.	Z	oitava_real	11.0	4 6 10
+430	8	10	Orfo ende que nacera, á sorte triste	AA	oitava_real	11.0	1 2 6 8 10
+431	8	10	Déralle por herencia ó desconsolo,	AB	oitava_real	11.0	1 6 10
+432	8	10	C'o á negra soledá, qu' ô probe asiste;	AA	oitava_real	10.0	2 6 8 10
+433	8	10	Naide na terra se topou tan solo	AB	oitava_real	11.0	1 4 8 9 10
+434	8	10	De canto en polvo terrenal se viste	AA	oitava_real	11.0	2 4 8 10
+435	8	10	Inda correndo un polo y outro polo,	AB	oitava_real	10.0	1 4 5 6 8 10
+436	8	10	Qu' era prob' e dorido antr' os doridos	AC	oitava_real	11.0	1 3 6 10
+437	8	10	E afrixido antr' os tristes afrixidos.	AC	oitava_real	11.0	3 6 10
+438	8	11	Tiña por casa un cortelliño escuro	AD	oitava_real	11.0	1 4 5 8 10
+439	8	11	Tiña por leito ó chan humedecido	AE	oitava_real	11.0	1 4 6 10
+440	8	11	Por cubirtor á neve e vento duro	AD	oitava_real	11.0	4 6 8 10
+441	8	11	Qu' entraba pó las fendas arresido.	AE	oitava_real	11.0	2 6 10
+442	8	11	Tiña ó sustento escaso e mal seguro	AD	oitava_real	11.0	1 4 6 8 10
+443	8	11	Que dan de porta en porta ô qu' é perdido	AE	oitava_real	10.0	2 4 6 8 10
+444	8	11	Qu' asi lle din con bulra non escasa	AF	oitava_real	11.0	1 4 6 8 10
+445	8	11	O que por probe neste mundo pasa.	AF	oitava_real	11.0	4 6 8 10
+446	8	12	En jamás ó infeliz decir poidera	AG	oitava_real	11.0	3 6 8 10
+447	8	12	—Esto que teño é meu!—qu' á sorte dura	AH	oitava_real	10.0	1 4 5 6 8 10
+448	8	12	N' inda por conceder lle concedera	AG	oitava_real	12.0	1 6 10
+449	8	12	Un pouco de querer ou de ternura,	AH	oitava_real	11.0	1 2 6 10
+450	8	12	Nin un pouco d' amor, que donde houbera	AG	oitava_real	11.0	2 3 6 8 10
+451	8	12	Pobreza, e soledad' e desventura,	AH	oitava_real	11.0	2 6 10
+452	8	12	Groria, dicha, e querer correndo pasan	AI	oitava_real	11.0	1 3 6 8 10
+453	8	12	Y á entradiña da porta non traspasan.	AI	oitava_real	11.0	3 6 8 10
+454	8	13	Sempre por dicha prá Vidal habia	AJ	oitava_real	10.0	1 4 8 10
+455	8	13	Caldo e mais pan nalgún lariño alleo,	AK	oitava_real	11.0	1 4 6 8 10
+456	8	13	Y á mais á caridá non s' estendia	AJ	oitava_real	10.0	2 6 7 10
+457	8	13	Que fora un mal matarlle outro deseo.	AK	oitava_real	11.0	2 3 4 6 7 10
+458	8	13	Que si á cousas mellores s' afacia	AJ	oitava_real	10.0	3 6 10
+459	8	13	Y outro vareo comer y outro recreo,	AK	oitava_real	11.0	1 3 6 7 10
+460	8	13	Traballo lle custara á bon seguro	AL	oitava_real	11.0	2 6 8 10
+461	8	13	Comer dempois berciñas e pan duro.	AL	oitava_real	11.0	2 3 6 9 10
+462	8	14	Tal conta á xente corda se botaba	AM	oitava_real	11.0	2 4 6 10
+463	8	14	Con parsimonia concençuda e grave,	AN	oitava_real	11.0	4 8 10
+464	8	14	E refrans sabios con afan buscaba	AM	oitava_real	11.0	3 4 8 10
+465	8	14	Dos que dín—Nunca dés do que ben sabe.—	AN	oitava_real	11.0	3 6 9 10
+466	8	14	Y ô compango Vidal nunca probaba	AM	oitava_real	11.0	3 6 7 10
+467	8	14	Por qu' era á sobriedá santa e saudabe	AN	oitava_real	11.0	2 6 7 10
+468	8	14	Segun á xente de poder decia	AÑ	oitava_real	10.0	2 4 8 10
+469	8	14	Anqu' ela ben folgaba e ben comia.	AÑ	oitava_real	11.0	2 4 6 8 10
+470	8	15	Cando d'os porcos á matanza viña	AO	oitava_real	11.0	4 8 10
+471	8	15	¡Qu' amabre chamuscar nas limpas eiras	AP	oitava_real	11.0	2 6 8 10
+472	8	15	O despertar da fresca mañanciña !...	AO	oitava_real	11.0	4 6 10
+473	8	15	¡Qu' alegre fumo antr' olmos e figueiras	AP	oitava_real	11.0	2 4 6 10
+474	8	15	Olendo á cocho pó los aires iña!	AO	oitava_real	11.0	2 4 8 10
+475	8	15	¡Qu' arremangar d'as nenas mondongueiras!	AP	oitava_real	11.0	1 4 6 10
+476	8	15	¡Qu' ir e vir dend' o banco hastr' a cociña!	AO	oitava_real	11.0	1 3 6 10
+477	8	15	Y aló no lar, ¡que fogo! que larada!	AQ	oitava_real	11.0	2 4 6 8 10
+478	8	16	¡Que rica e que ben feita frixolada!	AQ	novena	11.0	1 2 4 5 6 10
+479	8	16	Fígado con cebola ben frixida	AR	novena	11.0	1 6 8 10
+480	8	16	Y un-ha folliña de laurel cheirosa,	AS	novena	11.0	1 4 8 10
+481	8	16	Qu' inda á un morto ben morto dera vida	AR	novena	11.0	1 2 3 5 6 8 10
+482	8	16	De tan rica, tan tenra, e tan sabrosa:	AS	novena	11.0	2 3 5 6 8 10
+483	8	16	Raxo en sorsa c' un cheiro que convida,	AR	novena	13.0	1 3 5 6 10
+484	8	16	Y á sangre d'as morcillas sustanciosa	AS	novena	11.0	2 6 10
+485	8	16	En fregada caldeira rebotando	AT	novena	11.0	3 6 10
+486	8	16	A que fagan morcillas convidando.	AT	novena	11.0	3 6 10
+487	8	17	Cuadro tan agradabr' e farturento	AU	oitava_real	11.0	1 3 6 10
+488	8	17	Por tod' á vecindá se repetia	AV	oitava_real	11.0	2 6 10
+489	8	17	Con garular, e risa, e gran contento,	AU	oitava_real	11.0	4 6 8 10
+490	8	17	Que suceso tan grande ó requeria.	AV	oitava_real	11.0	3 5 6 10
+491	8	17	Mais por que lle sirvise de tormento	AU	oitava_real	11.0	6 10
+492	8	17	Solo na chouza de Vidal n' habia	AV	oitava_real	11.0	1 4 8 9 10
+493	8	17	Nin porco, nin mondongo, nin risiña,	AW	oitava_real	11.0	2 6 10
+494	8	17	Qu' era todo nubrado e tristesiña.	AW	oitava_real	11.0	1 3 6 10
+495	8	18	Nas frias pedras do seu lar sentado	AX	oitava_real	10.0	2 4 6 7 8 10
+496	8	18	Tan vareo movemento contempraba	AY	oitava_real	11.0	1 2 6 10
+497	8	18	De negra soledade acompañado:	AX	oitava_real	11.0	2 6 10
+498	8	18	Naide á festa do porco ó convidaba	AY	oitava_real	11.0	1 3 6 10
+499	8	18	Qu' era probe Vidal y era olvidado	AX	oitava_real	11.0	1 3 6 7 10
+500	8	18	Y á presença d' un probe ali estorbaba	AY	oitava_real	11.0	3 5 6 8 10
+501	8	18	Por eso antre suspiros repitia	AZ	oitava_real	10.0	2 6 9
+502	8	18	—¡Ay! quen fora riquiño un solo dia!	AZ	oitava_real	11.0	1 2 3 6 7 8 10
+503	8	19	Tales eran decote os seus deseos	BA	oitava_real	11.0	1 3 6 8 10
+504	8	19	Mais nunca ¡triste sorte! se cumprian,	BB	oitava_real	10.0	2 4 6 10
+505	8	19	E todos, todos de miseria cheos	BA	oitava_real	11.0	2 4 8 10
+506	8	19	Anos tras anos sin cesar corrian:	BB	oitava_real	10.0	1 4 8 10
+507	8	19	X' era bello Vidal, y os duros ceos	BA	oitava_real	12.0	1 3 6 8 10
+508	8	19	De tan negro sufrir non se doian	BB	oitava_real	10.0	2 3 6 7 10
+509	8	19	Qu' inda ó porco Vidal nunca probara	BC	oitava_real	11.0	1 3 6 7 10
+510	8	19	Nin naide á tal festiña ó convidara.	BC	oitava_real	11.0	2 4 6 10
+511	8	20	Tal com' era costume á rica proba	BD	oitava_real	11.0	1 3 6 8 10
+512	8	20	Veciños con veciños se trocaban	BE	oitava_real	11.0	2 6 10
+513	8	20	(Ind' ox' esta costume se renova)	BD	oitava_real	11.0	1 2 6 10
+514	8	20	Mais á Vidal veciño non chamaban,	BE	oitava_real	11.0	4 6 8 10
+515	8	20	Que fora indina misturanza boba	BD	oitava_real	11.0	2 4 8 10
+516	8	20	Ir á dar donde daiba non topaban	BE	oitava_real	11.0	1 3 6 8 10
+517	8	20	E por eso Vidal, probe coitado,	BF	oitava_real	11.0	3 6 7 10
+518	8	20	Nunca catou morcilla ó desdichado.	BF	oitava_real	11.0	1 4 6 10
+519	8	21	Mas ay! picaro mundo! mundo aleve!	BG	oitava_real	11.0	2 3 6 8 10
+520	8	21	Quen de teus pasos e revoltas fia?	BH	oitava_real	11.0	1 4 8 10
+521	8	21	Quen afirmar empavedo s' atreve	BG	oitava_real	11.0	1 4 6 10
+522	8	21	Que non se pode á noite tornar dia?	BH	oitava_real	11.0	2 4 6 9 10
+523	8	21	Quen en tempo tan rápido e tan breve	BG	oitava_real	11.0	1 3 5 6 9 10
+524	8	21	Os conocidos de Vidal diria	BH	oitava_real	11.0	4 8 10
+525	8	21	Qu' aquela triste homilde criatura	BI	oitava_real	11.0	2 4 6 10
+526	8	21	Iba nadar en ondas de ventura?	BI	oitava_real	11.0	1 4 6 10
+527	8	22	Y asi pasou!.. qu' aquel que todo mira	BJ	oitava_real	11.0	2 4 6 8 10
+528	8	22	Alo da inmensa e trasparente esfera,	BK	oitava_real	11.0	2 4 8 10
+529	8	22	Donde c' os astros centellantes xira	BJ	oitava_real	12.0	4 8 10
+530	8	22	Misericordia de Vidal tibera.	BK	oitava_real	11.0	4 8 10
+531	8	22	O torpe olvido dos podentes vira	BJ	oitava_real	11.0	2 4 8 10
+532	8	22	Y á pena de Vidal compadecera	BK	oitava_real	11.0	2 6 10
+533	8	22	E có seu brazo misterioso e forte	BL	oitava_real	11.0	3 4 8 10
+534	8	22	Trocou d' un sopro á temeraria sorte.	BL	oitava_real	11.0	2 3 4 8 10
+535	8	23	Tal pó las portas de Vidal entrara	BM	oitava_real	11.0	1 4 8 10
+536	8	23	Como en campo sedento farto rio,	BN	oitava_real	11.0	3 6 8 10
+537	8	23	Aló de Cais herencia qu' envidiara	BM	oitava_real	11.0	2 4 6 10
+538	8	23	O mais encopetado señorio.	BN	oitava_real	11.0	2 6 10
+539	8	23	Ucha d' ouro ôs seus ollos relumbrara	BM	oitava_real	11.0	1 3 5 6 10
+540	8	23	Dandolle desvareo, e risa, e frio	BN	oitava_real	11.0	1 6 8 10
+541	8	23	E tanto tal sorpresa ó contrubaba	BÑ	oitava_real	11.0	2 4 6 10
+542	8	23	Que coidaba infeliz qu' inda soñava.	BÑ	oitava_real	11.0	3 6 7 10
+543	8	24	Dempois chorou, sorreu, vicou á terra	BO	oitava_real	11.0	2 4 6 8 10
+544	8	24	Inda pó lo seu pranto humedecida,	BP	oitava_real	11.0	1 5 6 10
+545	8	24	E canta dicha á humanidad' encerra	BO	oitava_real	11.0	4 8 10
+546	8	24	Verteuse do seu peito escandecida,	BP	oitava_real	11.0	2 5 6 10
+547	8	24	Logo volvendo en si, casi s' aterra	BO	oitava_real	11.0	1 4 6 7 10
+548	8	24	De ver ventura tan sin par cumprida	BP	oitava_real	11.0	2 4 8 10
+549	8	24	E postrado ante Dios fervente ora	BQ	oitava_real	10.0	3 6 8 10
+550	8	24	Y ó seu misterio portentoso adora.	BQ	oitava_real	11.0	2 4 8 10
+551	8	25	Cumprido este deber, Vidal reposto	BR	oitava_real	11.0	2 3 6 8 10
+552	8	25	De sorpresa tan grave e prasenteira	BS	oitava_real	11.0	3 5 6 10
+553	8	25	Pónse limpio, amañado, e ben composto,	BR	oitava_real	11.0	1 3 6 8 10
+554	8	25	Co á graciña de Dios por compañeira;	BS	oitava_real	11.0	3 6 10
+555	8	25	Cal s' adimira d' ó mirar tan posto,	BR	oitava_real	11.0	1 4 8 9 10
+556	8	25	Cal lle di qu' é galan por derradeira,	BS	oitava_real	10.0	1 3 4 6 10
+557	8	25	Y aunque calvo quedou como S. Pedro	BT	oitava_real	11.0	3 6 10
+558	8	25	Dínlle que ten risado pelo negro.	BT	oitava_real	11.0	1 4 6 8 10
+559	8	26	Chámalle aquel, amigo; ¡cousa rara!	BU	oitava_real	11.0	1 4 6 8 10
+560	8	26	Qu' antes—Vidal! con sorna lle desia,	BV	oitava_real	10.0	1 4 6 10
+561	8	26	Y outro lle volve pracenteiro á cara	BU	oitava_real	11.0	1 4 8 10
+562	8	26	Que nantronte ó caris lle retorsia,	BV	oitava_real	10.0	3 6 10
+563	8	26	Tal miniña de velo se trubara,	BU	oitava_real	11.0	1 3 6 10
+564	8	26	Tal outra xunta del se rebolvia,	BV	oitava_real	10.0	1 2 6 10
+565	8	26	E séica non faltou quen lle dixera	BW	oitava_real	11.0	2 4 6 10
+566	8	26	Que feito com' un santo se volvera.	BW	oitava_real	11.0	2 5 6 10
+567	8	27	Qu' é triste ó rostro da mortal pobreza	BX	oitava_real	10.0	1 2 4 8 10
+568	8	27	Qu' entre ximidos e dolores nace,	BY	oitava_real	11.0	4 8 10
+569	8	27	Y hastra á hermosura ven, cando riqueza	BX	oitava_real	11.0	4 6 10
+570	8	27	Có seu mirar risoño nos comprace.	BY	oitava_real	11.0	2 4 6 10
+571	8	27	Presta o diñeiro encanto e gentilesa,	BX	oitava_real	11.0	1 4 6 10
+572	8	27	Y un Dios ó mesmo demo se tornara	BY	oitava_real	11.0	1 2 4 6 10
+573	8	27	Si tomando á figura de banqueiro	BZ	oitava_real	11.0	1 3 6 10
+574	8	27	Remexése diñeiro e mais diñeiro.	BZ	oitava_real	11.0	3 6 8 10
+575	8	28	Estos misterios son... eu me confundo	CA	oitava_real	11.0	1 4 6 7 10
+576	8	28	y en van' ôs espricar me propuñera;	CB	oitava_real	11.0	2 6 10
+577	8	28	Pero Vidal filosofo profundo,	CA	oitava_real	11.0	4 6 10
+578	8	28	Qu' anque xamais nos libros deprendera	CB	oitava_real	11.0	4 6 10
+579	8	28	A conta propia deprendeu no mundo,	CA	oitava_real	11.0	2 4 8 10
+580	8	28	Non de mudansa tal se sorprendera,	CB	oitava_real	11.0	1 4 6 10
+581	8	28	Qu' aló no seu caletre á adiviñara	CC	oitava_real	11.0	2 4 6 10
+582	8	28	Cando en ser rico con afan soñara.	CC	oitava_real	11.0	3 4 8 10
+583	8	29	Por eso recibeu con cortesia	CD	oitava_real	11.0	2 6 10
+584	8	29	Recrebos, agasaxo e comprimento,	CE	oitava_real	11.0	2 6 10
+585	8	29	Q' un tras outro homildoso lle facia,	CD	oitava_real	11.0	1 3 6 10
+586	8	29	Escoria vil do humano sentimento.	CE	oitava_real	11.0	2 4 6 10
+587	8	29	El á baixesa d' eles comprendia	CD	oitava_real	11.0	1 4 6 10
+588	8	29	Y anque vano nin torpe pensamento	CE	oitava_real	11.0	3 6 10
+589	8	29	Contra xentiñas tales meditaba,	CF	oitava_real	11.0	4 6 10
+590	8	29	Forte e séria lision darlles pensaba.	CF	oitava_real	11.0	1 3 6 7 10
+591	8	30	Un-ha mañan, á un santo e bon suxeto	CG	oitava_real	11.0	1 4 5 6 8 10
+592	8	30	Un quiño lle mercou, ¡soberbo quiño!	CH	oitava_real	11.0	1 2 6 8 10
+593	8	30	Tan niveo, tan plantado e tan repleto	CG	oitava_real	11.0	1 2 4 6 8 10
+594	8	30	Cal nunca ó vira tal ningun veciño.	CH	oitava_real	11.0	2 4 6 8 10
+595	8	30	Era curto de perna, o lombo neto,	CG	oitava_real	11.0	1 3 6 8 10
+596	8	30	Do rabo hastra á cabeza redondiño,	CH	oitava_real	11.0	2 6 10
+597	8	30	Y ó coiro tan graxento relusia	CI	oitava_real	10.0	2 4 6 10
+598	8	30	Que mesmo de manteiga paresia.	CI	oitava_real	10.0	2 6 10
+599	8	31	—Alabado sea Dios!—Dios ch' ó bendiga!	CJ	oitava_real	11.0	3 5 6 7 10
+600	8	31	—S. Antonio ch' ó guarde!—asi escramaban	CK	oitava_real	11.0	3 6 8 10
+601	8	31	Mentras qu' ó cocho á paso de formiga	CJ	oitava_real	10.0	4 6 10
+602	8	31	Y ó seu dono Vidal, serios pasaban.	CK	oitava_real	11.0	2 3 6 7 10
+603	8	31	A falarlle á Vidal cada un s' obriga	CJ	oitava_real	11.0	3 6 8 10
+604	8	31	Qu' ó porco xa mortiño contempraban	CK	oitava_real	10.0	2 4 6 10
+605	8	31	E nera de perder tan bon bocado	CL	oitava_real	11.0	2 6 7 8 10
+606	8	31	Pó las mans de Vidal morto e salgado.	CL	oitava_real	11.0	3 6 7 10
+607	8	32	Log' ó berrido do infeliz pasente	CM	oitava_real	11.0	1 4 8 10
+608	8	32	Que sofre có coitelo morte dura	CN	oitava_real	11.0	2 6 8 10
+609	8	32	Fender ós aires no lugar se sente,	CM	oitava_real	11.0	2 4 8 10
+610	8	32	Pouco á pouco á gorxiña queda muda,	CN	oitava_real	11.0	1 3 6 8 10
+611	8	32	O suspiro postrer soa estredente,	CM	oitava_real	10.0	3 6 7 10
+612	8	32	A sangre corre, ó matachin xa suda,	CN	oitava_real	11.0	2 4 8 10
+613	8	32	E naquel grave e quirtico momento	CÑ	oitava_real	11.0	3 4 6 10
+614	8	32	É o porco, vida e mundo e pensamento.	CÑ	oitava_real	11.0	1 2 4 6 10
+615	8	33	O difunto ali está repantrigado,	CO	oitava_real	11.0	3 5 6 10
+616	8	33	C' un-ha cebola n' antraberta boca,	CP	oitava_real	13.0	1 4 8 10
+617	8	33	(Qu' inda parés qu' á come ó desdichado)	CO	oitava_real	11.0	1 4 6 10
+618	8	33	Pero nó no chorés qu' á el solo toca	CP	oitava_real	11.0	3 4 6 7 8 10
+619	8	33	Dormir sono tan triste descuidado,	CO	oitava_real	11.0	2 3 5 6 10
+620	8	33	Pois as iras d' inferno non proboca	CP	oitava_real	11.0	3 6 8 10
+621	8	33	Nin groria ten nin porgatorio ardente,	CQ	oitava_real	11.0	2 4 8 10
+622	8	33	El dormirá insensible eternamente.	CQ	oitava_real	11.0	1 4 6 8 10
+623	8	34	Non cab' en si Vidal de tan contento,	CR	oitava_real	11.0	1 2 4 6 8 10
+624	8	34	O cheiriño do porco ll' enlouquece,	CS	oitava_real	11.0	3 6 10
+625	8	34	Qu' entr' os porcos nacidos é un portento	CR	oitava_real	11.0	3 6 8 10
+626	8	34	Aquel qu' ante seus ollos aparece,	CS	oitava_real	11.0	2 6 10
+627	8	34	Certa satisfacion, certo contento,	CR	oitava_real	11.0	1 6 7 10
+628	8	34	No rostro d' os presentes resplandece	CS	oitava_real	11.0	2 6 10
+629	8	34	Que mesmo quer decir en lenguax mudo	CT	oitava_real	11.0	2 4 6 9 10
+630	8	34	¡Este si que ch' é un porco repoludo!	CT	oitava_real	11.0	1 3 5 6 10
+631	8	35	Mais c' ó cocho Vidal soyo s' encerra	CU	oitava_real	12.0	3 6 7 10
+632	8	35	Mentras qu' á xente aturrullada mira...	CV	oitava_real	10.0	4 8 10
+633	8	35	Câl se pasma, câl bufa, câl s' aterra	CU	oitava_real	8.0	1 3 5 6 8 10
+634	8	35	Que nunca tal naquel lugar se vira,	CV	oitava_real	11.0	2 4 6 8 10
+635	8	35	Câl outro lle xurando eterna guerra,	CU	oitava_real	11.0	1 2 6 8 10
+636	8	35	Dás voltas que dá ó mundo s' adimira	CV	oitava_real	11.0	2 5 6 10
+637	8	35	Pois que nunca en jamas nengun veciño	CW	oitava_real	11.0	3 6 8 10
+638	8	35	Lle batera c' á porta no fociño.	CW	oitava_real	13.0	3 6 10
+639	8	36	Era aquel un rifar desesperado,	CX	oitava_real	11.0	1 3 6 10
+640	8	36	Pero Vidal ó xordo se facia,	CY	oitava_real	10.0	4 6 10
+641	8	36	A noit' enteira se pasou cerrado,	CX	oitava_real	11.0	2 4 8 10
+642	8	36	Y ô arbór primeiro do siguente dia	CY	oitava_real	11.0	2 4 8 10
+643	8	36	C' un varal de morcillas ben cargado	CX	oitava_real	12.0	1 3 6 8 10
+644	8	36	Que á pouco de cargado se rompia,	CY	oitava_real	10.0	2 6 10
+645	8	36	Apareceu lavado e reverendo	CZ	oitava_real	11.0	4 6 10
+646	8	36	A todos c' ó seu porte sorprendendo.	CZ	oitava_real	12.0	2 6 10
+647	8	37	El direitiño ô seu facer marchaba	DA	oitava_real	11.0	1 4 6 8 10
+648	8	37	Con paso despacioso camiñando,	DB	oitava_real	11.0	2 6 10
+649	8	37	E un sorrir nos seus labios s' atopaba	DA	oitava_real	11.0	1 3 5 6 10
+650	8	37	Qu' antroido iba dicindo ou contrabando,	DB	oitava_real	11.0	2 6 10
+651	8	37	Dempois con voz qu' as xentes atroaba	DA	oitava_real	10.0	2 4 6 10
+652	8	37	Foise de porta en porta perguntando:	DB	oitava_real	11.0	1 4 6 10
+653	8	37	—Deronlle aqui morcillas á Vidal?	DC	oitava_real	11.0	1 4 6 10
+654	8	37	—Aqui non!!!—Pos adiante có varal!	DC	oitava_real	11.0	2 3 6 10
+655	8	38	Asi as chousas correu un-ha por un-ha	DD	oitava_real	10.0	2 3 6 7 10
+656	8	38	Y ó varal inteiriño inda se via,	DE	oitava_real	11.0	3 6 7 10
+657	8	38	Con triste si non respondeu ningun-ha	DD	oitava_real	11.0	2 4 5 8 10
+658	8	38	De cantas en redondo requeria.	DE	oitava_real	10.0	6 10
+659	8	38	Rindos' entanto á falsa de fertun-ha	DD	oitava_real	11.0	1 4 6 10
+660	8	38	Con sonsa voz de bulra repetia:	DE	oitava_real	10.0	2 4 6 10
+661	8	38	—Deronlle aqui morcillas á Vidal?	DF	oitava_real	11.0	1 4 6 10
+662	8	38	—Aqui non!!! —Pois adiante có varal!	DF	oitava_real	4.0	2 3 6 10
+663	8	39	Vidal morreu, y ó tempo foi pasando,	DG	oitava_real	11.0	2 4 6 8 10
+664	8	39	Braso qu' os duros mármores arrasa	DH	oitava_real	11.0	1 4 6 10
+665	8	39	Antre helados escombros enterrando	DG	oitava_real	11.0	3 6 10
+666	8	39	Do bon Vidal á solitaria casa.	DH	oitava_real	11.0	2 4 8 10
+667	8	39	Mais sempr' esta historiña foy quedando,	DG	oitava_real	11.0	2 3 6 8 10
+668	8	39	Ind' oxe mesmo por provervio pasa,	DH	oitava_real	11.0	1 2 4 8 10
+669	8	39	E cand' ó nome de Vidal s' invoca	DI	oitava_real	11.0	4 8 10
+670	8	39	Muda sole quedar mais d' un-ha boca.	DI	oitava_real	11.0	1 3 6 7 8 10
+671	9	1	Os que, pr'eles trunfar, afogar queren	A	serventesio	11.0	3 6 9 10
+672	9	1	Doutrinas que han crebar nosas cadeas;	B	serventesio	11.0	2 4 6 10
+673	9	1	Os que, roendo latin, sin o entenderen.	A	serventesio	11.0	3 5 10
+674	9	1	Dan pr'o ceio boletas âs maus cheas.	B	serventesio	10.0	1 2 3 5 8 9
+675	9	1	Vendo que hai pouca fe n-as argalladas.	C	pareado	11.0	1 3 4 6 10
+676	9	1	Que ainda hoxe lles valen boas talladas,	C	pareado	10.0	1 3 6 8 10
+677	9	1	Bouran, e con razón: pan que se solta,	D	pareado	11.0	1 6 7 10
+678	9	1	Pan perdido pra sempre; e non ten volta!	D	pareado	11.0	1 3 6 8 9 10
+679	35	1	¿Pesan ús zocos seis libras	0	none	8.0	1 3 4 6 7
+680	35	1	I unhas zocas catro e media!.	a	none	8.0	1 3 5 7
+681	35	1	Pois no-é milagre que tire	0	none	8.0	1 2 4 7
+682	35	1	Pol-os gallegos a térra.	a	none	8.0	4 7
+683	10	1	Dicen que con raposadas,	0	romance	8.0	1 7
+684	10	1	Cando non por forza, pensas	a	romance	8.0	3 5 7
+685	10	1	Pouquiño á pouco ir logrando	0	romance	8.0	2 4 5 7
+686	10	1	Facerte dona d'a térra!...	a	romance	8.0	2 4 7
+687	10	1	Si, a quenes ti rogas botas	0	romance	8.0	4 5 7
+688	10	1	Os pillara a mais pequeña,	a	romance	8.0	3 5 7
+689	10	1	Poidera ser que eso viras,	0	romance	8.0	2 4 5 7
+690	10	1	Ou, de non, chegares cerca;	a	romance	8.0	3 5 7
+691	10	1	Pro, nin d'os brazos se tollen,	0	romance	8.0	4 7
+692	10	1	Nin se lies entala alengoa,	a	romance	8.0	5 7
+693	10	1	Cando con paus ou razós.	0	romance	8.0	4 7
+694	10	1	Según do cadra ch'arrean.	a	romance	8.0	2 4 7
+695	10	1	I-han deixarte, e non tardando.	0	romance	9.0	1 3 5 7
+696	10	1	Sin a que tés, e sin sedas.	a	romance	8.0	4 7
+697	10	1	I aqui mesmo, onde ontes inda	0	romance	8.0	2 3 5 7
+698	10	1	Cuase canto hai que ser eras	a	romance	8.0	1 3 4 6 7
+699	10	1	Logo nomais han lembrareche	0	romance	9.0	1 4 5 7
+700	10	1	Teu valer e tuas grandezas:	a	romance	8.0	3 7
+701	10	1	Unha mítola anarcada,	0	romance	8.0	1 4 7
+702	10	1	Que oxe xa ni o seu goberna,	a	romance	8.0	1 3 5 7
+703	10	1	I-o Cristo do Pasatempo,	0	romance	8.0	2 7
+704	10	1	Que; tamén, si dera â lengoa,	a	romance	8.0	3 5 7
+705	10	1	D'os que alí o tempo pasaron	0	romance	8.0	3 4 7
+706	10	1	Diría: ¡malditos sexan!.	a	romance	8.0	2 5 7
+707	11	1	Roxiña cál sol dourado,	a	setina	8.0	2 5 7
+708	11	1	Garrida cál fresca rosa,	b	setina	8.0	2 5 7
+709	11	1	Iba pó lo monte hermosa	b	setina	8.0	1 5 7
+710	11	1	Có branco pé descalzado...	a	setina	8.0	2 4 7
+711	11	1	Copo de neve pousado,	a	setina	8.0	1 4 7
+712	11	1	Deslumbrando á luz do dia,	c	setina	8.0	3 5 7
+713	11	1	Tan branco pé parecia.	c	setina	8.0	1 2 4 7
+714	11	2	As longas trenzas caidas,	d	setina	8.0	2 4 7
+715	11	2	Con quen os ventos xogaban,	e	setina	8.0	4 7
+716	11	2	Ondiñas d' ouro formaban	e	setina	8.0	2 4 7
+717	11	2	Ná branca espalda tendidas;	d	setina	8.0	2 4 7
+718	11	2	Apertadas e bruñidas	d	setina	8.0	3 7
+719	11	2	Qu' espigas eran, coidara	f	setina	8.0	2 4 7
+720	11	2	O que de lonxe as mirara.	f	setina	8.0	4 7
+721	11	3	Tiñan os cores do mare,	g	setina	8.0	1 4 7
+722	11	3	Os seus olliños dormentes,	h	setina	8.0	2 4 7
+723	11	3	Mais doces, mais trasparentes,	h	setina	8.0	1 2 4 7
+724	11	3	Naide os poidera encontrare;	g	setina	8.0	1 4 7
+725	11	3	Naide velos sin amare	g	setina	8.0	1 3 7
+726	11	3	O coraçon sin falsia,	i	setina	8.0	4 7
+727	11	3	Que por antr' eles se via.	i	setina	8.0	4 7
+728	11	4	Levaba na frente á yalma,	j	setina	8.0	2 5 7
+729	11	4	Nos doces labios á risa,	k	setina	8.0	2 4 7
+730	11	4	Auguiña que ó vento enrisa,	k	setina	8.0	2 5 7
+731	11	4	Pousaba no fondo en calma.	j	setina	8.0	2 5 7
+732	11	4	Tal como gallarda palma	j	setina	8.0	2 5 7
+733	11	4	Cimbrase con folgura	l	setina	7.0	1 6
+734	11	4	A delgadiña cintura.	l	setina	8.0	4 7
+735	11	5	Ó par da brisa temprada	m	setina	8.0	2 4 7
+736	11	5	Qu' antr' os salgueiros corria,	n	setina	8.0	4 7
+737	11	5	Ela correndo seguia	n	setina	8.0	1 4 7
+738	11	5	Unha veiriña encantada.	m	setina	8.0	1 4 7
+739	11	5	Qu' ali mansa e sosegada	m	setina	8.0	2 3 7
+740	11	5	Manaba unha fresca fonte	ñ	setina	8.0	2 3 5 7
+741	11	5	Cabo da falda do monte	ñ	setina	8.0	4 7
+742	11	6	Franca, pura, sin enganos,	o	setina	8.0	1 3 7
+743	11	6	Canta, canta garruleira,	p	setina	8.0	1 3 7
+744	11	6	Ô pé da verde silveira	p	setina	8.0	1 3 7
+745	11	6	Laband' os seus brancos panos.	o	setina	8.0	2 4 5 7
+746	11	6	Ô son dos romores vanos	o	setina	8.0	2 5 7
+747	11	6	Que nacen cá mañanciña,	q	setina	8.0	2 7
+748	11	6	Laba, laba na fontiña.	q	setina	8.0	1 3 7
+749	11	7	Xunto d' ela os paxariños	r	setina	8.0	3 7
+750	11	7	Gorgorexan qu' é un contento,	s	setina	8.0	3 5 7
+751	11	7	Faille festiñas ó vento	s	setina	8.0	1 4 7
+752	11	7	C' os seus hirmans os airiños.	r	setina	9.0	3 5 7
+753	11	7	Os pastores, coitadiños,	r	setina	8.0	3 7
+754	11	7	Cantalle ó doce á...la...lala...	t	setina	8.0	1 4 7
+755	11	7	Que lengua de amores fala.	t	setina	8.0	2 5 7
+756	11	8	Ela honesta está escoitando.	u	setina	9.0	1 3 5 7
+757	11	8	Mais con sospiros responde,	v	setina	8.0	4 7
+758	11	8	Qu' aló garda non sei donde	v	setina	8.0	2 3 5 6 7
+759	11	8	Saudades de non sei cando.	u	setina	8.0	2 5 6 7
+760	11	8	Os paniños vay labando	u	setina	8.0	3 5 7
+761	11	8	E á téndelos s' apresura	w	setina	8.0	3 7
+762	11	8	Nun campiño de verdura.	w	setina	8.0	1 3 7
+763	11	9	Dempois no rego que pasa,	x	setina	8.0	2 4 7
+764	11	9	Verte unha vagoa serena,	y	setina	8.0	1 2 4 7
+765	11	9	Filla da escondida pena	y	setina	8.0	1 5 7
+766	11	9	Qu' o seu peitiño traspasa.	x	setina	8.0	2 4 7
+767	11	9	Pois que d' amores s' abrasa	x	setina	8.0	4 7
+768	11	9	Aquela qu' é fresca rosa	z	setina	8.0	2 4 5 7
+769	11	9	Tan amante como hermosa.	z	setina	8.0	1 3 7
+770	11	10	Compañeiras van chegando	aa	setina	8.0	3 5 7
+771	11	10	Cal mais á mais ven portada,	ab	setina	8.0	2 4 5 7
+772	11	10	Xarros de louza vidrada,	ab	setina	8.0	1 5 7
+773	11	10	Antr' os seixos van pousando.	aa	setina	8.0	3 5 7
+774	11	10	Cay á auguiña mormuxando,	aa	setina	8.0	1 3 7
+775	11	10	Brancas vinchas se levantan,	ac	setina	8.0	1 3 7
+776	11	10	As meniñas cantan... cantan.	ac	setina	8.0	3 5 7
+777	11	11	As estrelas van fuxindo	ad	setina	8.0	3 5 7
+778	11	11	A espesa niebra enrarece,	ae	setina	8.0	2 4 7
+779	11	11	O arboriño que frorece	ae	setina	8.0	3 7
+780	11	11	Por antr' ela vay sahindo.	ad	setina	8.0	3 5 7
+781	11	11	O craro sol vay subindo	ad	setina	8.0	2 4 5 7
+782	11	11	Por riba do firmamento,	af	setina	8.0	2 7
+783	11	11	Limpo, garrulo e contento.	af	setina	8.0	1 3 7
+784	11	12	Arredor tod' arrescende	ag	setina	8.0	3 4 7
+785	11	12	A olido de primadera,	ah	setina	8.0	2 7
+786	11	12	Y á ló n' azulada esfera	ah	setina	9.0	2 5 7
+787	11	12	Fogax de groria s' encende.	ag	setina	8.0	2 4 7
+788	11	12	Mais á meniña n' atende	ag	setina	9.0	4 7
+789	11	12	Si non á ó dor ¡ mal pecado!	ai	setina	8.0	2 4 5 7
+790	11	12	Que ten no peito encravado.	ai	setina	8.0	2 4 7
+791	11	13	Danll' estrañeza os cantares,	aj	setina	8.0	1 4 7
+792	11	13	Danlle de chorar deseyos,	ak	setina	8.0	1 5 7
+793	11	13	Y os ollos de vagoas cheyos,	ak	setina	8.0	2 5 7
+794	11	13	Pensa nos nativos lares.	aj	setina	8.0	1 5 7
+795	11	13	Que n' hay mais tristes pesares,	aj	setina	9.0	2 3 4 7
+796	11	13	Mais negra malencolía	al	setina	8.0	2 3 7
+797	11	13	Qu' á qu' entr' extraños se cria.	al	setina	8.0	4 7
+798	11	14	Paxariños, verde prado,	am	setina	8.0	3 5 7
+799	11	14	Branca lua e sol ardente,	an	setina	8.0	1 3 5 7
+800	11	14	Todo consolo é impotente	an	setina	8.0	1 4 7
+801	11	14	En mal tan desconsolado.	am	setina	8.0	2 3 7
+802	11	14	Todo contento é trubado	am	setina	8.0	1 4 7
+803	11	14	Pó la peniña sin fondo	añ	setina	8.0	4 7
+804	11	14	Qu' hay no coraçon abondo.	añ	setina	8.0	1 4 7
+805	11	15	Por eso á meniña hermosa,	ao	setina	8.0	2 5 7
+806	11	15	Foxe d' alegre fontiña,	ap	setina	8.0	1 4 7
+807	11	15	Tal como triste ovelliña	ap	setina	8.0	1 4 7
+808	11	15	Que trema de dor queixosa.	ao	setina	8.0	2 5 7
+809	11	15	Vay sentida, vay chorosa,	ao	setina	8.0	1 3 5 7
+810	11	15	Mentras lle cantan con saña:	aq	setina	8.0	4 7
+811	11	15	-¡Da montaña! ¡da montaña!	aq	setina	8.0	4 7
+812	11	16	Y ela, que de tal s' estraña	aq	setina	8.0	1 5 7
+813	11	16	Ferida no que mais sinte,	ar	setina	8.0	2 6 7
+814	11	16	Qu' á maltraten non consinte,	ar	setina	8.0	3 5 7
+815	11	16	Y así lles contesta uraña:	aq	setina	8.0	2 5 7
+816	11	16	Anque ché son da montaña,	aq	setina	8.0	4 7
+817	11	16	Anque ché son montañesa,	as	setina	8.0	4 7
+818	11	16	Anque ché son, non me pesa.	as	setina	8.0	4 5 7
+819	12	1	¡Qué doce e deleitoso	a	lira	7.0	1 2 7
+820	12	1	É d'un pay ó desvelo, cando á veira	B	lira	11.0	1 2 3 6 10
+821	12	1	D'o seu leito d' esposo,	a	lira	7.0	2 3 6
+822	12	1	Vay oir pracenteira	b	lira	7.0	1 3 6
+823	12	1	D'o seu primeiro fillo á vos primeira!	B	lira	11.0	2 4 6 8 10
+824	12	2	¡Qué argullosa ufanía,	c	lira	7.0	1 3 6
+825	12	2	Qué mundo d' ilusiós e de contento	D	lira	11.0	1 2 6 10
+826	12	2	Acode á fantesía,	c	lira	7.0	2 6
+827	12	2	Y-en tan felís momento	d	lira	7.0	1 2 4 6
+828	12	2	Encolle o corazon y-o pensamento!	D	lira	11.0	2 6 10
+829	12	3	Hém' aquí retirado	e	lira	7.0	1 3 6
+830	12	3	D'o meu lar n'o curruncho escurecido,	F	lira	11.0	2 3 6 10
+831	12	3	Contando, ó són pausado	e	lira	7.0	2 4 6
+832	12	3	D'a péndola, o batido	f	lira	7.0	2 6
+833	12	3	D'o corazon, d'amor estremecido.	F	lira	11.0	4 6 10
+834	12	4	Chega hastra min, profunda	g	lira	7.0	1 4 6
+835	12	4	Com' a tétrica queixa lastimada	H	lira	11.0	3 6 10
+836	12	4	De cerva morimunda,	g	lira	7.0	2 6
+837	12	4	Solouzante e cansada	h	lira	7.0	3 6
+838	12	4	A vos dôrida d'a muller amada.	H	lira	10.0	2 4 8 10
+839	12	5	Mais, d'os seus beizos roxos	i	lira	7.0	3 4 6
+840	12	5	Envolto n'os suspiros d' amargura,	J	lira	11.0	2 6 10
+841	12	5	Trégola ós meus enoxos,	i	lira	7.0	1 4 6
+842	12	5	Un ánxel d' hermosura	j	lira	7.0	1 2 6
+843	12	5	Bríndam' eterna, celestial ventura.	J	lira	11.0	1 4 8 10
+844	12	6	¡Ah! Deixa que treidores	k	lira	7.0	1 2 6
+845	12	6	Ceben en tí, muller, sua saña impía	L	lira	11.0	1 4 6 8 10
+846	12	6	Os maternás doores:	k	lira	7.0	4 6
+847	12	6	Que canto máis sombría,	l	lira	7.0	4 6
+848	12	6	Máis tras d'a noite nos feitiza o dia.	L	lira	11.0	1 4 8 10
+849	12	7	Sôfre en calados ayes	m	lira	7.0	1 4 6
+850	12	7	O máis grande tormento conecido;	N	lira	11.0	2 3 6 10
+851	12	7	¡Sôfre!... ¡Mañan, quizayes,	m	lira	6.0	1 4 6
+852	12	7	Darás por ben sofrido	n	lira	7.0	2 4 6
+853	12	7	Ese, que á ningun outro é parecido!	N	lira	11.0	1 5 6 10
+854	12	8	¿Quén sabe, ó fin, s' estrela	ñ	lira	7.0	1 2 4 6
+855	12	8	Que vay lucir n'o noso triste ceo,	O	lira	11.0	2 4 6 8 10
+856	12	8	Purísima é sinxela,	ñ	lira	7.0	2 6
+857	12	8	Astro chegará á ser que de lus cheo	O	lira	11.0	1 5 6 9 10
+858	12	8	Os nosos dias enfeitice arreo?	O	lira	11.0	2 4 8 10
+859	12	9	¿Quén sabe si, puxante,	p	lira	7.0	1 2 6
+860	12	9	Esa pranta que brota oxe d'a terra,	Q	lira	11.0	1 3 6 7 10
+861	12	9	Erguéndose trunfante	p	lira	7.0	2 6
+862	12	9	Sobre canto de podre e ruin encerra,	Q	lira	11.0	6 8 1
+863	12	9	Arbol será de paz tras tanta guerra?	Q	lira	11.0	1 4 6 8 10
+864	12	10	Ven, fillo d'a miñ' alma;	r	lira	7.0	1 2 5 6
+865	12	10	Chega, chega, e non tardes, meu querido:	S	lira	11.0	1 3 5 6 10
+866	12	10	A humanidá sin calma,	r	lira	7.0	4 6
+867	12	10	O mundo en servidume sumerxido,	S	lira	11.0	2 6 10
+868	12	10	Nádo inda non, saúdante ben vido.	S	lira	11.0	1 2 4 6 9 10
+869	12	11	E ben chegado seas	t	lira	7.0	2 4 6
+870	12	11	O meu cólo tamen, ¡miña delicia!	U	lira	11.0	2 3 5 10
+871	12	11	Qu' inda mesmo sin vida me recreas,	T	lira	11.0	1 3 6 10
+872	12	11	Falangueira e propicia	u	lira	7.0	3 6
+873	12	11	A miña amant' e paternal caricia!	U	lira	11.0	2 4 8 10
+874	12	12	Namentres, noite, pasa,	v	lira	7.0	2 4 6
+875	12	12	Pasa, eses teus luceiros apagando:	W	lira	11.0	1 2 4 6 10
+876	12	12	Linda é a lua; mais sua lus escasa	v	lira	11.0	1 2 4 8 10
+877	12	12	Agoiro fôra infando	W	lira	7.0	2 4 6
+878	12	12	O berze d'o meu neno alumeando.	W	lira	11.0	2 5 6 10
+879	12	13	Pasa, noite d'as fadas,	x	lira	7.0	1 3 6
+880	12	13	En que Dios dorme e s'acobarda a xente;	Y	lira	11.0	3 4 8 10
+881	12	13	Qu'as párpedas pechadas	x	lira	7.0	2 6
+882	12	13	D'o meu rolo inocente	y	lira	7.0	2 3 6
+883	12	13	Quérense ó rayo abrir d'o sol fulxente.	Y	lira	11.0	1 4 6 8 10
+884	12	14	¡Ouh, sol! Tí que atesouras	z	lira	7.0	1 2 3 6
+885	12	14	A lus que esparxe a brétema sombría;	AA	lira	11.0	2 4 6 10
+886	12	14	Tí, qu' os outeiros douras	z	lira	7.0	1 4 6
+887	12	14	E inundas d' armonía	aa	lira	7.0	2 6
+888	12	14	O ceo, a terra, o mar, a tarde, o día;	AA	lira	11.0	2 4 6 8 10
+889	12	15	Pol-a xigante lomba	ab	lira	7.0	4 6
+890	12	15	Érguete á ver o meu miniño, quedo,	AC	lira	11.0	1 4 6 8 10
+891	12	15	Cal namorada pomba	ab	lira	7.0	4 6
+892	12	15	Que poI-a mañá cedo	ac	lira	6.0	5 6
+893	12	15	Léva os fillos calor n'o pico ledo.	AC	lira	11.0	1 3 6 8 10
+894	12	16	D'o mundo n'os lumiales,	ad	lira	7.0	2 6
+895	12	16	¡Ouh, sol! ¡sol imortal! meu neno espera	AE	lira	11.0	1 2 3 6 8 10
+896	12	16	Teus rayos celestiales....	ad	lira	7.0	2 6
+897	12	16	¡Si cara á ti nacera	ae	lira	7.0	4 6
+898	12	16	Non cara á noite, cara á tí correra!	AE	lira	11.0	1 4 8 10
+899	12	17	¡Qué cand' eu á esta vida	af	lira	6.0	3 4 6
+900	12	17	Abrin os ollos, triste noite escura	AG	lira	11.0	2 4 6 8 10
+901	12	17	Cubríume enloitecída.	af	lira	8.0	2 6
+902	12	17	E d'esa noite impura	ag	lira	7.0	2 4 6
+903	12	17	Ind'os crespós arrastro y-a tristura!	AG	lira	11.0	1 4 6 10
+904	13	1	Un repoludo gaiteiro	a	espinela	8.0	1 4 7
+905	13	1	De pano sedán vestido,	b	espinela	8.0	2 5 7
+906	13	1	Com' un principe cumprido,	b	espinela	8.0	1 2 3 7
+907	13	1	Cariñoso e falangueiro,	a	espinela	8.0	3 7
+908	13	1	Antr' os mozos o pirmeiro	a	espinela	8.0	3 7
+909	13	1	E nas siudades sin par,	c	espinela	8.0	4 7
+910	13	1	Tiña costum' en cantar	c	espinela	8.0	1 4 7
+911	13	1	Aló po la mañanciña,	d	espinela	8.0	2 7
+912	13	1	Con esta miña gaitiña	d	espinela	8.0	2 4 7
+913	13	1	Ás nenas ei d' engañar.	c	espinela	8.0	2 4 7
+914	13	2	Sempre pó la vila entraba	e	espinela	8.0	1 5 7
+915	13	2	Con aquel de señorio,	f	espinela	8.0	3 7
+916	13	2	Sempre con poxante brio	f	espinela	8.0	1 5 7
+917	13	2	Co tambor s' acompasaba:	e	espinela	8.0	3 7
+918	13	2	E si na gaita sopraba	e	espinela	8.0	4 7
+919	13	2	Era tan dulce soprar,	g	espinela	8.0	1 3 4 7
+920	13	2	Que ven fixera en cantar	g	espinela	8.0	2 4 7
+921	13	2	Aló po la mañanciña,	h	espinela	8.0	2 7
+922	13	2	Con esta miña gaitiña	h	espinela	8.0	2 7
+923	13	2	As nenas ei d' engañar.	g	espinela	8.0	2 4 7
+924	13	3	Todas por él reloucaban,	i	espinela	8.0	1 4 7
+925	13	3	Todas por él se morrian,	j	espinela	8.0	1 4 7
+926	13	3	S' ó tiñan cerca, sorrian,	j	espinela	8.0	2 4 7
+927	13	3	S' ó tiñan lonxe, choraban:	i	espinela	9.0	2 4 7
+928	13	3	Mal pecado! non coidaban	i	espinela	8.0	1 3 5 7
+929	13	3	Que c' aquel seu frolear	k	espinela	8.0	3 7
+930	13	3	Tiña costum' en cantar	k	espinela	8.0	1 4 7
+931	13	3	Aló pó la mañanciña,	l	espinela	8.0	2 7
+932	13	3	Con esta miña gaitiña	l	espinela	8.0	2 4 7
+933	13	3	As nenas ei d' engañar.	k	espinela	8.0	2 4 7
+934	13	4	Camiño da romeria,	m	espinela	8.0	2 7
+935	13	4	Debaixo d' un-ha figueira,	n	espinela	8.0	2 4 7
+936	13	4	Canta meniña solteira	n	espinela	8.0	1 4 7
+937	13	4	¡Querote! lle repetia...	m	espinela	8.0	1 7
+938	13	4	Y él c' á gaita respondia	m	espinela	8.0	1 3 7
+939	13	4	Por á todas envoucar,	ñ	espinela	8.0	3 7
+940	13	4	Pois ven fixeira en cantar	ñ	espinela	8.0	2 4 7
+941	13	4	Aló po la mañanciña,	o	espinela	8.0	2 7
+942	13	4	Con esta miña gaitiña	o	espinela	8.0	2 7
+943	13	4	As nenas ei d' engañar.	ñ	espinela	8.0	2 4 7
+944	13	5	Elas louquiñas bailaban	p	espinela	8.0	1 4 7
+945	13	5	E por xunta d' el corrian,	q	espinela	8.0	3 5 7
+946	13	5	Cegas... cegas que non vian	q	espinela	8.0	1 3 6 7
+947	13	5	As espiñas qu' as cercaban;	p	espinela	8.0	3 7
+948	13	5	Probes palomas buscaban	p	espinela	8.0	1 4 7
+949	13	5	A luz qu' as iba queimar	r	espinela	8.0	2 4 7
+950	13	5	Pois qu' el soupera cantar	r	espinela	8.0	2 4 7
+951	13	5	Aló po la mañanciña,	s	espinela	8.0	2 7
+952	13	5	Ó son da miña gaitiña	s	espinela	8.0	2 7
+953	13	5	As nenas ei d' engañar.	r	espinela	8.0	2 4 7
+954	13	6	¡Nás festas, canto contento!	t	espinela	8.0	2 4 7
+955	13	6	¡Canta risa nas fiadas!	u	espinela	8.0	1 3 7
+956	13	6	Todas, todas namoradas	u	espinela	8.0	1 3 7
+957	13	6	Deranll' ó seu pensamento;	t	espinela	8.0	1 4 7
+958	13	6	Y él que d' amores sedento	t	espinela	8.0	1 4 7
+959	13	6	Quixo á todas engañar,	v	espinela	8.0	1 3 7
+960	13	6	Cand' as veu dimpois chorar	v	espinela	8.0	3 5 7
+961	13	6	Cantaba nas mañanciñas,	w	espinela	8.0	2 7
+962	13	6	Non sean elas toliñas	w	espinela	8.0	1 2 4 7
+963	13	6	Non veñan ó meu tocar.	v	espinela	8.0	1 2 5 7
+964	14	1	-Ña muller, pilla esa roca	a	redondilla	8.0	3 4 5 7
+965	14	1	e déixate de ir á misa,	b	redondilla	8.0	2 7
+966	14	1	pensa que non tés camisa	b	redondilla	8.0	1 4 5 7
+967	14	1	e fía unha mazaroca.	a	redondilla	8.0	2 3 7
+968	14	2	-Luns das almas, meu homiño,	c	redondilla	8.0	1 3 5 7
+969	14	2	déixame garda-lo día;	d	redondilla	8.0	1 5 7
+970	14	2	se eu fiare, ¿que diría	d	redondilla	8.0	1 3 7
+971	14	2	no outro mundo meu paiciño?	c	redondilla	8.0	1 3 5 7
+972	14	3	Pois... martes de San Antonio	e	redondilla	8.0	1 2 7
+973	14	3	tampouco hei de traballare,	f	redondilla	8.0	2 3 7
+974	14	3	pra que o santo me librare	f	redondilla	8.0	3 7
+975	14	3	das tentazós do demonio.	e	redondilla	8.0	4 7
+976	14	4	Miércoles... ¡Non digo eu!	g	redondilla	8.0	1 4 5 7
+977	14	4	O home de Nosa Señora,	h	redondilla	8.0	1 4 7
+978	14	4	San Xusé... de fiar hora	h	redondilla	8.0	3 6 7
+979	14	4	non me quisera no ceu.	g	redondilla	8.0	1 4 7
+980	14	5	¡E xueves...! N-hai que falar:	i	redondilla	8.0	2 4 7
+981	14	5	¡Santísimo Sacramento!	j	redondilla	8.0	2 7
+982	14	5	Con todo comedimento	j	redondilla	8.0	2 7
+983	14	5	o dia che hei de gardar.	i	redondilla	8.0	2 4 7
+984	14	6	¡I o viernes! ¿Recordazón	k	redondilla	8.0	2 7
+985	14	6	da agonía de Xesús?	l	redondilla	8.0	3 7
+986	14	6	Pasareino ó pé da crus,	l	redondilla	8.0	3 5 7
+987	14	6	maxinando na Pasión.	k	redondilla	8.0	3 7
+988	14	7	E ti, benaventurado	m	redondilla	8.0	2 7
+989	14	7	sábado da Virxen santa,	n	redondilla	8.0	1 5 7
+990	14	7	quen túa festa crebanta	n	redondilla	8.0	2 4 7
+991	14	7	debe estar excomungado.	m	redondilla	8.0	1 3 7
+992	14	8	Mais, dende as doce hastra a unha	ñ	redondilla	8.0	4 7
+993	14	8	antre o sábado e o domingo,	o	redondilla	8.0	3 7
+994	14	8	tráeme acá esa roca, Mingo,	o	redondilla	8.0	1 3 5 7
+995	14	8	que esa n-é falta ningunha.	ñ	redondilla	8.0	1 3 4 7
+996	14	9	¡Se viras como o resío	p	redondilla	8.0	2 7
+997	14	9	me entra por antre os farrapos!	q	redondilla	8.0	1 7
+998	14	9	Acóchame co ese trapos,	q	redondilla	8.0	2 5 7
+999	14	9	que estou tembrando de frío.	p	redondilla	8.0	2 4 7
+1000	14	10	-Non vexo trapos nin toldo	r	redondilla	8.0	1 2 4 7
+1001	14	10	con que te poida tapare,	s	redondilla	8.0	4 7
+1002	14	10	arrímate o pé do lare	s	redondilla	8.0	2 5 7
+1003	14	10	ou métete antre o rescoldo.	r	redondilla	8.0	2 7
+1004	14	11	-Seica teño calentura...	t	redondilla	8.0	1 3 7
+1005	14	11	¡Bruu!, seica vou morrere.	u	redondilla	8.0	2 3 5 7
+1006	14	11	-Non te afrixas, ña mullere,	u	redondilla	8.0	1 3 7
+1007	14	11	que che irei cata-lo cura.	t	redondilla	8.0	3 5 7
+1008	14	12	-Mais quisera un cubirtore;	v	redondilla	8.0	3 7
+1009	14	12	sinto callofríos... tantos...	w	redondilla	8.0	1 5 7
+1010	14	12	-Pois que te cochen os santos,	w	redondilla	8.0	1 4 7
+1011	14	12	que n-hai cuberta millore.	v	redondilla	8.0	2 4 7
+1012	14	13	Folgaches noites e dias	x	redondilla	8.0	2 4 7
+1013	14	13	só por ilos a bicare,	y	redondilla	8.0	1 3 7
+1014	14	13	e débenche hora cochare	y	redondilla	8.0	2 4 7
+1015	14	13	nas túas postrimeirías.	x	redondilla	8.0	2 7
+1016	14	14	Deste modo Xan sin Terra	z	redondilla	8.0	1 3 5 7
+1017	14	14	coa súa muller falaba,	aa	redondilla	8.0	2 5 7
+1018	14	14	cando ven que se quedaba,	aa	redondilla	8.0	3 7
+1019	14	14	¡malpocado!, feita terra;	z	redondilla	8.0	3 5 7
+1020	14	15	e cuns codesos tapándolle	ab	redondilla	8.0	2 4 7
+1021	14	15	o triste coiro desnudo,	ac	redondilla	8.0	2 4 7
+1022	14	15	díxolle entonces (eu dudo	ac	redondilla	8.0	1 4 6 7
+1023	14	15	si chorando, si cantándolle):	ab	redondilla	8.0	1 3 7
+1024	14	16	Ei ti, miña gardadora	ad	cuarteta	8.0	2 3 7
+1025	14	16	dos días santos e das festas,	ae	cuarteta	8.0	2 4 7
+1026	14	16	¡como che relosen hora	ad	cuarteta	8.0	5 7
+1027	14	16	as carnes por antre as xestas!	ae	cuarteta	8.0	2 7
+1028	15	1	Dis que por boca do Espítiru Santo,	0	none	11.0	1 4 7 10
+1029	15	1	que debe ter unha boca ben negra,	A	none	11.0	2 4 5 7 9 10
+1030	15	1	púxome o crego na misa do pobo	B	none	11.0	1 4 7 10
+1031	15	1	(¡nai que me deu!...) como naide se vexa.	A	none	11.0	1 4 7 10
+1032	15	2	Algo ha de haber de verdade no conto,	B	none	11.0	1 2 4 7 10
+1033	15	2	que hoxe, ó pasar onda mín súa manceba,	A	none	11.0	1 4 7 9 11
+1034	15	2	fíxome a figa e rosmou polo baixo	0	none	11.0	1 4 7 10
+1035	15	2	mentres torcía pra on lado a cabeza:	A	none	11.0	4 6 7 10
+1036	15	3	¡Que inda te mirres cal coiro no lume!	0	none	11.0	1 4 7 10
+1037	15	3	¡Que inda reventes como unha boleca!	A	none	11.0	1 4 7 10
+1038	15	3	¡Vólvase sénica o pan na túa boca!	0	none	11.0	1 4 7 9 10
+1039	15	3	¡Tóllate Dios, condanado poeta!	A	none	11.0	1 4 7 10
+1040	15	4	¡Maldizoado na carne e nos ósos!	0	none	11.0	4 7 10
+1041	15	4	¡Maldizoado nos pes e na testa!	A	none	11.0	4 7 10
+1042	15	4	¡Entre as virillas de entrambas illargas!	0	none	11.0	4 7 10
+1043	15	4	¡Entre as xunturas das sete costelas!	A	none	11.0	4 7 10
+1044	15	5	¡Gafo te vexas de males estranos!	0	none	11.0	1 4 7 10
+1045	15	5	¡Por onde vaias acougo non teñas!	A	none	11.0	4 7 9 10
+1046	15	5	¡Vivo, non des con camiño seguro!	0	none	11.0	1 3 4 7 10
+1047	15	5	¡Morto, non topes descanso na terra!	A	none	11.0	1 3 4 7 10
+1048	15	6	Bótalle ó pote unha léngoa de porco,	B	none	11.0	1 4 5 7 10
+1049	15	6	miña muller, xa que andamos en léngoas;	A	none	11.0	1 4 5 7 10
+1050	15	6	bótalle ó pote unha léngoa de porco:	B	none	11.0	1 4 5 7 10
+1051	15	6	para engordar non che hai cousa como ela.	A	none	11.0	4 5 6 7 10
+1052	16	1	Anduriña viaxeira	a	sextilla	8.0	3 6
+1053	16	1	que lixeira	a	sextilla	4.0	3
+1054	16	1	cruzach' a térra y-o mar,	b	sextilla	8.0	2 4 7
+1055	16	1	pousa xa, prob' anduriña	c	sextilla	8.0	1 3 4 7
+1056	16	1	cansadiña,	c	sextilla	4.0	3
+1057	16	1	pousa, xa podes pousar.	b	sextilla	8.0	1 3 4 7
+1058	16	2	Pousa xa, mal pocadiño,	d	sextilla	8.0	1 3 4 7
+1059	16	2	qu' o teu niño	d	sextilla	4.0	2 3
+1060	16	2	xa podes eiquí faguer.	e	sextilla	8.0	1 2 5 7
+1061	16	2	Baixo de calquer tellado	f	sextilla	8.0	5 7
+1062	16	2	un sagrado	f	sextilla	4.0	1 3
+1063	16	2	pr' os rapaces ha de ser.	e	sextilla	8.0	3 5 7
+1064	16	3	Ben saben qu' as anduriñas	g	sextilla	8.0	1 2 7
+1065	16	3	as espiñas	g	sextilla	4.0	3
+1066	16	3	He quitaban ó Señor,	h	sextilla	8.0	3 7
+1067	16	3	e qu' o niño tés bendito	i	sextilla	8.0	3 5 7
+1068	16	3	y-é un delito	i	sextilla	4.0	1 3
+1069	16	3	privarbos d' o seu calor.	h	sextilla	8.0	2 5 7
+1070	16	4	Non dúbides, anduriña,	j	sextilla	8.0	1 2 7
+1071	16	4	n-a terriña	j	sextilla	4.0	3
+1072	16	4	ond' eu nacín, aniñar.	k	sextilla	8.0	2 4 7
+1073	16	4	Non dúbides, qu' o teu niño	l	sextilla	8.0	1 2 6 7
+1074	16	4	con cariño	l	sextilla	4.0	3
+1075	16	4	han-o todos de mirar.	k	sextilla	8.0	1 3 7
+1076	17	1	Xilgariño qu' enxaulado	a	sextilla	8.0	3 7
+1077	17	1	namorado	a	sextilla	4.0	3
+1078	17	1	te sintes d' a libertá,	b	sextilla	8.0	2 7
+1079	17	1	non sospires, ten pacencia	c	sextilla	8.0	1 3 5 7
+1080	17	1	qu' a nocencia	c	sextilla	4.0	1 3
+1081	17	1	o teu consolo será.	b	sextilla	8.0	2 4 7
+1082	17	2	Non sospires, xilgariño,	d	sextilla	8.0	1 3 7
+1083	17	2	pol-o niño,	d	sextilla	4.0	3
+1084	17	2	qu' era doce habitaceon;	e	sextilla	8.0	1 3 7
+1085	17	2	qu' o que non está culpado	f	sextilla	8.0	3 5 7
+1086	17	2	sen coidado	f	sextilla	4.0	3
+1087	17	2	poide durmir n-a priseon.	e	sextilla	8.0	1 4 7
+1088	17	3	¡Ay! triste d' o qu' antre ferros,	g	sextilla	8.0	1 2 7
+1089	17	3	os seus erros	g	sextilla	4.0	2 3
+1090	17	3	de cote chorand' está,	h	sextilla	8.0	2 5 7
+1091	17	3	qu' o torcedor infinito	i	sextilla	8.0	4 7
+1092	17	3	d' o delito,	i	sextilla	4.0	3
+1093	17	3	o peito lie queimará.	h	sextilla	8.0	2 7
+1094	18	1	Vint' un-ha crara noite,	0	romancillo	7.0	1 2 4 6
+1095	18	1	Noitiña de S. Xoán,	a	romancillo	7.0	2 6
+1096	18	1	Poñend' as frescas herbas	0	romancillo	7.0	2 4 6
+1097	18	1	Na font' á serenar.	a	romancillo	7.0	2 6
+1098	18	1	E tan bonit' estabas,	0	romancillo	7.0	2 4 6
+1099	18	1	Cál rosa nó rosal,	a	romancillo	7.0	2 6
+1100	18	1	Que d' orballiño fresco	0	romancillo	7.0	4 6
+1101	18	1	Toda cubert' está.	a	romancillo	7.0	1 4 6
+1102	18	1	Por eso, namorado,	b	romancillo	7.0	2 6
+1103	18	1	Con manso suspirar	a	romancillo	7.0	2 6
+1104	18	1	Os meus amantes brazos	b	romancillo	7.0	2 4 6
+1105	18	1	Voteiche pó lo bán.	a	romancillo	7.0	2 6
+1106	18	1	E ti con dulces ollos	0	romancillo	7.0	2 4 6
+1107	18	1	E mais dulce falar,	a	romancillo	7.0	2 3 6
+1108	18	1	Meiguiña m' envoucastes	0	romancillo	8.0	2 6
+1109	18	1	En pracido solás.	a	romancillo	7.0	2 6
+1110	18	1	As estrelliñas todas	0	romancillo	7.0	4 6
+1111	18	1	Qu' aló no espaço están,	a	romancillo	7.0	2 4 6
+1112	18	1	Sorrindo nos miraban	0	romancillo	7.0	2 6
+1113	18	1	Con soave craridá.	a	romancillo	7.0	2 6
+1114	18	1	E foron, ay! testigos	0	romancillo	7.0	2 4 6
+1115	18	1	D' aquel teu suspirar	a	romancillo	7.0	2 6
+1116	18	1	Qu' ó meu correspondia	0	romancillo	7.0	6
+1117	18	1	Con amoriño igual.	a	romancillo	7.0	4 6
+1118	18	1	Pero dempois con outros	0	romancillo	7.0	3 6
+1119	18	1	Mais majos e galans	a	romancillo	7.0	1 2 6
+1120	18	1	(Mais nón, que mais te queiran	0	romancillo	7.0	2 4 6
+1121	18	1	Qu' haber, nón haberá),	a	romancillo	7.0	2 3 6
+1122	18	1	Tamén, tamén meniña	0	romancillo	7.0	2 4 6
+1123	18	1	Soupeches praticar	a	romancillo	7.0	2 6
+1124	18	1	A sombra dos salgueiros	0	romancillo	7.0	2 6
+1125	18	1	Cabo do romeiral.	a	romancillo	7.0	6
+1126	18	1	Por eso eu che cantaba	0	romancillo	7.0	2 3 6
+1127	18	1	En triste soledá,	a	romancillo	7.0	2 6
+1128	18	1	Cando, ay de min! te via	c	romancillo	7.0	2 4 6
+1129	18	1	Con eles parolar:	a	romancillo	7.0	2 6
+1130	18	1	Cóida, miña meniña,	c	romancillo	7.0	1 6
+1131	18	1	Dás praticas que das,	a	romancillo	7.0	2 6
+1132	18	1	Que donde moitos cospen,	d	romancillo	7.0	4 6
+1133	18	1	Lama fan.	a	romancillo	4.0	1 3
+1134	18	2	Que triste hóra te vexo!...	e	romancillo	7.0	2 3 6
+1135	18	2	Que triste, nena, estás!...	a	romancillo	7.0	2 4 6
+1136	18	2	Os teus frescos colores,	d	romancillo	7.0	2 3 6
+1137	18	2	Donde, meniña, van?	a	romancillo	7.0	1 4 6
+1138	18	2	O teu mirar sereno,	e	romancillo	7.0	2 4 6
+1139	18	2	O teu doce cantar,	a	romancillo	7.0	2 3 6
+1140	18	2	Donde, meniña, donde	d	romancillo	7.0	1 4 6
+1141	18	2	Coitada toparás?	a	romancillo	7.0	2 6
+1142	18	2	Xá non te vin, meniña,	f	romancillo	7.0	1 2 4 6
+1143	18	2	Na noite de S. Xoán,	a	romancillo	7.0	2 6
+1144	18	2	Poñend' as frescas herbas	0	romancillo	7.0	2 4 6
+1145	18	2	Na font' á serenar.	a	romancillo	7.0	2 6
+1146	18	2	Xá non te vin fresquiña	f	romancillo	7.0	1 2 4 6
+1147	18	2	Cál rosa nó rosal,	a	romancillo	7.0	2 6
+1148	18	2	Que muchadiña estabas	0	romancillo	7.0	1 4 6
+1149	18	2	De tanto saloucar.	a	romancillo	7.0	2 6
+1150	18	2	Hóra de dór ferida	f	romancillo	7.0	1 4 6
+1151	18	2	Buscando á honriña vas,	a	romancillo	8.0	2 4 6
+1152	18	2	A honriña que perdeches,	0	romancillo	8.0	2 6
+1153	18	2	Mais ¿quen ch' á volverá?	a	romancillo	7.0	2 6
+1154	18	2	Eu ben, miña meniña,	f	romancillo	7.0	1 2 6
+1155	18	2	Ben ch' á quixera dar,	a	romancillo	7.0	1 4 6
+1156	18	2	Qu' á quel que ben te quixo	g	romancillo	7.0	2 4 6
+1157	18	2	Dóise de verte mal.	a	romancillo	7.0	1 4 6
+1158	18	2	Mais ánque dir, eu diga,	f	romancillo	7.0	4 5 6
+1159	18	2	Que limpa, nena, estás,	a	romancillo	7.0	2 4 6
+1160	18	2	Respondenme sorrindo	g	romancillo	7.0	2 6
+1161	18	2	Por se de min bulrár.	a	romancillo	7.0	2 4 6
+1162	18	2	«Ben sabes, Farruquiño,	g	romancillo	7.0	1 2 6
+1163	18	2	Farruco dó Pombal,	a	romancillo	7.0	2 6
+1164	18	2	Que donde moitos cospen,	0	romancillo	7.0	2 6
+1165	18	2	Lama fan.»	a	romancillo	4.0	1 3
+1166	19	1	-Costureiriña	0	cantar	5.0	4
+1167	19	1	comprimenteira,	a	cantar	5.0	4
+1168	19	1	sacha no campo,	0	cantar	5.0	1 4
+1169	19	1	malla na eira,	a	cantar	5.0	1 4
+1170	19	2	lava no río,	0	cantar	5.0	1 4
+1171	19	2	vai apañar	b	cantar	5.0	1 4
+1172	19	2	toxinos secos	0	cantar	5.0	2 4
+1173	19	2	antre o pinar.	b	cantar	5.0	4
+1174	19	3	Así a meniña	c	cantar	5.0	2 4
+1175	19	3	traballadora	d	cantar	5.0	4
+1176	19	3	os punteados	0	cantar	5.0	4
+1177	19	3	deprende ora.	d	cantar	5.0	2 4
+1178	19	4	-Miña Santiña,	c	cantar	5.0	4
+1179	19	4	mal me quixere	e	cantar	5.0	1 4
+1180	19	4	quen me aconsella	f	cantar	5.0	4
+1181	19	4	que tal fixere.	e	cantar	5.0	2 4
+1182	19	5	Mans de señora,	0	cantar	5.0	1 4
+1183	19	5	mans fidalgueiras	f	cantar	5.0	1 4
+1184	19	5	teñen todiñas	0	cantar	5.0	1 4
+1185	19	5	as costureiras;	f	cantar	5.0	4
+1186	19	6	boca de reina,	f	cantar	5.0	1 4
+1187	19	6	corpo de dama,	g	cantar	5.0	1 4
+1188	19	6	cómprelle a seda,	f	cantar	5.0	1 4
+1189	19	6	foxen da lama.	g	cantar	5.0	1 4
+1190	19	7	-¡Ai, rapaciña!	0	cantar	5.0	1 4
+1191	19	7	Ti te-lo teo:	h	cantar	5.0	1 2 4
+1192	19	7	¡Seda as que dormen	i	cantar	5.0	1 4
+1193	19	7	antre o centeo!	h	cantar	5.0	4
+1194	19	8	¡Fuxir da lama	0	cantar	5.0	2 4
+1195	19	8	quen naceu nela!	j	cantar	5.0	3 4
+1196	19	8	Dios cho perdone,	i	cantar	5.0	1 4
+1197	19	8	probre Manuela.	j	cantar	5.0	1 4
+1198	19	9	Lama con honra	0	cantar	5.0	1 4
+1199	19	9	non mancha nada,	k	cantar	5.0	1 2 4
+1200	19	9	nin seda limpa	l	cantar	5.0	2 4
+1201	19	9	honra emporcada.	k	cantar	5.0	1 4
+1202	19	10	-Santa, Santasa,	k	cantar	5.0	1 4
+1203	19	10	non sos comprida,	l	cantar	5.0	1 2 4
+1204	19	10	decindo cousas	m	cantar	5.0	2 4
+1205	19	10	que fan ferida.	l	cantar	5.0	2 4
+1206	19	11	Falaime solo	0	cantar	5.0	2 4
+1207	19	11	das muiñeiras,	n	cantar	5.0	4
+1208	19	11	daquelas voltas	m	cantar	5.0	2 4
+1209	19	11	revirandeiras,	n	cantar	5.0	4
+1210	19	12	daqueles puntos	0	cantar	5.0	2 4
+1211	19	12	que fan agora,	ñ	cantar	5.0	2 4
+1212	19	12	de afora adentro,	0	cantar	5.0	2 4
+1213	19	12	de adentro afora.	ñ	cantar	5.0	2 4
+1214	19	13	-Costureiriña	0	cantar	5.0	4
+1215	19	13	do carballal,	o	cantar	5.0	4
+1216	19	13	colle unha agulla,	0	cantar	5.0	1 2 4
+1217	19	13	colle un dedal;	o	cantar	5.0	1 2 4
+1218	19	14	cose os buratos	0	cantar	5.0	1 4
+1219	19	14	dese teu cós,	p	cantar	5.0	1 4
+1220	19	14	que andar rachada	0	cantar	5.0	2 4
+1221	19	14	non manda Dios.	p	cantar	5.0	1 2 4
+1222	19	15	Cose, meniña,	q	cantar	5.0	1 4
+1223	19	15	tantos furados	r	cantar	5.0	1 4
+1224	19	15	i ora non penses	0	cantar	5.0	1 3 4
+1225	19	15	nos punteados.	r	cantar	5.0	4
+1226	19	16	-Miña Santasa,	0	cantar	5.0	4
+1227	19	16	miña Santiña,	q	cantar	5.0	1 4
+1228	19	16	nin teño agulla,	0	cantar	5.0	2 4
+1229	19	16	nin teño liña,	q	cantar	5.0	2 4
+1230	19	17	nin dedal teño,	0	cantar	5.0	3 4
+1231	19	17	que aló na feira	r	cantar	5.0	2 4
+1232	19	17	rouboumo un majo	s	cantar	5.0	2 3 4
+1233	19	17	da faltriqueira,	r	cantar	5.0	4
+1234	19	18	decindo: «As perdas	r	cantar	5.0	2 4
+1235	19	18	dos descoidados	s	cantar	5.0	4
+1236	19	18	fan o lotiño	0	cantar	5.0	1 4
+1237	19	18	dos apañados».	s	cantar	5.0	4
+1238	19	19	-¡Costureiriña	0	cantar	5.0	4
+1239	19	19	que a majos trata!	t	cantar	5.0	2 4
+1240	19	19	Alma de cobre,	0	cantar	5.0	1 4
+1241	19	19	collar de prata,	t	cantar	5.0	2 4
+1242	19	20	mocidá rindo,	0	cantar	5.0	3 4
+1243	19	20	vellez chorando...	u	cantar	5.0	2 4
+1244	19	20	Anda, meniña,	0	cantar	5.0	1 4
+1245	19	20	coida do gando.	u	cantar	5.0	1 4
+1246	19	21	Coida das herbas	v	cantar	5.0	1 4
+1247	19	21	de teu herbal:	w	cantar	5.0	2 4
+1248	19	21	terás agulla,	0	cantar	5.0	2 4
+1249	19	21	terás dedal.	w	cantar	5.0	2 4
+1250	19	22	-Deixade as herbas,	v	cantar	5.0	2 4
+1251	19	22	que o que eu quería	x	cantar	5.0	2 4
+1252	19	22	era ir cal todas	y	cantar	5.0	1 2 4
+1253	19	22	á romería.	x	cantar	5.0	4
+1254	19	23	¡I alí con aire	0	cantar	5.0	2 4
+1255	19	23	dar cada volta!	y	cantar	5.0	1 2 4
+1256	19	23	Os ollos baixos,	0	cantar	5.0	2 4
+1257	19	23	a perna solta.	y	cantar	5.0	2 4
+1258	19	24	Pés lixeiriños,	0	cantar	5.0	1 4
+1259	19	24	corpo direito;	z	cantar	5.0	1 4
+1260	19	24	¡pero, Santiña...,	aa	cantar	5.0	4
+1261	19	24	non lle dou xeito!	z	cantar	5.0	1 3 4
+1262	19	25	Non vos metades	0	cantar	5.0	1 4
+1263	19	25	pedricadora;	ab	cantar	5.0	4
+1264	19	25	bailadoriña	aa	cantar	5.0	4
+1265	19	25	facéme agora.	ab	cantar	5.0	2 4
+1266	19	26	Vós dende arriba	aa	cantar	5.0	1 4
+1267	19	26	andá correndo;	ac	cantar	5.0	2 4
+1268	19	26	facede os puntos,	0	cantar	5.0	2 4
+1269	19	26	i eu adeprendo.	ac	cantar	5.0	1 4
+1270	19	27	Andá que peno	ac	cantar	5.0	2 4
+1271	19	27	polos penares...	ad	cantar	5.0	4
+1272	19	27	Mirá que o pido	0	cantar	5.0	2 4
+1273	19	27	chorando a mares.	ad	cantar	5.0	2 4
+1274	19	28	-¡Ai da meniña!	0	cantar	5.0	1 4
+1275	19	28	¡Ai da que chora!	ae	cantar	5.0	1 4
+1276	19	28	¡Ai, porque quere	0	cantar	5.0	1 4
+1277	19	28	ser bailadora!	ae	cantar	5.0	1 4
+1278	19	29	Que cando durma	0	cantar	5.0	4
+1279	19	29	no camposanto,	af	cantar	5.0	4
+1280	19	29	os enemigos	0	cantar	5.0	4
+1281	19	29	faránlle espanto,	af	cantar	5.0	2 4
+1282	19	30	bailando enriba	0	cantar	5.0	2 4
+1283	19	30	das herbas mudas,	ag	cantar	5.0	2 4
+1284	19	30	ó son da negra	0	cantar	5.0	2 4
+1285	19	30	gaita de Xudas.	ag	cantar	5.0	1 4
+1286	19	31	I aquel corpiño	0	cantar	5.0	2 4
+1287	19	31	que noutros días	ah	cantar	5.0	2 4
+1288	19	31	tanto truara	0	cantar	5.0	1 4
+1289	19	31	nas romerías,	ah	cantar	5.0	4
+1290	19	32	ó son dos ventos	0	cantar	5.0	2 4
+1291	19	32	máis desatados	ai	cantar	5.0	1 4
+1292	19	32	rolará logo	0	cantar	5.0	3 4
+1293	19	32	cos condenados.	ai	cantar	5.0	4
+1294	19	33	Costureiriña,	0	cantar	5.0	4
+1295	19	33	n'hei de ser, n'hei,	aj	cantar	5.0	1 3 4
+1296	19	33	quen che deprenda	ak	cantar	5.0	1 4
+1297	19	33	tan mala lei.	aj	cantar	5.0	1 2 4
+1298	19	34	-¡Ai, que Santasa!	0	cantar	5.0	1 4
+1299	19	34	¡Ai, que Santona!	al	cantar	5.0	1 4
+1300	19	34	Ollos de meiga,	ak	cantar	5.0	1 4
+1301	19	34	cara de mona,	al	cantar	5.0	1 4
+1302	19	35	pór n'hei de pórche	am	cantar	5.0	1 2 4
+1303	19	35	os meus pendentes,	an	cantar	5.0	2 4
+1304	19	35	pór n'hei de pórche	am	cantar	5.0	1 2 4
+1305	19	35	o meu collar,	añ	cantar	5.0	2 4
+1306	19	36	xa que non queres,	an	cantar	5.0	1 3 4
+1307	19	36	xa que non sabes	0	cantar	5.0	1 3 4
+1308	19	36	adeprenderme	an	cantar	5.0	4
+1309	19	36	a puntear.	añ	cantar	5.0	4
+1310	20	1	¡Profanemos d’o bosque as umbrías!...	0	none	10.0	3 6 9
+1311	20	1	E ante estes mudos testigos,	a	none	8.0	2 4 7
+1312	20	1	O rio, a fonte y os ceos,	b	none	8.0	2 4 7
+1313	20	1	Qu’eu rompa os xa vellos vínculos.	a	none	8.0	1 2 4 5 7
+1314	20	2	D’o pasado correron as horas,	0	none	10.0	3 6 9
+1315	20	2	Só Dios sabe antre que abismos,	a	none	8.0	1 2 3 6 8
+1316	20	2	¡Non tornarán... olvidemos!	b	none	8.0	1 4 7
+1317	20	2	Que á recordanza é un martirio.	a	none	8.0	4 5 7
+1318	20	3	Hay un niño de rosas silvestres	0	none	10.0	1 2 3 6 9
+1319	20	3	Cabo d’a fonte escondido,	a	none	8.0	1 4 7
+1320	20	3	E un prado de herba trebiña	c	none	8.0	1 2 4 7
+1321	20	3	Alfombra ô arredor sombriso.	a	none	8.0	2 5 7
+1322	20	4	Cal un tempo, rebuldan as brisas,	c	none	10.0	2 3 6 9
+1323	20	4	N’a fonda cantan os xilgaros,	a	none	9.0	2 4 7
+1324	20	4	As margaridas sorinme,	0	none	8.0	4 7
+1325	20	4	Y oyo ó marmurar d’o rio.	a	none	8.0	1 5 7
+1326	20	5	Sin amar cal e negra esta vida	c	none	10.0	3 4 6 7 9
+1327	20	5	E perde o sol o seu brilo,	a	none	8.0	2 4 6 7
+1328	20	5	Deixa que o sorbo postreiro	d	none	8.0	1 4 7
+1329	20	5	Beba d’o celeste viño.	a	none	8.0	1 5 7
+1330	20	6	Din que dorme ó privado n’o leito	d	none	10.0	1 3 6 9
+1331	20	6	Ancho d’os fondos olvidos,	a	none	8.0	1 4 7
+1332	20	6	Ambos pois, xuntos bebamos,	0	none	8.0	1 3 4 7
+1333	20	6	D’este bosque antr’os espinos.	a	none	8.0	1 3 7
+1334	20	7	¡Que armonioso n’altura resoa	0	none	10.0	3 6 9
+1335	20	7	O zoar ronco d’os pinos!,	a	none	8.0	3 4 7
+1336	20	7	Mais maxino que nos miran	0	none	8.0	1 3 7
+1337	20	7	Sereos dend’o monte arisco.	a	none	8.0	2 5 7
+1338	20	8	E parés que trasvexo antr’a brétema	0	none	10.0	3 6 9
+1339	20	8	N’as vaguedás d’o infinito	a	none	8.0	4 7
+1340	20	8	O perfil triste emborrado	e	none	8.0	3 4 7
+1341	20	8	D’os meus ensoños perdidos.	a	none	8.0	2 4 7
+1342	20	9	E que adustas m’axexan as sombras	0	none	10.0	3 6 9
+1343	20	9	Tras d’esos coutos e riscos,	a	none	8.0	2 4 7
+1344	20	9	D’os meus mortos adorados	e	none	8.0	2 3 7
+1345	20	9	E d’os meus delores vivos.	a	none	8.0	3 5 7
+1346	20	10	¡Mais n’importa! Da antigua devesa	0	none	10.0	1 3 6 9
+1347	20	10	Profanemos os retiros...	a	none	8.0	3 7
+1348	20	10	Séntate ó meu lado e dime,	0	none	8.0	1 4 5 7
+1349	20	10	Dime... o que tantas oiron.	a	none	8.0	1 4 7
+1350	20	11	Es garrido e lanzal y os teus ollos	0	none	10.0	1 3 6 8 9
+1351	20	11	N’os meus coma estrelas fixos,	a	none	8.0	2 5 7
+1352	20	11	Dormentes, din q’o amor n’eles	0	none	8.0	2 4 6 7
+1353	20	11	Pousa o seu dedo divino.	a	none	8.0	1 3 4 7
+1354	20	12	Eu contémprot’en tanto serea.	0	none	10.0	1 3 6 9
+1355	20	12	Dura coma os seixos frios	a	none	8.0	1 5 7
+1356	20	12	E d’o teu corazon conto	0	none	8.0	3 6 7
+1357	20	12	Os turbulentos latidos.	a	none	8.0	4 7
+1358	20	13	¡Faise á asmosfera densa ô redore...	0	none	10.0	1 3 6 9
+1359	20	13	Decote o mesmo camiño!	a	none	8.0	2 4 7
+1360	20	13	Coma o seu cantar os paxaros	0	none	9.0	3 5 7
+1361	20	13	Tés, corazon, ó teu ritmo.	a	none	8.0	1 4 6 7
+1362	20	14	Mais de vagoas s’inunda o meu rostro	0	none	10.0	3 6 8 9
+1363	20	14	E d’a yalma n’o mais intimo	a	none	9.0	3 6 7
+1364	20	14	O hastio lento penetra	0	none	7.0	2 4 7
+1365	20	14	Com’espada de dous fios	a	none	8.0	3 6 7
+1366	20	15	¡Ea! apártate lonxe... non quero	0	none	10.0	1 3 6 8 9
+1367	20	15	Profanar este retiro,	a	none	8.0	3 4 7
+1368	20	15	Nin pode o corazon tolo	0	none	8.0	2 6 7
+1369	20	15	Ser de sí mesmo asesino.	a	none	8.0	1 3 4 7
+1370	20	16	Sosegavos, ñas sombras airadas	0	none	10.0	3 6 9
+1371	20	16	Qu’estou morta para os vivos.	a	none	9.0	2 3 7
+1372	20	16	¡Sagrado quedaches, bosque	0	none	8.0	2 5 7
+1373	20	16	¡Sin mancha ti, meu esprito!	a	none	7.0	2 4 7
+1374	21	1	¡Adios! montes e prados, igrexas e campanas,	a	none	14.0	2 3 6 9 13
+1375	21	1	¡Adios! Sar e Sarela, cubertos d’enramada,	a	none	14.0	1 3 6 9 13
+1376	21	1	¡Adios! Vidán alegre, moiños e hondanadas,	a	none	14.0	2 4 6 9 13
+1377	21	1	Conxo o d’o craustro triste y as soedades prácidas,	a	none	14.0	1 4 6 11 13
+1378	21	1	San Lourenzo ó escondido, cal un niño antr’as ramas,	a	none	14.0	3 6 9 10 13
+1379	21	1	Balvis, para min sempre o d’as fondas lembranzas,	a	none	14.0	2 5 6 10 13
+1380	21	1	Santo Domingo, en donde cant’eu quixen descansa,	a	none	14.0	4 9 10 13
+1381	21	1	Vidas d’a miña vida, anacos d’as entrañas.	a	none	14.0	1 4 6 9 13
+1382	21	1	E vos tamen sombrisas paredes solitarias	a	none	14.0	2 4 6 9 13
+1383	21	1	Que me vichëis chorare soya e desventurada,	a	none	14.0	3 6 8 13
+1384	21	1	¡Adios! sombras queridas, ¡adios! sombras odiadas,	a	none	14.0	2 3 6 9 10 13
+1385	21	1	Outra vez os vaivens d’a fertuna	0	none	10.0	1 3 5 9
+1386	21	1	Pra lonxe m’arrastran.	a	none	6.0	2 5
+1387	21	2	Cando volver, se volvo, tod’estará ond’estaba,	a	none	14.0	4 6 8 11 13
+1388	21	2	Os mesmos montes negros y as mesmas alboradas	a	none	14.0	2 4 6 9 13
+1389	21	2	D’o Sar e d’o Sarela, mirandose n’as auguas.	a	none	14.0	2 6 9 13
+1390	21	2	Os mesmos verdes campos, as mesmas torres pardas,	a	none	14.0	2 4 6 9 11 13
+1391	21	2	D’a catredal severa, olland’as lontananzas:	a	none	14.0	4 6 9 13
+1392	21	2	Mais os qu’agora deixo, tal com’a fonte mansa	a	none	14.0	4 6 8 11 13
+1393	21	2	Ou n’o verdor d‘a vida, sin tempestás nin vagoas,	a	none	14.0	4 6 11 13
+1394	21	2	Canto, cand’eu tornare vitimas d’a mudanza	a	none	14.0	1 3 6 8 13
+1395	21	2	Terán de presa andado, n’a senda d’a desgracia!	a	none	14.0	2 4 6 9 13
+1396	21	2	Y eu.....mais eu nada temo n’o mundo	0	none	10.0	2 4 5 7 9
+1397	21	2	¡Qu’ á morte me tarda!	a	none	5.0	2 5
+1398	22	1	—Tod’está negro, as somhras envolven á vereda,	a	none	14.0	1 3 4 6 9 13
+1399	22	1	E nin o ceu ten ollos, nin o pinar ten lengua.	a	none	14.0	4 5 6 11 12 13
+1400	22	2	¡Vamos! D’o que hay oculto,¿quen midéu as fonduras?	b	none	13.0	1 4 6 8 10 13
+1401	22	2	¡Alma n’habrá que sepa!... ¡ven!... á noit’está escura.	b	none	14.0	1 4 6 8 10 12 13
+1402	22	3	—¿Escura?...mais relumbra non sei que luz traidora...	c	none	14.0	2 6 8 9 10 11 13 
+1403	22	3	—E un-ha estrela que brila, n’as auguas bulidoras.	c	none	14.0	1 3 6 9 13
+1404	22	4	—¿E non oyes que runxe algo ond’aquel herbal?	d	none	14.0	2 3 6 8 11 13
+1405	22	4	—Eovento queanda tolo, corrend’antr’á follax.	d	none	16.0	2 4 6 9 13
+1406	22	5	—Escoita, sinto pasos, e asoma seica un bulto...	e	none	14.0	2 4 6 9 11 13
+1407	22	5	—¡S’é un vivo, matarémolo! non fala s’é difunto.	e	none	14.0	1 2 6 8 9 11 13
+1408	22	6	—Mais aqui ond’este cómaro, hay un-ha cova fonda,	f	none	13.0	3 4 6 8 9 11 13
+1409	22	6	Ven, e santos ou deños, que nos atopen óra.	f	none	14.0	1 3 6 11 13
+1410	22	7	¿A donde irei conmigo? ¿donde m’esconderei?	g	none	13.0	2 4 6 8 13
+1411	22	7	Que xa ninguen me vexa y eu non veixa á ninguen?	g	none	14.0	2 4 6 8 10 13
+1412	22	8	A luz d’o dia asómbrame, pásmame o d’as estrelas.	h	none	14.0	2 4 6 8 10 13
+1413	22	8	Y as olladas d’os homes, n’a yalma me penetran.	h	none	14.0	3 6 9 13
+1414	22	9	Y é que ó que dentro levo de min, penso que ô rostro	i	none	14.0	1 6 9 10 12 13
+1415	22	9	Me sai cal sai d’o mare, ô cabo un corpo morto.	i	none	14.0	2 4 6 9 10 13
+1416	22	10	¡Houbera, e que saira!... mais non, déntro te levo;	j	none	13.0	2 6 9 10 13
+1417	22	10	Fantasma pavoroso d’os meus remordementos!	j	none	14.0	2 6 9 13
+1418	23	1	«Que foi de tanto barullo	a	estrofa_manriqueña	8.0	2 4 7
+1419	23	1	Que foi de tanto bureo	b	estrofa_manriqueña	8.0	2 4 7
+1420	23	1	E mil gandayas?	c	estrofa_manriqueña	5.0	2 4
+1421	23	1	Que foi de aquel fero orgullo	a	estrofa_manriqueña	8.0	2 4 5 7
+1422	23	1	E soberbios devaneos	b	estrofa_manriqueña	8.0	3 7
+1423	23	1	De estas sayas?	c	estrofa_manriqueña	4.0	1 3
+1424	23	2	Uns globos de vento cheos	b	estrofa_manriqueña	8.0	1 2 5 7
+1425	23	2	Feitos de agua de xabron	d	estrofa_manriqueña	8.0	1 4 7
+1426	23	2	Asoprando,	e	estrofa_manriqueña	4.0	3
+1427	23	2	Que He sirven de enrédeos	b	estrofa_manriqueña	8.0	3 7
+1428	23	2	A nenos que de un pallón	d	estrofa_manriqueña	8.0	2 5 7
+1429	23	2	Van soltando.	e	estrofa_manriqueña	4.0	1 3
+1430	23	3	Onde van aquelas glorias	f	estrofa_manriqueña	8.0	3 5 7
+1431	23	3	Aquela endiosada gente	g	estrofa_manriqueña	8.0	2 5 7
+1432	23	3	Po los astros?	e	estrofa_manriqueña	4.0	3
+1433	23	3	Andan en vellas historias	f	estrofa_manriqueña	8.0	1 4 7
+1434	23	3	Como un-has podres sementes	g	estrofa_manriqueña	8.0	2 4 7
+1435	23	3	En canastros.	e	estrofa_manriqueña	4.0	3
+1436	23	4	Si todos estes arreos	h	estrofa_manriqueña	8.0	2 4 7
+1437	23	4	E mais cantos os levaron	e	estrofa_manriqueña	8.0	2 7
+1438	23	4	Polvo son.	i	estrofa_manriqueña	4.0	1 3
+1439	23	4	Que pensan os dos empreos	h	estrofa_manriqueña	8.0	2 7
+1440	23	4	Que aiá por baixo quedaron	e	estrofa_manriqueña	8.0	2 4 7
+1441	23	4	Da leucion?	i	estrofa_manriqueña	4.0	3
+1442	23	5	E vindo mais ò presente	j	estrofa_manriqueña	8.0	2 4 7
+1443	23	5	Das cousas que agora vistes	k	estrofa_manriqueña	8.0	2 5 7
+1444	23	5	Que pasaron,	e	estrofa_manriqueña	4.0	3
+1445	23	5	Quen habrá que no escarmente	j	estrofa_manriqueña	8.0	1 3 5 7
+1446	23	5	Cos trocamentos tan tristes	k	estrofa_manriqueña	8.0	4 6 7
+1447	23	5	Que pasmaron?	e	estrofa_manriqueña	4.0	3
+1448	23	6	As voltas que houbo na Europa	l	estrofa_manriqueña	8.0	2 4 7
+1449	23	6	Sin deixar os cardenales	m	estrofa_manriqueña	8.0	3 7
+1450	23	6	Nin o Papa,	n	estrofa_manriqueña	4.0	3
+1451	23	6	Os tronos, gentes, e Iropa	l	estrofa_manriqueña	8.0	2 4 7
+1452	23	6	Contando as horas fatales	m	estrofa_manriqueña	8.0	2 4 7
+1453	23	6	Sobre ó mapa!	n	estrofa_manriqueña	4.0	3
+1454	23	7	Aquela gran revulsión	ñ	estrofa_manriqueña	8.0	2 4 7
+1455	23	7	Que do trono botou fora	o	estrofa_manriqueña	8.0	3 6 7
+1456	23	7	A Orleans,	p	estrofa_manriqueña	4.0	3
+1457	23	7	E llo puxo á Napoleón	ñ	estrofa_manriqueña	8.0	3 7
+1458	23	7	O pequeno nun-ha hora	o	estrofa_manriqueña	8.0	3 5 7
+1459	23	7	Entre as mans!	p	estrofa_manriqueña	4.0	3
+1460	23	8	O arcebispo asesinado!	q	estrofa_manriqueña	8.0	3 7
+1461	23	8	Cavina poñendo a sorte	r	estrofa_manriqueña	8.0	2 5 7
+1462	23	8	Ja nun tris!	s	estrofa_manriqueña	4.0	1 2 3
+1463	23	8	Radesqui cal can rabiado	q	estrofa_manriqueña	8.0	2 5 7
+1464	23	8	E Roma entregada á morte	r	estrofa_manriqueña	8.0	2 5 7
+1465	23	8	Por París!	s	estrofa_manriqueña	4.0	3
+1466	23	9	Onde vai Carlos Alberto	t	estrofa_manriqueña	8.0	1 3 4 7
+1467	23	9	Que foi o cabo da térra	u	estrofa_manriqueña	7.0	2 4 6
+1468	23	9	Mal pecado	v	estrofa_manriqueña	4.0	1 3
+1469	23	9	Deixar os osos, cuberlo	t	estrofa_manriqueña	8.0	2 4 7
+1470	23	9	De mal color po la guerra	u	estrofa_manriqueña	8.0	2 4 7
+1471	23	9	Chamuscado!	v	estrofa_manriqueña	4.0	3
+1472	23	10	E que decís de aquel feito	w	estrofa_manriqueña	8.0	4 6 7
+1473	23	10	Mui horrendo e criminal	x	estrofa_manriqueña	7.0	1 3 7
+1474	23	10	De Merino,	y	estrofa_manriqueña	4.0	3
+1475	23	10	Que puxo o inocente peito	w	estrofa_manriqueña	8.0	2 5 7
+1476	23	10	Da sua Reina o puñal	x	estrofa_manriqueña	7.0	2 4 7
+1477	23	10	Asesino?	y	estrofa_manriqueña	4.0	3
+1478	23	11	Quen de vos sabe as liornas	z	estrofa_manriqueña	7.0	1 3 4 7
+1479	23	11	Dos partidos que se matan	aa	estrofa_manriqueña	8.0	3 7
+1480	23	11	Por mandar?	ab	estrofa_manriqueña	4.0	3
+1481	23	11	Si quizáis das Californas	z	estrofa_manriqueña	8.0	3 7
+1482	23	11	O ouro somente tratan	aa	estrofa_manriqueña	8.0	1 4 7
+1483	23	11	De apañar?	ab	estrofa_manriqueña	4.0	3
+1484	23	12	Os que pensen que no hay Dios	ac	estrofa_manriqueña	8.0	3 6 7
+1485	23	12	Se levan valente chasco	ad	estrofa_manriqueña	8.0	2 5 7
+1486	23	12	En verdá.	ae	estrofa_manriqueña	4.0	3
+1487	23	12	Sen poder se ri de vos	ac	estrofa_manriqueña	8.0	3 5 7
+1488	23	12	E barre so de un chubasco	ad	estrofa_manriqueña	8.0	2 4 5 7
+1489	23	12	A impiedá.	ae	estrofa_manriqueña	4.0	3
+1490	23	13	Onde van os campanarios	af	estrofa_manriqueña	8.0	1 3 7
+1491	23	13	E campanas dos conventos	ag	estrofa_manriqueña	8.0	3 7
+1492	23	13	Do Señor?	ah	estrofa_manriqueña	4.0	3
+1493	23	13	Alajes, e relicarios,	af	estrofa_manriqueña	8.0	2 7
+1494	23	13	E copos, e sacramentos	ag	estrofa_manriqueña	8.0	2 7
+1495	23	13	De valor?	ah	estrofa_manriqueña	4.0	3
+1496	23	14	Onde van tantos altares	ai	estrofa_manriqueña	8.0	1 3 4 7
+1497	23	14	E órganos de alegrías	aj	estrofa_manriqueña	8.0	2 7
+1498	23	14	Insensatos!	ak	estrofa_manriqueña	4.0	3
+1499	23	14	Tantos libros a millares.	ai	estrofa_manriqueña	8.0	1 3 7
+1500	23	14	As ropas das sacristías,	aj	estrofa_manriqueña	8.0	2 7
+1501	23	14	E os ornatos?	ak	estrofa_manriqueña	4.0	3
+1502	23	15	Tantas rentas, e diñeiros,	al	estrofa_manriqueña	8.0	1 3 7
+1503	23	15	E facendas, e pinturas	am	estrofa_manriqueña	8.0	3 7
+1504	23	15	Tan prezadas?	an	estrofa_manriqueña	4.0	1 3
+1505	23	15	Sabedes vos si os rendeiros	al	estrofa_manriqueña	8.0	2 4 6
+1506	23	15	Fan hora as pagas mais duras	am	estrofa_manriqueña	8.0	1 2 4 6 7
+1507	23	15	Que as pasadas?	an	estrofa_manriqueña	4.0	3
+1508	23	16	De costumes nin de cuito	añ	estrofa_manriqueña	8.0	3 7
+1509	23	16	De virtudes non faledes	ao	estrofa_manriqueña	8.0	3 5 7
+1510	23	16	Nin moral;	ap	estrofa_manriqueña	4.0	3
+1511	23	16	Entre vos vai todo a bullo,	añ	estrofa_manriqueña	8.0	3 4 5 7
+1512	23	16	Sò dos homes prometes	ao	estrofa_manriqueña	6.0	1 3 6
+1513	23	16	Ben ou mal.	ap	estrofa_manriqueña	4.0	1 3
+1514	23	17	Bos exempros e leucios	aq	estrofa_manriqueña	8.0	1 3 7
+1515	23	17	Dos mayores os pequeños	ar	estrofa_manriqueña	8.0	3 7
+1516	23	17	Non se ven.	as	estrofa_manriqueña	4.0	1 3
+1517	23	17	Caminos de perdicios	aq	estrofa_manriqueña	8.0	2 7
+1518	23	17	Pralican os mais e os menos	ar	estrofa_manriqueña	8.0	2 5 7
+1519	23	17	Mais de cen,	as	estrofa_manriqueña	4.0	1 3
+1520	23	18	O carballo mais ferrudo	at	estrofa_manriqueña	8.0	3 5 7
+1521	23	18	Si o becho lle eraba o dente	au	estrofa_manriqueña	8.0	2 5 7
+1522	23	18	No raigado,	av	estrofa_manriqueña	4.0	3
+1523	23	18	Amolece e ja golvudo	at	estrofa_manriqueña	8.0	3 5 7
+1524	23	18	Vèn ao chan prestamente	au	estrofa_manriqueña	7.0	1 4 7
+1525	23	18	Derrumbado.	av	estrofa_manriqueña	4.0	3
+1526	23	19	Os vicios son vechos fortes	aw	estrofa_manriqueña	8.0	2 4 5 7
+1527	23	19	Que amolegan corpos duros	ax	estrofa_manriqueña	8.0	3 5 7
+1528	23	19	E valentes.	ay	estrofa_manriqueña	4.0	3
+1529	23	19	Os pecados son as morles	aw	estrofa_manriqueña	8.0	3 5 7
+1530	23	19	Que tumban torres e muros	ax	estrofa_manriqueña	8.0	2 4 7
+1531	23	19	Insolentes.	ay	estrofa_manriqueña	4.0	3
+1532	23	20	Non botés a naide a culpa.	az	estrofa_manriqueña	8.0	1 2 5 7
+1533	23	20	Que meta a man no seu peito	ba	estrofa_manriqueña	8.0	2 4 6 7
+1534	23	20	Cada cal,	bb	estrofa_manriqueña	4.0	3
+1535	23	20	E aquel que teña disculpa	az	estrofa_manriqueña	8.0	2 4 7
+1536	23	20	Diga si eso leva geito	ba	estrofa_manriqueña	8.0	1 3 5 7
+1537	23	20	Ben ou mal.	bb	estrofa_manriqueña	4.0	1 3
+1538	23	21	Tende conta que somente	bc	estrofa_manriqueña	8.0	1 3 6 7
+1539	23	21	A virtude nunca falla	bd	estrofa_manriqueña	8.0	3 5 7
+1540	23	21	Tarde ou cedo.	be	estrofa_manriqueña	4.0	1 3
+1541	23	21	Os que viven torpemente	bc	estrofa_manriqueña	8.0	3 5 7
+1542	23	21	Vólvense todos borralla	bd	estrofa_manriqueña	8.0	1 4 7
+1543	23	21	Cheos de medo.	be	estrofa_manriqueña	5.0	1 3
+1544	24	1	Dourado pintor de natura no Ceo	A	serventesio	14.0	2 5 8 11
+1545	24	1	Cos ollos cravados en tí maginando	B	serventesio	12.0	2 5 8 11
+1546	24	1	Nin sei si te escribo, nin sei si te leo,	A	serventesio	12.0	2 5 8 11
+1547	24	1	Nin si estou desperto nin sí estou soñando.	B	serventesio	14.0	3 5 9 11
+1548	24	2	Farasme ò favor de un cachiño de lume	C	serventesio	14.0	2 5 6 8 11
+1549	24	2	De aquel mais febeo das doce do dia,	D	serventesio	12.0	2 3 5 8 11
+1550	24	2	Frangulla noviña do délfico nume	C	serventesio	12.0	2 5 8 11
+1551	24	2	Con celme que sale miña poesía?	D	serventesio	12.0	2 5 11
+1552	24	3	Os versos secainos sin esa lentura	E	serventesio	12.0	2 5 8 11
+1553	24	3	Son aguas mui chirlas que causan arroyos	F	serventesio	12.0	2 5 8 11
+1554	24	3	E son carantoñas da literatura	E	serventesio	12.0	2 5 11
+1555	24	3	Paxaros sin pruma con duros cañotos.	F	serventesio	12.0	2 5 8 11
+1556	25	1	Oh quen poidera,	a	romancillo	5.0	1 2 4
+1557	25	1	Pillárte soa,	b	romancillo	5.0	2 4
+1558	25	1	No seo amigo,	0	romancillo	5.0	2 4
+1559	25	1	D' escura cova!	b	romancillo	5.0	2 4
+1560	25	1	E como edra,	a	romancillo	4.0	3
+1561	25	1	Que cenguidora,	b	romancillo	5.0	4
+1562	25	1	Branca coluna,	0	romancillo	5.0	1 4
+1563	25	1	Premente enrosca;	b	romancillo	5.0	1 2 4
+1564	25	1	Cos brazos dárche,	0	romancillo	5.0	2 4
+1565	25	1	Mil tenras voltas;	b	romancillo	5.0	1 2 4
+1566	25	1	Decirch' o oido,	0	romancillo	4.0	2 4
+1567	25	1	Mil tenras cousas;	b	romancillo	5.0	1 2 4
+1568	25	1	E o término atopar da esquiva ruta,	0	romancillo	11.0	2 6 8 10
+1569	25	1	En breve hora!	b	romancillo	4.0	2 4
+1570	26	1	Pol-o alto cantando,	0	romancillo	6.0	3 6
+1571	26	1	O sonoroso vái;	a	romancillo	7.0	4 6
+1572	26	1	Coa aguillada ó lombo,	0	romancillo	6.0	3 6
+1573	26	1	E garboso ademan;	a	romancillo	6.0	3 6
+1574	26	1	Tardío conducindo,	0	romancillo	7.0	2 6
+1575	26	1	En nuite de luar,	a	romancillo	6.0	2 6
+1576	26	1	Grave o carro de táboas,	0	romancillo	7.0	1 3 6
+1577	26	1	Anteposto quezáis;	a	romancillo	7.0	3 6
+1578	26	1	E cal quen non se cuide,	0	romancillo	7.0	4 6
+1579	26	1	Q' o poidan escuitar;	a	romancillo	7.0	2 6
+1580	26	1	Por cousas que n' esprica,	0	romancillo	8.0	2 5 6
+1581	26	1	D' un suïdoso afan,	a	romancillo	6.0	1 4 6
+1582	26	1	Mil pungentes recordos,	0	romancillo	7.0	1 3 6
+1583	26	1	Se prace en espallar;	a	romancillo	7.0	2 6
+1584	26	1	Mil vagas suïdades,	0	romancillo	7.0	1 2 6
+1585	26	1	Ceiband' os ecos vai;	a	romancillo	7.0	2 4 6
+1586	26	2	E da pequena pátria a servidume,	0	romancillo	11.0	4 6 10
+1587	26	2	Parece recordar...	a	romancillo	7.0	2 6
+1588	26	2	Ó pé do noto	0	romancillo	5.0	2 4
+1589	26	2	Ben os mira ó pasar;	a	romancillo	7.0	1 3 6
+1590	26	2	Q' en masa escura e infórme,	0	romancillo	7.0	2 4 7
+1591	26	2	Ajuntados están;	a	romancillo	7.0	3 6
+1592	26	2	E na nativa costa,	b	romancillo	7.0	4 6
+1593	26	2	Os escuita fungar:	a	romancillo	7.0	3 6
+1594	26	2	Parécelle que soan,	b	romancillo	7.0	2 6
+1595	26	2	Intrépido compás,	a	romancillo	7.0	2 6
+1596	26	2	Cuida, que do combate,	0	romancillo	7.0	1 6
+1597	26	2	Murmuran o siñal;	a	romancillo	7.0	2 6
+1598	26	2	En escadron formados,	0	romancillo	7.0	4 6
+1599	26	2	Cal gente de Breogán,	a	romancillo	8.0	2 6
+1600	26	3	En falange de ferro ben tecida,	0	romancillo	11.0	3 6 8 10
+1601	26	3	Que s' aprest' a luitar.	a	romancillo	7.0	3 6
+1602	27	1	Xóven, c‘ un tesouro	0	romancillo	7.0	1 3 5
+1603	27	1	desperanzas ledas,	a	romancillo	6.0	3 5
+1604	27	1	dono d‘os amores	0	romancillo	6.0	1 5
+1605	27	1	virxes d‘unha nena,	a	romancillo	6.0	1 3 5
+1606	27	1	era ô tempo, cando	0	romancillo	6.0	1 3 5
+1607	27	1	saindo d‘ aldea	a	romancillo	6.0	2 5
+1608	27	1	pra facer fortua	0	romancillo	6.0	3 5
+1609	27	1	fun á estranas terras.	a	romancillo	6.0	1 3 5
+1610	27	2	¡Nai que me criache,	0	romancillo	6.0	1 5
+1611	27	2	non me coneceras	a	romancillo	6.0	1 5
+1612	27	2	se me vises cando	0	romancillo	6.0	3 5
+1613	27	2	retornei pra ela...,	a	romancillo	6.0	3 5
+1614	27	2	por que solo trouxen	0	romancillo	6.0	3 5
+1615	27	2	galayos e penas,	a	romancillo	6.0	2 5
+1616	27	2	angurras n-a frente,	0	romancillo	6.0	2 5
+1617	27	2	canas n-a cabeza!	a	romancillo	6.0	1 5
+1618	27	3	Cheguei ô meu pobo	0	romancillo	6.0	2 4 5
+1619	27	3	sendo noite pêcha,	a	romancillo	6.0	1 3 5
+1620	27	3	noite com‘ as tumbas	0	romancillo	6.0	1 5
+1621	27	3	caladiña e negra.	a	romancillo	6.0	3 5
+1622	27	4	Os veciños cansos	0	romancillo	6.0	3 5
+1623	27	4	de cavar n-as terras,	a	romancillo	6.0	3 5
+1624	27	4	buscaban n-o sono	0	romancillo	6.0	2 5
+1625	27	4	folganza compreta.	a	romancillo	6.0	2 5
+1626	27	5	Non com‘outras noites	0	romancillo	6.0	1 3 5
+1627	27	5	soaban n-a serra	a	romancillo	6.0	2 5
+1628	27	5	alá lonxe... os ecos	0	romancillo	6.0	2 3 5
+1629	27	5	d‘ a gaita parleira,	a	romancillo	6.0	2 5
+1630	27	5	nin os aturuxos	0	romancillo	6.0	5
+1631	27	5	d‘ a trullada leda,	a	romancillo	6.0	3 5
+1632	27	5	e solo os ladridos	0	romancillo	6.0	2 5
+1633	27	5	d‘os cás d‘as facendas,	a	romancillo	6.0	2 5
+1634	27	5	que ond‘ â porta dormen	0	romancillo	6.0	3 5
+1635	27	5	presos â cadéa,	a	romancillo	6.0	1 5
+1636	27	5	por tempos turbaban	0	romancillo	6.0	2 5
+1637	27	5	a calma solémnia.	a	romancillo	6.0	2 5
+1638	27	6	Pasei sunt‘ o vello	0	romancillo	6.0	2 5
+1639	27	6	cruceiro de pedra	a	romancillo	6.0	2 5
+1640	27	6	testigo d‘as miñas	0	romancillo	6.0	2 5
+1641	27	6	amantes escenas;	a	romancillo	6.0	2 5
+1642	27	6	collin pol-o atallo,	0	romancillo	6.0	2 5
+1643	27	6	y-âs apalpadelas,	a	romancillo	6.0	1 5
+1644	27	6	pond‘ os pés n-os seixos.	0	romancillo	6.0	1 3 5
+1645	27	6	y-as mans n-as silveiras,	a	romancillo	6.0	2 5
+1646	27	6	fun á dar co-a casa	0	romancillo	6.0	1 3 5
+1647	27	6	d‘ a miña Sabela..	a	romancillo	6.0	2 5
+1648	27	7	Inda estaba â porta.	0	romancillo	6.0	1 3 5
+1649	27	7	d‘o corral aberta;	a	romancillo	6.0	3 5
+1650	27	7	subin alancando	0	romancillo	6.0	2 5
+1651	27	7	poi-as escaleiras,	a	romancillo	6.0	5
+1652	27	7	e ben pronto vínme	0	romancillo	6.0	2 3 5
+1653	27	7	n-a solaina estensa.	a	romancillo	6.0	3 5
+1654	27	8	Axexei d‘a porta	0	romancillo	6.0	3 5
+1655	27	8	pol-as rendixelas,	a	romancillo	6.0	5
+1656	27	8	e cal fora, drento	0	romancillo	6.0	3 5
+1657	27	8	vin as mesmas trévoas..	a	romancillo	6.0	1 3 5
+1658	27	9	Enton, pol-a mente	0	romancillo	6.0	2 5
+1659	27	9	pasoume unha idea;	a	romancillo	6.0	2 3 5
+1660	27	9	lembreime d‘as suas	0	romancillo	6.0	2 5
+1661	27	9	palabras postreiras:	a	romancillo	6.0	2 5
+1662	27	9	«váste, mais ben pode	0	romancillo	6.0	1 4 5
+1663	27	9	ser que cando veñas,	a	romancillo	6.0	1 5
+1664	27	9	que m‘ atopes morta,	0	romancillo	7.0	2 4 6
+1665	27	9	que non mais me vexas.»	a	romancillo	6.0	2 3 5
+1666	27	10	¡Non toleo, cando	0	romancillo	6.0	1 3 5
+1667	27	10	non toleei d‘ aquela!	a	romancillo	6.0	1 3 5 7
+1668	27	10	fun car‘ ô palleiro,	0	romancillo	6.0	1 5
+1669	27	10	e dínme tal presa	a	romancillo	6.0	2 4 5
+1670	27	10	que d‘ ali á ben pouco,	0	romancillo	6.0	3 4 5
+1671	27	10	nin feito por méigas,	a	romancillo	6.0	2 5
+1672	27	10	xa tiña un fachuco	0	romancillo	6.0	1 2 3 5
+1673	27	10	de pallas acesas.	a	romancillo	6.0	2 5
+1674	27	11	Volvinme pra porta,	0	romancillo	6.0	2 5
+1675	27	11	logo arrempuxéina;	a	romancillo	6.0	1 5
+1676	27	11	berrei canto puden	0	romancillo	6.0	2 5
+1677	27	11	chamando á Sabela,	a	romancillo	6.0	2 5
+1678	27	11	¡e nada... o silencio	0	romancillo	6.0	2 5
+1679	27	11	y-a quietude mesma!	a	romancillo	6.0	3 5
+1680	27	11	Tentei a ventana	0	romancillo	6.0	2 5
+1681	27	11	onde a luz puxera	a	romancillo	6.0	3 5
+1682	27	11	ô mediar a noite	0	romancillo	6.0	3 5
+1683	27	11	cando sain d‘ aldea,	a	romancillo	6.0	3 5
+1684	27	11	e nada tampouco...	b	romancillo	6.0	2 5
+1685	27	11	hachábase pêcha,	a	romancillo	6.0	2 5
+1686	27	11	pêcha... ¡e mal agoiro!	b	romancillo	6.0	1 3 5
+1687	27	11	de froles deserta...	a	romancillo	6.0	2 5
+1688	27	12	¡Ollos que tal virón,	0	romancillo	7.0	1 4 
+1689	27	12	nunca Dios me dera!	a	romancillo	6.0	1 3 5
+1690	27	12	¿como vivo agora?	0	romancillo	6.0	1 3 5
+1691	27	12	¿que farei sen ela?	a	romancillo	6.0	1 3 5
+1692	27	12	está morta ou viva?	c	romancillo	6.0	2 3 5
+1693	27	12	e cal si quixera	a	romancillo	6.0	5
+1694	27	12	perguntarlle ó ceo	0	romancillo	6.0	3 5
+1695	27	12	pol-a miña prenda,	a	romancillo	6.0	3 5
+1696	27	12	a atóneta vista	c	romancillo	6.0	2 5
+1697	27	12	n‘ altura fixéina.	a	romancillo	7.0	2 5
+1698	27	13	Estaba muy triste,	0	romancillo	6.0	2 4 5
+1699	27	13	de loito coberta,	a	romancillo	6.0	2 5
+1700	27	13	faltáballe o vago	0	romancillo	6.0	2 5
+1701	27	13	fulgor d‘as estrelas,	a	romancillo	6.0	2 5
+1702	27	13	que son o feitizo	0	romancillo	6.0	2 5
+1703	27	13	d‘as noites sereas,	a	romancillo	6.0	2 5
+1704	27	13	n-as que s'ademira	0	romancillo	6.0	5
+1705	27	13	de Dios a grandeza.	a	romancillo	6.0	2 5
+1706	27	14	Inda vive—dixen—	d	romancillo	6.0	1 3 5
+1707	27	14	curazon, alenta,	a	romancillo	6.0	3 5
+1708	27	14	que s‘ el a morrese	0	romancillo	7.0	2 6
+1709	27	14	non ansi estiveran	a	romancillo	6.0	1 3 5
+1710	27	14	o ceo tan triste	d	romancillo	6.0	2 4 5
+1711	27	14	y-a noite tan negra;	a	romancillo	6.0	2 4 5
+1712	27	14	pois o verme solo	0	romancillo	6.0	3 5
+1713	27	14	dempois d‘ unha ausencia,	a	romancillo	6.0	2 3 5
+1714	27	14	ô ver o profundo	0	romancillo	6.0	2 5
+1715	27	14	delor que m‘ apena,	a	romancillo	7.0	2 5
+1716	27	14	pra darme esperanza,	0	romancillo	6.0	2 5
+1717	27	14	meu ánxel, collera	a	romancillo	6.0	2 5
+1718	27	14	forza, voz e vida	0	romancillo	6.0	1 3 5
+1719	27	14	n-a luz d‘ unha estrela.	a	romancillo	6.0	2 3 5
+1720	27	15	Pensando estas cousas	0	romancillo	6.0	2 3 5
+1721	27	15	demais pracenteiras,	a	romancillo	6.0	2 5
+1722	27	15	pra quen nunca sorte	0	romancillo	6.0	3 5
+1723	27	15	nin pracer tivera,	a	romancillo	6.0	3 5
+1724	27	15	pousei os meus ollos	0	romancillo	6.0	2 3 5
+1725	27	15	n-a estension d‘ a veiga.	a	romancillo	6.0	3 5
+1726	27	16	¡Cal non foi meu pasmo	0	romancillo	6.0	1 2 3 5
+1727	27	16	y-a miña sorpresa,	a	romancillo	6.0	2 5
+1728	27	16	cando vin no escuro	0	romancillo	6.0	3 5
+1729	27	16	blanquexar a cirexa,	a	romancillo	7.0	3 6
+1730	27	16	e no adro, onde	0	romancillo	6.0	3 5
+1731	27	16	os mortos enterran,	a	romancillo	6.0	2 5
+1732	27	16	vag-ar pol-os ventos	0	romancillo	6.0	2 5
+1733	27	16	duas luces intensas,	a	romancillo	6.0	1 2 5
+1734	27	16	brancas, pero brancas	0	romancillo	6.0	1 5
+1735	27	16	com‘ a neve mesma!	a	romancillo	6.0	3 5
+1736	27	17	Corren moito, voan...	e	romancillo	6.0	1 3 5
+1737	27	17	¿serán volvoretas?	a	romancillo	6.0	2 5
+1738	27	17	non: que pol-a noite	0	romancillo	6.0	1 5
+1739	27	17	non se pode vêlas.	a	romancillo	6.0	1 3 5
+1740	27	18	Unha vay â outra	e	romancillo	6.0	1 3 5
+1741	27	18	siguindo lixeira,	a	romancillo	6.0	2 5
+1742	27	18	como si fuxira	0	romancillo	6.0	5
+1743	27	18	e quixer collêla...	a	romancillo	5.0	3 5
+1744	27	18	¿si serán cicaes	0	romancillo	6.0	3 5
+1745	27	18	duas almas en pena?	a	romancillo	6.0	1 2 5
+1746	27	19	No adro..., entr‘as tumbas...	0	romancillo	6.0	2 5
+1747	27	19	n-a hora suprema	a	romancillo	6.0	2 5
+1748	27	19	en que os mortos falan	f	romancillo	6.0	3 5
+1749	27	19	y-as mortaxas deixan...,	a	romancillo	6.0	1 3 5
+1750	27	19	¡Xesus, Dios te ‘axude!	0	romancillo	6.0	2 3 5
+1751	27	19	Pode ser que as sexan!	a	romancillo	6.0	1 3 5
+1752	27	20	¿Serán d‘ a compaña	f	romancillo	6.0	2 5
+1753	27	20	duas q‘ â desfeita	a	romancillo	6.0	1 5
+1754	27	20	andan, ou enfermos	0	romancillo	6.0	1 5
+1755	27	20	n-a parroquea ventana	f	romancillo	8.0	3 5
+1756	27	21	Almas d‘ outro mundo,	0	romancillo	6.0	1 3 5
+1757	27	21	luces que n-as tréboas	a	romancillo	6.0	1 5
+1758	27	21	brilás cal lostregos;	0	romancillo	6.0	2 5
+1759	27	21	¿sondes aparencia	a	romancillo	6.0	1 5
+1760	27	21	ou de cert-o sondes	0	romancillo	6.0	3 5
+1761	27	21	duas almas en pena?	a	romancillo	6.0	1 2 5
+1762	27	22	Cand‘ eu tal falaba,	0	romancillo	6.0	1 2 3 5
+1763	27	22	xa despareceran,	a	romancillo	6.0	1 5
+1764	27	22	espritus ou bruxas,	0	romancillo	6.0	2 5
+1765	27	22	as luces aquelas.	a	romancillo	6.0	2 5
+1766	29	1	Os infortunios o ser lle deron,	0	none	10.0	4 7 9
+1767	29	1	sen luz n-os ollos naceue probe,	A	none	10.0	2 4 7 9
+1768	29	1	o de farrapos coberto sempre,	0	none	10.0	4 7 9
+1769	29	1	famento e falto d‘ amor crióuse.	A	none	10.0	2 4 6 8 9
+1770	29	2	Namentres outros nenos d‘ aldea	0	none	10.0	2 4 6 8 10
+1771	29	2	ledos xogaban n-os alredores,	A	none	10.0	1 4 9
+1772	29	2	buscando grilos entr‘os centeos,	0	none	10.0	2 4 6 9
+1773	29	2	vend‘ os cabildos brincar n-o monte,	A	none	10.0	1 4 7 9
+1774	29	2	as volvoretas siguindo tolos,	0	none	10.0	4 7 9
+1775	29	2	ou ben collendo niños e froles;	A	none	10.0	2 4 6 9
+1776	29	2	él, n-un curruncho d‘ a humilde chouza	0	none	10.0	1 2 4 6 8 10
+1777	29	2	vivia a solas cr‘os seus delores,	A	none	10.0	1 4 6 7 9
+1778	29	2	calado e quedo com‘ un calávre,	0	none	10.0	2 4 6 7 9
+1779	29	2	envolto en negras sombras de cote.	A	none	10.0	2 4 6 9
+1780	29	3	Non pr‘el tiveron nunc‘ as mulleres	0	none	10.0	5
+1781	29	3	tenras palabras, promesas dolces,	A	none	10.0	1 4 7 9
+1782	29	3	nin d‘ amistade n-o seu espritu	0	none	10.0	4 7 9
+1783	29	3	a voz deixaron oubir os homes,	A	none	10.0	2 4 7 9
+1784	29	3	que orfo de todo cariño triste	B	none	10.0	1 4 7 9
+1785	29	3	o neno cego chegou á xóven.	A	none	10.0	2 4 7 9
+1786	29	4	As saudades que o consomian,	0	none	10.0	4 9
+1787	29	4	mais s‘ afondaron, foron mais fortes,	A	none	11.0	1 4 6 8 9
+1788	29	4	cand‘ ós lostregos d‘ a razon, víuse	B	none	10.0	3 8 9
+1789	29	4	sen agarimo, sen luz e probe.	A	none	10.0	4 7 9
+1790	29	5	O Prometeo que en si levaba,	0	none	10.0	4 7 9
+1791	29	5	fixo un esforzo supremo estonces,	A	none	10.0	1 2 4 7 9
+1792	29	5	e brazo a brazo, n-a escuridade,	0	none	10.0	2 4 9
+1793	29	5	púxose en fero loitar co-a sorte.	A	none	10.0	1 4 7 9
+1794	29	6	Deixou a aldea; por compañeiro	0	none	10.0	2 4 9
+1795	29	6	un cadeliño levou, e fóise	A	none	10.0	1 4 7 9
+1796	29	6	aventureiro correndo o mundo,	0	none	10.0	4 7 9
+1797	29	6	entoando ledas cancios acordes,	A	none	10.0	2 4 7 9
+1798	29	6	n-as barulleiras prazas d‘ o pobo	0	none	10.0	4 6 9
+1799	29	6	e n-as romaxes d‘ os labradores;	A	none	10.0	4 9
+1800	29	6	y-o que abondosas vágoas de sangue	0	none	10.0	4 6 9
+1801	29	6	vertia ô verse solo de noite,	A	none	10.0	2 4 6 9
+1802	29	6	pasaba os dias enteiros, sendo	0	none	10.0	2 4 7 9
+1803	29	6	causa de risa, xúbilo e goce.	A	none	10.0	1 4 6 9
+1804	29	7	Co-este sarcasmo d‘ a sua desgracia,	0	none	10.0	1 4 7 9
+1805	29	7	á costa d‘ este supricio enorme,	A	none	10.0	2 4 7 9
+1806	29	7	pasados anos, o cego poido	0	none	10.0	2 4 7 9
+1807	29	7	ter pan e roupas algo millores,	A	none	10.0	1 2 4 6 9
+1808	29	7	y-algús aforros que pr‘ el valian	0	none	10.0	2 4 7 9
+1809	29	7	mais q‘ a fortua d‘ un rico prócer.	A	none	10.0	1 4 6 7 9
+1810	29	8	¡Qué estrano, s‘ eles representaban	0	none	11.0	1 2 4 9
+1811	29	8	un mundo inteiro do sinsabores,	A	none	10.0	1 2 4 9
+1812	29	8	o trunfo n-unha xigante loita,	0	none	10.0	2 4 7 9
+1813	29	8	o premio a un fondo delor sen nome!	A	none	10.0	2 3 4 7 9
+1814	29	9	Enton d‘ os tempos que xa fuxiran	C	none	10.0	2 4 7 9
+1815	29	9	as relembranzas erguendo fóronse	A	none	10.0	4 7 9
+1816	29	9	n-o seu doido corazon, morto	D	none	10.0	2 4 8 9
+1817	29	9	a todo afeuto, pasion e goce,	A	none	10.0	2 4 7 9
+1818	29	9	e por primeira vez n-a sua vida	C	none	10.0	4 6 8 9
+1819	29	9	foi os empulsos d‘ un amor dócil.	A	none	10.0	1 4 6 8 9
+1820	29	9	Pensou n-a patria, por mais q‘ abroxos	D	none	12.0	2 4 7 9
+1821	29	9	lle dera solo de neno e xóven,	A	none	10.0	2 4 7 9
+1822	29	9	y-ô seu recordo, ¡cantos sospiros	0	none	10.0	2 4 6 9
+1823	29	9	custoulle estare d‘ ela tan lonxe!	A	none	10.0	2 4 6 8 9
+1824	29	10	Por un canciño guiado, marcha	0	none	10.0	2 4 7 9
+1825	29	10	o triste cego, ben sabe, pr‘ onde,	A	none	10.0	2 4 6 7 9
+1826	29	10	que anque seus ollos non ven, sacreto	E	none	10.0	4 6 7 9
+1827	29	10	poder o leva de car‘ os montes	A	none	10.0	2 4 7 9
+1828	29	10	d‘acurrunchada mísera aldea	0	none	10.0	4 6 9
+1829	29	10	que fora limbo d‘ os seus delores.	A	none	10.0	2 4 7 9
+1830	29	11	Non vai buscando n-ela un achego,	E	none	10.0	1 2 4 6 7 9
+1831	29	11	q‘ os desenganos dícenlle a voces,	A	none	11.0	4 6 9
+1832	29	11	que non-o lembran nin ten amigos,	0	none	10.0	2 4 7 9
+1833	29	11	que non hay alma q‘ alí o recordé;	A	none	11.0	2 3 4 7 9
+1834	29	11	vai, por que sede sinte d‘ as augas	0	none	10.0	1 4 6 9
+1835	29	11	puras e frescas d‘ aquelas fontes,	A	none	10.0	1 4 7 9
+1836	29	11	afan d‘ os bicos d‘ aqueles aires	0	none	10.0	2 4 7 9
+1837	29	11	qu‘ ecos y-aromas d‘ o val recolle,	A	none	10.0	1 4 7 9
+1838	29	11	aires d‘ a terra natal que teñen	0	none	10.0	1 4 7 9
+1839	29	11	cantos feitizos soñan os homes.	A	none	10.0	4 6 9
+1840	29	12	Por eso cando preto d‘ aldea	0	none	10.0	2 6 9
+1841	29	12	soar as ledas campanas oye,	A	none	10.0	2 4 7 9
+1842	29	12	estremecido deténse...., e chora...,	0	none	10.0	4 7 9
+1843	29	12	cicaes de pena, porque non pode	A	none	10.0	2 4 8 9
+1844	29	12	ver os destelos d‘ o sol que brila	0	none	10.0	1 4 7 9
+1845	29	12	con fogo d‘ ouro n-os hourizontes;	A	none	10.0	2 4 9
+1846	29	12	cicaes de gozo, por que ‘os seus lares,	0	none	10.0	2 4 9
+1847	29	12	â sua terriña de novo volve,	A	none	10.0	2 4 7 9
+1848	29	12	y-entenrecido, chorando, escrama:	0	none	10.0	4 7 9
+1849	29	12	«¡Querida pátria d‘ os meus amores	A	none	10.0	2 4 7 9
+1850	29	12	anque non vexo ben te conozo,	0	none	10.0	4 6 9
+1851	29	12	meiga que todo meu ser conmoves!	A	none	10.0	1 4 7 9
+1852	29	12	¡Ben te conozo..., úneca estrela	0	none	10.0	1 4 6 9
+1853	29	12	que vin n-a miña perpétoa noite!»	A	none	10.0	2 4 7 9
+1854	29	13	¡Amor d‘ a terra, ben haxas sempre!	0	none	10.0	2 4 6 7 9
+1855	29	13	¡Ou sentemento subrime e dolce,	A	none	10.0	4 7 9
+1856	29	13	ti non nos deixas nin n-a desgracia;	0	none	10.0	1 2 4 9
+1857	29	13	n-as nosas almas, ti nunca morres!	A	none	10.0	2 4 6 7 9
+1858	30	1	Á sombra tecida,	0	romancillo	6.0	2 5
+1859	30	1	D' espeso zreixal,	a	romancillo	6.0	2 5
+1860	30	1	Muy ledo e folloso,	0	romancillo	6.0	1 2 5
+1861	30	1	No tempo do vran;	a	romancillo	6.0	2 5
+1862	30	1	En donde se sente,	b	romancillo	6.0	2 5
+1863	30	1	Un doce zolás,	a	romancillo	6.0	1 2 5
+1864	30	1	S' o vento antr' as follas.	0	romancillo	6.0	2 5
+1865	30	1	Asopra quezáis;	a	romancillo	6.0	2 5
+1866	30	1	(Tan ledo, que sempre	b	romancillo	6.0	1 2 5
+1867	30	1	Frescura ali hai);	a	romancillo	6.0	2 4 5
+1868	30	2	A garrida Ousinde	0	romancillo	6.0	3 5
+1869	30	2	Alegre sin par,	a	romancillo	6.0	2 5
+1870	30	2	Rapaceta nova,	0	romancillo	6.0	3 5
+1871	30	2	De tan curta edá,	a	romancillo	6.0	2 3 5
+1872	30	2	Que segas catorce,	0	romancillo	6.0	2 5
+1873	30	2	Non pode contar;	a	romancillo	6.0	1 2 5
+1874	30	2	Ós niños andando,	0	romancillo	6.0	2 5
+1875	30	2	C' o deño de Jan,	a	romancillo	7.0	1 3 6
+1876	30	2	Dill' éste a meniña,	0	romancillo	6.0	1 2 5
+1877	30	2	C' un doce mirar,	a	romancillo	7.0	1 2 3 6
+1878	30	2	De pillo raposo:	0	romancillo	6.0	2 5
+1879	30	2	¡Que de zreixas hai,	a	romancillo	6.0	1 3 5
+1880	30	2	¡Que lindas, vermellas,	0	romancillo	6.0	1 2 5
+1881	30	2	E ledas están!	a	romancillo	6.0	2 5
+1882	30	2	Agora he o tempo	0	romancillo	6.0	2 3 5
+1883	30	2	Das zreixas pillar.	a	romancillo	6.0	2 5
+1884	30	3	E dixolle rindo,	0	romancillo	6.0	2 5
+1885	30	3	A tenra beldá;	a	romancillo	6.0	2 5
+1886	30	3	—Pois sube abranguélas,	c	romancillo	6.0	2 5
+1887	30	3	Se che gusto dan.	a	romancillo	6.0	3 5
+1888	30	3	—Non podo, estou coxo,	0	romancillo	6.0	1 2 4 5
+1889	30	3	Non podo aganchar;	a	romancillo	6.0	1 2 5
+1890	30	3	Subir tí puderas,	c	romancillo	6.0	2 3 5
+1891	30	3	Que estás muy ben san,	a	romancillo	6.0	2 3 4 5
+1892	30	3	Ligeira e gordecha,	c	romancillo	6.0	2 5
+1893	30	3	Com' un pas-pallás;	a	romancillo	6.0	3 5
+1894	30	3	E tés uns cachetes,	0	romancillo	6.0	2 3 5
+1895	30	3	Com' unhas mazans.	a	romancillo	5.0	2 5
+1896	30	4	—Eu subo, pró mira,	0	romancillo	6.0	1 2 5
+1897	30	4	Non has de mirar..,,	a	romancillo	6.0	1 2 5
+1898	30	4	E Jan lle contesta;	0	romancillo	6.0	2 5
+1899	30	4	—Corrente, ben 'sta;	a	romancillo	6.0	2 4 5
+1900	30	4	E logo o gran pillo,	0	romancillo	6.0	2 4 5
+1901	30	4	Tumbóuse no chan.	a	romancillo	6.0	2 5
+1902	32	1	Fada garrida de leves alas,	A	none	10.0	1 4 7 9
+1903	32	1	Que leda voas,	0	none	5.0	2 4
+1904	32	1	No doce abril;	b	none	5.0	2 4
+1905	32	1	Rompendo a brétoma,	0	none	5.0	2 4
+1906	32	1	Con lindas galas,	a	none	5.0	2 4
+1907	32	1	Desconocida, presta e gentil:	B	none	10.0	4 6 9
+1908	32	2	Fada q' as veces,	0	none	5.0	1 4
+1909	32	2	No espacio culto,	c	none	5.0	2 4
+1910	32	2	Dos pátrios agros costumas voar;	D	none	10.0	2 4 7 9
+1911	32	2	E as veces no aire,	0	none	5.0	2 4
+1912	32	2	Do monte inculto,	c	none	5.0	2 4
+1913	32	2	Te soes sin trazas evaporar:	D	none	10.0	2 4 9
+1914	32	3	Das tuas alas o doce ruido,	E	none	10.0	2 4 7 9
+1915	32	3	E dos teus pasos,	0	none	5.0	3 4
+1916	32	3	O grato son;	f	none	5.0	2 4
+1917	32	3	Que n' o percibe o atento oído,	E	none	10.0	2 5 7 9
+1918	32	3	Mais que só o sente,	0	none	5.0	3 4
+1919	32	3	O corazon:	f	none	4.0	4
+1920	32	4	Oín mil veces na miña infancia,	G	none	10.0	2 3 4 7 9
+1921	32	4	Nos pátrios montes.	0	none	5.0	2 4
+1922	32	4	Da verde Erín	h	none	3.0	2 4
+1923	32	4	Sentín tua engebre,	0	none	5.0	2 4
+1924	32	4	Doce fragáncia,	g	none	5.0	1 4
+1925	32	4	Cando pasabas por junta min.	h	none	10.0	4 9
+1926	32	5	Non te conozo;	0	none	5.0	1 4
+1927	32	5	Nin sei a donde,	i	none	5.0	2 4
+1928	32	5	Ou vas ou tornas, nin por qué lei;	J	none	10.0	2 3 4 8 9
+1929	32	5	Nin sei se antes,	0	none	5.0	2 4
+1930	32	5	Nin como ou onde,	i	none	5.0	2 4
+1931	32	5	Nin en q' antigo tempo t' hachéi.	J	none	11.0	3 4 6 9
+1932	32	6	Se fui na gandra de Carboéiro,	K	none	10.0	2 4 9
+1933	32	6	Nos verdes d' Oca,	0	none	5.0	2 4
+1934	32	6	Ou de Buxán;	l	none	5.0	4
+1935	32	6	Se nas alturas de Portoméiro,	K	none	10.0	4 9
+1936	32	6	Se nas areas	0	none	5.0	4
+1937	32	6	De Barrañán.	l	none	5.0	4
+1938	32	7	N' os verdexantes cómaros do Esto,	M	none	11.0	4 6 8
+1939	32	7	No val de Brántuas,	0	none	5.0	2 4
+1940	32	7	Ou d' Angeriz;	n	none	5.0	4
+1941	32	7	Ou nas pendentes	0	none	5.0	4
+1942	32	7	De Corcoésto,	m	none	5.0	4
+1943	32	7	Ou sobr' o cume do Gomariz.	N	none	10.0	2 9
+1944	32	8	Se dos curutos.	0	none	5.0	4
+1945	32	8	Na vaga bruma,	ñ	none	5.0	2 4
+1946	32	8	De prado verde na branda cor;	O	none	10.0	2 4 7 9
+1947	32	8	De negro baixo,	0	none	5.0	2 4
+1948	32	8	Na branca escuma,	ñ	none	5.0	2 4
+1949	32	8	De casta estrela no resprandor.	O	none	10.0	2 4 9
+1950	32	9	Nas negras copas armoniosas,	P	none	10.0	2 4 9
+1951	32	9	Dos altos pinos,	0	none	5.0	2 4
+1952	32	9	Q' hai en Cartel;	q	none	5.0	1 4
+1953	32	9	Se fui nas gandras espacïosas,	P	none	10.0	2 4 9
+1954	32	9	Nas correduiras	0	none	5.0	4
+1955	32	9	De Recemel.	q	none	5.0	4
+1956	32	10	Non sei... mais levo tua doce historia;	R	none	10.0	1 2 4 7 9
+1957	32	10	Non sei tampouco,	0	none	5.0	1 2 4
+1958	32	10	Quen m' a insinóu;	s	none	6.0	1 4
+1959	32	10	Nin sei de certo,	0	none	5.0	1 2 4
+1960	32	10	Porq' a memoria,	r	none	5.0	2 4
+1961	32	10	Doces lembranzas de ti gardóu.	S	none	10.0	1 4 7 9
+1962	32	11	Quezáis celeste	0	none	5.0	2 4
+1963	32	11	Reminiscencia,	t	none	5.0	4
+1964	32	11	És d' outra vida que paséi já;	U	none	10.0	1 2 4 8 9
+1965	32	11	Quezáis presagio,	0	none	5.0	2 4
+1966	32	11	D' outra existencia	t	none	5.0	1 4
+1967	32	11	Misterïosa q' inda virá.	U	none	10.0	4 6 9
+1968	32	12	Virgen dos celtas d' amigos astros,	V	none	10.0	1 4 7 9
+1969	32	12	Dos nobres celtas,	t	none	5.0	2 4
+1970	32	12	Fortes e bóos;	w	none	5.0	1 4
+1971	32	12	Quezáis habitas nos verdes castros,	V	none	10.0	2 4 7 9
+1972	32	12	Genio dos nosos	x	none	5.0	1 4
+1973	32	12	Grandes avóos.	w	none	5.0	1 4
+1974	32	13	E pois no cárzle q' ó home encerra,	Y	none	10.0	2 4 7 9
+1975	32	13	Pracer non hacha,	0	none	5.0	2 3 4
+1976	32	13	Tregua ou solaz;	z	none	5.0	1 4
+1977	32	13	Detén un pouco,	x	none	5.0	2 3 4
+1978	32	13	Na escura terra,	y	none	5.0	2 4
+1979	32	13	O teu gracioso paso fugaz.	Z	none	10.0	2 4 6 9
+1980	32	14	E m' apreixando,	0	none	6.0	2 4
+1981	32	14	Dos teus garridos,	aa	none	5.0	2 4
+1982	32	14	Graciosos velos de ledo tul,	AB	none	10.0	2 4 7 9
+1983	32	14	Nos perderemos,	0	none	5.0	4
+1984	32	14	Do van collidos,	aa	none	5.0	2 4
+1985	32	14	Dos pátrios ceos no brando azul.	AB	none	10.0	2 4 7 9
+1986	33	1	San Benito de Coba de Lobo	0	none	10.0	3 6 9
+1987	33	1	Ten n 'o cume un penedo furado,	A	none	4.0	3 6 9
+1988	33	1	De tan rara virtude ortopédeca	0	none	11.0	2 3 6 9
+1989	33	1	Que é o asombro d'o mundo cristiano.	A	none	10.0	1 3 6 9
+1990	33	2	Cando nace un miniño tolleito	0	none	10.0	3 4 6 9
+1991	33	2	Seus parentes oférceno ó santo,	A	none	10.0	4 6 9
+1992	33	2	E mitido n'un queipo de vimio	0	none	10.0	3 6 9
+1993	33	2	Alá o levan, a festa en chegando.	A	none	10.0	2 3 6 9
+1994	33	3	Y-aos dous lados d'a boca d'a pena,	0	none	10.0	1 3 4 7 10
+1995	33	3	Que Ile colle d un lado á outro lado,	A	none	11.0	3 5 6 7 9
+1996	33	3	Din a nay y-a madriña d'o renco	B	none	11.0	1 3 6 9
+1997	33	3	Pol-a gorxa de pedra pasándo-o:	A	none	10.0	3 6 9
+1998	33	4	—Ten conta, santiño,	0	none	10.0	2 5
+1999	33	4	D'o meu tangaraño:	a	none	6.0	2 5
+2000	33	4	Doente ch'o deixo	b	none	6.0	2 5
+2001	33	4	Devólvemo sano.	a	none	6.0	2 5
+2002	33	5	Y-ésto dito tres veces arreo,	b	none	6.0	1 3 5 6 9
+2003	33	5	Sin refolgo tomar nin descanso,	A	none	10.0	3 6 9
+2004	33	5	O coitado d'o entangarañido	0	none	10.0	3 9
+2005	33	5	Queda xa desentangarañado.	A	none	10.0	1 3 9
+2006	33	6	San Benito de Coba de Lobo,	0	none	10.0	3 6 9
+2007	33	6	San Benito quirido, meu santo,	A	none	10.0	3 6 9
+2008	33	6	Tamen eu, probe vella achacosa,	0	none	10.0	2 3 4 6 9
+2009	33	6	Que xa tiven de fillos un fato,	A	none	10.0	2 3 6 8 9
+2010	33	7	Xorobados d'o corpo ou d'a y-alma	C	none	10.0	3 6 9
+2011	33	7	D'a concencia ou d'os membros baldados,	A	none	10.0	3 6 9
+2012	33	7	Tamen eu vin buscar mediciña	0	none	10.0	2 3 4 6 9
+2013	33	7	Pr'os meus nenos n'o voso santuario.	A	none	10.0	2 3 6 9
+2014	33	8	E despois de deixarvos n'as aras	C	none	10.0	3 6 9
+2015	33	8	Seis perniles de porco cebado,	A	none	10.0	1 3 6 9
+2016	33	8	Eu tamen, eu tamen, de fe chea,	0	none	10.0	1 3 4 6 8 9
+2017	33	8	Repitin aquel místico ensalmo:	A	none	10.0	3 5 6 9
+2018	33	9	—Señor San Benito,	0	none	10.0	2 5
+2019	33	9	Meus fillos vos trayo;	a	none	6.0	1 2 5
+2020	33	9	Doentel-os deixo,	d	none	6.0	2 5
+2021	33	9	Volvédemos sanos.	a	none	6.0	2 5
+2022	33	10	Por tres veces chorosa roguéivolo;	d	none	6.0	2 3 6 9
+2023	33	10	Todas tres sin me dar resultado,	A	none	10.0	1 3 6 9
+2024	33	10	Y-os meus nenos entangarañidos	0	none	10.0	2 3 9
+2025	33	10	Morren todos entangarañados.	A	none	10.0	1 3 9
+2026	33	11	Verbo ardente d'a gran Democracia,	0	none	10.0	1 3 6 9
+2027	33	11	Novo Cristo d'os povos escravos,	A	none	10.0	1 3 6 9
+2028	33	11	N'estes tempos nacido pra azoute	0	none	10.0	1 3 6 9
+2029	33	11	De verdugos, de reis é tiranos,	A	none	10.0	3 6 9
+2030	33	12	Tí, que á miña profunda miseria	0	none	10.0	1 3 6 9
+2031	33	12	Vés traguer o consolo agardado,	A	none	10.0	1 3 6 9
+2032	33	12	Sin cubiza de laude, seguro	0	none	10.0	3 6 9
+2033	33	12	De ben probe e mizquiño agasallo,	A	none	10.0	2 3 6 9
+2034	33	13	Quer con Dios teñas pauto, ou c'o Demo,	E	none	10.0	1 3 4 6 9
+2035	33	13	Tí serás dende agora o meu santo,	A	none	10.0	1 3 6 8 9
+2036	33	13	A quen diga, poñendo os meus fillos	0	none	10.0	3 6 9
+2037	33	13	Baixo ó teu proteutor patronado:	A	none	10.0	3 6 9
+2038	33	14	—Tribuno d'os servos.	E	none	10.0	2 5
+2039	33	14	Meus nenos che trayo;	a	none	6.0	2 5
+2040	33	14	Doentes ch'os deixo,	e	none	6.0	3 6 9
+2041	33	14	Devólvemos sanos.	a	none	6.0	2 5
+2042	33	15	Pois cecais que tan pronto Iles chegue	0	none	6.0	1 3 5 6 9
+2043	33	15	O calor meciñal d'o teu bafo,	A	none	10.0	3 6 8 9
+2044	33	15	Os meus nenos entangarañidos	F	none	10.0	2 3 9
+2045	33	15	Quedarán desentangarañados.	A	none	10.0	3 9
+2046	33	16	Todos éles naceron saniños	F	none	10.0	1 3 6 9
+2047	33	16	Cal repôlos en horto pechado.	A	none	10.0	3 6 9
+2048	33	16	Mais despois, non sey cómo, torcéronse	0	none	9.0	3 5 6 9
+2049	33	16	E tortiños están ¡mal pocados!	A	none	10.0	3 6 7 9
+2050	33	17	Este é crego d'entrambol-os remos	0	none	10.0	1 2 3 6 9
+2051	33	17	Aquel outro cacique d'o raño,	A	none	10.0	2 3 6 9
+2052	33	17	Este ten un Marat n'as costelas,	G	none	10.0	1 3 4 6 9
+2053	33	17	Dóise aquel d'un Sylock n'o espiñazo.	A	none	10.0	1 4 5 6 9
+2054	33	18	¡Troca en homes de ben estes mónstros,	0	none	10.0	1 3 6 7 9
+2055	33	18	Que nin mesmo que os viran meigallos:	A	none	10.0	3 6 9
+2056	33	18	N'unha gran xuventude d'estrelas	G	none	10.0	1 3 6 9
+2057	33	18	Esta gran xuventude de sapos!	A	none	10.0	1 3 6 9
+2058	33	19	¡Que logre un xiquera	G	none	10.0	2 3 5
+2059	33	19	D'os meus tangarañes!	a	none	6.0	2 5
+2060	33	19	Doentes ch'os deixo,	0	none	6.0	2 5
+2061	33	19	Devólvemos sanos.	a	none	6.0	2 5
+2062	33	20	Eu ben sey que por esta velliña,	0	none	6.0	1 2 3 6 9
+2063	33	20	Como queiras farás o milagro;	A	none	10.0	3 6 9
+2064	33	20	Y-os gallegos entangarañidos	0	none	10.0	3 9
+2065	33	20	Vivirán desentangarañados.	A	none	10.0	3 9
+2066	34	1	Baite noi-	a	none	10.0	1 3
+2067	34	1	te—Bay fuxin-	b	none	4.0	2 4
+2068	34	1	do—Vent' auro-	a	none	4.0	2 4
+2069	34	1	ra—Vent' abrin-	b	none	4.0	2 4
+2070	34	1	do—C' ó teu ros-	a	none	6.0	3 4
+2071	34	1	tro—Que sorrin-	b	none	4.0	4
+2072	34	1	do—A sombr' espanta!!!	c	none	6.0	2 4
+2073	34	2	Canta!...	c	none	2.0	1
+2074	34	2	Paxariño can-	d	none	6.0	3 5
+2075	34	2	ta—De pónliñ' en pón-	e	none	7.0	4 6
+2076	34	2	la—Qu' ó sol se levan-	d	none	5.0	3 6
+2077	34	2	ta—Pó-lo monte ver-	f	none	7.0	4 6
+2078	34	2	de—Pó-lo verde mon-	e	none	7.0	4 6
+2079	34	2	te—Alegrand' as hér-	f	none	7.0	4 6
+2080	34	2	vas—Alegrand' as fon-	e	none	7.0	4 6
+2081	34	2	tes!...	f	none	2.0	1
+2082	34	3	Canta, paxariño alegre,	g	none	8.0	1 5 7
+2083	34	3	Canta!	h	none	2.0	1
+2084	34	3	Canta porqu' ó millo medre,	g	none	7.0	1 5 7
+2085	34	3	Canta!	h	none	2.0	1
+2086	34	3	Canta por qu' á luz t' escoite	i	none	8.0	1 5 7
+2087	34	3	Canta!	h	none	2.0	1
+2088	34	3	Canta que fuxeu á noite.	i	none	7.0	1 4 6
+2089	34	4	Noite escura	j	none	4.0	1 3
+2090	34	4	Logo ven,	0	none	4.0	1 3
+2091	34	4	E moito dura	j	none	5.0	2 4
+2092	34	4	C' ó seu manto	k	none	5.0	2 3
+2093	34	4	De tristura,	j	none	4.0	3
+2094	34	4	Con meigallos	k	none	4.0	3
+2095	34	4	E temores,	l	none	4.0	3
+2096	34	4	Agoreira	0	none	4.0	3
+2097	34	4	De dolores,	l	none	4.0	3
+2098	34	4	Agarimo	0	none	4.0	3
+2099	34	4	De pesares.	0	none	4.0	3
+2100	34	4	Cubridora	m	none	4.0	3
+2101	34	4	En todo mal.	n	none	5.0	2 4
+2102	34	4	Sal!!...	n	none	2.0	1
+2103	34	5	Qu' auroriña	0	none	4.0	3
+2104	34	5	O ceu colora	m	none	5.0	2 4
+2105	34	5	C' uns arbóres	0	none	5.0	1 3
+2106	34	5	Que namora	m	none	4.0	3
+2107	34	5	C' un sembrante	0	none	5.0	1 3
+2108	34	5	D' ouro e prata	ñ	none	4.0	1 3
+2109	34	5	Teñidiño	o	none	4.0	3
+2110	34	5	D' escalrata.	ñ	none	4.0	3
+2111	34	5	C' uns vestidos	o	none	5.0	1 3
+2112	34	5	De diamante	q	none	4.0	3
+2113	34	5	Que lle borda	p	none	4.0	3
+2114	34	5	O sol amante	q	none	5.0	2 4
+2115	34	5	Antr' as ondas	p	none	4.0	3
+2116	34	6	De cristal.	r	none	4.0	3
+2117	34	6	Sal!...	r	none	2.0	1
+2118	34	6	Señora en todo mal,	r	none	7.0	2 4 6
+2119	34	6	Qu' ô sol	0	none	2.0	0 1
+2120	34	6	Xa brila	s	none	3.0	1 2
+2121	34	6	Nas cunchiñas do areal.	r	none	8.0	3 7
+2122	34	6	Qu' á luz	0	none	2.0	2
+2123	34	6	Do dia	s	none	3.0	2
+2124	34	6	Vist' á terra d' alegria,	s	none	7.0	1 3 6
+2125	34	6	Qu' ó sol	t	none	2.0	2
+2126	34	6	Derrete con amor á escarcha fria.	s	none	11.0	2 6 8 10
+2127	34	7	Branc' auro-	t	none	4.0	1 3
+2128	34	7	ra—Ven chegan-	u	none	4.0	2 4
+2129	34	7	do—Y âs porti-	0	none	4.0	4
+2130	34	7	ñas—Bay chaman-	u	none	4.0	2 4
+2131	34	7	do—D' os que dor-	t	none	5.0	4
+2132	34	7	men—Esperan-	u	none	4.0	4
+2133	34	7	do—O teu folgor!...	t	none	6.0	2 4
+2134	34	8	Cor...	t	none	2.0	1
+2135	34	8	D' alba hermosa	v	none	4.0	1 3
+2136	34	8	Lles estende	w	none	4.0	3
+2137	34	8	Nos vidriños	0	none	4.0	3
+2138	34	8	Cariñosa,	v	none	4.0	3
+2139	34	8	Dond' ó sol	x	none	4.0	3
+2140	34	8	Tamen suspende,	w	none	5.0	2 4
+2141	34	8	Cand' aló	x	none	4.0	3
+2142	34	8	No mar se tende	w	none	5.0	2 4
+2143	34	8	De fogáx	0	none	4.0	3
+2144	34	8	Larada viva	y	none	5.0	2 4
+2145	34	8	Dempois leve	w	none	4.0	2 3
+2146	34	8	Fuxitiva	y	none	4.0	3
+2147	34	8	Triste vago	0	none	4.0	1 3
+2148	34	8	Resprandor.	z	none	4.0	3
+2149	34	8	Cantor	z	none	3.0	2
+2150	34	8	D' os aires,	0	none	3.0	2
+2151	34	8	Paxariño alegre	aa	none	6.0	3 5
+2152	34	8	Canta,	0	none	2.0	1
+2153	34	8	Canta por qu' ó millo medre	aa	none	7.0	1 5 7
+2154	34	9	Cantor	ab	none	3.0	2
+2155	34	9	D' aurora	0	none	3.0	2
+2156	34	9	Alegre namorado	ac	none	7.0	2 6
+2157	34	9	As meniñas dille	0	none	6.0	3 5
+2158	34	9	Que xa sal ó sol dourado.	ac	none	8.0	2 3 5 7
+2159	34	10	Qu' ó gaiteiro	0	none	3.0	2
+2160	34	10	Ben lavado	ac	none	4.0	1 3
+2161	34	10	Ben vestido	0	none	4.0	1 3
+2162	34	10	Ben peitado,	ac	none	4.0	1 3
+2163	34	10	Da gaitiña	0	none	4.0	3
+2164	34	10	Acompañado	ac	none	5.0	4
+2165	34	10	A porta está!...	ad	none	5.0	2 4
+2166	34	10	Xá!...	ad	none	2.0	1
+2167	34	11	S' espricando	ac	none	4.0	3
+2168	34	11	Que t' esprica	ae	none	5.0	3
+2169	34	11	Repinica,	ae	none	4.0	3
+2170	34	11	Repinica,	ae	none	4.0	3
+2171	34	11	N' alborada	af	none	5.0	3
+2172	34	11	Ben amada	af	none	4.0	1 3
+2173	34	11	Das meniñas	ag	none	4.0	3
+2174	34	11	Cantadeiras,	ah	none	4.0	3
+2175	34	11	Bailadoras,	0	none	4.0	3
+2176	34	11	Rebuldeiras,	ah	none	4.0	3
+2177	34	11	D' as belliñas	ag	none	4.0	3
+2178	34	11	Alegriñas,	ag	none	4.0	3
+2179	34	11	D' as que saben	0	none	4.0	3
+2180	34	11	Ben ruar.	ai	none	3.0	1 3
+2181	34	12	Arriba!	aj	none	3.0	2
+2182	34	12	Todas, rapaciñas do lugar,	ai	none	10.0	1 5 9
+2183	34	12	Qu' ó sol	0	none	2.0	2
+2184	34	12	Y á aurora xa vos vén á dispertar:	ai	none	11.0	2 4 6 10
+2185	34	12	Arriba!	aj	none	3.0	2
+2186	34	12	Arriba toleirona mocidád!	ai	none	11.0	2 6 10
+2187	34	12	Qu' atru—	0	none	2.0	2
+2188	34	12	charemos—cantaremos ó ala... lá!!!..	ai	none	11.0	2 6 10

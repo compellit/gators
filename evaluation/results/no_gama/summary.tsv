@@ -1,0 +1,2 @@
+poems	lines	pairs	tp	fp	fn	precision	recall	f1	stanzas	stanzas_correct	stanzas_without_prediction	stanza_accuracy
+33	2188	8440	6764	149	1527	0.978446405323304	0.8158243878904836	0.8897658510918179	255	84	1	0.32941176470588235

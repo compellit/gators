@@ -8,10 +8,11 @@ version = "0.1.0"
 description = "Rhyme and stanza analysis of Galician poetry (GATORS, Galician Tool for Rhyme and Stanza)"
 readme = "README.md"
 requires-python = ">=3.10"
+# trasgo and gama-verse are not on PyPI yet: they are installed from GitHub.
 dependencies = [
     "pandas",
     "regex",
-    "trasgo",
+    "trasgo @ git+https://github.com/compellit/trasgo",
 ]
 authors = [
     { name = "Anxo Alonso Pérez" },
@@ -25,7 +26,7 @@ classifiers = [
 ]
 
 [project.optional-dependencies]
-gama = ["gama-verse"]
+gama = ["gama-verse @ git+https://github.com/compellit/gama"]
 test = ["pytest"]
 
 [project.scripts]

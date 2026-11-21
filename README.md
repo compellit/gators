@@ -1,262 +1,138 @@
-# rhyme-gl-wk
+# GATORS
 
-Utilities for assigning Galician rhyme labels and stanza-pattern metadata from
-preprocessed verse data.
+Galician Tool for Rhyme and Stanza.
 
-The main script is `rhyme.py`. It reads a TSV of verses, groups rows by poem and
-stanza, extracts rhyme tails from phonetic/syllabified text, detects assonant
-and consonant rhyme groups, chooses a final rhyme label per verse, and optionally
-scores stanza types using `data/stanza_patterns.json` and poem types using
-`data/poem_patterns.json`.
+gators-verse finds the rhymes of Galician poems and assigns verse, stanza and
+poem types. It transcribes each line with [trasgo](https://github.com/compellit/trasgo),
+takes the rhyme from the stressed vowel of the line's last word, groups lines
+into assonant and consonant rhymes, and scores each stanza and poem against
+the stanza and poem types defined in `src/gators_verse/data/`.
 
-## Repository layout
+Stanza and poem types depend on metre (an `abba` quatrain is a redondilla in
+octosyllables and a cuarteto in hendecasyllables), and rhyme detection is more
+accurate on normalized spelling. Both come from
+[gama-verse](https://github.com/compellit/gama), installed as an optional
+extra. **Without gama-verse and without metre in the input, stanza and poem
+types are mostly wrong** (see [Evaluation](#evaluation)): install
+`gators-verse[gama]` if you need them.
 
-```text
-rhyme.py      main rhyme-analysis command
-src/          transcription and model-training modules
-scripts/      evaluation and workflow entry points
-data/         stanza and poem pattern definitions
-models/       trained models and their held-out test sets
-evaluation/   evaluation corpora and generated reports
-docs/         scoring and evaluation documentation
-iaa/          inter-annotator agreement tooling and reports
-wk/           legacy research utilities
-```
+## Installation
 
-Bundled commands resolve repository files relative to their own location, so
-they can be run from any working directory. Input and output paths remain
-overridable through command-line options.
-
-## Requirements
-
-Install the Python dependencies used by `rhyme.py`:
+trasgo and gama-verse are not on PyPI yet, so install them from GitHub first:
 
 ```bash
-pip install pandas regex
+pip install git+https://github.com/compellit/trasgo
+pip install git+https://github.com/compellit/gama       # optional, see above
+gama-verse-download                                      # gama-verse's data files
+
+git clone https://github.com/compellit/gators
+cd gators
+pip install ".[gama]"            # or: pip install . (without gama-verse)
 ```
 
-Some research utilities under `src/` additionally require `nltk`,
-`rhymetagger`, Cotovia, or the sibling Silaba project. Set `SILABA_GL_DIR` when
-Silaba is not located beside this repository. The optional Gumper preprocessor
-can be selected with `--gumper-preprocessor-path` or
-`GUMPER_PREPROCESSOR_PATH`.
+Python 3.10 or later is required.
 
-Run the bundled Silaba evaluation workflow with:
+## Usage
+
+### Command line
+
+A poem in plain text, one verse per line, with a blank line between stanzas:
 
 ```bash
-./scripts/run_silaba_evaluation.sh
+gators-verse poem.txt
+gators-verse poem.txt -o poem.tsv
+cat poem.txt | gators-verse
 ```
 
-Set `RHYME_EVALUATION_DIR` to write those evaluation artifacts elsewhere.
+Several poems, or poems with their metre, go in a table (a `.tsv` file) with
+one row per verse:
 
-## Input Data
+| Column | Content | Required |
+|---|---|---|
+| `poem_id` | poem identifier | yes |
+| `stanza_n` | stanza number; consecutive lines with the same number form a stanza | yes |
+| `text` | the verse | yes |
+| `metrical_syllables` | syllable count, e.g. `8` | no |
+| `stressed_syllables` | stressed syllables, e.g. `3 7` | no |
 
-By default, `rhyme.py` reads:
+Other column names can be given with `--poem-column`, `--stanza-column`,
+`--text-column`, `--syllable-column` and `--stress-column`; other columns are
+copied to the output.
 
-```text
-evaluation/gl-prepro-35k-silaba.tsv
+With gama-verse installed, gators-verse normalizes the spelling of each poem
+and, if the input has no metre columns, scans it. `--no-gama`
+turns this off.
+
+The syllable count from gama is used for stanza and poem types. Rhyme does not use gama's stress patterns: the stressed vowel where the rhyme
+starts comes from trasgo's transcription.
+
+`--stanza-scores` and `--poem-scores` write the score of every stanza and poem
+type considered, to see why a type was chosen.
+
+### Output
+
+A TSV with the input columns and:
+
+| Column | Content |
+|---|---|
+| `normalized_text` | the verse after gama-verse's spelling normalization (with gama-verse only) |
+| `transcription` | trasgo's transcription, used for rhyme |
+| `rhyme` | rhyme letter, uppercase for lines of 9 syllables or more (arte maior) when the metre is known; `-` for unrhymed lines |
+| `rhyme_ending` | the transcribed ending, from the stressed vowel of the last word |
+| `rhyme_vowels` | its stressed and last vowels, compared for assonance |
+| `verse_type` | experimental: verse types defined by stress positions (gaita galega, endecasílabo types), when the stresses match exactly; not evaluated |
+| `stanza_rhyme_pattern` | the stanza's rhyme scheme, e.g. `abba` |
+| `stanza_expected_pattern` | the scheme of the chosen stanza type |
+| `stanza_type`, `stanza_subtype` | stanza type and subtype, with their `_probability` |
+| `poem_type`, `poem_subtype` | poem type and subtype, with their `_probability` |
+
+How the stanza and poem types are scored is described in
+[docs/STANZA_PATTERN_SCORING.md](docs/STANZA_PATTERN_SCORING.md) and
+[docs/POEM_TYPE_SCORING.md](docs/POEM_TYPE_SCORING.md).
+
+### Python
+
+```python
+import pandas as pd
+from gators_verse import annotate, transcribe
+
+poem = pd.DataFrame({
+    "poem_id": 1,
+    "stanza_n": 1,
+    "text": ["-Ña muller, pilla esa roca", "e déixate de ir á misa,",
+             "pensa que non tés camisa", "e fía unha mazaroca."],
+    "metrical_syllables": [8, 8, 8, 8],
+    "stressed_syllables": ["3 4 5 7", "2 7", "1 4 5 7", "2 3 7"],
+})
+poem["transcription"] = transcribe(poem["text"].tolist())
+results, stanza_scores, poem_scores = annotate(poem)
+results[["text", "rhyme", "stanza_type"]]   # a b b a, redondilla
 ```
 
-The default column names are:
-
-```text
-poem_id       poem identifier
-stanza_n      stanza identifier inside the poem
-verse_text    original verse text
-phSilaba      phonetic/syllabified representation
-rhyme         optional gold rhyme label, copied to the output when present
-```
-
-The script can also use a syllable-count column for metre-aware stanza scoring.
-If `--syllable-column` is not supplied, it tries these names in order:
-
-```text
-nbSyll
-nbSG
-syllables
-num_silabas
-```
-
-The script can also use a rhythmic-accent column for verse-type tagging. If
-`--rhythm-column` is not supplied, it tries these names in order:
-
-```text
-gprMet
-meterNbr
-gprMetNoA
-```
-
-Verse-type tags are assigned only for perfect rhythmic matches. For
-`gaita_galega` lines shorter than 10 syllables, the tag is kept only when the
-line can be assigned to a non-overlapping adjacent pair in the same stanza where
-both lines are shorter than 10 syllables and match a `gaita_galega` rhythm.
-
-Poem-type scoring uses `data/poem_patterns.json` by default. To use another
-file, pass:
-
-```bash
---poem-patterns-path path/to/poem_patterns.json
-```
-
-Poem types are output only when the best poem-type probability is at least
-`0.8` by default. Change this with:
-
-```bash
---poem-type-min-probability 0.75
-```
-
-## Running
-
-From this directory:
-
-```bash
-python rhyme.py
-```
-
-This writes the default output:
-
-```text
-evaluation/test_results_rhyme.tsv
-```
-
-To choose explicit input and output paths:
-
-```bash
-python rhyme.py \
-  --input-path evaluation/gl-prepro-35k-silaba.tsv \
-  --results-path evaluation/test_results_rhyme.tsv
-```
-
-To process only selected poems:
-
-```bash
-python rhyme.py --poem-ids 1,2,3
-```
-
-To use non-default column names:
-
-```bash
-python rhyme.py \
-  --input-path my_verses.tsv \
-  --poem-column workId \
-  --stanza-column stanzaNbr \
-  --verse-column gumperLine \
-  --ph-column phSilaba \
-  --rhyme-column rhyme \
-  --results-path my_rhyme_results.tsv
-```
-
-## Stanza Patterns
-
-`rhyme.py` loads stanza definitions from:
-
-```text
-data/stanza_patterns.json
-```
-
-These definitions help with two tasks:
-
-- disambiguating assonant vs. consonant rhyme when both are plausible
-- assigning stanza fields such as `stanza_type`, `stanza_subtype`, and their
-  probabilities
-
-Use a different pattern file with:
-
-```bash
-python rhyme.py --stanza-patterns-path data/stanza_patterns.json
-```
-
-Disable predefined stanza-pattern evidence by pointing to a missing or empty
-path.
-
-The stanza-pattern scoring design is documented in:
-
-[`docs/STANZA_PATTERN_SCORING.md`](docs/STANZA_PATTERN_SCORING.md)
-
-## Output
-
-The output TSV keeps the poem, stanza, verse text, and optional gold rhyme
-column, then adds predicted rhyme and stanza fields.
-
-Important output columns include:
-
-```text
-letter                         final rhyme label for the verse
-rima                           extracted rhyme tail
-vogais                         vowel signature used for assonance
-asonante                       assonant group id or false/blank
-consonante                     consonant group id or false/blank
-final                          selected internal final group
-final_probability              probability used when resolving uncertain groups
-chosen_source                  asonante or consonante
-asonante_pattern               candidate stanza rhyme pattern from assonance
-consonante_pattern             candidate stanza rhyme pattern from consonance
-asonante_probability           combined assonant probability
-consonante_probability         combined consonant probability
-verse_type                     rhythmic verse type, only for perfect matches
-observed_rhythm                observed rhythmic accents from gprMet/meterNbr
-expected_rhythm                required and optional accents for verse_type
-retrouso                       repeated verse/refrain marker
-poem_type                      selected poem type
-poem_type_probability          poem type probability
-poem_subtype                   selected poem subtype, when any
-poem_subtype_probability       poem subtype probability
-poem_observed_pattern          full-poem observed rhyme pattern
-poem_expected_pattern          expected full-poem rhyme pattern
-poem_pattern_similarity        poem rhyme-pattern component
-poem_metre_similarity          poem metre component
-poem_rhyme_type_similarity     poem rhyme-type component
-poem_stanza_type_similarity    poem stanza-type component
-poem_refrain_similarity        poem refrain/retrouso component
-poem_stanza_length_similarity  poem stanza-length component
-stanza_type                    selected broad stanza type
-stanza_type_probability        local stanza probability
-stanza_type_probability_poem   stanza probability taking both local and poem-level support into account
-stanza_subtype                 selected subtype, when any
-observed_pattern               final observed stanza rhyme pattern
-expected_pattern               best matching predefined pattern
-observed_metre                 observed syllable counts when available
-expected_metre                 expected metre from the selected pattern entry
-pattern_similarity             rhyme-pattern similarity component
-metre_similarity               metre similarity component
-rhyme_type_similarity          assonant/consonant type similarity component
-```
-
-`letter` is usually the column to use as the predicted rhyme tag in downstream
-evaluation or interfaces. Unrhymed lines are written as `-`.
+`transcribe()` takes the normalized lines as a second argument, if you have them.
 
 ## Evaluation
 
-See [`docs/EVALUATION.md`](docs/EVALUATION.md) for the complete metric definitions,
-formulas, stanza-scoring procedure, output schemas, and interpretation notes.
+On the test corpus (33 poems, 2,188 lines, 255 stanzas with a gold stanza
+type), with `evaluation/run_all.sh`:
 
-Use `scripts/evaluate_rhyme_tags.py` to compare predicted labels against a gold column.
-By default it uses `letter` as the prediction column and chooses `gold` or
-`rhyme` as the gold column.
+| Setting | Rhyme F1 (pairwise) | Stanza type accuracy |
+|---|---|---|
+| gama-verse normalization, gold metre | 98.14% | 96.47% (246) |
+| gama-verse normalization and metre (end to end) | 98.13% | 96.86% (247) |
+| without gama-verse, no metre | 88.98% | 32.94% (84) |
 
-Example:
+See [docs/EVALUATION.md](docs/EVALUATION.md) for the metrics and the settings,
+and [iaa/README.md](iaa/README.md) for the agreement between the two rhyme
+annotators.
+
+## Tests
 
 ```bash
-python scripts/evaluate_rhyme_tags.py \
-  evaluation/test_results_rhyme.tsv \
-  --pred-column letter \
-  --gold-column rhyme \
-  --group-column poem_id \
-  --text-column lines \
-  --pairs-path evaluation/rhyme_pairs.tsv \
-  --summary-path evaluation/summary.tsv
+pip install ".[test]"
+pytest
 ```
 
-The evaluator computes pairwise same-rhyme metrics inside each poem or requested
-group. This is useful because rhyme labels are arbitrary within a poem: what
-matters is whether two lines are predicted to rhyme with each other.
+## Authors
 
-When `stanzaTypeNarrow` is present, the evaluator also reports exact stanza-type
-accuracy once per stanza and writes per-stanza comparisons to `stanzas.tsv`
-beside `--pairs-path` by default. The stanza file includes `stanza_match`
-and `subtype_match` columns with `True` or `False` values, so broad type
-and subtype matches can be filtered separately. Stanzas whose gold label is blank,
-`none`, `null`, `nan`, `0`, or `-` are skipped rather than counted as errors.
-By default, the evaluator checks the gold stanza against both `stanza_type` and
-`stanza_subtype`. Use `--stanzas-path`, `--stanza-gold-column`,
-`--stanza-pred-column`, or `--stanza-column` to override these defaults.
+Anxo Alonso Pérez and Pablo Ruiz Fabo.

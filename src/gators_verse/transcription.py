@@ -37,11 +37,11 @@ def merge_tokens(tokens):
     return text.strip()
 
 
-# Words stressed on the last syllable whose spelling in the development
-# corpus (gl-prepro-35k, about 38,500 lines; not the test corpus) does not
-# show it, so trasgo stresses the penultimate ("marfin" read as
-# "márfin"). Like WRONG_ACCENT_WORDS, this list does not affect the test
-# corpus, whose only listed words are written with their accent.
+# Words stressed on the last syllable whose spelling does not show it, so
+# trasgo stresses the penultimate ("marfin" read as "márfin"). Found by
+# reading the output on texts outside the test corpus; like WRONG_ACCENT_WORDS,
+# this list does not affect the test corpus, whose only listed words are
+# written with their accent.
 # Neither normalization nor rhyme_text() adds the accent; checked in context
 # against the rhyme. Some forms stay out: "Verin" and "Crispin" in Garcia
 # Ferreiro's Follas are deliberately paroxytone, set against "Verín" and
@@ -148,7 +148,7 @@ ACCENT_MARKS = {"\u0300", "\u0301", "\u0302", "\u0308"}
 FINAL_WORD_RE = re.compile(r"[^\W\d_]+(?=[^\w]*$)")
 VOWEL_GROUP_RE = re.compile(r"[aeiouáéíóúàèìòùâêîôûäëïöü]+")
 # Nouns that normalization reads as a verb plus clitic ("escríbano"), found
-# in the development corpus; none ends a line of the test corpus.
+# in texts outside the test corpus; none ends a line of the test corpus.
 WRONG_ACCENT_WORDS = {"escribano", "escribanos", "sobrana",
                       "rosales", "castelas", "paletos", "ponteareas",
                       "raxas", "trives", "rispeta", "rispeto"}

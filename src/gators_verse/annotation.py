@@ -20,13 +20,13 @@ OUTPUT_COLUMNS = {
     "stanza_rhyme_pattern": "observed_pattern",
     "stanza_expected_pattern": "expected_pattern",
     "stanza_type": "stanza_type",
-    "stanza_type_probability": "stanza_type_probability",
+    "stanza_type_score": "stanza_type_score",
     "stanza_subtype": "stanza_subtype",
-    "stanza_subtype_probability": "stanza_subtype_probability",
+    "stanza_subtype_score": "stanza_subtype_score",
     "poem_type": "poem_type",
-    "poem_type_probability": "poem_type_probability",
+    "poem_type_score": "poem_type_score",
     "poem_subtype": "poem_subtype",
-    "poem_subtype_probability": "poem_subtype_probability",
+    "poem_subtype_score": "poem_subtype_score",
 }
 # Rhyme letters are uppercase for lines of arte maior (9 syllables or more),
 # as is usual in metrics and in the GAMA interface (which uppercases lines
@@ -81,13 +81,13 @@ def make_poem_data(poem, stanza_column, text_column, transcription_column, sylla
             "observed_pattern": None,
             "expected_pattern": None,
             "stanza_type": None,
-            "stanza_type_probability": None,
+            "stanza_type_score": None,
             "stanza_subtype": None,
-            "stanza_subtype_probability": None,
+            "stanza_subtype_score": None,
             "poem_type": None,
-            "poem_type_probability": None,
+            "poem_type_score": None,
             "poem_subtype": None,
-            "poem_subtype_probability": None,
+            "poem_subtype_score": None,
         }
     return poem_data
 

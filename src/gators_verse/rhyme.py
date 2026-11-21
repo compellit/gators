@@ -21,7 +21,7 @@ from .patterns import (
     stanza_pattern_similarity,
 )
 
-PROBABILITY_TIE_TOLERANCE = 1e-12
+SCORE_TIE_TOLERANCE = 1e-12
 
 
 def rhyme_ending(transcription):
@@ -204,7 +204,7 @@ def pattern_windows(pattern, max_stanza_size=8, window_size=6):
     ]
 
 
-def pattern_probability(candidate, patterns, total_patterns):
+def poem_pattern_score(candidate, patterns, total_patterns):
     if total_patterns == 0:
         return 0
 
@@ -218,8 +218,8 @@ def pattern_probability(candidate, patterns, total_patterns):
             if len(candidate_window) != len(reference):
                 continue
 
-            pattern_probability = count / total_patterns
-            window_score += pattern_similarity(candidate_window, reference) * pattern_probability
+            frequency = count / total_patterns
+            window_score += pattern_similarity(candidate_window, reference) * frequency
 
         candidate_score += window_score
 
@@ -257,7 +257,7 @@ def candidate_observed_pair_data(stanza, observed_pattern, source_key):
     return pairs
 
 
-def predefined_pattern_probability(stanza, observed_pattern, source_key, stanza_patterns):
+def predefined_pattern_score(stanza, observed_pattern, source_key, stanza_patterns):
     if not stanza_patterns:
         return None
 
@@ -319,7 +319,7 @@ def more_than_half_complete(groups):
     return len(complete_groups) > len(groups) / 2
 
 
-def probability_penalties(consonante_groups):
+def score_penalties(consonante_groups):
     if more_than_half_complete(consonante_groups):
         return True, False
 
@@ -331,8 +331,8 @@ def choose_final_from_patterns(
     patterns,
     total_patterns,
     stanza_patterns,
-    halve_asonante_probability=False,
-    halve_consonante_probability=False,
+    halve_asonante_score=False,
+    halve_consonante_score=False,
 ):
     stanzas = get_stanzas(poem_data)
 
@@ -356,66 +356,66 @@ def choose_final_from_patterns(
 
         asonante_pattern = candidate_pattern(stanza, "asonante")
         consonante_pattern = candidate_pattern(stanza, "consonante")
-        asonante_probability_raw = pattern_probability(asonante_pattern, patterns, total_patterns)
-        consonante_probability_raw = pattern_probability(consonante_pattern, patterns, total_patterns)
-        asonante_probability = asonante_probability_raw
-        consonante_probability = consonante_probability_raw
-        if halve_asonante_probability:
-            asonante_probability /= 2
-        if halve_consonante_probability:
-            consonante_probability /= 2
-        asonante_predefined_probability = predefined_pattern_probability(
+        asonante_score_raw = poem_pattern_score(asonante_pattern, patterns, total_patterns)
+        consonante_score_raw = poem_pattern_score(consonante_pattern, patterns, total_patterns)
+        asonante_score = asonante_score_raw
+        consonante_score = consonante_score_raw
+        if halve_asonante_score:
+            asonante_score /= 2
+        if halve_consonante_score:
+            consonante_score /= 2
+        asonante_predefined_score = predefined_pattern_score(
             stanza,
             asonante_pattern,
             "asonante",
             stanza_patterns,
         )
-        consonante_predefined_probability = predefined_pattern_probability(
+        consonante_predefined_score = predefined_pattern_score(
             stanza,
             consonante_pattern,
             "consonante",
             stanza_patterns,
         )
-        asonante_probability = average_available(
-            asonante_probability,
-            asonante_predefined_probability,
+        asonante_score = average_available(
+            asonante_score,
+            asonante_predefined_score,
         )
-        consonante_probability = average_available(
-            consonante_probability,
-            consonante_predefined_probability,
-        )
-
-        probabilities_tied = (
-            abs(asonante_probability - consonante_probability)
-            <= PROBABILITY_TIE_TOLERANCE
+        consonante_score = average_available(
+            consonante_score,
+            consonante_predefined_score,
         )
 
-        if probabilities_tied and unresolved_lines_false_in_both(stanza):
+        scores_tied = (
+            abs(asonante_score - consonante_score)
+            <= SCORE_TIE_TOLERANCE
+        )
+
+        if scores_tied and unresolved_lines_false_in_both(stanza):
             source_key = "asonante"
-            probability = asonante_probability
-        elif asonante_probability == consonante_probability == 0:
+            score = asonante_score
+        elif asonante_score == consonante_score == 0:
             source_key = "asonante"
-            probability = asonante_probability
-        elif consonante_probability >= asonante_probability:
+            score = asonante_score
+        elif consonante_score >= asonante_score:
             source_key = "consonante"
-            probability = consonante_probability
+            score = consonante_score
         else:
             source_key = "asonante"
-            probability = asonante_probability
+            score = asonante_score
 
         for _, data in stanza:
             data["asonante_pattern"] = asonante_pattern
             data["consonante_pattern"] = consonante_pattern
-            data["asonante_probability_raw"] = asonante_probability_raw
-            data["consonante_probability_raw"] = consonante_probability_raw
-            data["asonante_predefined_probability"] = asonante_predefined_probability
-            data["consonante_predefined_probability"] = consonante_predefined_probability
-            data["asonante_probability"] = asonante_probability
-            data["consonante_probability"] = consonante_probability
+            data["asonante_score_raw"] = asonante_score_raw
+            data["consonante_score_raw"] = consonante_score_raw
+            data["asonante_predefined_score"] = asonante_predefined_score
+            data["consonante_predefined_score"] = consonante_predefined_score
+            data["asonante_score"] = asonante_score
+            data["consonante_score"] = consonante_score
             data["chosen_source"] = source_key
             if data["final"] is False:
                 data["final"] = data[source_key]
-                data["final_probability"] = probability
+                data["final_score"] = score
 
 
 def renumber_final(poem_data, max_gap=4):
@@ -534,6 +534,6 @@ def assign_rhymes(poem_data, stanza_patterns):
         patterns,
         total_patterns,
         stanza_patterns,
-        *probability_penalties(consonante_groups),
+        *score_penalties(consonante_groups),
     )
     add_final_letters(poem_data, renumber_final(poem_data))

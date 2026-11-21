@@ -2,7 +2,7 @@
 
 The whole poem is scored against every entry of poem_patterns.json (rhyme
 pattern, meter, rhyme type, stanza types, refrain, stanza lengths, verse and
-stanza counts). Without a type scoring at least POEM_TYPE_MIN_PROBABILITY,
+stanza counts). Without a type scoring at least POEM_TYPE_MIN_SCORE,
 a poem whose stanzas all share a type is labelled after it ("Serie de
 cuarteto"). See docs/STANZA_AND_POEM_TYPES.md.
 """
@@ -22,7 +22,7 @@ from .patterns import (
     stanza_pattern_similarity,
 )
 
-POEM_TYPE_MIN_PROBABILITY = 0.8
+POEM_TYPE_MIN_SCORE = 0.8
 
 
 def normalize_refrain_text(value):
@@ -200,7 +200,7 @@ def poem_refrain_similarity(poem_lines, entry):
     if compared == 0:
         return None
 
-    score = matches / compared
+    result = matches / compared
     if refrain.get("repeat_across_stanzas"):
         repeated_scores = []
         for texts in texts_by_position.values():
@@ -210,9 +210,9 @@ def poem_refrain_similarity(poem_lines, entry):
             else:
                 most_common = max(texts.count(text) for text in set(texts))
                 repeated_scores.append(most_common / len(texts))
-        score = min(score, sum(repeated_scores) / len(repeated_scores))
+        result = min(result, sum(repeated_scores) / len(repeated_scores))
 
-    return score
+    return result
 
 
 def score_poem_entry(poem_data, entry):
@@ -265,21 +265,21 @@ def score_poem_entry(poem_data, entry):
             "stanza_type": stanza_type_score,
         }
         if entry.get("refrain", {}).get("required") and refrain_score != 1:
-            probability = 0
+            score = 0
         elif entry.get("stanza_lengths") and stanza_length_score != 1:
-            probability = 0
+            score = 0
         elif any(
             component_scores.get(name) != 1
             for name in entry.get("required_components", ())
         ):
-            # Hard requirement: a missing (None) or partial score
+            # Hard requirement: a missing (None) or partial result
             # rules the type out, so that perfect counts cannot
             # outweigh e.g. a wrong meter (8-8-8 tercets as haiku).
-            probability = 0
+            score = 0
         else:
             components = [
-                score
-                for score in (
+                result
+                for result in (
                     pattern_score,
                     meter_score,
                     rhyme_score,
@@ -289,13 +289,13 @@ def score_poem_entry(poem_data, entry):
                     verse_count_score,
                     stanza_count_score,
                 )
-                if score is not None
+                if result is not None
             ]
-            probability = sum(components) / len(components) if components else 1
+            score = sum(components) / len(components) if components else 1
 
         result = {
             "entry": entry,
-            "probability": probability,
+            "score": score,
             "observed_pattern": observed_pattern,
             "expected_pattern": expected_pattern,
             "observed_meter": observed_meter,
@@ -309,7 +309,7 @@ def score_poem_entry(poem_data, entry):
             "verse_count_similarity": verse_count_score,
             "stanza_count_similarity": stanza_count_score,
         }
-        if best is None or result["probability"] > best["probability"]:
+        if best is None or result["score"] > best["score"]:
             best = result
 
     return best
@@ -318,11 +318,11 @@ def score_poem_entry(poem_data, entry):
 def annotate_poem_type(poem_data, poem_patterns):
     poem_score_rows = []
 
-    def record_poem_scores(scores, selected_labels=()):
+    def record_poem_scores(results, selected_labels=()):
         selected_labels = set(selected_labels)
         stanza_count = len(get_stanzas(poem_data))
-        for score in scores:
-            entry = score["entry"]
+        for result in results:
+            entry = result["entry"]
             poem_score_rows.append(
                 {
                     "verse_count": len(poem_data),
@@ -330,20 +330,20 @@ def annotate_poem_type(poem_data, poem_patterns):
                     "poem_type": entry["poem_type"],
                     "parent_type": entry.get("parent_type"),
                     "refines_type": entry.get("refines_type"),
-                    "probability": score["probability"],
-                    "selection_threshold": POEM_TYPE_MIN_PROBABILITY,
-                    "pattern_similarity": score["pattern_similarity"],
-                    "meter_similarity": score["meter_similarity"],
-                    "rhyme_type_similarity": score["rhyme_type_similarity"],
-                    "stanza_type_similarity": score["stanza_type_similarity"],
-                    "refrain_similarity": score["refrain_similarity"],
-                    "stanza_length_similarity": score["stanza_length_similarity"],
-                    "verse_count_similarity": score["verse_count_similarity"],
-                    "stanza_count_similarity": score["stanza_count_similarity"],
-                    "observed_pattern": score["observed_pattern"],
-                    "expected_pattern": score["expected_pattern"],
-                    "observed_meter": score["observed_meter"],
-                    "expected_meter": score["expected_meter"],
+                    "score": result["score"],
+                    "selection_threshold": POEM_TYPE_MIN_SCORE,
+                    "pattern_similarity": result["pattern_similarity"],
+                    "meter_similarity": result["meter_similarity"],
+                    "rhyme_type_similarity": result["rhyme_type_similarity"],
+                    "stanza_type_similarity": result["stanza_type_similarity"],
+                    "refrain_similarity": result["refrain_similarity"],
+                    "stanza_length_similarity": result["stanza_length_similarity"],
+                    "verse_count_similarity": result["verse_count_similarity"],
+                    "stanza_count_similarity": result["stanza_count_similarity"],
+                    "observed_pattern": result["observed_pattern"],
+                    "expected_pattern": result["expected_pattern"],
+                    "observed_meter": result["observed_meter"],
+                    "expected_meter": result["expected_meter"],
                     "selected": entry["poem_type"] in selected_labels,
                 }
             )
@@ -379,91 +379,91 @@ def annotate_poem_type(poem_data, poem_patterns):
         annotate_fallback_type()
         return poem_score_rows
 
-    scores = [
+    results = [
         score_poem_entry(poem_data, entry)
         for entry in poem_patterns
     ]
-    scores = [score for score in scores if score is not None]
-    if not scores:
+    results = [result for result in results if result is not None]
+    if not results:
         annotate_fallback_type()
         return poem_score_rows
 
     def best_poem_entry(poem_type):
         candidates = [
-            score
-            for score in scores
-            if score["entry"].get("poem_type") == poem_type
-            and not score["entry"].get("parent_type")
-            and not score["entry"].get("refines_type")
+            result
+            for result in results
+            if result["entry"].get("poem_type") == poem_type
+            and not result["entry"].get("parent_type")
+            and not result["entry"].get("refines_type")
         ]
         if not candidates:
             return None
-        return max(candidates, key=lambda score: score["probability"])
+        return max(candidates, key=lambda result: result["score"])
 
     def best_child(parent_type, relation_key):
         candidates = [
-            score
-            for score in scores
-            if relation_matches(score["entry"], relation_key, parent_type)
+            result
+            for result in results
+            if relation_matches(result["entry"], relation_key, parent_type)
         ]
         if not candidates:
             return None
-        best = max(candidates, key=lambda score: score["probability"])
-        if best["probability"] >= POEM_TYPE_MIN_PROBABILITY:
+        best = max(candidates, key=lambda result: result["score"])
+        if best["score"] >= POEM_TYPE_MIN_SCORE:
             return best
         return None
 
-    winner = max(scores, key=lambda score: score["probability"])
+    winner = max(results, key=lambda result: result["score"])
     entry = winner["entry"]
     poem_type = entry["poem_type"]
-    probability = winner["probability"]
-    selected_probability = winner["probability"]
+    score = winner["score"]
+    selected_score = winner["score"]
     poem_subtype = None
-    poem_subtype_probability = None
+    poem_subtype_score = None
 
     if entry.get("parent_type"):
         parent_score = best_poem_entry(entry["parent_type"])
         poem_type = entry["parent_type"]
-        probability = (
-            parent_score["probability"]
+        score = (
+            parent_score["score"]
             if parent_score
-            else winner["probability"]
+            else winner["score"]
         )
         poem_subtype = entry["poem_type"]
-        poem_subtype_probability = winner["probability"]
+        poem_subtype_score = winner["score"]
     else:
         subtype = best_child(poem_type, "parent_type")
         if subtype:
             poem_subtype = subtype["entry"]["poem_type"]
-            poem_subtype_probability = subtype["probability"]
+            poem_subtype_score = subtype["score"]
 
     refinement = best_child(poem_type, "refines_type")
     if refinement:
         winner = refinement
         entry = winner["entry"]
         poem_type = entry["poem_type"]
-        probability = winner["probability"]
-        selected_probability = winner["probability"]
+        score = winner["score"]
+        selected_score = winner["score"]
         poem_subtype = None
-        poem_subtype_probability = None
+        poem_subtype_score = None
         subtype = best_child(poem_type, "parent_type")
         if subtype:
             poem_subtype = subtype["entry"]["poem_type"]
-            poem_subtype_probability = subtype["probability"]
+            poem_subtype_score = subtype["score"]
     elif entry.get("refines_type"):
         poem_type = entry["poem_type"]
-        probability = winner["probability"]
-        selected_probability = winner["probability"]
+        score = winner["score"]
+        selected_score = winner["score"]
         poem_subtype = None
-        poem_subtype_probability = None
+        poem_subtype_score = None
 
-    if selected_probability < POEM_TYPE_MIN_PROBABILITY:
-        record_poem_scores(scores)
+    if selected_score < POEM_TYPE_MIN_SCORE:
+        record_poem_scores(results)
         annotate_fallback_type()
         return poem_score_rows
 
     record_poem_scores(
-        scores,
+        results,
         [
             label
             for label in (poem_type, poem_subtype)
@@ -473,9 +473,9 @@ def annotate_poem_type(poem_data, poem_patterns):
     forced_stanza_type = entry.get("set_stanza_type")
     for data in poem_data.values():
         data["poem_type"] = poem_type
-        data["poem_type_probability"] = probability
+        data["poem_type_score"] = score
         data["poem_subtype"] = poem_subtype
-        data["poem_subtype_probability"] = poem_subtype_probability
+        data["poem_subtype_score"] = poem_subtype_score
         data["poem_expected_pattern"] = winner["expected_pattern"]
         data["poem_observed_pattern"] = winner["observed_pattern"]
         data["poem_pattern_similarity"] = winner["pattern_similarity"]
@@ -488,10 +488,10 @@ def annotate_poem_type(poem_data, poem_patterns):
         data["poem_stanza_count_similarity"] = winner["stanza_count_similarity"]
         if forced_stanza_type:
             data["stanza_type"] = forced_stanza_type
-            data["stanza_type_probability"] = probability
-            data["stanza_type_probability_poem"] = probability
+            data["stanza_type_score"] = score
+            data["stanza_type_score_poem"] = score
             data["stanza_subtype"] = None
-            data["stanza_subtype_probability"] = None
-            data["stanza_subtype_probability_poem"] = None
+            data["stanza_subtype_score"] = None
+            data["stanza_subtype_score_poem"] = None
 
     return poem_score_rows

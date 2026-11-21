@@ -38,10 +38,9 @@ def merge_tokens(tokens):
 
 
 # Words stressed on the last syllable whose spelling does not show it, so
-# trasgo stresses the penultimate ("marfin" read as "márfin"). Found by
-# reading the output on texts outside the test corpus; like WRONG_ACCENT_WORDS,
-# this list does not affect the test corpus, whose only listed words are
-# written with their accent.
+# trasgo stresses the penultimate ("marfin" read as "márfin"). None of these
+# words, nor of WRONG_ACCENT_WORDS, occurs unaccented in the test corpus, so
+# neither list affects the evaluation.
 # Neither normalization nor rhyme_text() adds the accent; checked in context
 # against the rhyme. Some forms stay out: "Verin" and "Crispin" in Garcia
 # Ferreiro's Follas are deliberately paroxytone, set against "Verín" and
@@ -147,8 +146,7 @@ def prepro_text(text):
 ACCENT_MARKS = {"\u0300", "\u0301", "\u0302", "\u0308"}
 FINAL_WORD_RE = re.compile(r"[^\W\d_]+(?=[^\w]*$)")
 VOWEL_GROUP_RE = re.compile(r"[aeiouáéíóúàèìòùâêîôûäëïöü]+")
-# Nouns that normalization reads as a verb plus clitic ("escríbano"), found
-# in texts outside the test corpus; none ends a line of the test corpus.
+# Nouns that normalization reads as a verb plus clitic ("escríbano").
 WRONG_ACCENT_WORDS = {"escribano", "escribanos", "sobrana",
                       "rosales", "castelas", "paletos", "ponteareas",
                       "raxas", "trives", "rispeta", "rispeto"}

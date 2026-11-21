@@ -7,43 +7,15 @@ Output is a TSV with one row per verse.
 
 import argparse
 import csv
-import importlib.util
 import sys
+import warnings
 
 import pandas as pd
 
 from . import __version__
-from .annotation import annotate
-from .transcription import transcribe
+from .pipeline import analyze, read_poem_text
 
 TSV_OPTIONS = {"sep": "\t", "quoting": csv.QUOTE_NONE}
-
-
-def gumper_stresses(result):
-    """Stresses passed to the rhyme analysis for one line scanned by Gumper.
-
-    The stresses of the line's regular pattern, without extra-rhythmic
-    stresses, as in the GAMA web app; Gumper has no regular pattern for lines
-    over 11 syllables ("-"), and those get all the stresses Gumper detects.
-    They are only used for the experimental verse types (verse.py), which
-    require no stress outside the type's pattern; rhyme takes the stress from
-    trasgo.
-    """
-    if result["regular_pattern"] != "-":
-        return result["regular_pattern"]
-    return result["stressed_syllables"]
-
-
-def read_poem_text(text):
-    """Turn a plain-text poem into a table: one row per verse."""
-    rows = []
-    stanza_n = 1
-    for line in text.splitlines():
-        if line.strip():
-            rows.append({"poem_id": 1, "stanza_n": stanza_n, "text": line.strip()})
-        elif rows and rows[-1]["stanza_n"] == stanza_n:
-            stanza_n += 1
-    return pd.DataFrame(rows, columns=["poem_id", "stanza_n", "text"])
 
 
 def read_input(path):
@@ -57,35 +29,6 @@ def read_input(path):
 
 def write_tsv(frame, path):
     frame.to_csv(path if path else sys.stdout, index=False, **TSV_OPTIONS)
-
-
-def add_gama_columns(df, args, need_metre):
-    """Normalize the spelling (and scan, if metre is needed) with gama-verse, poem by poem."""
-    import gama_verse
-
-    normalized = pd.Series(index=df.index, dtype=object)
-    syllables = pd.Series(index=df.index, dtype=object)
-    stresses = pd.Series(index=df.index, dtype=object)
-    for _, poem in df.groupby(args.poem_column, sort=False):
-        lines = [str(text) for text in poem[args.text_column]]
-        if need_metre:
-            results = gama_verse.scan("\n".join(lines))
-            normalized_lines = [result["preprocessing"] for result in results]
-            syllables[poem.index] = [result["metrical_syllables"] for result in results]
-            stresses[poem.index] = [gumper_stresses(result) for result in results]
-        else:
-            normalized_lines = gama_verse.preprocess("\n".join(lines)).splitlines()
-        if len(normalized_lines) != len(lines):
-            raise RuntimeError("gama-verse returned a different number of lines")
-        normalized[poem.index] = normalized_lines
-    df["normalized_text"] = normalized
-    if need_metre:
-        df[args.syllable_column] = syllables
-        df[args.stress_column] = stresses
-
-
-def gama_available():
-    return importlib.util.find_spec("gama_verse") is not None
 
 
 def main(argv=None):
@@ -106,33 +49,19 @@ def main(argv=None):
     parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     args = parser.parse_args(argv)
 
-    df = read_input(args.input)
-    for column in (args.poem_column, args.stanza_column, args.text_column):
-        if column not in df.columns:
-            parser.error(f"column {column!r} not found in the input; available: {list(df.columns)}")
-    df = df.dropna(subset=[args.text_column]).reset_index(drop=True)
-    has_metre = args.syllable_column in df.columns and args.stress_column in df.columns
-
-    normalized_lines = None
-    if not args.no_gama and gama_available():
-        add_gama_columns(df, args, need_metre=not has_metre)
-        normalized_lines = df["normalized_text"].tolist()
-    elif not has_metre:
-        print(
-            "Warning: no metre columns and gama-verse not used; stanza and poem types "
-            "will be unreliable. Install gators-verse[gama] to get them.",
-            file=sys.stderr,
+    warnings.formatwarning = lambda message, *_args, **_kwargs: f"Warning: {message}\n"
+    try:
+        results, stanza_scores, poem_scores = analyze(
+            read_input(args.input),
+            use_gama=not args.no_gama,
+            poem_column=args.poem_column,
+            stanza_column=args.stanza_column,
+            text_column=args.text_column,
+            syllable_column=args.syllable_column,
+            stress_column=args.stress_column,
         )
-    df["transcription"] = transcribe(df[args.text_column].astype(str).tolist(), normalized_lines)
-
-    results, stanza_scores, poem_scores = annotate(
-        df,
-        poem_column=args.poem_column,
-        stanza_column=args.stanza_column,
-        text_column=args.text_column,
-        syllable_column=args.syllable_column,
-        stress_column=args.stress_column,
-    )
+    except ValueError as error:
+        parser.error(str(error))
     write_tsv(results, args.output)
     if args.stanza_scores:
         write_tsv(stanza_scores, args.stanza_scores)

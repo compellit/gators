@@ -1,18 +1,16 @@
 """gators-verse: rhyme and stanza analysis of Galician poetry (GATORS, Galician Tool for Rhyme and Stanza).
 
-Two steps:
-
-- :func:`transcribe` transcribes verse lines with trasgo.
-- :func:`annotate` takes a table of verses with their transcription (and,
-  optionally, their metre) and adds rhyme letters, verse, stanza and poem types.
-
-The ``gators-verse`` command runs both, and uses gama-verse, when installed,
-for spelling normalization and metre.
+- :func:`analyze` runs the whole analysis from the text: spelling
+  normalization and metre with gama-verse (when installed), transcription
+  with trasgo, and annotation. The ``gators-verse`` command calls it.
+- :func:`transcribe` and :func:`annotate` are its last two steps, for input
+  that already has its metre or transcription.
 """
 
 __version__ = "0.1.0"
 
 from .annotation import annotate  # noqa: E402
+from .pipeline import analyze  # noqa: E402
 from .transcription import transcribe  # noqa: E402
 
-__all__ = ["annotate", "transcribe"]
+__all__ = ["analyze", "annotate", "transcribe"]

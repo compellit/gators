@@ -9,7 +9,7 @@ Two inputs are written to the output folder:
 
 The gold rhyme letters and stanza types are kept as gold_rhyme and
 gold_stanza_type, for evaluate.py. Only nbSyll and meterNbr are gold metre;
-nbSG and gprMet in the corpus are Gumper's output and are not used.
+nbSG and gprMet in the corpus are an earlier GAMA output and are not used.
 """
 
 import argparse

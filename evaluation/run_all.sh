@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Rerun the evaluation on the test corpus, in three settings:
 #   gold_metre  gama-verse normalizes the spelling; metre from the gold annotation
-#   end_to_end  gama-verse normalizes the spelling and scans the lines (Gumper)
+#   end_to_end  gama-verse normalizes the spelling and scans the lines
 #   no_gama     no gama-verse: light spelling cleanup and no metre
 # Needs gators-verse installed with the gama extra, and gama-verse's data files.
 set -euo pipefail

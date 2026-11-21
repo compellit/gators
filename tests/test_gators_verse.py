@@ -1,7 +1,8 @@
 import pandas as pd
+import pytest
 
-from gators_verse import annotate, transcribe
-from gators_verse.cli import read_poem_text
+from gators_verse import analyze, annotate, transcribe
+from gators_verse.pipeline import gama_available, read_poem_text
 from gators_verse.rhyme import rhyme_ending
 from gators_verse.transcription import rhyme_text
 
@@ -74,3 +75,20 @@ def test_read_poem_text_splits_stanzas_on_blank_lines():
     table = read_poem_text("uno\ndous\n\n\ntres\n")
     assert table["stanza_n"].tolist() == [1, 1, 2]
     assert table["text"].tolist() == ["uno", "dous", "tres"]
+
+
+def poem_text(stanza):
+    return "\n".join(text for text, _, _ in stanza)
+
+
+def test_analyze_text_without_gama_warns_and_finds_rhymes():
+    with pytest.warns(UserWarning, match="no metre"):
+        results, _, _ = analyze(poem_text(REDONDILLA), use_gama=False)
+    assert results["rhyme"].tolist() == ["a", "b", "b", "a"]
+
+
+@pytest.mark.skipif(not gama_available(), reason="gama-verse not installed")
+def test_analyze_text_with_gama_gets_metre_and_stanza_type():
+    results, _, _ = analyze(poem_text(REDONDILLA))
+    assert results["metrical_syllables"].tolist() == [8, 8, 8, 8]
+    assert set(results["stanza_type"]) == {"redondilla"}

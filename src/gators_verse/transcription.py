@@ -38,8 +38,8 @@ def merge_tokens(tokens):
 
 
 # Words stressed on the last syllable whose spelling in the development
-# corpus (the 35k-line corpus used for the GAMA web app, not the test corpus)
-# does not show it, so trasgo stresses the penultimate ("marfin" read as
+# corpus (gl-prepro-35k, about 38,500 lines; not the test corpus) does not
+# show it, so trasgo stresses the penultimate ("marfin" read as
 # "márfin"). Like WRONG_ACCENT_WORDS, this list does not affect the test
 # corpus, whose only listed words are written with their accent.
 # Neither normalization nor rhyme_text() adds the accent; checked in context

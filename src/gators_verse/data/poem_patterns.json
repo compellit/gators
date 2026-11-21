@@ -2,12 +2,12 @@
   {
     "poem_type": "haiku",
     "set_stanza_type": "haiku",
-    "metre": [
+    "meter": [
       5,
       7,
       5
     ],
-    "repeat_metre": false,
+    "repeat_meter": false,
     "patterns": [
       "000"
     ],
@@ -18,17 +18,17 @@
       3
     ],
     "required_components": [
-      "metre",
+      "meter",
       "pattern"
     ]
   },
   {
     "poem_type": "romance",
     "stanza_type": "romance",
-    "metre": [
+    "meter": [
       8
     ],
-    "repeat_metre": true,
+    "repeat_meter": true,
     "rhyme_kind": "asonante",
     "min_verses": 4,
     "length_multiple": 2
@@ -36,10 +36,10 @@
   {
     "poem_type": "romancillo",
     "stanza_type": "romancillo",
-    "metre": [
+    "meter": [
       8
     ],
-    "metre_kind": "max",
+    "meter_kind": "max",
     "rhyme_kind": "asonante",
     "min_verses": 4,
     "length_multiple": 2
@@ -47,32 +47,32 @@
   {
     "poem_type": "romance_heroico",
     "stanza_type": "romance_arte_maior",
-    "metre": [
+    "meter": [
       9
     ],
-    "metre_kind": "min",
+    "meter_kind": "min",
     "rhyme_kind": "asonante",
     "min_verses": 4,
     "length_multiple": 2
   },
   {
     "poem_type": "silva",
-    "metre": [
+    "meter": [
       7,
       11
     ],
-    "metre_kind": "mixed",
+    "meter_kind": "mixed",
     "rhyme_kind": "consonante",
     "min_verses": 2
   },
   {
     "poem_type": "silva_arromanzada",
     "stanza_type": "silva_arromanzada",
-    "metre": [
+    "meter": [
       7,
       11
     ],
-    "metre_kind": "mixed",
+    "meter_kind": "mixed",
     "rhyme_kind": "asonante",
     "min_verses": 4
   },
@@ -97,10 +97,10 @@
     "stanza_lengths": [4, 4, 3, 3],
     "stanza_count": 4,
     "verse_count": 14,
-    "metre": [
+    "meter": [
       9
     ],
-    "metre_kind": "min",
+    "meter_kind": "min",
     "rhyme_kind": "consonante"
   },
   {
@@ -125,10 +125,10 @@
     "extra_stanza_length": 3,
     "extra_stanza_type": "terceto",
     "min_stanza_count": 5,
-    "metre": [
+    "meter": [
       9
     ],
-    "metre_kind": "min",
+    "meter_kind": "min",
     "rhyme_kind": "consonante"
   },
   {
@@ -152,10 +152,10 @@
     "stanza_lengths": [4, 4, 3, 3],
     "stanza_count": 4,
     "verse_count": 14,
-    "metre": [
+    "meter": [
       8
     ],
-    "metre_kind": "max",
+    "meter_kind": "max",
     "rhyme_kind": "consonante"
   },
   {

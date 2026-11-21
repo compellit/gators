@@ -17,7 +17,7 @@ from .patterns import (
     get_stanzas,
     make_pattern,
     rhyme_type_similarity,
-    stanza_metre_similarity,
+    stanza_meter_similarity,
     stanza_pattern_similarity,
 )
 
@@ -262,7 +262,7 @@ def predefined_pattern_probability(stanza, observed_pattern, source_key, stanza_
         return None
 
     observed_length = len(stanza)
-    observed_metre = [data["metre"] for _, data in stanza]
+    observed_meter = [data["meter"] for _, data in stanza]
     observed_pairs = candidate_observed_pair_data(
         stanza,
         observed_pattern,
@@ -274,7 +274,7 @@ def predefined_pattern_probability(stanza, observed_pattern, source_key, stanza_
         if not entry_allowed_for_length(entry, observed_length):
             continue
 
-        metre_score = stanza_metre_similarity(observed_metre, entry)
+        meter_score = stanza_meter_similarity(observed_meter, entry)
         # detection_rhyme_kind overrides rhyme_kind when choosing between
         # the asonante and consonante candidates (not for stanza typing)
         detection_rhyme_kind = entry.get(
@@ -299,7 +299,7 @@ def predefined_pattern_probability(stanza, observed_pattern, source_key, stanza_
             )
             components = [
                 score
-                for score in (pattern_score, metre_score, rhyme_score)
+                for score in (pattern_score, meter_score, rhyme_score)
                 if score is not None
             ]
             scores.append(sum(components) / len(components) if components else 1)

@@ -1,10 +1,10 @@
 """Poem types and refrains.
 
 The whole poem is scored against every entry of poem_patterns.json (rhyme
-pattern, metre, rhyme type, stanza types, refrain, stanza lengths, verse and
+pattern, meter, rhyme type, stanza types, refrain, stanza lengths, verse and
 stanza counts). Without a type scoring at least POEM_TYPE_MIN_PROBABILITY,
 a poem whose stanzas all share a type is labelled after it ("Serie de
-cuarteto"). See docs/POEM_TYPE_SCORING.md.
+cuarteto"). See docs/STANZA_AND_POEM_TYPES.md.
 """
 
 import pandas as pd
@@ -18,7 +18,7 @@ from .patterns import (
     observed_pair_data,
     relation_matches,
     rhyme_type_similarity,
-    stanza_metre_similarity,
+    stanza_meter_similarity,
     stanza_pattern_similarity,
 )
 
@@ -223,11 +223,11 @@ def score_poem_entry(poem_data, entry):
 
     finals = [data["final"] for _, data in poem_lines]
     observed_pattern = make_pattern(finals)
-    observed_metre = [data["metre"] for _, data in poem_lines]
+    observed_meter = [data["meter"] for _, data in poem_lines]
     observed_pairs = poem_observed_pairs(poem_lines, observed_pattern)
     stanzas = get_stanzas(poem_data)
 
-    metre_score = stanza_metre_similarity(observed_metre, entry)
+    meter_score = stanza_meter_similarity(observed_meter, entry)
     stanza_type_score = poem_stanza_type_similarity(stanzas, entry)
     stanza_length_score = poem_stanza_length_similarity(stanzas, entry)
     refrain_score = poem_refrain_similarity(poem_lines, entry)
@@ -260,7 +260,7 @@ def score_poem_entry(poem_data, entry):
 
         component_scores = {
             "pattern": pattern_score,
-            "metre": metre_score,
+            "meter": meter_score,
             "rhyme_type": rhyme_score,
             "stanza_type": stanza_type_score,
         }
@@ -274,14 +274,14 @@ def score_poem_entry(poem_data, entry):
         ):
             # Hard requirement: a missing (None) or partial score
             # rules the type out, so that perfect counts cannot
-            # outweigh e.g. a wrong metre (8-8-8 tercets as haiku).
+            # outweigh e.g. a wrong meter (8-8-8 tercets as haiku).
             probability = 0
         else:
             components = [
                 score
                 for score in (
                     pattern_score,
-                    metre_score,
+                    meter_score,
                     rhyme_score,
                     stanza_type_score,
                     refrain_score,
@@ -298,10 +298,10 @@ def score_poem_entry(poem_data, entry):
             "probability": probability,
             "observed_pattern": observed_pattern,
             "expected_pattern": expected_pattern,
-            "observed_metre": observed_metre,
-            "expected_metre": entry.get("metre"),
+            "observed_meter": observed_meter,
+            "expected_meter": entry.get("meter"),
             "pattern_similarity": pattern_score,
-            "metre_similarity": metre_score,
+            "meter_similarity": meter_score,
             "rhyme_type_similarity": rhyme_score,
             "stanza_type_similarity": stanza_type_score,
             "refrain_similarity": refrain_score,
@@ -333,7 +333,7 @@ def annotate_poem_type(poem_data, poem_patterns):
                     "probability": score["probability"],
                     "selection_threshold": POEM_TYPE_MIN_PROBABILITY,
                     "pattern_similarity": score["pattern_similarity"],
-                    "metre_similarity": score["metre_similarity"],
+                    "meter_similarity": score["meter_similarity"],
                     "rhyme_type_similarity": score["rhyme_type_similarity"],
                     "stanza_type_similarity": score["stanza_type_similarity"],
                     "refrain_similarity": score["refrain_similarity"],
@@ -342,8 +342,8 @@ def annotate_poem_type(poem_data, poem_patterns):
                     "stanza_count_similarity": score["stanza_count_similarity"],
                     "observed_pattern": score["observed_pattern"],
                     "expected_pattern": score["expected_pattern"],
-                    "observed_metre": score["observed_metre"],
-                    "expected_metre": score["expected_metre"],
+                    "observed_meter": score["observed_meter"],
+                    "expected_meter": score["expected_meter"],
                     "selected": entry["poem_type"] in selected_labels,
                 }
             )
@@ -479,7 +479,7 @@ def annotate_poem_type(poem_data, poem_patterns):
         data["poem_expected_pattern"] = winner["expected_pattern"]
         data["poem_observed_pattern"] = winner["observed_pattern"]
         data["poem_pattern_similarity"] = winner["pattern_similarity"]
-        data["poem_metre_similarity"] = winner["metre_similarity"]
+        data["poem_meter_similarity"] = winner["meter_similarity"]
         data["poem_rhyme_type_similarity"] = winner["rhyme_type_similarity"]
         data["poem_stanza_type_similarity"] = winner["stanza_type_similarity"]
         data["poem_refrain_similarity"] = winner["refrain_similarity"]

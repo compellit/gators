@@ -1,10 +1,10 @@
 """gators-verse: rhyme and stanza analysis of Galician poetry (GATORS, Galician Tool for Rhyme and Stanza).
 
 - :func:`analyze` runs the whole analysis from the text: spelling
-  normalization and metre with gama-verse (when installed), transcription
+  normalization and meter with gama-verse (when installed), transcription
   with trasgo, and annotation. The ``gators-verse`` command calls it.
 - :func:`transcribe` and :func:`annotate` are its last two steps, for input
-  that already has its metre or transcription.
+  that already has its meter or transcription.
 """
 
 __version__ = "0.1.0"

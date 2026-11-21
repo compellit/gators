@@ -6,8 +6,8 @@ from gators_verse.pipeline import gama_available, read_poem_text
 from gators_verse.rhyme import rhyme_ending
 from gators_verse.transcription import rhyme_text
 
-# Two abba quatrains from the test corpus, with their gold metre: only the
-# metre tells the redondilla (octosyllables) from the cuarteto (hendecasyllables).
+# Two abba quatrains from the test corpus, with their gold meter: only the
+# meter tells the redondilla (octosyllables) from the cuarteto (hendecasyllables).
 REDONDILLA = [
     ("-Ña muller, pilla esa roca", 8, "3 4 5 7"),
     ("e déixate de ir á misa,", 8, "2 7"),
@@ -22,12 +22,12 @@ CUARTETO = [
 ]
 
 
-def make_table(stanza, with_metre=True):
+def make_table(stanza, with_meter=True):
     df = pd.DataFrame(stanza, columns=["text", "metrical_syllables", "stressed_syllables"])
     df.insert(0, "poem_id", 1)
     df.insert(1, "stanza_n", 1)
     df["transcription"] = transcribe(df["text"].tolist())
-    if not with_metre:
+    if not with_meter:
         df = df.drop(columns=["metrical_syllables", "stressed_syllables"])
     return df
 
@@ -50,7 +50,7 @@ def test_rhyme_text_rejects_normalization_that_changes_spelling():
     assert rhyme_text("polo camino", "polo camiño") == "polo camino"
 
 
-def test_redondilla_and_cuarteto_differ_by_metre():
+def test_redondilla_and_cuarteto_differ_by_meter():
     results, _, _ = annotate(make_table(REDONDILLA))
     assert results["rhyme"].tolist() == ["a", "b", "b", "a"]
     assert set(results["stanza_type"]) == {"redondilla"}
@@ -59,9 +59,9 @@ def test_redondilla_and_cuarteto_differ_by_metre():
     assert set(results["stanza_type"]) == {"cuarteto"}
 
 
-def test_rhymes_without_metre():
-    # Without metre, letters stay lowercase: the line length is unknown.
-    results, _, _ = annotate(make_table(CUARTETO, with_metre=False))
+def test_rhymes_without_meter():
+    # Without meter, letters stay lowercase: the line length is unknown.
+    results, _, _ = annotate(make_table(CUARTETO, with_meter=False))
     assert results["rhyme"].tolist() == ["a", "b", "b", "a"]
 
 
@@ -82,13 +82,13 @@ def poem_text(stanza):
 
 
 def test_analyze_text_without_gama_warns_and_finds_rhymes():
-    with pytest.warns(UserWarning, match="no metre"):
+    with pytest.warns(UserWarning, match="no meter"):
         results, _, _ = analyze(poem_text(REDONDILLA), use_gama=False)
     assert results["rhyme"].tolist() == ["a", "b", "b", "a"]
 
 
 @pytest.mark.skipif(not gama_available(), reason="gama-verse not installed")
-def test_analyze_text_with_gama_gets_metre_and_stanza_type():
+def test_analyze_text_with_gama_gets_meter_and_stanza_type():
     results, _, _ = analyze(poem_text(REDONDILLA))
     assert results["metrical_syllables"].tolist() == [8, 8, 8, 8]
     assert set(results["stanza_type"]) == {"redondilla"}

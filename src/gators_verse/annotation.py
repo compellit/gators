@@ -60,15 +60,15 @@ def make_poem_data(poem, stanza_column, text_column, transcription_column, sylla
             previous_stanza = row[stanza_column]
         transcription = row[transcription_column]
         rhyme_tail, vowels = rhyme_ending(transcription if isinstance(transcription, str) else "")
-        metre = parse_syllable_value(row[syllable_column]) if syllable_column else None
+        meter = parse_syllable_value(row[syllable_column]) if syllable_column else None
         rhythm = parse_rhythm_value(row[stress_column]) if stress_column else []
         poem_data[verse_number] = {
             "row": row.name,
             "stanza": stanza_n,
             "rhyme_tail": rhyme_tail,
             "vowels": vowels,
-            "metre": metre,
-            **classify_verse_type(metre, rhythm),
+            "meter": meter,
+            **classify_verse_type(meter, rhythm),
             "_normalized_verse_text": normalize_refrain_text(row[text_column]),
             "asonante": None,
             "consonante": None,
@@ -105,14 +105,14 @@ def annotate(
     """Annotate verses with rhyme letters, verse, stanza and poem types.
 
     ``df`` has one row per verse, in reading order, with the poem and stanza
-    each belongs to, its text and its trasgo transcription. Metre (syllable
+    each belongs to, its text and its trasgo transcription. Meter (syllable
     count and stressed syllables, e.g. ``8`` and ``3 7``) is optional, but
-    without it stanza and poem types are far less accurate. Metre columns
+    without it stanza and poem types are far less accurate. Meter columns
     missing from ``df`` are ignored.
 
     Returns a copy of ``df`` with the OUTPUT_COLUMNS added, and two tables
     with the score of every stanza and poem pattern considered. Rhyme letters
-    are uppercase for lines of 9 syllables or more, when the metre is known.
+    are uppercase for lines of 9 syllables or more, when the meter is known.
     """
     for column in (poem_column, stanza_column, text_column, transcription_column):
         if column not in df.columns:
@@ -143,7 +143,7 @@ def annotate(
         stanza_score_rows += [{"poem_id": poem_id, **row} for row in stanza_rows]
         poem_score_rows += [{"poem_id": poem_id, **row} for row in poem_rows]
         for data in poem_data.values():
-            if data["metre"] is not None and data["metre"] >= ARTE_MAIOR_MIN_SYLLABLES:
+            if data["meter"] is not None and data["meter"] >= ARTE_MAIOR_MIN_SYLLABLES:
                 data["letter"] = data["letter"].upper()
             data["vowels"] = ",".join(data["vowels"])
             data["retrouso"] = bool(data["retrouso"])

@@ -1,12 +1,12 @@
 [
   {
     "stanza_type": "pareado",
-    "metre": [
+    "meter": [
       3,
       20
     ],
-    "metre_kind": "range",
-    "repeat_metre": false,
+    "meter_kind": "range",
+    "repeat_meter": false,
     "rhyme_kind": "both",
     "patterns": [
       "aa"
@@ -16,11 +16,11 @@
   },
   {
     "stanza_type": "tercerilla",
-    "metre": [
+    "meter": [
       8
     ],
-    "metre_kind": "max",
-    "repeat_metre": true,
+    "meter_kind": "max",
+    "repeat_meter": true,
     "rhyme_kind": "consonante",
     "patterns": [
       "a-a"
@@ -29,11 +29,11 @@
   },
   {
     "stanza_type": "terceto",
-    "metre": [
+    "meter": [
       9
     ],
-    "metre_kind": "min",
-    "repeat_metre": true,
+    "meter_kind": "min",
+    "repeat_meter": true,
     "rhyme_kind": "consonante",
     "patterns": [
       "-aa",
@@ -44,10 +44,10 @@
   },
   {
     "stanza_type": "soledad",
-    "metre": [
+    "meter": [
       8
     ],
-    "repeat_metre": true,
+    "repeat_meter": true,
     "rhyme_kind": "asonante",
     "patterns": [
       "a-a"
@@ -56,11 +56,11 @@
   },
   {
     "stanza_type": "terceto_monorrimo",
-    "metre": [
+    "meter": [
       9
     ],
-    "metre_kind": "min",
-    "repeat_metre": true,
+    "meter_kind": "min",
+    "repeat_meter": true,
     "rhyme_kind": "consonante",
     "patterns": [
       "aaa"
@@ -69,15 +69,15 @@
   },
   {
     "stanza_type": "cantar",
-    "notes": ["Consonante rhyme is accepted too (rhyme_kind both), although Domínguez Caparrós defines the cantar with asonante rhyme: octosyllabic -a-a quatrains whose rhyme happens to be consonante (it contains the assonance) are cantares here; otherwise they got no fitting type (decision of November 2026).", "min_pattern_similarity 1.0 (decision of November 2026): lines 2 and 4 must rhyme. Without it the cantar, which accepts any arte menor quatrain, took the quatrains that fit no type (octosyllabic -aab, abbc, aabb, abab with assonance, unrhymed), often visibly (cert >= 0.75), including those that the metre constraint on cuarteto and serventesio keeps out of those types. On the 33 corpus files tested (with 4,388 of the 5,726 cantares), it moved 94 visible off-definition cantares to hidden types, against 6 correct visible cantares changed."],
+    "notes": ["Consonante rhyme is accepted too (rhyme_kind both), although Domínguez Caparrós defines the cantar with asonante rhyme: octosyllabic -a-a quatrains whose rhyme happens to be consonante (it contains the assonance) are cantares here; otherwise they got no fitting type (decision of November 2026).", "min_pattern_similarity 1.0 (decision of November 2026): lines 2 and 4 must rhyme. Without it the cantar, which accepts any arte menor quatrain, took the quatrains that fit no type (octosyllabic -aab, abbc, aabb, abab with assonance, unrhymed), often visibly (cert >= 0.75), including those that the meter constraint on cuarteto and serventesio keeps out of those types. On the 33 corpus files tested (with 4,388 of the 5,726 cantares), it moved 94 visible off-definition cantares to hidden types, against 6 correct visible cantares changed."],
     "sources": ["José Domínguez Caparrós, Métrica española, p. 187 (asonante rhyme)", "Isabel Paraíso, La métrica española en su contexto románico, pp. 234-235 (cuarteta asonantada is another name for cantar or copla popular)"],
     "refines_type": ["romance", "romancillo"],
     "min_pattern_similarity": 1.0,
-    "metre": [
+    "meter": [
       8
     ],
-    "metre_kind": "max",
-    "repeat_metre": true,
+    "meter_kind": "max",
+    "repeat_meter": true,
     "rhyme_kind": "both",
     "detection_rhyme_kind": "asonante",
     "patterns": [
@@ -88,10 +88,10 @@
   {
     "stanza_type": "cuaderna_vía",
     "min_pattern_similarity": 1.0,
-    "metre": [
+    "meter": [
       14
     ],
-    "repeat_metre": true,
+    "repeat_meter": true,
     "rhyme_kind": "consonante",
     "patterns": [
       "aaaa"
@@ -102,11 +102,11 @@
     "stanza_type": "cuarteta",
     "refines_type": ["cantar"],
     "min_pattern_similarity": 1.0,
-    "metre": [
+    "meter": [
       8
     ],
-    "metre_kind": "max",
-    "repeat_metre": false,
+    "meter_kind": "max",
+    "repeat_meter": false,
     "rhyme_kind": "consonante",
     "patterns": [
       "abab"
@@ -118,11 +118,11 @@
     "sources": ["Claudio Rodríguez Fer, Arte literaria, p. 40 (definition used here)", "Isabel Paraíso, La métrica española en su contexto románico, pp. 234-235, uses the name for the cantar (copla popular)"],
     "min_pattern_similarity": 1.0,
     "refines_type": ["romance", "romancillo"],
-    "metre": [
+    "meter": [
       8
     ],
-    "metre_kind": "max",
-    "repeat_metre": false,
+    "meter_kind": "max",
+    "repeat_meter": false,
     "rhyme_kind": "asonante",
     "patterns": [
       "abab"
@@ -131,14 +131,14 @@
   },
   {
     "stanza_type": "cuarteto",
-    "notes": ["min_metre_similarity 0.95 (decision of November 2026): the cuarteto is arte mayor, every line of 9 syllables or more (Rantanplan checks this as a hard condition). With the proportional metre score alone, an octosyllable is 8/9 = 0.89 of a cuarteto line, and octosyllabic quatrains that no type fits well (-aab, abbc, unrhymed) became cuartetos: 70 of the 156 visible (cert >= 0.75) cuartetos in the corpus, all with every line of 8 syllables or less. 0.95 still allows about one line one syllable off. Applied together with the same constraint on serventesio and min_pattern_similarity 1.0 on cantar, so that these quatrains do not move to those types.", "min_pattern_similarity 1.0 (decision of November 2026): the full abba is required, as in Rantanplan. Otherwise decasyllabic quatrains with partial or assonant rhyme (-c-c, fgeg), once excluded from estrofa_alcaica by its exact metre, became visible cuartetos: 7 of the 27 alcaicas shown in the app. Known cost: a correct abba quatrain can lose visibility through the poem-level adjustment when the other quatrain of a sonnet has an undetected rhyme (test set poem 1 stanza 1, 0.63; one stanza in the corpus)."],
+    "notes": ["min_meter_similarity 0.95 (decision of November 2026): the cuarteto is arte mayor, every line of 9 syllables or more (Rantanplan checks this as a hard condition). With the proportional meter score alone, an octosyllable is 8/9 = 0.89 of a cuarteto line, and octosyllabic quatrains that no type fits well (-aab, abbc, unrhymed) became cuartetos: 70 of the 156 visible (cert >= 0.75) cuartetos in the corpus, all with every line of 8 syllables or less. 0.95 still allows about one line one syllable off. Applied together with the same constraint on serventesio and min_pattern_similarity 1.0 on cantar, so that these quatrains do not move to those types.", "min_pattern_similarity 1.0 (decision of November 2026): the full abba is required, as in Rantanplan. Otherwise decasyllabic quatrains with partial or assonant rhyme (-c-c, fgeg), once excluded from estrofa_alcaica by its exact meter, became visible cuartetos: 7 of the 27 alcaicas shown in the app. Known cost: a correct abba quatrain can lose visibility through the poem-level adjustment when the other quatrain of a sonnet has an undetected rhyme (test set poem 1 stanza 1, 0.63; one stanza in the corpus)."],
     "min_pattern_similarity": 1.0,
-    "min_metre_similarity": 0.95,
-    "metre": [
+    "min_meter_similarity": 0.95,
+    "meter": [
       9
     ],
-    "metre_kind": "min",
-    "repeat_metre": false,
+    "meter_kind": "min",
+    "repeat_meter": false,
     "rhyme_kind": "consonante",
     "patterns": [
       "abba"
@@ -147,13 +147,13 @@
   },
   {
     "stanza_type": "cuarteto_lira",
-    "notes": ["Caparrós _Métrica_ (10.2.3) lists {7,11} combination as only requirement and gives examples 11-7-11-7 and 7-11-7-11. Paraíso (6.7) gives examples 11-11-7-7 and 7-7-11-11, also 11-7-11-11 and 7-11-7-7", "min_metre_similarity raised from 0.8 to 0.95 (decision of November 2026): only lines of 7 and 11 syllables (Rantanplan checks this as a hard condition). With 0.8, 28 of the 80 visible (cert >= 0.75) cuarteto_lira stanzas in the corpus were below 0.95, with lines of other lengths (e.g. 9-12-10-10, 8-7-7-10). 0.95 still allows about one line one syllable off.", "Known limitation (November 2026): the metre similarity is an average, so one line two syllables off can still pass 0.95. przca1-01970 stanza 1 (\"O gaiteiro de San Xulián\", a popular aabb copla, 9-11-11-11) scores 0.955 and stays a visible cuarteto_lira (cert 0.82): its 9-syllable line is equidistant from 7 and 11 and the other candidates are penalised for rhyme type, which cuarteto_lira (rhyme_kind both) does not score. A count-based rule (every line within one syllable of 7 or 11, at most one line using that tolerance) would remove it and keep the correct curros-aires-00186 stanza 2, whose 2-4 rhyme (amen/ben) is not detected; min_pattern_similarity 1.0 would remove both. Not implemented: it fixed this one stanza only. Revisit if more cases appear."],
-    "min_metre_similarity": 0.95,
-    "metre": [
+    "notes": ["Caparrós _Métrica_ (10.2.3) lists {7,11} combination as only requirement and gives examples 11-7-11-7 and 7-11-7-11. Paraíso (6.7) gives examples 11-11-7-7 and 7-7-11-11, also 11-7-11-11 and 7-11-7-7", "min_meter_similarity raised from 0.8 to 0.95 (decision of November 2026): only lines of 7 and 11 syllables (Rantanplan checks this as a hard condition). With 0.8, 28 of the 80 visible (cert >= 0.75) cuarteto_lira stanzas in the corpus were below 0.95, with lines of other lengths (e.g. 9-12-10-10, 8-7-7-10). 0.95 still allows about one line one syllable off.", "Known limitation (November 2026): the meter similarity is an average, so one line two syllables off can still pass 0.95. przca1-01970 stanza 1 (\"O gaiteiro de San Xulián\", a popular aabb copla, 9-11-11-11) scores 0.955 and stays a visible cuarteto_lira (cert 0.82): its 9-syllable line is equidistant from 7 and 11 and the other candidates are penalised for rhyme type, which cuarteto_lira (rhyme_kind both) does not score. A count-based rule (every line within one syllable of 7 or 11, at most one line using that tolerance) would remove it and keep the correct curros-aires-00186 stanza 2, whose 2-4 rhyme (amen/ben) is not detected; min_pattern_similarity 1.0 would remove both. Not implemented: it fixed this one stanza only. Revisit if more cases appear."],
+    "min_meter_similarity": 0.95,
+    "meter": [
       7,
       11
     ],
-    "metre_kind": "mixed",
+    "meter_kind": "mixed",
     "rhyme_kind": "both",
     "patterns": [
       "abab",
@@ -165,63 +165,63 @@
     "stanza_type": "estrofa_francisco_de_la_torre",
     "notes": "For de la Torre as subtype of cuarteto lira, see Caparrós _Métrica_, 10.2.3",
     "parent_type": "cuarteto_lira",
-    "metre": [
+    "meter": [
       11,
       11,
       11,
       7
     ],
-    "repeat_metre": false,
+    "repeat_meter": false,
     "patterns": [
       "----"
     ],
-    "min_metre_similarity": 0.95,
+    "min_meter_similarity": 0.95,
     "stanza_length": 4
   },
   {
     "stanza_type": "estrofa_sáfica",
-    "notes": ["For sáfica as subtype of cuarteto lira, see Caparrós _Métrica_, 10.2,3. Decided by metre (11-11-11-5, min_metre_similarity) and not by verse type, as in rantanplan: with verse_types (Sapphic hendecasyllables stressed exactly on 1-4-6-8-10, Adonic on 1-4) no stanza in the corpus qualified, and Sapphic stanzas went to cuarteto_lira or silva_arromanzada (decision of November 2026). Rhymed and unrhymed stanzas both count."],
+    "notes": ["For sáfica as subtype of cuarteto lira, see Caparrós _Métrica_, 10.2,3. Decided by meter (11-11-11-5, min_meter_similarity) and not by verse type, as in rantanplan: with verse_types (Sapphic hendecasyllables stressed exactly on 1-4-6-8-10, Adonic on 1-4) no stanza in the corpus qualified, and Sapphic stanzas went to cuarteto_lira or silva_arromanzada (decision of November 2026). Rhymed and unrhymed stanzas both count."],
     "parent_type": "cuarteto_lira",
-    "metre": [
+    "meter": [
       11,
       11,
       11,
       5
     ],
-    "repeat_metre": false,
+    "repeat_meter": false,
     "patterns": [
       "----"
     ],
-    "min_metre_similarity": 0.95,
+    "min_meter_similarity": 0.95,
     "stanza_length": 4
   },
   {
     "stanza_type": "estrofa_alcaica",
-    "notes": ["Definitions vary. Rodríguez Fer _Arte literaria_ says 10 10 9 10, but Paraíso (6.6) gives first 11 11 9 10, with specific rhythm requirements, and then gives a 10 10 9 10 example, which she considers a different interpretation of the same. She states that different poets have interpreted this type differently.", "min_metre_similarity 1.0, exact 10-10-9-10 (decision of November 2026; was 0.95). The form is very specific and 9-syllable lines are rare in Galician; with 0.95, one line one syllable off passed, and 45 of the 63 stanzas tagged alcaica were plain 10-10-10-10 quatrains (e.g. the dactylic decasyllables of aonpoe-00337), none a real alcaica. Even exact matches can be wrong (przca1-01963, a popular aabb song). Applied together with min_pattern_similarity 1.0 on cuarteto and serventesio, so that these decasyllabic quatrains do not become visible cuartetos or serventesios instead.", "Pattern 0000 with min_pattern_similarity 1.0 (decision of November 2026; was ----): the stanza must be unrhymed, as the classical alcaic stanza adapted to Romance metre. The only stanza tagged alcaica in the corpus, przca1-01963 (10-10-9-10, rhymes zonchos/moitos and cantar/dar), was a popular song."],
+    "notes": ["Definitions vary. Rodríguez Fer _Arte literaria_ says 10 10 9 10, but Paraíso (6.6) gives first 11 11 9 10, with specific rhythm requirements, and then gives a 10 10 9 10 example, which she considers a different interpretation of the same. She states that different poets have interpreted this type differently.", "min_meter_similarity 1.0, exact 10-10-9-10 (decision of November 2026; was 0.95). The form is very specific and 9-syllable lines are rare in Galician; with 0.95, one line one syllable off passed, and 45 of the 63 stanzas tagged alcaica were plain 10-10-10-10 quatrains (e.g. the dactylic decasyllables of aonpoe-00337), none a real alcaica. Even exact matches can be wrong (przca1-01963, a popular aabb song). Applied together with min_pattern_similarity 1.0 on cuarteto and serventesio, so that these decasyllabic quatrains do not become visible cuartetos or serventesios instead.", "Pattern 0000 with min_pattern_similarity 1.0 (decision of November 2026; was ----): the stanza must be unrhymed, as the classical alcaic stanza adapted to Romance meter. The only stanza tagged alcaica in the corpus, przca1-01963 (10-10-9-10, rhymes zonchos/moitos and cantar/dar), was a popular song."],
     "parent_type": "cuarteto_lira",
-    "metre": [
+    "meter": [
       10,
       10,
       9,
       10
     ],
-    "repeat_metre": false,
+    "repeat_meter": false,
     "patterns": [
       "0000"
     ],
     "min_pattern_similarity": 1.0,
-    "min_metre_similarity": 1.0,
+    "min_meter_similarity": 1.0,
     "stanza_length": 4
   },
   {
     "stanza_type": "endecha_real",
-    "metre": [
+    "meter": [
       7,
       7,
       7,
       11
     ],
-    "repeat_metre": false,
+    "repeat_meter": false,
     "rhyme_kind": "asonante",
     "patterns": [
       "-a-a"
@@ -230,11 +230,11 @@
   },
   {
     "stanza_type": "redondilla",
-    "metre": [
+    "meter": [
       8
     ],
-    "metre_kind": "max",
-    "repeat_metre": false,
+    "meter_kind": "max",
+    "repeat_meter": false,
     "rhyme_kind": "both",
     "patterns": [
       "abba"
@@ -244,18 +244,18 @@
   },
   {
     "stanza_type": "seguidilla",
-    "min_metre_similarity": 0.95,
+    "min_meter_similarity": 0.95,
     "parent_type": "cantar",
-    "subtype_selection_component": "metre_similarity",
+    "subtype_selection_component": "meter_similarity",
     "subtype_selection_threshold": 0.8,
-    "metre": [
+    "meter": [
       7,
       5,
       7,
       5
     ],
-    "repeat_metre": false,
-    "metre_tolerance": 1,
+    "repeat_meter": false,
+    "meter_tolerance": 1,
     "rhyme_kind": "both",
     "patterns": [
       "-a-a"
@@ -264,15 +264,15 @@
   },
   {
     "stanza_type": "seguidilla_real",
-    "min_metre_similarity": 0.95,
-    "metre": [
+    "min_meter_similarity": 0.95,
+    "meter": [
       10,
       6,
       10,
       6
     ],
-    "repeat_metre": false,
-    "metre_tolerance": 1,
+    "repeat_meter": false,
+    "meter_tolerance": 1,
     "rhyme_kind": "both",
     "patterns": [
       "-a-a"
@@ -281,13 +281,13 @@
   },
   {
     "stanza_type": "seguidilla_xitana",
-    "metre": [
+    "meter": [
       6,
       6,
       11,
       6
     ],
-    "repeat_metre": false,
+    "repeat_meter": false,
     "rhyme_kind": "asonante",
     "patterns": [
       "-a-a"
@@ -296,14 +296,14 @@
   },
   {
     "stanza_type": "serventesio",
-    "notes": ["min_metre_similarity 0.95 (decision of November 2026), as for the cuarteto: the serventesio is arte mayor, every line of 9 syllables or more (a hard condition in Rantanplan). Without it, octosyllabic quatrains kept out of the cuarteto by its metre constraint became serventesios (unrhymed octosyllabic coplas, aabb).", "min_pattern_similarity 1.0 (decision of November 2026): the full abab is required, as in Rantanplan. Otherwise the decasyllabic quatrains excluded from estrofa_alcaica and cuarteto became visible serventesios instead (8 in the app). The visible serventesios already had their full pattern, so none of them changes."],
+    "notes": ["min_meter_similarity 0.95 (decision of November 2026), as for the cuarteto: the serventesio is arte mayor, every line of 9 syllables or more (a hard condition in Rantanplan). Without it, octosyllabic quatrains kept out of the cuarteto by its meter constraint became serventesios (unrhymed octosyllabic coplas, aabb).", "min_pattern_similarity 1.0 (decision of November 2026): the full abab is required, as in Rantanplan. Otherwise the decasyllabic quatrains excluded from estrofa_alcaica and cuarteto became visible serventesios instead (8 in the app). The visible serventesios already had their full pattern, so none of them changes."],
     "min_pattern_similarity": 1.0,
-    "min_metre_similarity": 0.95,
-    "metre": [
+    "min_meter_similarity": 0.95,
+    "meter": [
       9
     ],
-    "metre_kind": "min",
-    "repeat_metre": false,
+    "meter_kind": "min",
+    "repeat_meter": false,
     "rhyme_kind": "consonante",
     "patterns": [
       "abab"
@@ -312,14 +312,14 @@
   },
   {
     "stanza_type": "lira",
-    "notes": ["Paraíso mentions several 'typical' orderings between the short and long members: 7-11-7-7-11, 7-11-11-7-11, 11-7-7-11-11. Jauralde (2020), in his section about *Quinteto-lira* (which he considers equivalent to *lira*), lists 3 examples with 7-11-7-7-11, but also 7-11-7-11-7.", "Metre: any mix of 7- and 11-syllable lines (metre_kind mixed, as for cuarteto_lira), not the fixed order 7-11-7-7-11 (decision of November 2026, after the orderings above; Rantanplan requires exactly 7-11-7-7-11). min_metre_similarity 0.95: lines of other lengths are not a lira (with the fixed order and no floor, octosyllabic ababb stanzas of Follas novas and 7/8 coplas were visible liras); the mixed score is 0 when nearly all lines are closest to one length, so a stanza of octosyllables is excluded. 0.95 still allows about one line one syllable off."],
-    "metre": [
+    "notes": ["Paraíso mentions several 'typical' orderings between the short and long members: 7-11-7-7-11, 7-11-11-7-11, 11-7-7-11-11. Jauralde (2020), in his section about *Quinteto-lira* (which he considers equivalent to *lira*), lists 3 examples with 7-11-7-7-11, but also 7-11-7-11-7.", "Meter: any mix of 7- and 11-syllable lines (meter_kind mixed, as for cuarteto_lira), not the fixed order 7-11-7-7-11 (decision of November 2026, after the orderings above; Rantanplan requires exactly 7-11-7-7-11). min_meter_similarity 0.95: lines of other lengths are not a lira (with the fixed order and no floor, octosyllabic ababb stanzas of Follas novas and 7/8 coplas were visible liras); the mixed score is 0 when nearly all lines are closest to one length, so a stanza of octosyllables is excluded. 0.95 still allows about one line one syllable off."],
+    "meter": [
       7,
       11
     ],
-    "metre_kind": "mixed",
-    "min_metre_similarity": 0.95,
-    "repeat_metre": false,
+    "meter_kind": "mixed",
+    "min_meter_similarity": 0.95,
+    "repeat_meter": false,
     "rhyme_kind": "consonante",
     "patterns": [
       "ababb"
@@ -328,11 +328,11 @@
   },
   {
     "stanza_type": "quinteto",
-    "metre": [
+    "meter": [
       9
     ],
-    "metre_kind": "min",
-    "repeat_metre": false,
+    "meter_kind": "min",
+    "repeat_meter": false,
     "rhyme_kind": "consonante",
     "patterns": [
       "aabab",
@@ -345,11 +345,11 @@
   },
   {
     "stanza_type": "quintilla",
-    "metre": [
+    "meter": [
       8
     ],
-    "metre_kind": "max",
-    "repeat_metre": false,
+    "meter_kind": "max",
+    "repeat_meter": false,
     "rhyme_kind": "consonante",
     "patterns": [
       "aabab",
@@ -362,11 +362,11 @@
   },
   {
     "stanza_type": "sexteto",
-    "metre": [
+    "meter": [
       9
     ],
-    "metre_kind": "min",
-    "repeat_metre": true,
+    "meter_kind": "min",
+    "repeat_meter": true,
     "rhyme_kind": "consonante",
     "patterns": [
       "*"
@@ -375,13 +375,13 @@
   },
   {
     "stanza_type": "sexta_rima",
-    "notes": ["min_metre_similarity 0.95 (decision of November 2026): six hendecasyllables. Without it, sextets of hendecasyllables with one heptasyllable (e.g. 11-11-11-11-11-7 aabccb in Lamas' Saudades, lamas-saudades-00216) were visible sextas rimas (17 of 29), because the rhyme fits exactly and one 7 only lowers the metre average to about 0.94; they are plain sextetos (sexteto_lira excludes them: 5 of 6 lines of 11 is not a 7/11 mix)."],
-    "min_metre_similarity": 0.95,
+    "notes": ["min_meter_similarity 0.95 (decision of November 2026): six hendecasyllables. Without it, sextets of hendecasyllables with one heptasyllable (e.g. 11-11-11-11-11-7 aabccb in Lamas' Saudades, lamas-saudades-00216) were visible sextas rimas (17 of 29), because the rhyme fits exactly and one 7 only lowers the meter average to about 0.94; they are plain sextetos (sexteto_lira excludes them: 5 of 6 lines of 11 is not a 7/11 mix)."],
+    "min_meter_similarity": 0.95,
     "parent_type": "sexteto",
-    "metre": [
+    "meter": [
       11
     ],
-    "repeat_metre": true,
+    "repeat_meter": true,
     "rhyme_kind": "consonante",
     "patterns": [
       "aabcbc",
@@ -392,14 +392,14 @@
   },
   {
     "stanza_type": "sexteto_lira",
-    "notes": ["Paraíso (8.2). Most frequent types are aBaBCC, aBabcC, aBABCC. Other: AbbAcC; ABbaCC; aBbACC, etc. Caparrós' examples (10.2.5) are aBaBcC, AaBCcB.", "min_metre_similarity 0.95 (decision of November 2026), as for cuarteto_lira and lira: only lines of 7 and 11 (Rantanplan checks this as a hard condition). Without it, the 12-12-5 and 14-14-7 sextets with pie quebrado of A Virxe d'o Cristal (curros-aires) and others were visible sextetos-lira. The rhyme pattern stays open (*), given the many rhyme schemes above, where Rantanplan accepts only ababcc, aabccb, abcabc, abbacc."],
-    "min_metre_similarity": 0.95,
+    "notes": ["Paraíso (8.2). Most frequent types are aBaBCC, aBabcC, aBABCC. Other: AbbAcC; ABbaCC; aBbACC, etc. Caparrós' examples (10.2.5) are aBaBcC, AaBCcB.", "min_meter_similarity 0.95 (decision of November 2026), as for cuarteto_lira and lira: only lines of 7 and 11 (Rantanplan checks this as a hard condition). Without it, the 12-12-5 and 14-14-7 sextets with pie quebrado of A Virxe d'o Cristal (curros-aires) and others were visible sextetos-lira. The rhyme pattern stays open (*), given the many rhyme schemes above, where Rantanplan accepts only ababcc, aabccb, abcabc, abbacc."],
+    "min_meter_similarity": 0.95,
     "parent_type": "sexteto",
-    "metre": [
+    "meter": [
       7,
       11
     ],
-    "metre_kind": "mixed",
+    "meter_kind": "mixed",
     "rhyme_kind": "consonante",
     "patterns": [
       "*"
@@ -408,11 +408,11 @@
   },
   {
     "stanza_type": "sextilla",
-    "metre": [
+    "meter": [
       8
     ],
-    "metre_kind": "max",
-    "repeat_metre": true,
+    "meter_kind": "max",
+    "repeat_meter": true,
     "rhyme_kind": "consonante",
     "patterns": [
       "*"
@@ -422,7 +422,7 @@
   {
     "stanza_type": "estrofa_manriqueña",
     "parent_type": "sextilla",
-    "metre": [
+    "meter": [
       8,
       8,
       4,
@@ -430,8 +430,8 @@
       8,
       4
     ],
-    "repeat_metre": false,
-    "metre_tolerance": 1,
+    "repeat_meter": false,
+    "meter_tolerance": 1,
     "rhyme_kind": "consonante",
     "patterns": [
       "abcabc"
@@ -440,11 +440,11 @@
   },
   {
     "stanza_type": "copla_mixta",
-    "metre": [
+    "meter": [
       8
     ],
-    "metre_kind": "max",
-    "repeat_metre": false,
+    "meter_kind": "max",
+    "repeat_meter": false,
     "rhyme_kind": "consonante",
     "patterns": [
       "abbacca"
@@ -454,7 +454,7 @@
   {
     "stanza_type": "seguidilla_composta",
     "parent_type": "setina",
-    "metre": [
+    "meter": [
       7,
       5,
       7,
@@ -463,7 +463,7 @@
       7,
       5
     ],
-    "repeat_metre": false,
+    "repeat_meter": false,
     "rhyme_kind": "both",
     "patterns": [
       "-a-ab-b"
@@ -472,11 +472,11 @@
   },
   {
     "stanza_type": "sétima",
-    "metre": [
+    "meter": [
       9
     ],
-    "metre_kind": "min",
-    "repeat_metre": true,
+    "meter_kind": "min",
+    "repeat_meter": true,
     "patterns": [
       "*"
     ],
@@ -484,14 +484,14 @@
   },
   {
     "stanza_type": "sétima_lira",
-    "notes": ["min_metre_similarity 0.95 (decision of November 2026), as for the rest of the lira family: only lines of 7 and 11."],
-    "min_metre_similarity": 0.95,
+    "notes": ["min_meter_similarity 0.95 (decision of November 2026), as for the rest of the lira family: only lines of 7 and 11."],
+    "min_meter_similarity": 0.95,
     "parent_type": "sétima",
-    "metre": [
+    "meter": [
       7,
       11
     ],
-    "metre_kind": "mixed",
+    "meter_kind": "mixed",
     "rhyme_kind": "consonante",
     "patterns": [
       "*"
@@ -500,11 +500,11 @@
   },
   {
     "stanza_type": "setina",
-    "metre": [
+    "meter": [
       8
     ],
-    "metre_kind": "max",
-    "repeat_metre": true,
+    "meter_kind": "max",
+    "repeat_meter": true,
     "patterns": [
       "*"
     ],
@@ -514,11 +514,11 @@
     "stanza_type": "copla_arte_maior",
     "min_pattern_similarity": 1.0,
     "parent_type": "oitava",
-    "metre": [
+    "meter": [
       9
     ],
-    "metre_kind": "min",
-    "repeat_metre": false,
+    "meter_kind": "min",
+    "repeat_meter": false,
     "rhyme_kind": "consonante",
     "patterns": [
       "ababbaab",
@@ -536,11 +536,11 @@
     "stanza_type": "copla_arte_menor",
     "min_pattern_similarity": 1.0,
     "parent_type": "octavilla",
-    "metre": [
+    "meter": [
       8
     ],
-    "metre_kind": "max",
-    "repeat_metre": false,
+    "meter_kind": "max",
+    "repeat_meter": false,
     "rhyme_kind": "consonante",
     "patterns": [
       "abababab",
@@ -573,10 +573,10 @@
   {
     "stanza_type": "copla_castelá",
     "parent_type": "octavilla",
-    "metre": [
+    "meter": [
       8
     ],
-    "repeat_metre": false,
+    "repeat_meter": false,
     "rhyme_kind": "consonante",
     "patterns": [
       "ababcdcd",
@@ -588,11 +588,11 @@
   },
   {
     "stanza_type": "octavilla",
-    "metre": [
+    "meter": [
       8
     ],
-    "metre_kind": "max",
-    "repeat_metre": true,
+    "meter_kind": "max",
+    "repeat_meter": true,
     "rhyme_kind": "both",
     "patterns": [
       "*"
@@ -601,11 +601,11 @@
   },
   {
     "stanza_type": "oitava",
-    "metre": [
+    "meter": [
       9
     ],
-    "metre_kind": "min",
-    "repeat_metre": false,
+    "meter_kind": "min",
+    "repeat_meter": false,
     "patterns": [
       "*"
     ],
@@ -614,10 +614,10 @@
   {
     "stanza_type": "oitava_real",
     "parent_type": "oitava",
-    "metre": [
+    "meter": [
       11
     ],
-    "repeat_metre": true,
+    "repeat_meter": true,
     "rhyme_kind": "consonante",
     "patterns": [
       "abababcc"
@@ -626,8 +626,8 @@
   },
   {
     "stanza_type": "novena",
-    "metre": null,
-    "repeat_metre": false,
+    "meter": null,
+    "repeat_meter": false,
     "patterns": [
       "*"
     ],
@@ -636,10 +636,10 @@
   {
     "stanza_type": "copla_real",
     "min_pattern_similarity": 1.0,
-    "metre": [
+    "meter": [
       8
     ],
-    "repeat_metre": true,
+    "repeat_meter": true,
     "rhyme_kind": "consonante",
     "patterns": [
       "aababccdcd",
@@ -674,10 +674,10 @@
   {
     "stanza_type": "décima_antiga",
     "min_pattern_similarity": 1.0,
-    "metre": [
+    "meter": [
       8
     ],
-    "repeat_metre": true,
+    "repeat_meter": true,
     "rhyme_kind": "consonante",
     "patterns": [
       "abab111111",
@@ -690,10 +690,10 @@
   {
     "stanza_type": "espinela",
     "min_pattern_similarity": 1.0,
-    "metre": [
+    "meter": [
       8
     ],
-    "repeat_metre": true,
+    "repeat_meter": true,
     "rhyme_kind": "consonante",
     "patterns": [
       "abbaaccddc"
@@ -704,7 +704,7 @@
   {
     "stanza_type": "ovillejo",
     "min_pattern_similarity": 1.0,
-    "metre": [
+    "meter": [
       8,
       4,
       8,
@@ -716,7 +716,7 @@
       8,
       8
     ],
-    "repeat_metre": false,
+    "repeat_meter": false,
     "rhyme_kind": "consonante",
     "patterns": [
       "aabbcccddc"
@@ -726,7 +726,7 @@
   {
     "stanza_type": "ovillejo",
     "min_pattern_similarity": 1.0,
-    "metre": [
+    "meter": [
       8,
       3,
       8,
@@ -738,7 +738,7 @@
       8,
       8
     ],
-    "repeat_metre": false,
+    "repeat_meter": false,
     "rhyme_kind": "consonante",
     "patterns": [
       "aabbcccddc"
@@ -748,7 +748,7 @@
   {
     "stanza_type": "seguidilla_chamberga",
     "min_pattern_similarity": 1.0,
-    "metre": [
+    "meter": [
       7,
       5,
       7,
@@ -760,7 +760,7 @@
       3,
       7
     ],
-    "repeat_metre": false,
+    "repeat_meter": false,
     "rhymes": {
       "a": "both",
       "b": "asonante",
@@ -774,10 +774,10 @@
   },
   {
     "stanza_type": "romance",
-    "metre": [
+    "meter": [
       8
     ],
-    "repeat_metre": true,
+    "repeat_meter": true,
     "rhyme_kind": "asonante",
     "patterns": [
       "-a"
@@ -788,11 +788,11 @@
   {
     "stanza_type": "romancillo",
     "refines_type": ["octavilla", "sextilla"],
-    "metre": [
+    "meter": [
       7
     ],
-    "metre_kind": "max",
-    "repeat_metre": true,
+    "meter_kind": "max",
+    "repeat_meter": true,
     "rhyme_kind": "asonante",
     "patterns": [
       "-a"
@@ -803,11 +803,11 @@
   {
     "stanza_type": "romance_arte_maior",
     "refines_type": ["oitava", "sexteto"],
-    "metre": [
+    "meter": [
       9
     ],
-    "metre_kind": "min",
-    "repeat_metre": true,
+    "meter_kind": "min",
+    "repeat_meter": true,
     "rhyme_kind": "asonante",
     "patterns": [
       "-a"
@@ -817,11 +817,11 @@
   },
   {
     "stanza_type": "silva_arromanzada",
-    "metre": [
+    "meter": [
       7,
       11
     ],
-    "metre_kind": "mixed",
+    "meter_kind": "mixed",
     "rhyme_kind": "asonante",
     "patterns": [
       "-a"

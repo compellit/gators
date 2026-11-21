@@ -48,8 +48,8 @@ def scansion_stresses(result):
     return result["stressed_syllables"]
 
 
-def add_gama_columns(df, poem_column, text_column, syllable_column, stress_column, need_metre):
-    """Normalize the spelling (and scan, if metre is needed) with gama-verse, poem by poem."""
+def add_gama_columns(df, poem_column, text_column, syllable_column, stress_column, need_meter):
+    """Normalize the spelling (and scan, if meter is needed) with gama-verse, poem by poem."""
     import gama_verse
 
     normalized = pd.Series(index=df.index, dtype=object)
@@ -57,7 +57,7 @@ def add_gama_columns(df, poem_column, text_column, syllable_column, stress_colum
     stresses = pd.Series(index=df.index, dtype=object)
     for _, poem in df.groupby(poem_column, sort=False):
         lines = [str(text) for text in poem[text_column]]
-        if need_metre:
+        if need_meter:
             results = gama_verse.scan("\n".join(lines))
             normalized_lines = [result["preprocessing"] for result in results]
             syllables[poem.index] = [result["metrical_syllables"] for result in results]
@@ -68,7 +68,7 @@ def add_gama_columns(df, poem_column, text_column, syllable_column, stress_colum
             raise RuntimeError("gama-verse returned a different number of lines")
         normalized[poem.index] = normalized_lines
     df["normalized_text"] = normalized
-    if need_metre:
+    if need_meter:
         df[syllable_column] = syllables
         df[stress_column] = stresses
 
@@ -91,7 +91,7 @@ def analyze(
     are dropped.
 
     With gama-verse installed (and ``use_gama``), the spelling is normalized
-    and, if the input has no metre, the lines are scanned. The output adds
+    and, if the input has no meter, the lines are scanned. The output adds
     ``normalized_text`` (with gama-verse) and ``transcription`` to the input
     columns, plus those of :func:`~gators_verse.annotation.annotate`, which
     gives the return value: ``(results, stanza_scores, poem_scores)``.
@@ -101,15 +101,15 @@ def analyze(
         if column not in df.columns:
             raise ValueError(f"column {column!r} not found in the input; available: {list(df.columns)}")
     df = df.dropna(subset=[text_column]).reset_index(drop=True)
-    has_metre = syllable_column in df.columns and stress_column in df.columns
+    has_meter = syllable_column in df.columns and stress_column in df.columns
 
     normalized_lines = None
     if use_gama and gama_available():
-        add_gama_columns(df, poem_column, text_column, syllable_column, stress_column, need_metre=not has_metre)
+        add_gama_columns(df, poem_column, text_column, syllable_column, stress_column, need_meter=not has_meter)
         normalized_lines = df["normalized_text"].tolist()
-    elif not has_metre:
+    elif not has_meter:
         warnings.warn(
-            "no metre columns and gama-verse not used; stanza and poem types "
+            "no meter columns and gama-verse not used; stanza and poem types "
             "will be unreliable. Install gators-verse[gama] to get them."
         )
     df["transcription"] = transcribe(df[text_column].astype(str).tolist(), normalized_lines)

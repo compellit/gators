@@ -2,13 +2,13 @@
 
 Two inputs are written to the output folder:
 
-- input_gold_metre.tsv: with the gold metre (syllable count nbSyll and
+- input_gold_meter.tsv: with the gold meter (syllable count nbSyll and
   metrical stresses meterNbr), to evaluate rhyme and stanza analysis alone.
-- input_no_metre.tsv: without metre, so that gators-verse gets it from
+- input_no_meter.tsv: without meter, so that gators-verse gets it from
   gama-verse (end to end), or goes without it if gama-verse is not used.
 
 The gold rhyme letters and stanza types are kept as gold_rhyme and
-gold_stanza_type, for evaluate.py. Only nbSyll and meterNbr are gold metre;
+gold_stanza_type, for evaluate.py. Only nbSyll and meterNbr are gold meter;
 nbSG and gprMet in the corpus are an earlier GAMA output and are not used.
 """
 
@@ -26,7 +26,7 @@ COLUMNS = {
     "rhyme": "gold_rhyme",
     "stanzaTypeNarrow": "gold_stanza_type",
 }
-METRE_COLUMNS = {"nbSyll": "metrical_syllables", "meterNbr": "stressed_syllables"}
+METER_COLUMNS = {"nbSyll": "metrical_syllables", "meterNbr": "stressed_syllables"}
 TSV_OPTIONS = {"sep": "\t", "quoting": csv.QUOTE_NONE}
 
 
@@ -43,10 +43,10 @@ def main():
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    gold_metre = corpus[list(COLUMNS) + list(METRE_COLUMNS)].rename(columns={**COLUMNS, **METRE_COLUMNS})
-    gold_metre.to_csv(output_dir / "input_gold_metre.tsv", index=False, **TSV_OPTIONS)
-    no_metre = corpus[list(COLUMNS)].rename(columns=COLUMNS)
-    no_metre.to_csv(output_dir / "input_no_metre.tsv", index=False, **TSV_OPTIONS)
+    gold_meter = corpus[list(COLUMNS) + list(METER_COLUMNS)].rename(columns={**COLUMNS, **METER_COLUMNS})
+    gold_meter.to_csv(output_dir / "input_gold_meter.tsv", index=False, **TSV_OPTIONS)
+    no_meter = corpus[list(COLUMNS)].rename(columns=COLUMNS)
+    no_meter.to_csv(output_dir / "input_no_meter.tsv", index=False, **TSV_OPTIONS)
     print(f"Wrote {len(corpus)} verses to {output_dir}")
 
 

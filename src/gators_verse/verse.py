@@ -155,8 +155,8 @@ def enforce_short_gaita_pairs(poem_data):
         return (
             data
             and data["verse_type"] == "gaita_galega"
-            and data["metre"] is not None
-            and data["metre"] < 10
+            and data["meter"] is not None
+            and data["meter"] < 10
         )
 
     keep = set()

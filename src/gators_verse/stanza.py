@@ -1,9 +1,9 @@
 """Stanza types.
 
 Each stanza is scored against every entry of stanza_patterns.json (rhyme
-pattern, metre, rhyme type, verse types). The best entry wins in a first
+pattern, meter, rhyme type, verse types). The best entry wins in a first
 round; in a second round, each candidate's score is averaged with how often
-its type won in the poem's other stanzas. See docs/STANZA_PATTERN_SCORING.md.
+its type won in the poem's other stanzas. See docs/STANZA_AND_POEM_TYPES.md.
 """
 
 from .patterns import (
@@ -14,13 +14,13 @@ from .patterns import (
     format_pairs,
     get_stanzas,
     make_pattern,
-    meets_min_metre_similarity,
+    meets_min_meter_similarity,
     meets_min_pattern_similarity,
     observed_pair_data,
     relation_matches,
     relation_targets,
     rhyme_type_similarity,
-    stanza_metre_similarity,
+    stanza_meter_similarity,
     stanza_pattern_similarity,
 )
 
@@ -45,10 +45,10 @@ def score_stanza_entry(stanza, entry):
 
     finals = [data["final"] for _, data in stanza]
     observed_pattern = make_pattern(finals)
-    observed_metre = [data["metre"] for _, data in stanza]
+    observed_meter = [data["meter"] for _, data in stanza]
     observed_pairs = observed_pair_data(stanza, observed_pattern)
-    metre_score = stanza_metre_similarity(observed_metre, entry)
-    if not meets_min_metre_similarity(entry, metre_score):
+    meter_score = stanza_meter_similarity(observed_meter, entry)
+    if not meets_min_meter_similarity(entry, meter_score):
         return None
     verse_type_score = stanza_verse_type_similarity(stanza, entry)
 
@@ -72,7 +72,7 @@ def score_stanza_entry(stanza, entry):
             score
             for score in (
                 pattern_score,
-                metre_score,
+                meter_score,
                 rhyme_score,
                 verse_type_score,
             )
@@ -84,8 +84,8 @@ def score_stanza_entry(stanza, entry):
             "probability": probability,
             "observed_pattern": observed_pattern,
             "expected_pattern": expected_pattern,
-            "observed_metre": observed_metre,
-            "expected_metre": entry.get("metre"),
+            "observed_meter": observed_meter,
+            "expected_meter": entry.get("meter"),
             "observed_verse_types": [
                 data["verse_type"] for _, data in stanza
             ],
@@ -94,7 +94,7 @@ def score_stanza_entry(stanza, entry):
             "observed_rhyme_pairs": format_pairs(observed_pairs),
             "expected_rhyme_pairs": format_pairs(expected_pairs),
             "pattern_similarity": pattern_score,
-            "metre_similarity": metre_score,
+            "meter_similarity": meter_score,
             "rhyme_type_similarity": rhyme_score,
             "verse_type_similarity": verse_type_score,
         }
@@ -190,7 +190,7 @@ def stanza_candidate_key(score):
 
 
 def score_stanza_length(score):
-    return len(score["observed_metre"])
+    return len(score["observed_meter"])
 
 
 def poem_probability_for(key, poem_probabilities, stanza_length=None):
@@ -448,7 +448,7 @@ def annotate_stanza_types(poem_data, stanza_patterns):
                         len(stanza),
                     ),
                     "pattern_similarity": score["pattern_similarity"],
-                    "metre_similarity": score["metre_similarity"],
+                    "meter_similarity": score["meter_similarity"],
                     "rhyme_type_similarity": score["rhyme_type_similarity"],
                     "verse_type_similarity": score.get("verse_type_similarity"),
                     "subtype_selection_component": (
@@ -468,8 +468,8 @@ def annotate_stanza_types(poem_data, stanza_patterns):
                     ),
                     "observed_pattern": score["observed_pattern"],
                     "expected_pattern": score["expected_pattern"],
-                    "observed_metre": score["observed_metre"],
-                    "expected_metre": score["expected_metre"],
+                    "observed_meter": score["observed_meter"],
+                    "expected_meter": score["expected_meter"],
                     "selected": stanza_type in {
                         output["stanza_type"],
                         output["stanza_subtype"],
@@ -480,13 +480,13 @@ def annotate_stanza_types(poem_data, stanza_patterns):
         for _, data in stanza:
             data["observed_pattern"] = winner["observed_pattern"]
             data["expected_pattern"] = winner["expected_pattern"]
-            data["observed_metre"] = winner["observed_metre"]
-            data["expected_metre"] = winner["expected_metre"]
+            data["observed_meter"] = winner["observed_meter"]
+            data["expected_meter"] = winner["expected_meter"]
             data["expected_rhymes"] = winner["expected_rhymes"]
             data["observed_rhyme_pairs"] = winner["observed_rhyme_pairs"]
             data["expected_rhyme_pairs"] = winner["expected_rhyme_pairs"]
             data["pattern_similarity"] = winner["pattern_similarity"]
-            data["metre_similarity"] = winner["metre_similarity"]
+            data["meter_similarity"] = winner["meter_similarity"]
             data["rhyme_type_similarity"] = winner["rhyme_type_similarity"]
             data["stanza_type"] = output["stanza_type"]
             data["stanza_type_probability"] = output["stanza_type_probability"]

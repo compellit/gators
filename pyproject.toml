@@ -17,7 +17,7 @@ authors = [
     { name = "Anxo Alonso Pérez" },
     { name = "Pablo Ruiz Fabo" },
 ]
-keywords = ["Galician", "poetry", "rhyme", "stanza", "metre"]
+keywords = ["Galician", "poetry", "rhyme", "stanza", "meter"]
 classifiers = [
     "Programming Language :: Python :: 3",
     "Natural Language :: Galician",

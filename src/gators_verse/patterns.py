@@ -1,12 +1,12 @@
 """Helpers shared by rhyme, stanza and poem analysis.
 
 A poem is held as ``poem_data``: a dict from verse number (1, 2, ...) to a dict
-with that verse's data (rhyme ending, metre, rhyme class, stanza number...).
+with that verse's data (rhyme ending, meter, rhyme class, stanza number...).
 
 Rhyme schemes are written as patterns: one character per line, the same letter
 for lines that rhyme together, ``-`` for an unrhymed line. Expected patterns in
 the pattern files may also use ``0`` (must not rhyme), ``1`` (must rhyme, with
-any other line) and ``*`` (any pattern). See docs/STANZA_PATTERN_SCORING.md.
+any other line) and ``*`` (any pattern). See docs/STANZA_AND_POEM_TYPES.md.
 """
 
 import json
@@ -14,7 +14,7 @@ import string
 from pathlib import Path
 
 DATA_DIR = Path(__file__).resolve().parent / "data"
-MIXED_METRE_DOMINANCE_THRESHOLD = 0.8
+MIXED_METER_DOMINANCE_THRESHOLD = 0.8
 
 
 def load_patterns(file_name):
@@ -112,15 +112,15 @@ def meets_min_pattern_similarity(entry, pattern_score):
     return pattern_score >= threshold
 
 
-def meets_min_metre_similarity(entry, metre_score):
+def meets_min_meter_similarity(entry, meter_score):
     # Hard constraint, like min_pattern_similarity: forms defined by
-    # their metre alone (rhyme pattern "----") are not candidates for
-    # a stanza far from that metre, or they would take any quatrain
-    # that no rhymed form fits. Stanzas without metre are not affected.
-    threshold = entry.get("min_metre_similarity")
-    if threshold is None or metre_score is None:
+    # their meter alone (rhyme pattern "----") are not candidates for
+    # a stanza far from that meter, or they would take any quatrain
+    # that no rhymed form fits. Stanzas without meter are not affected.
+    threshold = entry.get("min_meter_similarity")
+    if threshold is None or meter_score is None:
         return True
-    return metre_score >= threshold
+    return meter_score >= threshold
 
 
 def stanza_pattern_similarity(observed_pattern, expected_pattern):
@@ -164,7 +164,7 @@ def stanza_pattern_similarity(observed_pattern, expected_pattern):
     return matches / compared
 
 
-def line_metre_similarity(observed, expected):
+def line_meter_similarity(observed, expected):
     if observed is None or expected is None:
         return None
     if observed == expected:
@@ -174,76 +174,76 @@ def line_metre_similarity(observed, expected):
     return min(observed, expected) / max(observed, expected)
 
 
-def boundary_metre_similarity(observed, expected, kind):
+def boundary_meter_similarity(observed, expected, kind):
     if observed is None:
         return None
     if kind == "min" and observed >= expected:
         return 1
     if kind == "max" and observed <= expected:
         return 1
-    return line_metre_similarity(observed, expected)
+    return line_meter_similarity(observed, expected)
 
 
-def stanza_metre_similarity(observed_metre, entry):
-    metre = entry.get("metre")
-    if not metre or any(value is None for value in observed_metre):
+def stanza_meter_similarity(observed_meter, entry):
+    meter = entry.get("meter")
+    if not meter or any(value is None for value in observed_meter):
         return None
 
-    kind = entry.get("metre_kind")
+    kind = entry.get("meter_kind")
     scores = []
 
     if kind == "mixed":
-        closest_counts = {expected: 0 for expected in metre}
-        for observed in observed_metre:
-            closest_distance = min(abs(observed - expected) for expected in metre)
-            closest_metres = [
+        closest_counts = {expected: 0 for expected in meter}
+        for observed in observed_meter:
+            closest_distance = min(abs(observed - expected) for expected in meter)
+            closest_meters = [
                 expected
-                for expected in metre
+                for expected in meter
                 if abs(observed - expected) == closest_distance
             ]
-            for expected in closest_metres:
+            for expected in closest_meters:
                 closest_counts[expected] += 1
             scores.append(
                 max(
-                    line_metre_similarity(observed, expected)
-                    for expected in closest_metres
+                    line_meter_similarity(observed, expected)
+                    for expected in closest_meters
                 )
             )
         support = sorted(
-            (count / len(observed_metre) for count in closest_counts.values()),
+            (count / len(observed_meter) for count in closest_counts.values()),
             reverse=True,
         )
         if (
             support
-            and support[0] > MIXED_METRE_DOMINANCE_THRESHOLD
-            and (len(support) == 1 or support[1] <= 1 - MIXED_METRE_DOMINANCE_THRESHOLD)
+            and support[0] > MIXED_METER_DOMINANCE_THRESHOLD
+            and (len(support) == 1 or support[1] <= 1 - MIXED_METER_DOMINANCE_THRESHOLD)
         ):
             return 0
     elif kind in ("min", "max"):
-        expected = metre[0]
-        for observed in observed_metre:
-            scores.append(boundary_metre_similarity(observed, expected, kind))
+        expected = meter[0]
+        for observed in observed_meter:
+            scores.append(boundary_meter_similarity(observed, expected, kind))
     elif kind == "range":
-        low, high = metre
-        for observed in observed_metre:
+        low, high = meter
+        for observed in observed_meter:
             if low <= observed <= high:
                 scores.append(1)
             else:
                 scores.append(
                     max(
-                        line_metre_similarity(observed, low),
-                        line_metre_similarity(observed, high),
+                        line_meter_similarity(observed, low),
+                        line_meter_similarity(observed, high),
                     )
                 )
-    elif entry.get("repeat_metre") and len(metre) == 1:
-        expected = metre[0]
-        for observed in observed_metre:
-            scores.append(line_metre_similarity(observed, expected))
+    elif entry.get("repeat_meter") and len(meter) == 1:
+        expected = meter[0]
+        for observed in observed_meter:
+            scores.append(line_meter_similarity(observed, expected))
     else:
-        if len(metre) != len(observed_metre):
+        if len(meter) != len(observed_meter):
             return None
-        for observed, expected in zip(observed_metre, metre):
-            scores.append(line_metre_similarity(observed, expected))
+        for observed, expected in zip(observed_meter, meter):
+            scores.append(line_meter_similarity(observed, expected))
 
     scores = [score for score in scores if score is not None]
     return sum(scores) / len(scores) if scores else None

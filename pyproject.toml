@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=61"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -7,6 +7,8 @@ name = "gators-verse"
 version = "0.1.0"
 description = "Rhyme and stanza analysis of Galician poetry (GATORS, Galician Tool for Rhyme and Stanza)"
 readme = "README.md"
+license = "GPL-3.0-only"
+license-files = ["LICENSE"]
 requires-python = ">=3.10"
 # trasgo and gama-verse are not on PyPI yet: they are installed from GitHub.
 dependencies = [

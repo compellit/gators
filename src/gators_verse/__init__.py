@@ -12,7 +12,7 @@ for spelling normalization and metre.
 
 __version__ = "0.1.0"
 
-from .annotate import annotate  # noqa: E402
-from .transcribe import transcribe  # noqa: E402
+from .annotation import annotate  # noqa: E402
+from .transcription import transcribe  # noqa: E402
 
 __all__ = ["annotate", "transcribe"]

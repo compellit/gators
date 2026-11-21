@@ -13,8 +13,8 @@ import sys
 import pandas as pd
 
 from . import __version__
-from .annotate import annotate
-from .transcribe import transcribe
+from .annotation import annotate
+from .transcription import transcribe
 
 TSV_OPTIONS = {"sep": "\t", "quoting": csv.QUOTE_NONE}
 # Gumper's stresses passed to the rhyme analysis, as in the GAMA web app.

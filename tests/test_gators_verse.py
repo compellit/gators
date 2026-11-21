@@ -3,7 +3,7 @@ import pandas as pd
 from gators_verse import annotate, transcribe
 from gators_verse.cli import read_poem_text
 from gators_verse.rhyme import rhyme_ending
-from gators_verse.transcribe import rhyme_text
+from gators_verse.transcription import rhyme_text
 
 # Two abba quatrains from the test corpus, with their gold metre: only the
 # metre tells the redondilla (octosyllables) from the cuarteto (hendecasyllables).

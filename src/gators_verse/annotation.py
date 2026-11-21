@@ -28,6 +28,11 @@ OUTPUT_COLUMNS = {
     "poem_subtype": "poem_subtype",
     "poem_subtype_probability": "poem_subtype_probability",
 }
+# Rhyme letters are uppercase for lines of arte maior (9 syllables or more),
+# as is usual in metrics and in the GAMA interface (which uppercases lines
+# whose last stress falls on syllable 8 or later: the same lines, since the
+# last stress falls on the second-to-last syllable).
+ARTE_MAIOR_MIN_SYLLABLES = 9
 
 
 def clean_output_value(value):
@@ -106,7 +111,8 @@ def annotate(
     missing from ``df`` are ignored.
 
     Returns a copy of ``df`` with the OUTPUT_COLUMNS added, and two tables
-    with the score of every stanza and poem pattern considered.
+    with the score of every stanza and poem pattern considered. Rhyme letters
+    are uppercase for lines of 9 syllables or more, when the metre is known.
     """
     for column in (poem_column, stanza_column, text_column, transcription_column):
         if column not in df.columns:
@@ -137,6 +143,8 @@ def annotate(
         stanza_score_rows += [{"poem_id": poem_id, **row} for row in stanza_rows]
         poem_score_rows += [{"poem_id": poem_id, **row} for row in poem_rows]
         for data in poem_data.values():
+            if data["metre"] is not None and data["metre"] >= ARTE_MAIOR_MIN_SYLLABLES:
+                data["letter"] = data["letter"].upper()
             data["vowels"] = ",".join(data["vowels"])
             data["retrouso"] = bool(data["retrouso"])
             output_rows[data["row"]] = {column: data[key] for column, key in OUTPUT_COLUMNS.items()}

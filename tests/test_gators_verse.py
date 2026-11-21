@@ -54,11 +54,12 @@ def test_redondilla_and_cuarteto_differ_by_metre():
     assert results["rhyme"].tolist() == ["a", "b", "b", "a"]
     assert set(results["stanza_type"]) == {"redondilla"}
     results, _, _ = annotate(make_table(CUARTETO))
-    assert results["rhyme"].tolist() == ["a", "b", "b", "a"]
+    assert results["rhyme"].tolist() == ["A", "B", "B", "A"]  # arte maior
     assert set(results["stanza_type"]) == {"cuarteto"}
 
 
 def test_rhymes_without_metre():
+    # Without metre, letters stay lowercase: the line length is unknown.
     results, _, _ = annotate(make_table(CUARTETO, with_metre=False))
     assert results["rhyme"].tolist() == ["a", "b", "b", "a"]
 

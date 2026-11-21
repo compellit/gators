@@ -17,7 +17,10 @@ from .annotation import annotate
 from .transcription import transcribe
 
 TSV_OPTIONS = {"sep": "\t", "quoting": csv.QUOTE_NONE}
-# Gumper's stresses passed to the rhyme analysis, as in the GAMA web app.
+# Gumper's stresses passed to the rhyme analysis, as in the GAMA web app: the
+# stresses of the line's regular pattern, without extra-rhythmic stresses.
+# They are only used for verse types (verse.py), which require no stress
+# outside the type's pattern; rhyme takes the stress from trasgo.
 GAMA_STRESS_KEY = "regular_pattern"
 
 

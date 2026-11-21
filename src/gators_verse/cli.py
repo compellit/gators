@@ -17,11 +17,21 @@ from .annotation import annotate
 from .transcription import transcribe
 
 TSV_OPTIONS = {"sep": "\t", "quoting": csv.QUOTE_NONE}
-# Gumper's stresses passed to the rhyme analysis, as in the GAMA web app: the
-# stresses of the line's regular pattern, without extra-rhythmic stresses.
-# They are only used for verse types (verse.py), which require no stress
-# outside the type's pattern; rhyme takes the stress from trasgo.
-GAMA_STRESS_KEY = "regular_pattern"
+
+
+def gumper_stresses(result):
+    """Stresses passed to the rhyme analysis for one line scanned by Gumper.
+
+    The stresses of the line's regular pattern, without extra-rhythmic
+    stresses, as in the GAMA web app; Gumper has no regular pattern for lines
+    over 11 syllables ("-"), and those get all the stresses Gumper detects.
+    They are only used for the experimental verse types (verse.py), which
+    require no stress outside the type's pattern; rhyme takes the stress from
+    trasgo.
+    """
+    if result["regular_pattern"] != "-":
+        return result["regular_pattern"]
+    return result["stressed_syllables"]
 
 
 def read_poem_text(text):
@@ -62,7 +72,7 @@ def add_gama_columns(df, args, need_metre):
             results = gama_verse.scan("\n".join(lines))
             normalized_lines = [result["preprocessing"] for result in results]
             syllables[poem.index] = [result["metrical_syllables"] for result in results]
-            stresses[poem.index] = [result[GAMA_STRESS_KEY] for result in results]
+            stresses[poem.index] = [gumper_stresses(result) for result in results]
         else:
             normalized_lines = gama_verse.preprocess("\n".join(lines)).splitlines()
         if len(normalized_lines) != len(lines):

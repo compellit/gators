@@ -30,13 +30,9 @@ Pairs are created only within the same poem. A pair is:
 
 Pairs absent from both are not counted, so there are no true negatives.
 
-The following values are treated as no-rhyme labels and never form a rhyme
-pair (after stripping surrounding whitespace and converting to lowercase, so
-`A` and `a` are the same letter):
-
-```text
-""  -  0  nan  none  null
-```
+Unrhymed lines never form a pair: gators-verse marks them `-`, and the gold
+annotation `0`; an empty cell counts as unrhymed too. Letters are compared
+ignoring case, so `A` and `a` are the same rhyme.
 
 ## Rhyme metrics
 

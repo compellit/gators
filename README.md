@@ -1,6 +1,6 @@
 # GATORS
 
-Galician Tool for Rhyme and Stanza.
+Galician Tool for Rhyme and Stanza · 🐊.
 
 gators-verse finds the rhymes of Galician poems and assigns verse, stanza and
 poem types. It transcribes each line with [trasgo](https://github.com/compellit/trasgo),
@@ -8,27 +8,24 @@ takes the rhyme from the stressed vowel of the line's last word, groups lines
 into assonant and consonant rhymes, and scores each stanza and poem against
 the stanza and poem types defined in `src/gators_verse/data/`.
 
-Stanza and poem types depend on metre (an `abba` quatrain is a redondilla in
+Stanza and poem types depend on meter (an `abba` quatrain is a redondilla in
 octosyllables and a cuarteto in hendecasyllables), and rhyme detection is more
-accurate on normalized spelling. Both come from
+accurate on normalized spelling. Both meter and normalization come from
 [gama-verse](https://github.com/compellit/gama), installed as an optional
-extra. **Without gama-verse and without metre in the input, stanza and poem
-types are mostly wrong** (see [Evaluation](#evaluation)): install
+extra. **Without gama-verse and without meter in the input, stanza and poem
+types will be mostly wrong** (see [Evaluation](#evaluation)): install
 `gators-verse[gama]` if you need them.
 
 ## Installation
 
-trasgo and gama-verse are not on PyPI yet, so install them from GitHub first:
-
 ```bash
-pip install git+https://github.com/compellit/trasgo
-pip install git+https://github.com/compellit/gama       # optional, see above
-gama-verse-download                                      # gama-verse's data files
-
 git clone https://github.com/compellit/gators
 cd gators
-pip install ".[gama]"            # or: pip install . (without gama-verse)
+pip install ".[gama]"     # or: pip install . (without gama-verse)
+gama-verse-download       # gama-verse's data files
 ```
+
+This installs trasgo and gama-verse from GitHub, as they are not on PyPI yet.
 
 Python 3.10 or later is required.
 
@@ -44,7 +41,7 @@ gators-verse poem.txt -o poem.tsv
 cat poem.txt | gators-verse
 ```
 
-Several poems, or poems with their metre, go in a table (a `.tsv` file) with
+Several poems, or poems with their meter, go in a table (a `.tsv` file) with
 one row per verse:
 
 | Column | Content | Required |
@@ -53,18 +50,19 @@ one row per verse:
 | `stanza_n` | stanza number; consecutive lines with the same number form a stanza | yes |
 | `text` | the verse | yes |
 | `metrical_syllables` | syllable count, e.g. `8` | no |
-| `stressed_syllables` | stressed syllables, e.g. `3 7` | no |
+| `stressed_syllables` | stressed syllables, e.g. `3 7`; only used for the experimental `verse_type` | no |
 
 Other column names can be given with `--poem-column`, `--stanza-column`,
 `--text-column`, `--syllable-column` and `--stress-column`; other columns are
 copied to the output.
 
 With gama-verse installed, gators-verse normalizes the spelling of each poem
-and, if the input has no metre columns, scans it. `--no-gama`
-turns this off.
+and, if the input has no syllable count, scans it. `--no-gama` turns this off.
 
-The syllable count from gama is used for stanza and poem types. Rhyme does not use gama's stress patterns: the stressed vowel where the rhyme
-starts comes from trasgo's transcription.
+The syllable count, from the input or from gama-verse, is used for stanza and
+poem types, and to write the rhyme letters of long lines in uppercase. Rhyme
+detection does not use stresses: the stressed vowel where the rhyme starts
+comes from trasgo's transcription.
 
 `--stanza-scores` and `--poem-scores` write the score of every stanza and poem
 type considered, to see why a type was chosen.
@@ -77,39 +75,41 @@ A TSV with the input columns and:
 |---|---|
 | `normalized_text` | the verse after gama-verse's spelling normalization (with gama-verse only) |
 | `transcription` | trasgo's transcription, used for rhyme |
-| `rhyme` | rhyme letter, uppercase for lines of 9 syllables or more (arte maior) when the metre is known; `-` for unrhymed lines |
+| `rhyme` | rhyme letter, uppercase for lines of 9 syllables or more (arte maior) when the meter is known; `-` for unrhymed lines |
 | `rhyme_ending` | the transcribed ending, from the stressed vowel of the last word |
 | `rhyme_vowels` | its stressed and last vowels, compared for assonance |
-| `verse_type` | experimental: verse types defined by stress positions (gaita galega, endecasílabo types), when the stresses match exactly; not evaluated |
+| `verse_type` | experimental: small subset of verse-line types defined by stress positions, when the stresses match exactly; not evaluated (note that gama-verse detects a full inventory of line types, independent from gators) |
 | `stanza_rhyme_pattern` | the stanza's rhyme scheme, e.g. `abba` |
 | `stanza_expected_pattern` | the scheme of the chosen stanza type |
-| `stanza_type`, `stanza_subtype` | stanza type and subtype, with their `_probability` |
-| `poem_type`, `poem_subtype` | poem type and subtype, with their `_probability` |
+| `stanza_type`, `stanza_subtype` | stanza type and subtype, also with their `_score` field |
+| `poem_type`, `poem_subtype` | poem type and subtype, also with their `_score` field |
 
-How the stanza and poem types are scored is described in
-[docs/STANZA_PATTERN_SCORING.md](docs/STANZA_PATTERN_SCORING.md) and
-[docs/POEM_TYPE_SCORING.md](docs/POEM_TYPE_SCORING.md).
+How the stanza and poem types are scored, and how to add or change a type, is
+described in [docs/STANZA_AND_POEM_TYPES.md](docs/STANZA_AND_POEM_TYPES.md).
 
 ### Python
 
 ```python
-import pandas as pd
-from gators_verse import annotate, transcribe
+from gators_verse import analyze
 
-poem = pd.DataFrame({
-    "poem_id": 1,
-    "stanza_n": 1,
-    "text": ["-Ña muller, pilla esa roca", "e déixate de ir á misa,",
-             "pensa que non tés camisa", "e fía unha mazaroca."],
-    "metrical_syllables": [8, 8, 8, 8],
-    "stressed_syllables": ["3 4 5 7", "2 7", "1 4 5 7", "2 3 7"],
-})
-poem["transcription"] = transcribe(poem["text"].tolist())
-results, stanza_scores, poem_scores = annotate(poem)
-results[["text", "rhyme", "stanza_type"]]   # a b b a, redondilla
+poem = """Aquel romor de cántigas e risas,
+Ir, vir, algarear;
+Aquel falar de cousas que pasaron
+Y outras que pasarán;
+Aquela, en fin, vitalidade inquieta
+Xuvenil, tanto mal
+Me fixo, que lles dixen:
+Ivos e non volvás."""
+
+results, stanza_scores, poem_scores = analyze(poem)
+results[["rhyme", "stanza_type"]]   # - a - a - a - a, silva_arromanzada
 ```
 
-`transcribe()` takes the normalized lines as a second argument, if you have them.
+`analyze()` does what the `gators-verse` command does: it takes a plain-text poem or a
+DataFrame with the columns above, and uses gama-verse, when installed, for
+spelling normalization and meter (`use_gama=False` turns this off). Its two
+last steps, `transcribe()` and `annotate()`, can also be called on their own,
+for input that already has its transcription.
 
 ## Evaluation
 
@@ -118,9 +118,9 @@ type), with `evaluation/run_all.sh`:
 
 | Setting | Rhyme F1 (pairwise) | Stanza type accuracy |
 |---|---|---|
-| gama-verse normalization, gold metre | 98.14% | 96.47% (246) |
-| gama-verse normalization and metre (end to end) | 98.13% | 96.86% (247) |
-| without gama-verse, no metre | 88.98% | 32.94% (84) |
+| gama-verse normalization, gold meter | 98.14% | 96.47% (246) |
+| gama-verse normalization and meter (end to end) | 98.13% | 96.86% (247) |
+| without gama-verse, no meter | 88.98% | 32.94% (84) |
 
 See [docs/EVALUATION.md](docs/EVALUATION.md) for the metrics and the settings,
 and [iaa/README.md](iaa/README.md) for the agreement between the two rhyme
@@ -133,6 +133,6 @@ pip install ".[test]"
 pytest
 ```
 
-## Authors
+## Citation
 
-Anxo Alonso Pérez and Pablo Ruiz Fabo.
+Anxo Alonso Pérez and Pablo Ruiz Fabo. (2026). GATORS - Galician Tool for Rhyme and Stanza. CiTIUS, Universidade de Santiago de Compostela.

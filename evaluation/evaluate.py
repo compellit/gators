@@ -8,9 +8,9 @@ need them. The share of counted pairs that are correct, tp / (tp + fp + fn),
 is the Jaccard index. See docs/EVALUATION.md.
 
 Stanza types: a stanza is correct when its gold type equals the predicted
-stanza type or subtype. Stanzas whose gold type is "none" or empty are not
-annotated in the gold and are not evaluated; this does not mean that they
-should get no type.
+stanza type or subtype; a stanza without a predicted type counts as wrong.
+Stanzas whose gold type is "none" or empty are not annotated in the gold and
+are not evaluated; this does not mean that they should get no type.
 
 Input: gators-verse output with the gold columns written by prepare.py
 (gold_rhyme, gold_stanza_type). Writes pairs.tsv, stanzas.tsv and summary.tsv
@@ -125,6 +125,9 @@ def main():
         "f1": ratio(2 * precision * recall, precision + recall),
         "stanzas": len(stanza_rows),
         "stanzas_correct": correct_stanzas,
+        "stanzas_without_prediction": sum(
+            1 for row in stanza_rows if not (row["pred_stanza_type"] or row["pred_stanza_subtype"])
+        ),
         "stanza_accuracy": ratio(correct_stanzas, len(stanza_rows)),
     }
 

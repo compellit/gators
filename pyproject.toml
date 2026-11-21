@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gators-verse"
+version = "0.1.0"
+description = "Rhyme and stanza analysis of Galician poetry (GATORS, Galician Tool for Rhyme and Stanza)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas",
+    "regex",
+    "trasgo",
+]
+authors = [
+    { name = "Anxo Alonso Pérez" },
+    { name = "Pablo Ruiz Fabo" },
+]
+keywords = ["Galician", "poetry", "rhyme", "stanza", "metre"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Natural Language :: Galician",
+    "Topic :: Text Processing :: Linguistic",
+]
+
+[project.optional-dependencies]
+gama = ["gama-verse"]
+test = ["pytest"]
+
+[project.scripts]
+gators-verse = "gators_verse.cli:main"
+
+[tool.setuptools.package-data]
+gators_verse = ["data/*.json"]

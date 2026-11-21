@@ -1,5 +1,8 @@
-# Python bytecode and tool caches
+# Python bytecode, tool caches and build files
 __pycache__/
+*.egg-info/
+build/
+dist/
 *.py[cod]
 .pytest_cache/
 .mypy_cache/

@@ -1,35 +1,19 @@
-"""Phonetic transcription of Galician verse lines with Silaba, for rhyme detection.
+"""Phonetic transcription of verse lines with trasgo, for rhyme detection.
 
-main() transcribes a DataFrame column. The web app calls it on the normalised
-text that scansion preprocessing already produced; transcribe_with_silaba.py
-wraps it for the command line and can run that normalisation itself
-(normalize_with_gumper). Normalisation modernises the spelling and restores
-written accents ("dia" -> "día", "lua" -> "lúa", "mais" -> "máis"), without
-which Silaba misplaces the stress of many nineteenth-century spellings.
-For rhyme, rhyme_text() keeps a normalised line only where normalisation just
-restored accents on its final word; see there.
+Lines are transcribed word by word. Spelling normalization (gama-verse)
+modernizes the spelling and restores written accents ("dia" -> "día", "lua" ->
+"lúa", "mais" -> "máis"), without which trasgo misplaces the stress of many
+nineteenth-century spellings. For rhyme, rhyme_text() keeps a normalized line
+only where normalization just restored accents on its final word; otherwise,
+and when no normalized text is available, the line gets a light spelling
+cleanup (prepro_text).
 """
+import functools
 import re
-import subprocess
-import sys
-import tempfile
 import unicodedata
-from pathlib import Path
-from types import SimpleNamespace
 
-PROJECT_DIR = Path(__file__).resolve().parents[1]
-WORKSPACE_DIR = PROJECT_DIR.parent
-SILABA_DIR = WORKSPACE_DIR / "silaba_gl"
+from trasgo import SilabaError, Transcriber
 
-sys.path.insert(0, str(SILABA_DIR))
-
-from silaba_py import Silaba, SilabaError  # noqa: E402
-
-TEXT_COLUMN = "running_text"
-OUTPUT_COLUMN = "phSilaba"
-TSV_QUOTECHAR = "\x07"
-GUMPER_PREPROCESSOR_PATH = WORKSPACE_DIR / "preprocessing" / "g2s_client_running_text.py"
-GUMPER_PREPROCESSED_RELATIVE_PATH = Path("out_001") / "input_pp_out_norm_spa_001.txt"
 CEDILLA_TRANSLATION = str.maketrans("çÇ", "zZ")
 CEDILLA_ON_RE = re.compile(r"[çÇ]([oO])([nN][sS]?)\b")
 ACUTE_O = {"o": "ó", "O": "Ó"}
@@ -46,21 +30,6 @@ TOKEN_RE = re.compile(
 )
 
 
-def build_silaba_args():
-    return SimpleNamespace(
-        l=False,
-        i=True,
-        d=False,
-        p=True,
-        s=False,
-        c=True,
-        t=True,
-        r=False,
-        h=False,
-        b=True,
-    )
-
-
 def merge_tokens(tokens):
     text = " ".join(tokens)
     text = re.sub(r"\s+([.,!?;:)\]])", r"\1", text)
@@ -68,32 +37,19 @@ def merge_tokens(tokens):
     return text.strip()
 
 
-def reset_silaba_state(silaba):
-    silaba.entrada = ""
-    silaba.entrada2 = None
-    silaba.entrada_lem = None
-    silaba.entrada_lem2 = None
-    silaba.entrada_vbex = None
-    silaba.input_word = ""
-    silaba.palavra = ""
-    silaba.deep = ""
-
-
 # Words stressed on the last syllable whose spelling in the corpus does not
-# show it, so Silaba stresses the penultimate ("marfin" read as "márfin").
-# Neither normalisation nor rhyme_text() adds the accent; checked in context
+# show it, so trasgo stresses the penultimate ("marfin" read as "márfin").
+# Neither normalization nor rhyme_text() adds the accent; checked in context
 # against the rhyme. Some forms stay out: "Verin" and "Crispin" in Garcia
 # Ferreiro's Follas are deliberately paroxytone, set against "Verín" and
 # "Crispín"; "Ullin" in Pondal scans as 8 either way ("de Ú.llin" with
 # dialepha, "de_U.llín" with synalepha) but ends an unrhymed odd line, so the
 # usual "Úllin" is kept.
-# The accent is added here, after scansion, so scansion still reads these
-# words as paroxytone ("Da verde Erin" gets no stress on 4) and its syllable
-# counts and rhythm feed the verse and stanza types. Fixing that would mean
-# moving the list into the per-word loop of both preprocessing clients
-# (g2s_client_running_text.py and g2s_client_running_text_for_api.py), next
-# to diacritic_stress, but the list is too specific to this corpus for that,
-# and every mid-line occurrence would need checking first ("paris").
+# The accent is added here, for transcription only, so scansion (gama-verse)
+# still reads these words as paroxytone ("Da verde Erin" gets no stress on 4).
+# Moving the list into gama-verse's preprocessing would fix that, but the list
+# is too specific to this corpus for that, and every mid-line occurrence would
+# need checking first ("paris").
 FINAL_STRESS_WORDS = {
     "ami": "amí",  # French "mon ami"
     "ceci": "cecí",  # French
@@ -119,26 +75,30 @@ def add_final_stress(token):
     return accented
 
 
-def transcribe_token(token, silaba, cache):
+TRANSCRIBER = Transcriber(complex_codas=True, thetacism=True, broad=True)
+
+
+@functools.lru_cache(maxsize=None)
+def transcribe_word(word):
+    """Transcribe one lowercase word; "erro" if trasgo cannot."""
+    try:
+        return TRANSCRIBER.word(add_final_stress(word))
+    except SilabaError:
+        return "erro"
+
+
+def transcribe_token(token):
     if not WORD_RE.fullmatch(token):
         return token
-
-    key = token.lower()
-    if key not in cache:
-        try:
-            reset_silaba_state(silaba)
-            cache[key] = silaba.run(add_final_stress(token))
-        except SilabaError:
-            cache[key] = "erro"
-    return cache[key]
+    return transcribe_word(token.lower())
 
 
 def replace_cedilla(text):
-    """Respell the old "ç", which Silaba can't read (it splits the word there).
+    """Respell the old "ç", which trasgo can't read (it splits the word there).
 
     It sounds like "z". Words in "-çon(s)" ("coraçon", "devoçon") are stressed
-    on the last syllable, which Silaba only knows from a written accent.
-    Normalisation leaves "ç" as it is, so this applies to normalised text too.
+    on the last syllable, which trasgo only knows from a written accent.
+    Normalization leaves "ç" as it is, so this applies to normalized text too.
     """
     text = CEDILLA_ON_RE.sub(
         lambda match: match.group(0)[0].translate(CEDILLA_TRANSLATION)
@@ -149,19 +109,17 @@ def replace_cedilla(text):
     return text.translate(CEDILLA_TRANSLATION)
 
 
-def transcribe_text(text, silaba, cache):
-    # '"' marks stress in Silaba's output, so quotation marks in the verse
+def transcribe_line(text):
+    # '"' marks stress in trasgo's output, so quotation marks in the verse
     # would read as stress marks (and hide where the rhyme starts).
     text = text.replace('"', "")
     text = replace_cedilla(text)
     text = text.translate(NONSTANDARD_VOWEL_TRANSLATION)
-    tokens = TOKEN_RE.findall(text)
-    transcribed_tokens = [transcribe_token(token, silaba, cache) for token in tokens]
-    return merge_tokens(transcribed_tokens)
+    return merge_tokens([transcribe_token(token) for token in TOKEN_RE.findall(text)])
 
 
 def prepro_text(text):
-    """Light spelling cleanup for Silaba, used when no normalised text is available."""
+    """Light spelling cleanup for trasgo, used when no normalized text is available."""
     text = re.sub(rf"(?i)q(?:u)?[{PREPRO_APOSTROPHE}]\s*(?=[{PREPRO_LETTER}])", "k", text)
     text = re.sub(rf"(?i)\bq(?:u)?\s+(?=[{PREPRO_LETTER}])", "k", text)
     text = re.sub(
@@ -179,12 +137,12 @@ def prepro_text(text):
     return text
 
 
-# Combining marks that normalisation may add or remove; the tilde is kept,
+# Combining marks that normalization may add or remove; the tilde is kept,
 # so "ñ" and "n" stay different letters.
 ACCENT_MARKS = {"\u0300", "\u0301", "\u0302", "\u0308"}
 FINAL_WORD_RE = re.compile(r"[^\W\d_]+(?=[^\w]*$)")
 VOWEL_GROUP_RE = re.compile(r"[aeiouáéíóúàèìòùâêîôûäëïöü]+")
-# Nouns that normalisation reads as a verb plus clitic ("escríbano").
+# Nouns that normalization reads as a verb plus clitic ("escríbano").
 WRONG_ACCENT_WORDS = {"escribano", "escribanos", "sobrana",
                       "rosales", "castelas", "paletos", "ponteareas",
                       "raxas", "trives", "rispeta", "rispeto"}
@@ -203,10 +161,10 @@ def final_word(text):
 
 
 def accepts_normalized_word(original, normalized):
-    """Tell whether a normalised final word can be used for rhyme.
+    """Tell whether a normalized final word can be used for rhyme.
 
     Only when it differs from the original by accents alone ("dia" ->
-    "día", "corazon" -> "corazón"): normalisation also modernises spellings
+    "día", "corazon" -> "corazón"): normalization also modernizes spellings
     ("Rosiña" -> "Rosina", "camino" -> "camiño"), which changes the sounds
     the poet rhymed, and drops words after some elisions ("rezarll'ést'igrexa"
     -> "rezarlle ést"). Added accents that are wrong in this corpus are
@@ -232,12 +190,12 @@ def accepts_normalized_word(original, normalized):
 
 
 def is_wrong_preterite_accent(original, normalized):
-    """Tell whether normalisation accented a dialectal preterite as verb + clitic.
+    """Tell whether normalization accented a dialectal preterite as verb + clitic.
 
     Dialectal third-person plural preterites in -ano/-eno ("levano" =
     "levaron", "dixeno" = "dixeron") are stressed on the a or e, and poets
     rhyme them so ("tirano" : "levano", "notano" : "castillano"). They are
-    not in the normaliser's vocabulary, which lists verbs with enclitic
+    not in the normalizer's vocabulary, which lists verbs with enclitic
     pronouns, so it picks one of those, one accent away ("leva" + "no" ->
     "lévano", "nota" + "no" -> "nótano"). An added accent with two or more
     vowels after it, on a word in -ano/-eno, is therefore not used for rhyme.
@@ -258,7 +216,7 @@ def is_wrong_preterite_accent(original, normalized):
 def rhyme_text(original, normalized):
     """Choose the text of a line to transcribe for rhyme.
 
-    The normalised line when its final word passes accepts_normalized_word(),
+    The normalized line when its final word passes accepts_normalized_word(),
     otherwise the original line after the light cleanup (prepro_text).
     """
     if accepts_normalized_word(final_word(original), final_word(normalized)):
@@ -266,72 +224,16 @@ def rhyme_text(original, normalized):
     return prepro_text(original)
 
 
-def normalize_with_gumper(texts, preprocessor_path=GUMPER_PREPROCESSOR_PATH):
-    """Normalise lines with the running-text preprocessing used for scansion.
+def transcribe(lines, normalized_lines=None):
+    """Transcribe verse lines; return one transcription per line.
 
-    Runs preprocessing/g2s_client_running_text.py in a subprocess, which loads
-    its language model on every call: fine for batch runs, too slow for the
-    web app, which gets the same text from the preprocessing service instead.
-    Returns one normalised line per input line.
+    ``normalized_lines``, if given, are the same lines after gama-verse's
+    spelling normalization; see rhyme_text().
     """
-    preprocessor_path = Path(preprocessor_path)
-    if not preprocessor_path.exists():
-        raise FileNotFoundError(f"Gumper preprocessing script not found: {preprocessor_path}")
-
-    texts = list(texts)
-    with tempfile.TemporaryDirectory(prefix="silaba-gumper-prepro-") as tmp:
-        work_dir = Path(tmp)
-        input_path = work_dir / "input.txt"
-        input_path.write_text(
-            "\n".join(str(text).strip() for text in texts) + "\n", encoding="utf-8"
-        )
-
-        subprocess.run(
-            [
-                sys.executable,
-                str(preprocessor_path),
-                str(input_path),
-                "-p",
-                "-d",
-                "-n",
-                "-s",
-                "-b",
-                "001",
-                "-m",
-            ],
-            check=True,
-            cwd=preprocessor_path.parent,
-        )
-
-        output_path = work_dir / GUMPER_PREPROCESSED_RELATIVE_PATH
-        lines = output_path.read_text(encoding="utf-8").splitlines()
-
-    if len(lines) != len(texts):
-        raise RuntimeError(
-            "Gumper preprocessing count mismatch: "
-            f"got {len(lines)} rows for {len(texts)} input rows"
-        )
-    return lines
-
-
-def main(df, text_column=TEXT_COLUMN, output_column=OUTPUT_COLUMN, prepro=False):
-    """Transcribe ``df[text_column]`` into ``df[output_column]``.
-
-    Pass normalised text where available. ``prepro`` applies the light cleanup
-    (prepro_text) first, for raw text, and stores the cleaned text in "prepro".
-    """
-    df.dropna(subset=[text_column], inplace=True)
-    transcription_column = text_column
-    if prepro:
-        df["prepro"] = df[text_column].apply(prepro_text)
-        transcription_column = "prepro"
-
-    silaba = Silaba(build_silaba_args())
-    cache = {}
-    df[output_column] = df[transcription_column].apply(
-        lambda text: transcribe_text(text, silaba, cache)
-    )
-
-    print(f"Transcribed {len(df)} verses.")
-    print(f"Unique word forms transcribed: {len(cache)}")
-    return df
+    if normalized_lines is None:
+        texts = [prepro_text(line) for line in lines]
+    else:
+        if len(normalized_lines) != len(lines):
+            raise ValueError("lines and normalized_lines differ in length")
+        texts = [rhyme_text(line, normalized) for line, normalized in zip(lines, normalized_lines)]
+    return [transcribe_line(text) for text in texts]

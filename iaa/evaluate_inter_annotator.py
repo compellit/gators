@@ -9,7 +9,21 @@ import csv
 from collections import defaultdict
 from itertools import combinations
 
-from evaluate_rhyme_tags import TSV_QUOTECHAR, normalize_label, same_rhyme, safe_divide
+TSV_QUOTECHAR = "\x07"  # never in the data, so quotation marks are read as text
+NO_RHYME_VALUES = {"", "-", "0", "nan", "none", "null"}
+
+
+def normalize_label(value):
+    return str(value if value is not None else "").strip().lower()
+
+
+def same_rhyme(left, right):
+    left = normalize_label(left)
+    return left == normalize_label(right) and left not in NO_RHYME_VALUES
+
+
+def safe_divide(numerator, denominator):
+    return numerator / denominator if denominator else 0.0
 
 
 def read_rows(path):

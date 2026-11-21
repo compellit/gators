@@ -82,7 +82,7 @@ def poem_text(stanza):
 
 
 def test_analyze_text_without_gama_warns_and_finds_rhymes():
-    with pytest.warns(UserWarning, match="no meter"):
+    with pytest.warns(UserWarning, match="no syllable column"):
         results, _, _ = analyze(poem_text(REDONDILLA), use_gama=False)
     assert results["rhyme"].tolist() == ["a", "b", "b", "a"]
 
@@ -104,3 +104,14 @@ def test_decima_that_is_not_an_espinela_is_a_decima_antiga():
     results, _, _ = annotate(table)
     assert "".join(results["rhyme"]) == "abbacddcee"
     assert set(results["stanza_type"]) == {"décima_antiga"}
+
+
+def test_analyze_keeps_input_syllables_without_stresses():
+    # Syllables alone count as meter: gama-verse must not rescan and overwrite
+    # them. Without stresses, verse types are not computed.
+    table = make_table(REDONDILLA).drop(columns=["stressed_syllables", "transcription"])
+    table["metrical_syllables"] = 9  # differs from what a scansion would give
+    results, _, _ = analyze(table)
+    assert results["metrical_syllables"].tolist() == [9, 9, 9, 9]
+    assert "stressed_syllables" not in results.columns
+    assert results["verse_type"].eq("").all()

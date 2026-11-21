@@ -87,11 +87,13 @@ def analyze(
 
     ``poems`` is a plain-text poem (one verse per line, a blank line between
     stanzas) or a DataFrame with one row per verse, with poem, stanza and text
-    columns and, optionally, syllable and stress columns. Rows without text
-    are dropped.
+    columns and, optionally, a syllable column and a stress column. The
+    stresses are only used for the experimental verse types, which are not
+    computed without them. Rows without text are dropped.
 
     With gama-verse installed (and ``use_gama``), the spelling is normalized
-    and, if the input has no meter, the lines are scanned. The output adds
+    and, if the input has no syllable column, the lines are scanned, which
+    gives both syllables and stresses. The output adds
     ``normalized_text`` (with gama-verse) and ``transcription`` to the input
     columns, plus those of :func:`~gators_verse.annotation.annotate`, which
     gives the return value: ``(results, stanza_scores, poem_scores)``.
@@ -101,7 +103,7 @@ def analyze(
         if column not in df.columns:
             raise ValueError(f"column {column!r} not found in the input; available: {list(df.columns)}")
     df = df.dropna(subset=[text_column]).reset_index(drop=True)
-    has_meter = syllable_column in df.columns and stress_column in df.columns
+    has_meter = syllable_column in df.columns
 
     normalized_lines = None
     if use_gama and gama_available():
@@ -109,7 +111,7 @@ def analyze(
         normalized_lines = df["normalized_text"].tolist()
     elif not has_meter:
         warnings.warn(
-            "no meter columns and gama-verse not used; stanza and poem types "
+            "no syllable column and gama-verse not used; stanza and poem types "
             "will be unreliable. Install gators-verse[gama] to get them."
         )
     df["transcription"] = transcribe(df[text_column].astype(str).tolist(), normalized_lines)

@@ -105,10 +105,11 @@ def annotate(
     """Annotate verses with rhyme letters, verse, stanza and poem types.
 
     ``df`` has one row per verse, in reading order, with the poem and stanza
-    each belongs to, its text and its trasgo transcription. Meter (syllable
-    count and stressed syllables, e.g. ``8`` and ``3 7``) is optional, but
-    without it stanza and poem types are far less accurate. Meter columns
-    missing from ``df`` are ignored.
+    each belongs to, its text and its trasgo transcription. The syllable
+    count (e.g. ``8``) is optional, but without it stanza and poem types are
+    far less accurate. The stressed syllables (e.g. ``3 7``) are optional too,
+    and only used for the experimental verse types, which are left empty
+    without them.
 
     Returns a copy of ``df`` with the OUTPUT_COLUMNS added, and two tables
     with the score of every stanza and poem pattern considered. Rhyme letters

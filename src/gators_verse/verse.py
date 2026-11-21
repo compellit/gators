@@ -1,5 +1,9 @@
 """Verse types that depend on stress positions (gaita galega, endecasílabo types).
 
+Experimental: verse types are not evaluated (there is no gold for them) and
+no stanza or poem type uses them at present; they only fill the verse_type
+output column.
+
 Each line gets a verse type when its syllable count and stressed syllables
 match one of VERSE_TYPE_PATTERNS: all the required stresses, and no stress
 outside the required and optional ones.

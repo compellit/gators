@@ -1,5 +1,28 @@
 [
   {
+    "poem_type": "haiku",
+    "set_stanza_type": "haiku",
+    "metre": [
+      5,
+      7,
+      5
+    ],
+    "repeat_metre": false,
+    "patterns": [
+      "000"
+    ],
+    "min_verses": 3,
+    "verse_count": 3,
+    "stanza_count": 1,
+    "stanza_lengths": [
+      3
+    ],
+    "required_components": [
+      "metre",
+      "pattern"
+    ]
+  },
+  {
     "poem_type": "romance",
     "stanza_type": "romance",
     "metre": [

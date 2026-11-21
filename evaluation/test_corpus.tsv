@@ -1,4 +1,4 @@
-lineID	workId	part	lineNbr	author	title	collection	lines	gumperLine	testEq	nbSyll	meterNbr	gprMet	cf	nbSG	gprMetNoA	stanzaNbr	 rhyme	stanzaTypeNarrow	stanzaTypeBroad	stanzaTypeSource	source	digitalSource	foundIn	comment
+lineID	workId	part	lineNbr	author	title	collection	lines	gumperLine	testEq	nbSyll	meterNbr	gprMet	cf	nbSG	gprMetNoA	stanzaNbr	rhyme	stanzaTypeNarrow	stanzaTypeBroad	stanzaTypeSource	source	digitalSource	foundIn	comment
 1	1	dev	1	Eduardo Pondal	A Valeriano Weyler		Muitos qu'ás tuas ordes pelearon,	muitos quás túas ordes pelearon	0	11	1 4 6 10	1 3 4 6 10	0	11	1 3 6 10	1	A	cuarteto	sonnet		Revista gallega, 135, p. 4, 10 Oct 1897	https://academia.gal/archive-hemeroteca-web/paxinas.do?id=9199	crf	
 2	1	dev	2	Eduardo Pondal	A Valeriano Weyler		E as suas roxas faixas che deberon,	E as súas roxas faixas che deberon,	0	11	2 4 6 10	2 4 6 8 10	0	11	2 4 6 8 10	1	B	cuarteto	sonnet					
 3	1	dev	3	Eduardo Pondal	A Valeriano Weyler		En cuanto os sumos grados atingueron,	En cuanto os sumos grados atingueron,	1	11	4 6 10	2 4 6 10	0	11	2 4 6 10	1	B	cuarteto	sonnet					
@@ -1022,10 +1022,10 @@ lineID	workId	part	lineNbr	author	title	collection	lines	gumperLine	testEq	nbSyl
 1021	14	test	58	Rosalía de Castro	Cantares Gallegos - Textos engadidos - 93	Cantares Gallegos - Textos engadidos	o triste coiro desnudo,	o triste coiro desnudo,	1	8	2 4 7	2 4 7	1	8	2 4 7	15	ac	redondilla						
 1022	14	test	59	Rosalía de Castro	Cantares Gallegos - Textos engadidos - 94	Cantares Gallegos - Textos engadidos	díxolle entonces (eu dudo	díxolle entonces (eu dudo	1	8	1 4 6 7	1 4 6 7	1	8	1 4 7	15	ac	redondilla						
 1023	14	test	60	Rosalía de Castro	Cantares Gallegos - Textos engadidos - 95	Cantares Gallegos - Textos engadidos	si chorando, si cantándolle):	si chorando, si cantándolle):	1	8	1 3 7	3 7	0	8	3 7	15	ab	redondilla						
-1024	14	test	61	Rosalía de Castro	Cantares Gallegos - Textos engadidos - 96	Cantares Gallegos - Textos engadidos	Ei ti, miña gardadora	Ei ti, miña gardadora	1	8	2 3 7	1 2 3 7	0	8	1 3 7	16	ad	redondilla						
-1025	14	test	62	Rosalía de Castro	Cantares Gallegos - Textos engadidos - 97	Cantares Gallegos - Textos engadidos	dos días santos e das festas,	dos d#ís santos e das festas	0	8	2 4 7	2 3 7	0	8	2 7	16	ae	redondilla						
-1026	14	test	63	Rosalía de Castro	Cantares Gallegos - Textos engadidos - 98	Cantares Gallegos - Textos engadidos	¡como che relosen hora	¡como che relosen hora	1	8	5 7	3 5 7	0	8	3 5 7	16	ad	redondilla						
-1027	14	test	64	Rosalía de Castro	Cantares Gallegos - Textos engadidos - 99	Cantares Gallegos - Textos engadidos	as carnes por antre as xestas!	as carnes por antre as xestas!	1	8	2 7	2 7	1	8	2 7	16	ae	redondilla						
+1024	14	test	61	Rosalía de Castro	Cantares Gallegos - Textos engadidos - 96	Cantares Gallegos - Textos engadidos	Ei ti, miña gardadora	Ei ti, miña gardadora	1	8	2 3 7	1 2 3 7	0	8	1 3 7	16	ad	cuarteta						
+1025	14	test	62	Rosalía de Castro	Cantares Gallegos - Textos engadidos - 97	Cantares Gallegos - Textos engadidos	dos días santos e das festas,	dos d#ís santos e das festas	0	8	2 4 7	2 3 7	0	8	2 7	16	ae	cuarteta						
+1026	14	test	63	Rosalía de Castro	Cantares Gallegos - Textos engadidos - 98	Cantares Gallegos - Textos engadidos	¡como che relosen hora	¡como che relosen hora	1	8	5 7	3 5 7	0	8	3 5 7	16	ad	cuarteta						
+1027	14	test	64	Rosalía de Castro	Cantares Gallegos - Textos engadidos - 99	Cantares Gallegos - Textos engadidos	as carnes por antre as xestas!	as carnes por antre as xestas!	1	8	2 7	2 7	1	8	2 7	16	ae	cuarteta						
 1028	15	test	1	Manuel Curros Enríquez	O vento		Dis que por boca do Espítiru Santo,	Dis que por boca do Espítiru Santo,	1	11	1 4 7 10	1 4 7 10	1	11	1 4 10	1	0	none				https://academia.gal/Biblioteca/GetPageById.do?id=AidmiTe_1&orde=29&format=0		ccH:397 endec de muñeira
 1029	15	test	2	Manuel Curros Enríquez	O vento		que debe ter unha boca ben negra,	que debe ter unha boca ben negra,	1	11	2 4 5 7 9 10	2 4 5 7 9 10	1	11	2 4 10	1	A	none						
 1030	15	test	3	Manuel Curros Enríquez	O vento		púxome o crego na misa do pobo	púxome o crego na misa do pobo	1	11	1 4 7 10	1 4 7 10	1	11	1 4 10	1	B	none						
@@ -1164,150 +1164,150 @@ lineID	workId	part	lineNbr	author	title	collection	lines	gumperLine	testEq	nbSyl
 1163	18	test	70	Rosalía de Castro	Cantares Gallegos 1. ed. - 10 - I	Cantares Gallegos 1. ed	Farruco dó Pombal,	Farruco dó Pombal,	1	7	2 6	2 4 6	0	7	2 4 6	2	a	romancillo						
 1164	18	test	71	Rosalía de Castro	Cantares Gallegos 1. ed. - 10 - I	Cantares Gallegos 1. ed	Que donde moitos cospen,	Que donde moitos cospen,	1	7	2 6	2 4 6	0	7	2 4 6	2	0	romancillo						
 1165	18	test	72	Rosalía de Castro	Cantares Gallegos 1. ed. - 10 - I	Cantares Gallegos 1. ed	Lama fan.»	Lama fan.»	1	4	1 3	1 3	1	4	1 3	2	a	romancillo						
-1166	19	dev	1	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	-Costureiriña	-Costureiriña	1	5	4	4	1	5	4	1	0	seguidilla						
-1167	19	dev	2	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	comprimenteira,	comprimenteira,	1	5	4	4	1	5	4	1	a	seguidilla						
-1168	19	dev	3	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	sacha no campo,	sacha no campo,	1	5	1 4	1 4	1	5	1 4	1	0	seguidilla						
-1169	19	dev	4	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	malla na eira,	malla na   eira	0	5	1 4	1 4	1	5	1 4	1	a	seguidilla						
-1170	19	dev	5	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	lava no río,	lava no río,	1	5	1 4	1 4	1	5	1 4	2	0	seguidilla						
-1171	19	dev	6	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	vai apañar	vai   apañar	0	5	1 4	1 4	1	5	1 4	2	b	seguidilla						
-1172	19	dev	7	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	toxinos secos	toxinos secos	1	5	2 4	2 4	1	5	2 4	2	0	seguidilla						
-1173	19	dev	8	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	antre o pinar.	antre o pinar.	1	5	4	4	1	5	4	2	b	seguidilla						
-1174	19	dev	9	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Así a meniña	Así a meniña	1	5	2 4	2 4	1	5	2 4	3	c	seguidilla						
-1175	19	dev	10	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	traballadora	traballadora	1	5	4	4	1	5	4	3	d	seguidilla						
-1176	19	dev	11	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	os punteados	os punteados	1	5	4	4	1	5	4	3	0	seguidilla						
-1177	19	dev	12	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	deprende ora.	deprende   ora	0	5	2 4	2 4	1	5	2 4	3	d	seguidilla						
-1178	19	dev	13	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	-Miña Santiña,	-Miña Santiña,	1	5	4	1 4	0	5	1 4	4	c	seguidilla						
-1179	19	dev	14	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	mal me quixere	mal me quixere	1	5	1 4	1 4	1	5	1 4	4	e	seguidilla						
-1180	19	dev	15	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	quen me aconsella	quen me aconsella	1	5	4	1 4	0	5	1 4	4	f	seguidilla						
-1181	19	dev	16	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	que tal fixere.	que tal fixere.	1	5	2 4	2 4	1	5	2 4	4	e	seguidilla						
-1182	19	dev	17	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Mans de señora,	Mans de señora,	1	5	1 4	1 4	1	5	1 4	5	0	seguidilla						
-1183	19	dev	18	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	mans fidalgueiras	mans fidalgueiras	1	5	1 4	1 4	1	5	1 4	5	f	seguidilla						
-1184	19	dev	19	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	teñen todiñas	teñen todiñas	1	5	1 4	1 4	1	5	1 4	5	0	seguidilla						
-1185	19	dev	20	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	as costureiras;	as costureiras;	1	5	4	4	1	5	4	5	f	seguidilla						
-1186	19	dev	21	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	boca de reina,	boca de reina,	1	5	1 4	1 4	1	5	1 4	6	f	seguidilla						
-1187	19	dev	22	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	corpo de dama,	corpo de dama,	1	5	1 4	1 4	1	5	1 4	6	g	seguidilla						
-1188	19	dev	23	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	cómprelle a seda,	comprelle a seda,	0	5	1 4	2 4	0	5	2 4	6	f	seguidilla						
-1189	19	dev	24	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	foxen da lama.	foxen da lama.	1	5	1 4	1 4	1	5	1 4	6	g	seguidilla						
-1190	19	dev	25	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	-¡Ai, rapaciña!	-¡Ai, rapaciña!	1	5	1 4	1 4	1	5	1 4	7	0	seguidilla						
-1191	19	dev	26	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Ti te-lo teo:	Ti te-lo teo:	1	5	1 2 4	1 2 4	1	5	2 4	7	h	seguidilla						
-1192	19	dev	27	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	¡Seda as que dormen	¡Seda as que dormen	1	5	1 4	1 4	1	5	1 4	7	i	seguidilla						
-1193	19	dev	28	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	antre o centeo!	antre o centeo!	1	5	4	4	1	5	4	7	h	seguidilla						
-1194	19	dev	29	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	¡Fuxir da lama	¡Fuxir da lama	1	5	2 4	2 4	1	5	2 4	8	0	seguidilla						
-1195	19	dev	30	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	quen naceu nela!	quen naceu nela!	1	5	3 4	1 2 4	0	5	2 4	8	j	seguidilla						
-1196	19	dev	31	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Dios cho perdone,	Dios cho perdone,	1	5	1 4	1 4	1	5	1 4	8	i	seguidilla						
-1197	19	dev	32	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	probre Manuela.	probre Manuela.	1	5	1 4	1 4	1	5	1 4	8	j	seguidilla						
-1198	19	dev	33	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Lama con honra	Lama con honra	1	5	1 4	1 4	1	5	1 4	9	0	seguidilla						
-1199	19	dev	34	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	non mancha nada,	non mancha nada,	1	5	1 2 4	1 2 4	1	5	2 4	9	k	seguidilla						
-1200	19	dev	35	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	nin seda limpa	nin seda limpa	1	5	2 4	2 4	1	5	2 4	9	l	seguidilla						
-1201	19	dev	36	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	honra emporcada.	honra emporcada.	1	5	1 4	1 4	1	5	1 4	9	k	seguidilla						
-1202	19	dev	37	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	-Santa, Santasa,	-Santa, Santasa,	1	5	1 4	4	0	5	4	10	k	seguidilla						
-1203	19	dev	38	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	non sos comprida,	non sos comprida,	1	5	1 2 4	1 2 4	1	5	2 4	10	l	seguidilla						
-1204	19	dev	39	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	decindo cousas	decindo cousas	1	5	2 4	2 4	1	5	2 4	10	m	seguidilla						
-1205	19	dev	40	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	que fan ferida.	que fan ferida.	1	5	2 4	2 4	1	5	2 4	10	l	seguidilla						
-1206	19	dev	41	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Falaime solo	Falaime solo	1	5	2 4	2 4	1	5	2 4	11	0	seguidilla						
-1207	19	dev	42	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	das muiñeiras,	das muiñe~iras	0	5	4	4	1	5	4	11	n	seguidilla						
-1208	19	dev	43	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	daquelas voltas	daquelas voltas	1	5	2 4	2 4	1	5	2 4	11	m	seguidilla						
-1209	19	dev	44	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	revirandeiras,	revirandeiras,	1	5	4	4	1	5	4	11	n	seguidilla						
-1210	19	dev	45	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	daqueles puntos	daqueles puntos	1	5	2 4	2 4	1	5	2 4	12	0	seguidilla						
-1211	19	dev	46	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	que fan agora,	que fan agora,	1	5	2 4	2 4	1	5	2 4	12	ñ	seguidilla						
-1212	19	dev	47	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	de afora adentro,	de afora adentro,	1	5	2 4	2 4	1	5	2 4	12	0	seguidilla						
-1213	19	dev	48	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	de adentro afora.	de adentro afora.	1	5	2 4	2 4	1	5	2 4	12	ñ	seguidilla						
-1214	19	dev	49	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	-Costureiriña	-Costureiriña	1	5	4	4	1	5	4	13	0	seguidilla						
-1215	19	dev	50	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	do carballal,	do carballal,	1	5	4	4	1	5	4	13	o	seguidilla						
-1216	19	dev	51	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	colle unha agulla,	colle unha agulla,	1	5	1 2 4	1 2 4	1	5	2 4	13	0	seguidilla						
-1217	19	dev	52	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	colle un dedal;	colle un dedal;	1	5	1 2 4	1 2 4	1	5	2 4	13	o	seguidilla						
-1218	19	dev	53	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	cose os buratos	cose os buratos	1	5	1 4	1 4	1	5	1 4	14	0	seguidilla						
-1219	19	dev	54	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	dese teu cós,	dese teu cos,	0	5	1 4	1 3 4	0	5	1 4	14	p	seguidilla						
-1220	19	dev	55	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	que andar rachada	que andar rachada	1	5	2 4	2 4	1	5	2 4	14	0	seguidilla						
-1221	19	dev	56	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	non manda Dios.	non manda Dios.	1	5	1 2 4	1 2 4	1	5	2 4	14	p	seguidilla						
-1222	19	dev	57	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Cose, meniña,	Cose, meniña,	1	5	1 4	1 4	1	5	1 4	15	q	seguidilla						
-1223	19	dev	58	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	tantos furados	tantos furados	1	5	1 4	1 4	1	5	1 4	15	r	seguidilla						
-1224	19	dev	59	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	i ora non penses	i ora non penses	1	5	1 3 4	1 3 4	1	5	1 4	15	0	seguidilla						
-1225	19	dev	60	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	nos punteados.	nos punteados.	1	5	4	4	1	5	4	15	r	seguidilla						
-1226	19	dev	61	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	-Miña Santasa,	-Miña Santasa,	1	5	4	1 4	0	5	1 4	16	0	seguidilla						
-1227	19	dev	62	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	miña Santiña,	miña Santiña,	1	5	1 4	1 4	1	5	1 4	16	q	seguidilla						
-1228	19	dev	63	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	nin teño agulla,	nin teño agulla,	1	5	2 4	2 4	1	5	2 4	16	0	seguidilla						
-1229	19	dev	64	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	nin teño liña,	nin teño liña,	1	5	2 4	2 4	1	5	2 4	16	q	seguidilla						
-1230	19	dev	65	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	nin dedal teño,	nin dedal teño,	1	5	3 4	3 4	1	5	4	17	0	seguidilla						
-1231	19	dev	66	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	que aló na feira	que aló na feira	1	5	2 4	2 4	1	5	2 4	17	r	seguidilla						
-1232	19	dev	67	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	rouboumo un majo	rouboumo un majo	1	5	2 3 4	2 3 4	1	5	2 4	17	s	seguidilla						
-1233	19	dev	68	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	da faltriqueira,	da faltriqueira,	1	5	4	4	1	5	4	17	r	seguidilla						
-1234	19	dev	69	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	decindo: «As perdas	decindo: «As perdas	1	5	2 4	2 4	1	5	2 4	18	r	seguidilla						
-1235	19	dev	70	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	dos descoidados	dos descoidados	1	5	4	4	1	5	4	18	s	seguidilla						
-1236	19	dev	71	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	fan o lotiño	fan o lotiño	1	5	1 4	1 4	1	5	1 4	18	0	seguidilla						
-1237	19	dev	72	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	dos apañados».	dos apañados».	1	5	4	4	1	5	4	18	s	seguidilla						
-1238	19	test	73	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	-¡Costureiriña	-¡Costureiriña	1	5	4	4	1	5	4	19	0	seguidilla						
-1239	19	test	74	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	que a majos trata!	que a majos trata!	1	5	2 4	2 4	1	5	2 4	19	t	seguidilla						
-1240	19	test	75	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Alma de cobre,	Alma de cobre,	1	5	1 4	1 4	1	5	1 4	19	0	seguidilla						
-1241	19	test	76	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	collar de prata,	collar de prata,	1	5	2 4	2 4	1	5	2 4	19	t	seguidilla						
-1242	19	test	77	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	mocidá rindo,	mocidá rindo,	1	5	3 4	3 4	1	5	4	20	0	seguidilla						
-1243	19	test	78	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	vellez chorando...	vellez chorando...	1	5	2 4	2 4	1	5	2 4	20	u	seguidilla						
-1244	19	test	79	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Anda, meniña,	Anda, meniña,	1	5	1 4	1 4	1	5	1 4	20	0	seguidilla						
-1245	19	test	80	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	coida do gando.	coida do gando.	1	5	1 4	1 4	1	5	1 4	20	u	seguidilla						
-1246	19	test	81	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Coida das herbas	Coida das herbas	1	5	1 4	1 4	1	5	1 4	21	v	seguidilla						
-1247	19	test	82	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	de teu herbal:	de teu   herbal	0	5	2 4	2 4	1	5	2 4	21	w	seguidilla						
-1248	19	test	83	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	terás agulla,	terás agulla,	1	5	2 4	2 4	1	5	2 4	21	0	seguidilla						
-1249	19	test	84	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	terás dedal.	terás dedal.	1	5	2 4	2 4	1	5	2 4	21	w	seguidilla						
-1250	19	test	85	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	-Deixade as herbas,	-Deixade as herbas,	1	5	2 4	2 4	1	5	2 4	22	v	seguidilla						
-1251	19	test	86	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	que o que eu quería	que o que eu quería	1	5	2 4	2 4	1	5	2 4	22	x	seguidilla						
-1252	19	test	87	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	era ir cal todas	era ir cal todas	1	5	1 2 4	1 2 3 4	0	5	2 4	22	y	seguidilla						
-1253	19	test	88	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	á romería.	a romería.	0	5	4	4	1	5	4	22	x	seguidilla						
-1254	19	test	89	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	¡I alí con aire	¡I alí con aire	1	5	2 4	1 2 4	0	5	2 4	23	0	seguidilla						
-1255	19	test	90	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	dar cada volta!	dar cada volta!	1	5	1 2 4	1 2 4	1	5	2 4	23	y	seguidilla						
-1256	19	test	91	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Os ollos baixos,	Os ollos baixos,	1	5	2 4	2 4	1	5	2 4	23	0	seguidilla						
-1257	19	test	92	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	a perna solta.	a perna solta.	1	5	2 4	2 4	1	5	2 4	23	y	seguidilla						
-1258	19	test	93	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Pés lixeiriños,	Pés lixeiriños,	1	5	1 4	1 4	1	5	1 4	24	0	seguidilla						
-1259	19	test	94	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	corpo direito;	corpo direito;	1	5	1 4	1 4	1	5	1 4	24	z	seguidilla						
-1260	19	test	95	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	¡pero, Santiña...,	¡pero, Santiña...,	1	5	4	4	1	5	4	24	aa	seguidilla						
-1261	19	test	96	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	non lle dou xeito!	non lle d#ó xeito	0	5	1 3 4	1 3 4	1	5	1 4	24	z	seguidilla						
-1262	19	test	97	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Non vos metades	Non vos metades	1	5	1 4	1 4	1	5	1 4	25	0	seguidilla						
-1263	19	test	98	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	pedricadora;	pedricadora;	1	5	4	4	1	5	4	25	ab	seguidilla						
-1264	19	test	99	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	bailadoriña	bailadoriña	1	5	4	4	1	5	4	25	aa	seguidilla						
-1265	19	test	100	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	facéme agora.	facéme agora.	1	5	2 4	2 4	1	5	2 4	25	ab	seguidilla						
-1266	19	test	101	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Vós dende arriba	Vós dende arriba	1	5	1 4	1 4	1	5	1 4	26	aa	seguidilla						
-1267	19	test	102	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	andá correndo;	andá correndo;	1	5	2 4	2 4	1	5	2 4	26	ac	seguidilla						
-1268	19	test	103	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	facede os puntos,	facede os puntos,	1	5	2 4	2 4	1	5	2 4	26	0	seguidilla						
-1269	19	test	104	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	i eu adeprendo.	i eu   adeprendo	0	5	1 4	1 4	1	5	1 4	26	ac	seguidilla						
-1270	19	test	105	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Andá que peno	Andá que peno	1	5	2 4	2 4	1	5	2 4	27	ac	seguidilla						
-1271	19	test	106	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	polos penares...	polos penares...	1	5	4	4	1	5	4	27	ad	seguidilla						
-1272	19	test	107	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Mirá que o pido	Mirá que o pido	1	5	2 4	2 4	1	5	2 4	27	0	seguidilla						
-1273	19	test	108	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	chorando a mares.	chorando a mares.	1	5	2 4	2 4	1	5	2 4	27	ad	seguidilla						
-1274	19	test	109	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	-¡Ai da meniña!	-¡Ai da meniña!	1	5	1 4	1 4	1	5	1 4	28	0	seguidilla						
-1275	19	test	110	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	¡Ai da que chora!	¡Ai da que chora!	1	5	1 4	1 4	1	5	1 4	28	ae	seguidilla						
-1276	19	test	111	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	¡Ai, porque quere	¡Ai, porque quere	1	5	1 4	1 4	1	5	1 4	28	0	seguidilla						
-1277	19	test	112	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	ser bailadora!	ser bailadora!	1	5	1 4	1 4	1	5	1 4	28	ae	seguidilla						
-1278	19	test	113	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Que cando durma	Que cando durma	1	5	4	4	1	5	4	29	0	seguidilla						
-1279	19	test	114	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	no camposanto,	no camposanto,	1	5	4	4	1	5	4	29	af	seguidilla						
-1280	19	test	115	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	os enemigos	os enemigos	1	5	4	4	1	5	4	29	0	seguidilla						
-1281	19	test	116	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	faránlle espanto,	faránlle espanto,	1	5	2 4	2 4	1	5	2 4	29	af	seguidilla						
-1282	19	test	117	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	bailando enriba	bailando enriba	1	5	2 4	2 4	1	5	2 4	30	0	seguidilla						
-1283	19	test	118	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	das herbas mudas,	das herbas mudas,	1	5	2 4	2 4	1	5	2 4	30	ag	seguidilla						
-1284	19	test	119	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	ó son da negra	o son da negra	0	5	2 4	2 4	1	5	2 4	30	0	seguidilla						
-1285	19	test	120	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	gaita de Xudas.	gaita de Xudas.	1	5	1 4	1 4	1	5	1 4	30	ag	seguidilla						
-1286	19	test	121	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	I aquel corpiño	I aquel corpiño	1	5	2 4	1 2 4	0	5	2 4	31	0	seguidilla						
-1287	19	test	122	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	que noutros días	que noutros días	1	5	2 4	2 4	1	5	2 4	31	ah	seguidilla						
-1288	19	test	123	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	tanto truara	tanto tru~ara	0	5	1 4	1 4	1	5	1 4	31	0	seguidilla						
-1289	19	test	124	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	nas romerías,	nas romerías,	1	5	4	4	1	5	4	31	ah	seguidilla						
-1290	19	test	125	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	ó son dos ventos	o son dos ventos	0	5	2 4	2 4	1	5	2 4	32	0	seguidilla						
-1291	19	test	126	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	máis desatados	máis desatados	1	5	1 4	1 4	1	5	1 4	32	ai	seguidilla						
-1292	19	test	127	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	rolará logo	rolará logo	1	5	3 4	3 4	1	5	4	32	0	seguidilla						
-1293	19	test	128	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	cos condenados.	cos condenados.	1	5	4	4	1	5	4	32	ai	seguidilla						
-1294	19	test	129	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Costureiriña,	Costureiriña,	1	5	4	4	1	5	4	33	0	seguidilla						
-1295	19	test	130	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	n'hei de ser, n'hei,	nhei de ser, nhei,	0	5	1 3 4	1 3 4	1	5	1 4	33	aj	seguidilla						
-1296	19	test	131	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	quen che deprenda	quen che deprenda	1	5	1 4	1 2 4	0	5	2 4	33	ak	seguidilla						
-1297	19	test	132	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	tan mala lei.	tan mala lei.	1	5	1 2 4	1 2 4	1	5	2 4	33	aj	seguidilla						
-1298	19	test	133	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	-¡Ai, que Santasa!	-¡Ai, que Santasa!	1	5	1 4	1 4	1	5	1 4	34	0	seguidilla						
-1299	19	test	134	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	¡Ai, que Santona!	¡Ai, que Santona!	1	5	1 4	1 4	1	5	1 4	34	al	seguidilla						
-1300	19	test	135	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Ollos de meiga,	Ollos de meiga,	1	5	1 4	1 4	1	5	1 4	34	ak	seguidilla						
-1301	19	test	136	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	cara de mona,	cara de mona,	1	5	1 4	1 4	1	5	1 4	34	al	seguidilla						
-1302	19	test	137	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	pór n'hei de pórche	pór nhei de pórche	0	5	1 2 4	1 2 4	1	5	2 4	35	am	seguidilla						
-1303	19	test	138	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	os meus pendentes,	os meus pendentes,	1	5	2 4	2 4	1	5	2 4	35	an	seguidilla						
-1304	19	test	139	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	pór n'hei de pórche	pór nhei de pórche	0	5	1 2 4	1 2 4	1	5	2 4	35	am	seguidilla						
-1305	19	test	140	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	o meu collar,	o meu collar,	1	5	2 4	2 4	1	5	2 4	35	añ	seguidilla						
-1306	19	test	141	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	xa que non queres,	xa que non queres,	1	5	1 3 4	1 3 4	1	5	1 4	36	an	seguidilla						
-1307	19	test	142	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	xa que non sabes	xa que non sabes	1	5	1 3 4	1 3 4	1	5	1 4	36	0	seguidilla						
-1308	19	test	143	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	adeprenderme	adeprenderme	1	5	4	4	1	5	4	36	an	seguidilla						
-1309	19	test	144	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	a puntear.	a puntear.	1	5	4	4	1	5	4	36	añ	seguidilla						
+1166	19	dev	1	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	-Costureiriña	-Costureiriña	1	5	4	4	1	5	4	1	0	cantar						
+1167	19	dev	2	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	comprimenteira,	comprimenteira,	1	5	4	4	1	5	4	1	a	cantar						
+1168	19	dev	3	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	sacha no campo,	sacha no campo,	1	5	1 4	1 4	1	5	1 4	1	0	cantar						
+1169	19	dev	4	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	malla na eira,	malla na   eira	0	5	1 4	1 4	1	5	1 4	1	a	cantar						
+1170	19	dev	5	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	lava no río,	lava no río,	1	5	1 4	1 4	1	5	1 4	2	0	cantar						
+1171	19	dev	6	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	vai apañar	vai   apañar	0	5	1 4	1 4	1	5	1 4	2	b	cantar						
+1172	19	dev	7	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	toxinos secos	toxinos secos	1	5	2 4	2 4	1	5	2 4	2	0	cantar						
+1173	19	dev	8	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	antre o pinar.	antre o pinar.	1	5	4	4	1	5	4	2	b	cantar						
+1174	19	dev	9	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Así a meniña	Así a meniña	1	5	2 4	2 4	1	5	2 4	3	c	cantar						
+1175	19	dev	10	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	traballadora	traballadora	1	5	4	4	1	5	4	3	d	cantar						
+1176	19	dev	11	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	os punteados	os punteados	1	5	4	4	1	5	4	3	0	cantar						
+1177	19	dev	12	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	deprende ora.	deprende   ora	0	5	2 4	2 4	1	5	2 4	3	d	cantar						
+1178	19	dev	13	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	-Miña Santiña,	-Miña Santiña,	1	5	4	1 4	0	5	1 4	4	c	cantar						
+1179	19	dev	14	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	mal me quixere	mal me quixere	1	5	1 4	1 4	1	5	1 4	4	e	cantar						
+1180	19	dev	15	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	quen me aconsella	quen me aconsella	1	5	4	1 4	0	5	1 4	4	f	cantar						
+1181	19	dev	16	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	que tal fixere.	que tal fixere.	1	5	2 4	2 4	1	5	2 4	4	e	cantar						
+1182	19	dev	17	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Mans de señora,	Mans de señora,	1	5	1 4	1 4	1	5	1 4	5	0	cantar						
+1183	19	dev	18	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	mans fidalgueiras	mans fidalgueiras	1	5	1 4	1 4	1	5	1 4	5	f	cantar						
+1184	19	dev	19	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	teñen todiñas	teñen todiñas	1	5	1 4	1 4	1	5	1 4	5	0	cantar						
+1185	19	dev	20	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	as costureiras;	as costureiras;	1	5	4	4	1	5	4	5	f	cantar						
+1186	19	dev	21	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	boca de reina,	boca de reina,	1	5	1 4	1 4	1	5	1 4	6	f	cantar						
+1187	19	dev	22	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	corpo de dama,	corpo de dama,	1	5	1 4	1 4	1	5	1 4	6	g	cantar						
+1188	19	dev	23	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	cómprelle a seda,	comprelle a seda,	0	5	1 4	2 4	0	5	2 4	6	f	cantar						
+1189	19	dev	24	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	foxen da lama.	foxen da lama.	1	5	1 4	1 4	1	5	1 4	6	g	cantar						
+1190	19	dev	25	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	-¡Ai, rapaciña!	-¡Ai, rapaciña!	1	5	1 4	1 4	1	5	1 4	7	0	cantar						
+1191	19	dev	26	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Ti te-lo teo:	Ti te-lo teo:	1	5	1 2 4	1 2 4	1	5	2 4	7	h	cantar						
+1192	19	dev	27	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	¡Seda as que dormen	¡Seda as que dormen	1	5	1 4	1 4	1	5	1 4	7	i	cantar						
+1193	19	dev	28	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	antre o centeo!	antre o centeo!	1	5	4	4	1	5	4	7	h	cantar						
+1194	19	dev	29	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	¡Fuxir da lama	¡Fuxir da lama	1	5	2 4	2 4	1	5	2 4	8	0	cantar						
+1195	19	dev	30	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	quen naceu nela!	quen naceu nela!	1	5	3 4	1 2 4	0	5	2 4	8	j	cantar						
+1196	19	dev	31	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Dios cho perdone,	Dios cho perdone,	1	5	1 4	1 4	1	5	1 4	8	i	cantar						
+1197	19	dev	32	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	probre Manuela.	probre Manuela.	1	5	1 4	1 4	1	5	1 4	8	j	cantar						
+1198	19	dev	33	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Lama con honra	Lama con honra	1	5	1 4	1 4	1	5	1 4	9	0	cantar						
+1199	19	dev	34	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	non mancha nada,	non mancha nada,	1	5	1 2 4	1 2 4	1	5	2 4	9	k	cantar						
+1200	19	dev	35	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	nin seda limpa	nin seda limpa	1	5	2 4	2 4	1	5	2 4	9	l	cantar						
+1201	19	dev	36	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	honra emporcada.	honra emporcada.	1	5	1 4	1 4	1	5	1 4	9	k	cantar						
+1202	19	dev	37	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	-Santa, Santasa,	-Santa, Santasa,	1	5	1 4	4	0	5	4	10	k	cantar						
+1203	19	dev	38	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	non sos comprida,	non sos comprida,	1	5	1 2 4	1 2 4	1	5	2 4	10	l	cantar						
+1204	19	dev	39	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	decindo cousas	decindo cousas	1	5	2 4	2 4	1	5	2 4	10	m	cantar						
+1205	19	dev	40	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	que fan ferida.	que fan ferida.	1	5	2 4	2 4	1	5	2 4	10	l	cantar						
+1206	19	dev	41	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Falaime solo	Falaime solo	1	5	2 4	2 4	1	5	2 4	11	0	cantar						
+1207	19	dev	42	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	das muiñeiras,	das muiñe~iras	0	5	4	4	1	5	4	11	n	cantar						
+1208	19	dev	43	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	daquelas voltas	daquelas voltas	1	5	2 4	2 4	1	5	2 4	11	m	cantar						
+1209	19	dev	44	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	revirandeiras,	revirandeiras,	1	5	4	4	1	5	4	11	n	cantar						
+1210	19	dev	45	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	daqueles puntos	daqueles puntos	1	5	2 4	2 4	1	5	2 4	12	0	cantar						
+1211	19	dev	46	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	que fan agora,	que fan agora,	1	5	2 4	2 4	1	5	2 4	12	ñ	cantar						
+1212	19	dev	47	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	de afora adentro,	de afora adentro,	1	5	2 4	2 4	1	5	2 4	12	0	cantar						
+1213	19	dev	48	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	de adentro afora.	de adentro afora.	1	5	2 4	2 4	1	5	2 4	12	ñ	cantar						
+1214	19	dev	49	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	-Costureiriña	-Costureiriña	1	5	4	4	1	5	4	13	0	cantar						
+1215	19	dev	50	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	do carballal,	do carballal,	1	5	4	4	1	5	4	13	o	cantar						
+1216	19	dev	51	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	colle unha agulla,	colle unha agulla,	1	5	1 2 4	1 2 4	1	5	2 4	13	0	cantar						
+1217	19	dev	52	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	colle un dedal;	colle un dedal;	1	5	1 2 4	1 2 4	1	5	2 4	13	o	cantar						
+1218	19	dev	53	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	cose os buratos	cose os buratos	1	5	1 4	1 4	1	5	1 4	14	0	cantar						
+1219	19	dev	54	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	dese teu cós,	dese teu cos,	0	5	1 4	1 3 4	0	5	1 4	14	p	cantar						
+1220	19	dev	55	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	que andar rachada	que andar rachada	1	5	2 4	2 4	1	5	2 4	14	0	cantar						
+1221	19	dev	56	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	non manda Dios.	non manda Dios.	1	5	1 2 4	1 2 4	1	5	2 4	14	p	cantar						
+1222	19	dev	57	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Cose, meniña,	Cose, meniña,	1	5	1 4	1 4	1	5	1 4	15	q	cantar						
+1223	19	dev	58	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	tantos furados	tantos furados	1	5	1 4	1 4	1	5	1 4	15	r	cantar						
+1224	19	dev	59	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	i ora non penses	i ora non penses	1	5	1 3 4	1 3 4	1	5	1 4	15	0	cantar						
+1225	19	dev	60	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	nos punteados.	nos punteados.	1	5	4	4	1	5	4	15	r	cantar						
+1226	19	dev	61	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	-Miña Santasa,	-Miña Santasa,	1	5	4	1 4	0	5	1 4	16	0	cantar						
+1227	19	dev	62	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	miña Santiña,	miña Santiña,	1	5	1 4	1 4	1	5	1 4	16	q	cantar						
+1228	19	dev	63	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	nin teño agulla,	nin teño agulla,	1	5	2 4	2 4	1	5	2 4	16	0	cantar						
+1229	19	dev	64	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	nin teño liña,	nin teño liña,	1	5	2 4	2 4	1	5	2 4	16	q	cantar						
+1230	19	dev	65	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	nin dedal teño,	nin dedal teño,	1	5	3 4	3 4	1	5	4	17	0	cantar						
+1231	19	dev	66	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	que aló na feira	que aló na feira	1	5	2 4	2 4	1	5	2 4	17	r	cantar						
+1232	19	dev	67	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	rouboumo un majo	rouboumo un majo	1	5	2 3 4	2 3 4	1	5	2 4	17	s	cantar						
+1233	19	dev	68	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	da faltriqueira,	da faltriqueira,	1	5	4	4	1	5	4	17	r	cantar						
+1234	19	dev	69	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	decindo: «As perdas	decindo: «As perdas	1	5	2 4	2 4	1	5	2 4	18	r	cantar						
+1235	19	dev	70	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	dos descoidados	dos descoidados	1	5	4	4	1	5	4	18	s	cantar						
+1236	19	dev	71	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	fan o lotiño	fan o lotiño	1	5	1 4	1 4	1	5	1 4	18	0	cantar						
+1237	19	dev	72	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	dos apañados».	dos apañados».	1	5	4	4	1	5	4	18	s	cantar						
+1238	19	test	73	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	-¡Costureiriña	-¡Costureiriña	1	5	4	4	1	5	4	19	0	cantar						
+1239	19	test	74	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	que a majos trata!	que a majos trata!	1	5	2 4	2 4	1	5	2 4	19	t	cantar						
+1240	19	test	75	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Alma de cobre,	Alma de cobre,	1	5	1 4	1 4	1	5	1 4	19	0	cantar						
+1241	19	test	76	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	collar de prata,	collar de prata,	1	5	2 4	2 4	1	5	2 4	19	t	cantar						
+1242	19	test	77	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	mocidá rindo,	mocidá rindo,	1	5	3 4	3 4	1	5	4	20	0	cantar						
+1243	19	test	78	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	vellez chorando...	vellez chorando...	1	5	2 4	2 4	1	5	2 4	20	u	cantar						
+1244	19	test	79	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Anda, meniña,	Anda, meniña,	1	5	1 4	1 4	1	5	1 4	20	0	cantar						
+1245	19	test	80	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	coida do gando.	coida do gando.	1	5	1 4	1 4	1	5	1 4	20	u	cantar						
+1246	19	test	81	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Coida das herbas	Coida das herbas	1	5	1 4	1 4	1	5	1 4	21	v	cantar						
+1247	19	test	82	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	de teu herbal:	de teu   herbal	0	5	2 4	2 4	1	5	2 4	21	w	cantar						
+1248	19	test	83	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	terás agulla,	terás agulla,	1	5	2 4	2 4	1	5	2 4	21	0	cantar						
+1249	19	test	84	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	terás dedal.	terás dedal.	1	5	2 4	2 4	1	5	2 4	21	w	cantar						
+1250	19	test	85	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	-Deixade as herbas,	-Deixade as herbas,	1	5	2 4	2 4	1	5	2 4	22	v	cantar						
+1251	19	test	86	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	que o que eu quería	que o que eu quería	1	5	2 4	2 4	1	5	2 4	22	x	cantar						
+1252	19	test	87	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	era ir cal todas	era ir cal todas	1	5	1 2 4	1 2 3 4	0	5	2 4	22	y	cantar						
+1253	19	test	88	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	á romería.	a romería.	0	5	4	4	1	5	4	22	x	cantar						
+1254	19	test	89	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	¡I alí con aire	¡I alí con aire	1	5	2 4	1 2 4	0	5	2 4	23	0	cantar						
+1255	19	test	90	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	dar cada volta!	dar cada volta!	1	5	1 2 4	1 2 4	1	5	2 4	23	y	cantar						
+1256	19	test	91	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Os ollos baixos,	Os ollos baixos,	1	5	2 4	2 4	1	5	2 4	23	0	cantar						
+1257	19	test	92	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	a perna solta.	a perna solta.	1	5	2 4	2 4	1	5	2 4	23	y	cantar						
+1258	19	test	93	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Pés lixeiriños,	Pés lixeiriños,	1	5	1 4	1 4	1	5	1 4	24	0	cantar						
+1259	19	test	94	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	corpo direito;	corpo direito;	1	5	1 4	1 4	1	5	1 4	24	z	cantar						
+1260	19	test	95	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	¡pero, Santiña...,	¡pero, Santiña...,	1	5	4	4	1	5	4	24	aa	cantar						
+1261	19	test	96	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	non lle dou xeito!	non lle d#ó xeito	0	5	1 3 4	1 3 4	1	5	1 4	24	z	cantar						
+1262	19	test	97	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Non vos metades	Non vos metades	1	5	1 4	1 4	1	5	1 4	25	0	cantar						
+1263	19	test	98	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	pedricadora;	pedricadora;	1	5	4	4	1	5	4	25	ab	cantar						
+1264	19	test	99	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	bailadoriña	bailadoriña	1	5	4	4	1	5	4	25	aa	cantar						
+1265	19	test	100	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	facéme agora.	facéme agora.	1	5	2 4	2 4	1	5	2 4	25	ab	cantar						
+1266	19	test	101	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Vós dende arriba	Vós dende arriba	1	5	1 4	1 4	1	5	1 4	26	aa	cantar						
+1267	19	test	102	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	andá correndo;	andá correndo;	1	5	2 4	2 4	1	5	2 4	26	ac	cantar						
+1268	19	test	103	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	facede os puntos,	facede os puntos,	1	5	2 4	2 4	1	5	2 4	26	0	cantar						
+1269	19	test	104	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	i eu adeprendo.	i eu   adeprendo	0	5	1 4	1 4	1	5	1 4	26	ac	cantar						
+1270	19	test	105	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Andá que peno	Andá que peno	1	5	2 4	2 4	1	5	2 4	27	ac	cantar						
+1271	19	test	106	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	polos penares...	polos penares...	1	5	4	4	1	5	4	27	ad	cantar						
+1272	19	test	107	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Mirá que o pido	Mirá que o pido	1	5	2 4	2 4	1	5	2 4	27	0	cantar						
+1273	19	test	108	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	chorando a mares.	chorando a mares.	1	5	2 4	2 4	1	5	2 4	27	ad	cantar						
+1274	19	test	109	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	-¡Ai da meniña!	-¡Ai da meniña!	1	5	1 4	1 4	1	5	1 4	28	0	cantar						
+1275	19	test	110	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	¡Ai da que chora!	¡Ai da que chora!	1	5	1 4	1 4	1	5	1 4	28	ae	cantar						
+1276	19	test	111	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	¡Ai, porque quere	¡Ai, porque quere	1	5	1 4	1 4	1	5	1 4	28	0	cantar						
+1277	19	test	112	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	ser bailadora!	ser bailadora!	1	5	1 4	1 4	1	5	1 4	28	ae	cantar						
+1278	19	test	113	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Que cando durma	Que cando durma	1	5	4	4	1	5	4	29	0	cantar						
+1279	19	test	114	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	no camposanto,	no camposanto,	1	5	4	4	1	5	4	29	af	cantar						
+1280	19	test	115	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	os enemigos	os enemigos	1	5	4	4	1	5	4	29	0	cantar						
+1281	19	test	116	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	faránlle espanto,	faránlle espanto,	1	5	2 4	2 4	1	5	2 4	29	af	cantar						
+1282	19	test	117	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	bailando enriba	bailando enriba	1	5	2 4	2 4	1	5	2 4	30	0	cantar						
+1283	19	test	118	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	das herbas mudas,	das herbas mudas,	1	5	2 4	2 4	1	5	2 4	30	ag	cantar						
+1284	19	test	119	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	ó son da negra	o son da negra	0	5	2 4	2 4	1	5	2 4	30	0	cantar						
+1285	19	test	120	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	gaita de Xudas.	gaita de Xudas.	1	5	1 4	1 4	1	5	1 4	30	ag	cantar						
+1286	19	test	121	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	I aquel corpiño	I aquel corpiño	1	5	2 4	1 2 4	0	5	2 4	31	0	cantar						
+1287	19	test	122	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	que noutros días	que noutros días	1	5	2 4	2 4	1	5	2 4	31	ah	cantar						
+1288	19	test	123	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	tanto truara	tanto tru~ara	0	5	1 4	1 4	1	5	1 4	31	0	cantar						
+1289	19	test	124	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	nas romerías,	nas romerías,	1	5	4	4	1	5	4	31	ah	cantar						
+1290	19	test	125	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	ó son dos ventos	o son dos ventos	0	5	2 4	2 4	1	5	2 4	32	0	cantar						
+1291	19	test	126	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	máis desatados	máis desatados	1	5	1 4	1 4	1	5	1 4	32	ai	cantar						
+1292	19	test	127	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	rolará logo	rolará logo	1	5	3 4	3 4	1	5	4	32	0	cantar						
+1293	19	test	128	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	cos condenados.	cos condenados.	1	5	4	4	1	5	4	32	ai	cantar						
+1294	19	test	129	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Costureiriña,	Costureiriña,	1	5	4	4	1	5	4	33	0	cantar						
+1295	19	test	130	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	n'hei de ser, n'hei,	nhei de ser, nhei,	0	5	1 3 4	1 3 4	1	5	1 4	33	aj	cantar						
+1296	19	test	131	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	quen che deprenda	quen che deprenda	1	5	1 4	1 2 4	0	5	2 4	33	ak	cantar						
+1297	19	test	132	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	tan mala lei.	tan mala lei.	1	5	1 2 4	1 2 4	1	5	2 4	33	aj	cantar						
+1298	19	test	133	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	-¡Ai, que Santasa!	-¡Ai, que Santasa!	1	5	1 4	1 4	1	5	1 4	34	0	cantar						
+1299	19	test	134	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	¡Ai, que Santona!	¡Ai, que Santona!	1	5	1 4	1 4	1	5	1 4	34	al	cantar						
+1300	19	test	135	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	Ollos de meiga,	Ollos de meiga,	1	5	1 4	1 4	1	5	1 4	34	ak	cantar						
+1301	19	test	136	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	cara de mona,	cara de mona,	1	5	1 4	1 4	1	5	1 4	34	al	cantar						
+1302	19	test	137	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	pór n'hei de pórche	pór nhei de pórche	0	5	1 2 4	1 2 4	1	5	2 4	35	am	cantar						
+1303	19	test	138	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	os meus pendentes,	os meus pendentes,	1	5	2 4	2 4	1	5	2 4	35	an	cantar						
+1304	19	test	139	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	pór n'hei de pórche	pór nhei de pórche	0	5	1 2 4	1 2 4	1	5	2 4	35	am	cantar						
+1305	19	test	140	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	o meu collar,	o meu collar,	1	5	2 4	2 4	1	5	2 4	35	añ	cantar						
+1306	19	test	141	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	xa que non queres,	xa que non queres,	1	5	1 3 4	1 3 4	1	5	1 4	36	an	cantar						
+1307	19	test	142	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	xa que non sabes	xa que non sabes	1	5	1 3 4	1 3 4	1	5	1 4	36	0	cantar						
+1308	19	test	143	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	adeprenderme	adeprenderme	1	5	4	4	1	5	4	36	an	cantar						
+1309	19	test	144	Rosalía de Castro	Cantares Gallegos 2. ed - 5	Cantares Gallegos 2. ed	a puntear.	a puntear.	1	5	4	4	1	5	4	36	añ	cantar						
 1310	20	dev	1	Rosalía de Castro	Olvidemo-l-os mortos	Follas Novas	¡Profanemos d’o bosque as umbrías!...	¡Profanemos do bosque as umbrías!...	0	10	3 6 9	3 6 9	1	10	3 6 9	1	0	none						
 1311	20	dev	2	Rosalía de Castro	Olvidemo-l-os mortos	Follas Novas	E ante estes mudos testigos,	E ante estes mudos testigos,	1	8	2 4 7	2 4 7	1	8	2 4 7	1	a	none						
 1312	20	dev	3	Rosalía de Castro	Olvidemo-l-os mortos	Follas Novas	O rio, a fonte y os ceos,	o río a fonte y   os ceos	0	8	2 4 7	2 4 7	1	8	2 4 7	1	b	none						

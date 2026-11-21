@@ -318,6 +318,7 @@ def more_than_half_complete(groups):
     ]
     return len(complete_groups) > len(groups) / 2
 
+
 def probability_penalties(consonante_groups):
     if more_than_half_complete(consonante_groups):
         return True, False

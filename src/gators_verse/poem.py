@@ -70,8 +70,10 @@ def poem_entry_allowed_for_length(entry, observed_length):
         return False
     return True
 
+
 def poem_observed_pairs(poem_lines, observed_pattern):
     return observed_pair_data(poem_lines, observed_pattern)
+
 
 def count_similarity(observed, expected):
     if expected is None:
@@ -82,6 +84,7 @@ def count_similarity(observed, expected):
         return 0
     return min(observed, expected) / max(observed, expected)
 
+
 def stanza_labels(data):
     labels = set()
     if data.get("stanza_type") not in (None, ""):
@@ -89,6 +92,7 @@ def stanza_labels(data):
     if data.get("stanza_subtype") not in (None, ""):
         labels.add(data["stanza_subtype"])
     return labels
+
 
 def poem_stanza_type_similarity(stanzas, entry):
     observed = [stanza[0][1] for stanza in stanzas.values()]
@@ -126,6 +130,7 @@ def poem_stanza_type_similarity(stanzas, entry):
 
     return matches / compared
 
+
 def poem_stanza_length_similarity(stanzas, entry):
     expected_lengths = entry.get("stanza_lengths")
     if not expected_lengths:
@@ -150,6 +155,7 @@ def poem_stanza_length_similarity(stanzas, entry):
 
     return matches / compared if compared else None
 
+
 def refrain_units(poem_lines, entry):
     stanzas = get_stanzas({verse: data for verse, data in poem_lines})
     if len(stanzas) > 1:
@@ -164,6 +170,7 @@ def refrain_units(poem_lines, entry):
         ]
 
     return [poem_lines]
+
 
 def poem_refrain_similarity(poem_lines, entry):
     refrain = entry.get("refrain")
@@ -206,6 +213,7 @@ def poem_refrain_similarity(poem_lines, entry):
         score = min(score, sum(repeated_scores) / len(repeated_scores))
 
     return score
+
 
 def score_poem_entry(poem_data, entry):
     poem_lines = sorted(poem_data.items())
@@ -305,6 +313,7 @@ def score_poem_entry(poem_data, entry):
             best = result
 
     return best
+
 
 def annotate_poem_type(poem_data, poem_patterns):
     poem_score_rows = []

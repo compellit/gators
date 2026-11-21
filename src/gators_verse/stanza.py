@@ -117,8 +117,10 @@ def tied_max(items, key):
 def subtype_selection_component(score):
     return score["entry"].get("subtype_selection_component") or "probability"
 
+
 def subtype_selection_value(score):
     return score.get(subtype_selection_component(score))
+
 
 def subtype_selection_threshold(score):
     return score["entry"].get(
@@ -126,9 +128,11 @@ def subtype_selection_threshold(score):
         SUBTYPE_MIN_PROBABILITY,
     )
 
+
 def subtype_is_selected(score):
     value = subtype_selection_value(score)
     return value is not None and value >= subtype_selection_threshold(score)
+
 
 def choose_subtype(parent_type, scores):
     candidates = [
@@ -140,6 +144,7 @@ def choose_subtype(parent_type, scores):
     if not candidates:
         return None
     return max(candidates, key=subtype_selection_value)
+
 
 def choose_refinement(stanza_type, scores, poem_probabilities=None):
     poem_probabilities = poem_probabilities or {}
@@ -165,6 +170,7 @@ def choose_refinement(stanza_type, scores, poem_probabilities=None):
         return best
     return None
 
+
 def score_for_stanza_type(stanza_type, scores):
     candidates = [
         score
@@ -177,12 +183,15 @@ def score_for_stanza_type(stanza_type, scores):
         return None
     return max(candidates, key=lambda score: score["probability"])
 
+
 def stanza_candidate_key(score):
     entry = score["entry"]
     return entry["stanza_type"]
 
+
 def score_stanza_length(score):
     return len(score["observed_metre"])
+
 
 def poem_probability_for(key, poem_probabilities, stanza_length=None):
     if key is None or not poem_probabilities:
@@ -194,11 +203,13 @@ def poem_probability_for(key, poem_probabilities, stanza_length=None):
         return defaults.get(stanza_length)
     return None
 
+
 def adjusted_probability(probability, key, poem_probabilities, stanza_length=None):
     poem_probability = poem_probability_for(key, poem_probabilities, stanza_length)
     if poem_probability is not None:
         return average_available(probability, poem_probability)
     return probability
+
 
 def resolve_stanza_output(scores, winner, poem_probabilities=None, adjust=False):
     poem_probabilities = poem_probabilities or {}
@@ -300,11 +311,13 @@ def resolve_stanza_output(scores, winner, poem_probabilities=None, adjust=False)
         "stanza_subtype_probability_poem": stanza_subtype_probability_poem,
     }
 
+
 def output_probability_keys(output):
     keys = [output["stanza_type"]]
     if output["stanza_subtype"]:
         keys.append(output["stanza_subtype"])
     return [key for key in keys if key is not None]
+
 
 def score_probability_keys(score):
     entry = score["entry"]
@@ -314,6 +327,7 @@ def score_probability_keys(score):
     }
     keys.update(relation_targets(entry, "refines_type"))
     return {key for key in keys if key is not None}
+
 
 def poem_probability_defaults(scores_by_stanza, stanza_count):
     labels_by_length = {}
@@ -328,6 +342,7 @@ def poem_probability_defaults(scores_by_stanza, stanza_count):
         stanza_length: 1 / (stanza_count + len(labels))
         for stanza_length, labels in labels_by_length.items()
     }
+
 
 def poem_stanza_probabilities(outputs_by_stanza, scores_by_stanza, stanza_count):
     totals = {}
@@ -346,6 +361,7 @@ def poem_stanza_probabilities(outputs_by_stanza, scores_by_stanza, stanza_count)
         stanza_count,
     )
     return probabilities
+
 
 def second_round_score(score, poem_probabilities):
     poem_probability = poem_probability_for(

@@ -79,6 +79,8 @@ TRANSCRIBER = Transcriber(complex_codas=True, thetacism=True, broad=True)
 
 
 @functools.lru_cache(maxsize=None)
+
+
 def transcribe_word(word):
     """Transcribe one lowercase word; "erro" if trasgo cannot."""
     try:

@@ -136,7 +136,7 @@ poem_id	stanza_n	line_count	gold_stanza	pred_stanza_type	pred_stanza_subtype	cor
 13	1	10	espinela	espinela		1	abbaaccddc	abbaaccddc
 13	2	10	espinela	espinela		1	abbaaccddc	abbaaccddc
 13	3	10	espinela	espinela		1	abbaaccddc	abbaaccddc
-13	4	10	espinela	romance		0	aaabbccddc	-a-a-a-a-a
+13	4	10	espinela	décima_antiga		0	aaabbccddc	111111abba
 13	5	10	espinela	espinela		1	abbaaccddc	abbaaccddc
 13	6	10	espinela	espinela		1	abbaaccddc	abbaaccddc
 14	1	4	redondilla	redondilla		1	abba	abba

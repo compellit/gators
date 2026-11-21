@@ -92,3 +92,15 @@ def test_analyze_text_with_gama_gets_meter_and_stanza_type():
     results, _, _ = analyze(poem_text(REDONDILLA))
     assert results["metrical_syllables"].tolist() == [8, 8, 8, 8]
     assert set(results["stanza_type"]) == {"redondilla"}
+
+
+def test_decima_that_is_not_an_espinela_is_a_decima_antiga():
+    # "1" in a pattern (abba111111) means that the line rhymes, with any line.
+    lines = ["Vou camiñando ao luar", "polo camiño esquecido", "co corazón tan ferido",
+             "sen ninguén a quen amar.", "A noite chega silente", "coa súa negra figura,",
+             "chea de fonda tristura,", "baixo a lúa transparente,", "e eu sigo o meu carreiro",
+             "como un vello romeiro."]
+    table = make_table([(line, 8, "7") for line in lines])
+    results, _, _ = annotate(table)
+    assert "".join(results["rhyme"]) == "abbacddcee"
+    assert set(results["stanza_type"]) == {"décima_antiga"}

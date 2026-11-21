@@ -932,16 +932,16 @@ line_id	poem_id	stanza_n	text	gold_rhyme	gold_stanza_type	normalized_text	metric
 931	13	3	Aló pó la mañanciña,	l	espinela	Aló pó la mañanciña,	8	2 7	a".lo "po "la ma.Jan".Ti.Ja,	l	i.Ja	i,a	False		abbaaccddc	abbaaccddc	espinela	0.9166666666666667			-			
 932	13	3	Con esta miña gaitiña	l	espinela	Con esta miña gaitiña	8	2 7	koN "es.ta "mi.Ja gaj".ti.Ja	l	i.Ja	i,a	True		abbaaccddc	abbaaccddc	espinela	0.9166666666666667			-			
 933	13	3	As nenas ei d' engañar.	k	espinela	As nenas ei de enganar.	8	2 4 7	as "ne.nas "ej deN.ga".Jar.	k	ar	a	True		abbaaccddc	abbaaccddc	espinela	0.9166666666666667			-			
-934	13	4	Camiño da romeria,	m	espinela	camiño da romeri~a	8	2 7	ka".mi.Jo da Ro".me.rja,	m	e.rja	e,a	False		aaabbccddc	-a-a-a-a-a	romance	0.26666666666666666			-			
-935	13	4	Debaixo d' un-ha figueira,	n	espinela	Debaixo dunha figueira,	8	2 4 7	de".Baj.So "du.Na fi".Gej.ra,	m	ej.ra	e,a	False		aaabbccddc	-a-a-a-a-a	romance	0.26666666666666666			-			
-936	13	4	Canta meniña solteira	n	espinela	Canta meniña solteira	8	1 4 7	"kan.ta me".ni.Ja sOl".tej.ra	m	ej.ra	e,a	False		aaabbccddc	-a-a-a-a-a	romance	0.26666666666666666			-			
-937	13	4	¡Querote! lle repetia...	m	espinela	¡quérote! lle repetía...	8	1 7	¡"ke.ro.te! Le Re.pe".ti.a...	n	i.a	i,a	False		aaabbccddc	-a-a-a-a-a	romance	0.26666666666666666			-			
-938	13	4	Y él c' á gaita respondia	m	espinela	E él coa gaita respondía	8	1 3 7	E "el ko.a "gaj.ta Res.pon".di.a	n	i.a	i,a	False		aaabbccddc	-a-a-a-a-a	romance	0.26666666666666666			-			
-939	13	4	Por á todas envoucar,	ñ	espinela	Por a todas envoucar,	8	3 7	por a "to.Das em.bow".kar,	ñ	ar	a	False		aaabbccddc	-a-a-a-a-a	romance	0.26666666666666666			-			
-940	13	4	Pois ven fixeira en cantar	ñ	espinela	Pois ven fixeira en cantar	8	2 4 7	"pojs "beN fi".Sej.ra eN kan".tar	ñ	ar	a	False		aaabbccddc	-a-a-a-a-a	romance	0.26666666666666666			-			
-941	13	4	Aló po la mañanciña,	o	espinela	Aló po la mañanciña,	8	2 7	a".lo "pO "la ma.Jan".Ti.Ja,	o	i.Ja	i,a	True		aaabbccddc	-a-a-a-a-a	romance	0.26666666666666666			-			
-942	13	4	Con esta miña gaitiña	o	espinela	Con esta miña gaitiña	8	2 7	koN "es.ta "mi.Ja gaj".ti.Ja	o	i.Ja	i,a	True		aaabbccddc	-a-a-a-a-a	romance	0.26666666666666666			-			
-943	13	4	As nenas ei d' engañar.	ñ	espinela	As nenas ei de enganar.	8	2 4 7	as "ne.nas "ej deN.ga".Jar.	ñ	ar	a	True		aaabbccddc	-a-a-a-a-a	romance	0.26666666666666666			-			
+934	13	4	Camiño da romeria,	m	espinela	camiño da romeri~a	8	2 7	ka".mi.Jo da Ro".me.rja,	m	e.rja	e,a	False		aaabbccddc	111111abba	décima_antiga	0.5833333333333334			-			
+935	13	4	Debaixo d' un-ha figueira,	n	espinela	Debaixo dunha figueira,	8	2 4 7	de".Baj.So "du.Na fi".Gej.ra,	m	ej.ra	e,a	False		aaabbccddc	111111abba	décima_antiga	0.5833333333333334			-			
+936	13	4	Canta meniña solteira	n	espinela	Canta meniña solteira	8	1 4 7	"kan.ta me".ni.Ja sOl".tej.ra	m	ej.ra	e,a	False		aaabbccddc	111111abba	décima_antiga	0.5833333333333334			-			
+937	13	4	¡Querote! lle repetia...	m	espinela	¡quérote! lle repetía...	8	1 7	¡"ke.ro.te! Le Re.pe".ti.a...	n	i.a	i,a	False		aaabbccddc	111111abba	décima_antiga	0.5833333333333334			-			
+938	13	4	Y él c' á gaita respondia	m	espinela	E él coa gaita respondía	8	1 3 7	E "el ko.a "gaj.ta Res.pon".di.a	n	i.a	i,a	False		aaabbccddc	111111abba	décima_antiga	0.5833333333333334			-			
+939	13	4	Por á todas envoucar,	ñ	espinela	Por a todas envoucar,	8	3 7	por a "to.Das em.bow".kar,	ñ	ar	a	False		aaabbccddc	111111abba	décima_antiga	0.5833333333333334			-			
+940	13	4	Pois ven fixeira en cantar	ñ	espinela	Pois ven fixeira en cantar	8	2 4 7	"pojs "beN fi".Sej.ra eN kan".tar	ñ	ar	a	False		aaabbccddc	111111abba	décima_antiga	0.5833333333333334			-			
+941	13	4	Aló po la mañanciña,	o	espinela	Aló po la mañanciña,	8	2 7	a".lo "pO "la ma.Jan".Ti.Ja,	o	i.Ja	i,a	True		aaabbccddc	111111abba	décima_antiga	0.5833333333333334			-			
+942	13	4	Con esta miña gaitiña	o	espinela	Con esta miña gaitiña	8	2 7	koN "es.ta "mi.Ja gaj".ti.Ja	o	i.Ja	i,a	True		aaabbccddc	111111abba	décima_antiga	0.5833333333333334			-			
+943	13	4	As nenas ei d' engañar.	ñ	espinela	As nenas ei de enganar.	8	2 4 7	as "ne.nas "ej deN.ga".Jar.	ñ	ar	a	True		aaabbccddc	111111abba	décima_antiga	0.5833333333333334			-			
 944	13	5	Elas louquiñas bailaban	p	espinela	Elas louquiñas bailaban	8	1 4 7	"E.las low".ki.Jas baj".la.BaN	p	a.BaN	a,a	False		abbaaccddc	abbaaccddc	espinela	0.9166666666666667			-			
 945	13	5	E por xunta d' el corrian,	q	espinela	E por xunta del corrían,	8	5 7	E por "Sun.ta "del ko".Ri.aN,	q	i.aN	i,a	False		abbaaccddc	abbaaccddc	espinela	0.9166666666666667			-			
 946	13	5	Cegas... cegas que non vian	q	espinela	Cegas... cegas que non vían	8	1 3 7	"TE.Gas... "TE.Gas ke "noN "bi.aN	q	i.aN	i,a	False		abbaaccddc	abbaaccddc	espinela	0.9166666666666667			-			

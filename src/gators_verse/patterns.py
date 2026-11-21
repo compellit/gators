@@ -92,12 +92,10 @@ def expected_line_relation(pattern, left_index, right_index):
         return None
     if left == "0" or right == "0":
         return False
-    if left == "1" and right == "1":
+    if "1" in (left, right):
+        # "1" only says that the line rhymes (checked on its own in
+        # stanza_pattern_similarity), not which line it rhymes with.
         return None
-    if left == "1":
-        return right not in ("-", "0")
-    if right == "1":
-        return left not in ("-", "0")
     return left == right
 
 

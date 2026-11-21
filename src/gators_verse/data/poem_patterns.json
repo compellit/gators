@@ -66,7 +66,7 @@
     "min_verses": 2
   },
   {
-    "poem_type": "silva arromanzada",
+    "poem_type": "silva_arromanzada",
     "stanza_type": "silva_arromanzada",
     "metre": [
       7,
@@ -74,7 +74,7 @@
     ],
     "metre_kind": "mixed",
     "rhyme_kind": "asonante",
-    "min_verses": 2
+    "min_verses": 4
   },
   {
     "poem_type": "soneto",

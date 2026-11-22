@@ -1,6 +1,6 @@
 # Stanza and poem types
 
-gators-verse assigns a stanza type to each stanza and a poem type to each poem
+Gators assigns a stanza type to each stanza and a poem type to each poem
 by scoring them against the entries of two files:
 
 - `src/gators_verse/data/stanza_patterns.json` (50 stanza types)

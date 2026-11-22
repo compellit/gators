@@ -1,7 +1,7 @@
 # Evaluation
 
 `evaluation/evaluate.py` evaluates the rhyme letters and stanza types that
-gators-verse assigns, against the gold annotation of the test corpus
+Gators assigns, against the gold annotation of the test corpus
 (`evaluation/test_corpus.tsv`, 33 poems, 2,188 lines). Rhyme detection is
 evaluated as a set of relationships between lines rather than by comparing the
 letter assigned to each line literally.
@@ -30,7 +30,7 @@ Pairs are created only within the same poem. A pair is:
 
 Pairs absent from both are not counted, so there are no true negatives.
 
-Unrhymed lines never form a pair: gators-verse marks them `-`, and the gold
+Unrhymed lines never form a pair: Gators marks them `-`, and the gold
 annotation `0`; an empty cell counts as unrhymed too. Letters are compared
 ignoring case, so `A` and `a` are the same rhyme.
 
@@ -68,26 +68,26 @@ stanza_accuracy = stanzas_correct / stanzas
 ```
 
 This is exact label accuracy. The pattern, meter and other similarity scores
-that gators-verse computes do not contribute to it.
+that Gators computes do not contribute to it.
 
 ## Running the evaluation
 
-`evaluation/run_all.sh` needs gators-verse installed with the `gama` extra, and
-gama-verse's data files. It runs three steps:
+`evaluation/run_all.sh` needs `gators-verse` installed with the `gama` extra, and
+`gama-verse`'s data files. It runs three steps:
 
-1. `prepare.py` writes the test corpus as gators-verse input, with the
+1. `prepare.py` writes the test corpus as Gators input, with the
    standard column names, to `evaluation/results/input/`. The gold meter
    (`nbSyll`, `meterNbr`) goes into `metrical_syllables` and
    `stressed_syllables`; the gold rhyme letters and stanza types go into
    `gold_rhyme` and `gold_stanza_type`. The corpus's `nbSG` and `gprMet`
-   columns are an earlier GAMA output and are not used.
+   columns are an earlier Gama output and are not used.
 2. `gators-verse` annotates the corpus in three settings.
 3. `evaluate.py` scores each setting.
 
 | Setting | Spelling normalization | meter |
 |---|---|---|
-| `gold_meter` | gama-verse | gold annotation |
-| `end_to_end` | gama-verse | gama-verse |
+| `gold_meter` | Gama | gold annotation |
+| `end_to_end` | Gama | Gama |
 | `no_gama` | none (light cleanup only) | none |
 
 `gold_meter` evaluates the rhyme and stanza analysis on its own; `end_to_end`
@@ -103,13 +103,13 @@ python evaluation/evaluate.py RESULTS.tsv OUTPUT_DIR
 The results file must have the columns `poem_id`, `stanza_n`, `line_id`,
 `text`, `rhyme`, `gold_rhyme`, `stanza_type`, `stanza_subtype`,
 `gold_stanza_type`, `stanza_rhyme_pattern` and `stanza_expected_pattern`, as
-written by gators-verse from `prepare.py`'s input.
+written by Gators from `prepare.py`'s input.
 
 ## Output files
 
 Each setting's folder in `evaluation/results/` has:
 
-- `results.tsv`: gators-verse's output.
+- `results.tsv`: the output of Gators.
 - `pairs.tsv`: one row for every pair present in prediction, gold, or both:
   - `line_pair`: identifiers of the two lines;
   - `pred_pair` and `gold_pair`: their labels;

@@ -136,3 +136,7 @@ pytest
 ## Citation
 
 Anxo Alonso Pérez and Pablo Ruiz Fabo. (2026). Gators: Galician Tool for Rhyme and Stanza. CiTIUS, Universidade de Santiago de Compostela.
+
+## License
+
+Gators is licensed under GPLv3; see [LICENSE](LICENSE).

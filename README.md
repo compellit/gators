@@ -1,5 +1,7 @@
 # Gators
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24443054.svg)](https://doi.org/10.5281/zenodo.24443054)
+
 Galician Tool for Rhyme and Stanza · 🐊
 
 Gators finds the rhymes of Galician poems and assigns verse, stanza and
@@ -135,7 +137,7 @@ pytest
 
 ## Citation
 
-Anxo Alonso Pérez and Pablo Ruiz Fabo. (2026). Gators: Galician Tool for Rhyme and Stanza. CiTIUS, Universidade de Santiago de Compostela.
+Anxo Alonso Pérez and Pablo Ruiz Fabo (2026). Gators: Galician Tool for Rhyme and Stanza. CiTIUS, Universidade de Santiago de Compostela. https://doi.org/10.5281/zenodo.24443054
 
 ## License
 

@@ -41,3 +41,6 @@ test_auto.py
 * copy*
 *Copy*
 *bkp*
+
+# Private development notes (separate repo)
+docs/dev/

@@ -124,6 +124,11 @@ type), with `evaluation/run_all.sh`:
 | Gama normalization and meter (end to end) | 98.13% | 96.86% (247) |
 | without Gama, no meter | 88.98% | 32.94% (84) |
 
+The test set covers 18 stanza types, but only 11 with five or more stanzas.
+Some forms frequent in 19th-century Galician poetry (romance, romance de arte mayor,
+silva arromanzada) are barely or not represented, so these figures don't reflect
+performance on them.
+
 See [`docs/EVALUATION.md`](docs/EVALUATION.md) for the metrics and the settings,
 and [`iaa/README.md`](iaa/README.md) for the agreement between the two rhyme
 annotators.

@@ -7,7 +7,7 @@
   that already has its meter or transcription.
 """
 
-__version__ = "0.1.0"
+__version__ = "1.0.0"
 
 from .annotation import annotate  # noqa: E402
 from .pipeline import analyze  # noqa: E402

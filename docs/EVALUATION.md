@@ -61,7 +61,7 @@ with no predicted type stays in the denominator and counts as wrong
 Stanzas whose type in the gold column is `none` or empty are not evaluated. In the test
 corpus, `none` means that the stanza is not part of the gold annotation, not
 that it should get no stanza type. Of the 368 stanzas in the corpus, 255 have
-"none" in gold.
+a gold type and 113 have "none".
 
 ```text
 stanza_accuracy = stanzas_correct / stanzas

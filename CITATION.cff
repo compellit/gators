@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "The software can be cited as follows."
+type: software
+title: "Gators: Galician Tool for Rhyme and Stanza"
+abstract: "Rhyme and stanza analysis of Galician poetry: finds the rhymes of a poem and assigns verse, stanza and poem types."
+authors:
+  - family-names: Alonso Pérez
+    given-names: Anxo
+    affiliation: "CiTIUS, Universidade de Santiago de Compostela"
+    orcid: "https://orcid.org/0009-0007-0143-2656"
+  - family-names: Ruiz Fabo
+    given-names: Pablo
+    affiliation: "CiTIUS, Universidade de Santiago de Compostela"
+    orcid: "https://orcid.org/0000-0002-4349-4835"
+repository-code: "https://github.com/compellit/gators"
+license: GPL-3.0-only
+keywords:
+  - Galician
+  - poetry
+  - rhyme
+  - stanza
+  - meter

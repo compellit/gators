@@ -1,0 +1,43 @@
+{
+  "title": "Gators: Galician Tool for Rhyme and Stanza",
+  "description": "<p>Gators finds the rhymes of Galician poems and assigns verse, stanza and poem types. It transcribes each line with Trasgo, takes the rhyme from the stressed vowel of the line's last word, groups lines into assonant and consonant rhymes, and scores each stanza and poem against a set of stanza and poem type definitions. Meter and spelling normalization come from Gama, installed as an optional extra.</p>",
+  "creators": [
+    {
+      "name": "Alonso Pérez, Anxo",
+      "affiliation": "CiTIUS, Universidade de Santiago de Compostela",
+      "orcid": "0009-0007-0143-2656"
+    },
+    {
+      "name": "Ruiz Fabo, Pablo",
+      "affiliation": "CiTIUS, Universidade de Santiago de Compostela",
+      "orcid": "0000-0002-4349-4835"
+    }
+  ],
+  "upload_type": "software",
+  "keywords": [
+    "Galician",
+    "poetry",
+    "rhyme",
+    "stanza",
+    "meter"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/compellit/trasgo",
+      "relation": "requires",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://github.com/compellit/gama",
+      "relation": "references",
+      "resource_type": "software"
+    }
+  ],
+  "license": "gpl-3.0-only",
+  "language": "eng",
+  "grants": [
+    {
+      "id": "10.13039/501100000780::101149659"
+    }
+  ]
+}

@@ -390,7 +390,7 @@
   },
   {
     "stanza_type": "sexteto_lira",
-    "notes": ["Paraíso (8.2). Most frequent types are aBaBCC, aBabcC, aBABCC. Other: AbbAcC; ABbaCC; aBbACC, etc. Caparrós' examples (10.2.5) are aBaBcC, AaBCcB.", "min_meter_similarity 0.95 (decision of November 2026), as for cuarteto_lira and lira: only lines of 7 and 11 (Rantanplan checks this as a hard condition). Without it, the 12-12-5 and 14-14-7 sextets with pie quebrado of A Virxe d'o Cristal (curros-aires) and others were visible sextetos-lira. The rhyme pattern stays open (*), given the many rhyme schemes above, where Rantanplan accepts only ababcc, aabccb, abcabc, abbacc."],
+    "notes": ["Paraíso (8.2). Most frequent types are aBaBCC, aBabcC, aBABCC. Other: AbbAcC; ABbaCC; aBbACC, etc. Caparrós' examples (10.2.5) are aBaBcC, AaBCcB. For Rodríguez Fer, requires 3 hepta and 3 hendecasyllables (p. 42)", "min_meter_similarity 0.95 (decision of November 2026), as for cuarteto_lira and lira: only lines of 7 and 11 (Rantanplan checks this as a hard condition). Without it, the 12-12-5 and 14-14-7 sextets with pie quebrado of A Virxe d'o Cristal (curros-aires) and others were visible sextetos-lira. The rhyme pattern stays open (*), given the many rhyme schemes above, where Rantanplan accepts only ababcc, aabccb, abcabc, abbacc."],
     "min_meter_similarity": 0.95,
     "parent_type": "sexteto",
     "meter": [

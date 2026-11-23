@@ -124,10 +124,20 @@ type), with `evaluation/run_all.sh`:
 | Gama normalization and meter (end to end) | 98.13% | 96.86% (247) |
 | without Gama, no meter | 88.98% | 32.94% (84) |
 
-The test set covers 18 stanza types, but only 11 with five or more stanzas.
-Some forms frequent in 19th-century Galician poetry (romance, romance de arte mayor,
-silva arromanzada) are barely or not represented, so these figures don't reflect
-performance on them.
+The public test set covers 18 stanza types, but only 11 with five or more
+stanzas. We therefore also annotated 61 poems (296 stanzas) sampled from a
+corpus of 19th-century Galician poetry (not redistributable), covering 30
+stanza types. Some of their stanzas fit no type in Gators's inventory; as
+Gators always outputs a type, these count as errors, unless a minimum score
+is required (0.75 below), in which case a low-scoring type counts as "no type".
+
+| Stanza type accuracy, end to end | All types | Min. score 0.75 |
+|---|---|---|
+| Public test set (255 stanzas) | 96.9% | 93.3% |
+| Corpus sample (296 stanzas), estimate for the corpus | 86.1% | 84.1% |
+
+The sample was stratified by confidence score; the estimate weights each
+confidence level by its share of the corpus.
 
 See [`docs/EVALUATION.md`](docs/EVALUATION.md) for the metrics and the settings,
 and [`iaa/README.md`](iaa/README.md) for the agreement between the two rhyme

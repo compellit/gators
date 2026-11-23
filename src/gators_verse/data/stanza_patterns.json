@@ -163,7 +163,7 @@
   },
   {
     "stanza_type": "estrofa_francisco_de_la_torre",
-    "notes": "For de la Torre as subtype of cuarteto lira, see Caparrós _Métrica_, 10.2.3",
+    "notes": ["For de la Torre as subtype of cuarteto lira, see Caparrós _Métrica_, 10.2.3"],
     "parent_type": "cuarteto_lira",
     "meter": [
       11,
@@ -585,6 +585,7 @@
   },
   {
     "stanza_type": "octavilla",
+    "notes": ["Follow loose definition in Rodríguez Fer (p. 44), just requires 8 arte menor lines, variable rhyme"],
     "meter": [
       8
     ],

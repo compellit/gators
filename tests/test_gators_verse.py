@@ -2,6 +2,7 @@ import pandas as pd
 import pytest
 
 from gators_verse import analyze, annotate, transcribe
+from gators_verse.patterns import load_patterns, relation_targets
 from gators_verse.pipeline import gama_available, read_poem_text
 from gators_verse.rhyme import rhyme_ending
 from gators_verse.transcription import rhyme_text
@@ -115,3 +116,21 @@ def test_analyze_keeps_input_syllables_without_stresses():
     assert results["metrical_syllables"].tolist() == [9, 9, 9, 9]
     assert "stressed_syllables" not in results.columns
     assert results["verse_type"].eq("").all()
+
+
+def test_pattern_files_refer_only_to_defined_types():
+    stanza_entries = load_patterns("stanza_patterns.json")
+    poem_entries = load_patterns("poem_patterns.json")
+    stanza_types = {entry["stanza_type"] for entry in stanza_entries}
+    poem_types = {entry["poem_type"] for entry in poem_entries}
+    for entry in stanza_entries:
+        for key in ("parent_type", "refines_type"):
+            assert set(relation_targets(entry, key)) <= stanza_types, (entry["stanza_type"], key)
+    for entry in poem_entries:
+        referenced = set(relation_targets(entry, "stanza_type"))
+        referenced |= set(relation_targets(entry, "extra_stanza_type"))
+        for allowed in entry.get("stanza_types", []):
+            referenced |= set(allowed)
+        assert referenced <= stanza_types, (entry["poem_type"], referenced - stanza_types)
+        for key in ("parent_type", "refines_type"):
+            assert set(relation_targets(entry, key)) <= poem_types, (entry["poem_type"], key)

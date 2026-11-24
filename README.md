@@ -8,7 +8,8 @@ Gators finds the rhymes of Galician poems and assigns verse, stanza and
 poem types. It transcribes each line with [Trasgo](https://github.com/compellit/trasgo),
 takes the rhyme from the stressed vowel of the line's last word, groups lines
 into assonant and consonant rhymes, and scores each stanza and poem against
-the stanza and poem types defined in `src/gators_verse/data/`.
+49 stanza types and 10 poem types, defined in `src/gators_verse/data/` and
+listed in [`docs/STANZA_AND_POEM_TYPES.md`](docs/STANZA_AND_POEM_TYPES.md#types).
 
 Stanza and poem types depend on meter (an `abba` quatrain is a redondilla in
 octosyllables and a cuarteto in hendecasyllables), and rhyme detection is more
@@ -115,32 +116,33 @@ for input that already has its transcription.
 
 ## Evaluation
 
-On the test corpus (33 poems, 2,188 lines, 255 stanzas with a gold stanza
-type), with `evaluation/run_all.sh`:
+Gators was evaluated on two sets of annotated poems:
 
-| Setting | Rhyme F1 (pairwise) | Stanza type accuracy |
+- a public test set (`evaluation/test_corpus.tsv`): 33 poems, 2,188 lines,
+  255 stanzas with a gold stanza type and gold rhyme. It covers 18 stanza
+  types, but only 11 with five or more stanzas;
+- poems from a corpus of Galician poetry (about 155,000 lines, 1777-1908; not
+  redistributable): 73 poems, 356 stanzas with a gold stanza type, covering
+  36 stanza types.
+
+Together they cover 37 of the 49 stanza types. The other 12 are rare: in the
+whole corpus, Gators assigns them to 39 of 18,417 stanzas (0.2%).
+
+| End to end (Gama normalization and meter) | Rhyme F1 (pairwise) | Stanza type accuracy |
 |---|---|---|
-| Gama normalization, gold meter | 98.14% | 96.47% (246) |
-| Gama normalization and meter (end to end) | 98.13% | 96.86% (247) |
-| without Gama, no meter | 88.98% | 32.94% (84) |
+| Public test set | 98.13% | 96.86% |
+| Corpus | not evaluated | 86.1%* |
 
-The public test set covers 18 stanza types, but only 11 with five or more
-stanzas. We therefore also annotated 61 poems (296 stanzas) sampled from a
-corpus of 19th-century Galician poetry (not redistributable), covering 30
-stanza types. Some of their stanzas fit no type in Gators's inventory; as
-Gators always outputs a type, these count as errors, unless a minimum score
-is required (0.75 below), in which case a low-scoring type counts as "no type".
+\* Estimated for the whole corpus from a sample of 61 of the 73 poems; the
+other 12 were chosen to cover stanza types missing from the sample, and
+Gators gets 86.7% of their stanzas right.
 
-| Stanza type accuracy, end to end | All types | Min. score 0.75 |
-|---|---|---|
-| Public test set (255 stanzas) | 96.9% | 93.3% |
-| Corpus sample (296 stanzas), estimate for the corpus | 86.1% | 84.1% |
+Without Gama and without meter in the input, stanza type accuracy on the
+public test set falls to 32.94% (rhyme F1 88.98%).
 
-The sample was stratified by confidence score; the estimate weights each
-confidence level by its share of the corpus.
-
-See [`docs/EVALUATION.md`](docs/EVALUATION.md) for the metrics and the settings,
-and [`iaa/README.md`](iaa/README.md) for the agreement between the two rhyme
+See [`docs/EVALUATION.md`](docs/EVALUATION.md) for the metrics, the settings,
+and how the corpus poems were chosen and scored, and
+[`iaa/README.md`](iaa/README.md) for the agreement between the two rhyme
 annotators.
 
 ## Tests

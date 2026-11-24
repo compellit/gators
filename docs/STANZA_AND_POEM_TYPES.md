@@ -3,7 +3,8 @@
 Gators assigns a stanza type to each stanza and a poem type to each poem
 by scoring them against the entries of two files:
 
-- `src/gators_verse/data/stanza_patterns.json` (50 stanza types)
+- `src/gators_verse/data/stanza_patterns.json` (49 stanza types, in 50
+  entries: `ovillejo` has two)
 - `src/gators_verse/data/poem_patterns.json` (10 poem types)
 
 Each entry describes one type: its rhyme scheme, meter, rhyme type, and, for
@@ -13,6 +14,89 @@ similarities, not a probability: the scores of competing types do not add up
 to 1, and they are not calibrated.
 
 To add a type or change one, edit these files; no code changes are needed.
+
+## Types
+
+The tables summarize the entries; the files are the reference. "Syllables"
+reads as in [Meter](#meter): "up to 8" is `meter_kind: "max"`, "9 or more"
+`"min"`, "7 and 11" `"mixed"`, and "7-5-7-5" gives the count of each line.
+A scheme marked "any" is not scored. Subtypes and refinements are explained in
+[Subtypes and refinements](#subtypes-and-refinements).
+
+The definitions are based on Domínguez Caparrós (2014), Paraíso (2000),
+Rodríguez Fer (1991) and Jauralde Pou (2020); see [References](#references).
+The `sources` and `notes` of an entry give the pages or sections it follows,
+and which work was preferred where they disagree.
+
+
+### Stanza types
+
+| Stanza type | Lines | Syllables | Rhyme scheme | Rhyme | Relation |
+|---|---|---|---|---|---|
+| `pareado` | 2 | 3 to 20 | `aa` | either |  |
+| `tercerilla` | 3 | up to 8 | `a-a` | consonant |  |
+| `terceto` | 3 | 9 or more | `-aa`, `a-a`, `aa-` | consonant |  |
+| `soledad` | 3 | 8 | `a-a` | assonant |  |
+| `terceto_monorrimo` | 3 | 9 or more | `aaa` | consonant |  |
+| `cantar` | 4 | up to 8 | `-a-a` | either | refines `romance`, `romancillo` |
+| `cuaderna_vía` | 4 | 14 | `aaaa` | consonant |  |
+| `cuarteta` | 4 | up to 8 | `abab` | consonant | refines `cantar` |
+| `cuarteta_asonantada` | 4 | up to 8 | `abab` | assonant | refines `romance`, `romancillo` |
+| `cuarteto` | 4 | 9 or more | `abba` | consonant |  |
+| `cuarteto_lira` | 4 | 7 and 11 | `abab`, `abba` | either |  |
+| `estrofa_francisco_de_la_torre` | 4 | 11-11-11-7 | `----` | any | subtype of `cuarteto_lira` |
+| `estrofa_sáfica` | 4 | 11-11-11-5 | `----` | any | subtype of `cuarteto_lira` |
+| `estrofa_alcaica` | 4 | 10-10-9-10 | `0000` | any | subtype of `cuarteto_lira` |
+| `endecha_real` | 4 | 7-7-7-11 | `-a-a` | assonant |  |
+| `redondilla` | 4 | up to 8 | `abba` | either |  |
+| `seguidilla` | 4 | 7-5-7-5 | `-a-a` | either | subtype of `cantar` |
+| `seguidilla_real` | 4 | 10-6-10-6 | `-a-a` | either |  |
+| `seguidilla_xitana` | 4 | 6-6-11-6 | `-a-a` | assonant |  |
+| `serventesio` | 4 | 9 or more | `abab` | consonant |  |
+| `lira` | 5 | 7 and 11 | `ababb` | consonant |  |
+| `quinteto` | 5 | 9 or more | 5 schemes, e.g. `aabab` | consonant |  |
+| `quintilla` | 5 | up to 8 | 5 schemes, e.g. `aabab` | consonant |  |
+| `sexteto` | 6 | 9 or more | any | consonant |  |
+| `sexta_rima` | 6 | 11 | `aabcbc`, `aabccb`, `ababcc` | consonant | subtype of `sexteto` |
+| `sexteto_lira` | 6 | 7 and 11 | any | consonant | subtype of `sexteto` |
+| `sextilla` | 6 | up to 8 | any | consonant |  |
+| `estrofa_manriqueña` | 6 | 8-8-4-8-8-4 | `abcabc` | consonant | subtype of `sextilla` |
+| `copla_mixta` | 7 | up to 8 | `abbacca` | consonant |  |
+| `seguidilla_composta` | 7 | 7-5-7-5-5-7-5 | `-a-ab-b` | either | subtype of `setina` |
+| `sétima` | 7 | 9 or more | any | any |  |
+| `sétima_lira` | 7 | 7 and 11 | any | consonant | subtype of `sétima` |
+| `setina` | 7 | up to 8 | any | any |  |
+| `copla_arte_maior` | 8 | 9 or more | 8 schemes, e.g. `ababbaab` | consonant | subtype of `oitava` |
+| `copla_arte_menor` | 8 | up to 8 | 24 schemes, e.g. `abababab` | consonant | subtype of `octavilla` |
+| `copla_castelá` | 8 | 8 | 4 schemes, e.g. `ababcdcd` | consonant | subtype of `octavilla` |
+| `octavilla` | 8 | up to 8 | any | either |  |
+| `oitava` | 8 | 9 or more | any | any |  |
+| `oitava_real` | 8 | 11 | `abababcc` | consonant | subtype of `oitava` |
+| `novena` | 9 | any | any | any |  |
+| `copla_real` | 10 | 8 | 25 schemes, e.g. `aababccdcd` | consonant | refines `décima_antiga` |
+| `décima_antiga` | 10 | 8 | 4 schemes, e.g. `abab111111` | consonant |  |
+| `espinela` | 10 | 8 | `abbaaccddc` | consonant | refines `décima_antiga` |
+| `ovillejo` | 10 | 8-4-8-4-8-4-8-8-8-8 or 8-3-8-3-8-3-8-8-8-8 | `aabbcccddc` | consonant |  |
+| `seguidilla_chamberga` | 10 | 7-5-7-5-3-7-3-7-3-7 | `-a-abbccdd` | per rhyme |  |
+| `romance` | 4 or more | 8 | `-a` repeated | assonant |  |
+| `romancillo` | 4 or more | up to 7 | `-a` repeated | assonant | refines `octavilla`, `sextilla` |
+| `romance_arte_maior` | 4 or more | 9 or more | `-a` repeated | assonant | refines `oitava`, `sexteto` |
+| `silva_arromanzada` | 4 or more | 7 and 11 | `-a` repeated | assonant |  |
+
+### Poem types
+
+| Poem type | Lines | Stanzas | Syllables | Rhyme |
+|---|---|---|---|---|
+| `haiku` | 3 | one, 3 lines | 5-7-5 | none |
+| `romance` | 4 or more, even | `romance` | 8 | assonant |
+| `romancillo` | 4 or more, even | `romancillo` | up to 8 | assonant |
+| `romance_heroico` | 4 or more, even | `romance_arte_maior` | 9 or more | assonant |
+| `silva` | 2 or more | any | 7 and 11 | consonant |
+| `silva_arromanzada` | 4 or more | `silva_arromanzada` | 7 and 11 | assonant |
+| `soneto` | 14 | 4-4-3-3: `cuarteto` or `serventesio` twice, `terceto` twice | 9 or more | consonant |
+| `soneto_con_estrambote` | 17 or more | as `soneto`, then `terceto` | 9 or more | consonant |
+| `sonetillo` | 14 | 4-4-3-3: `redondilla` or `cuarteta` twice, `tercerilla` twice | up to 8 | consonant |
+| `cosaute` | 6 or more, multiple of 3 | `aab` repeated, refrain in the third line | any | either |
 
 ## Rhyme schemes
 
@@ -192,3 +276,12 @@ threshold was chosen); they do not affect the scores.
 with its similarities, its observed and expected scheme and meter, and
 `selected`, whether it was output. They show why a type was or was not
 chosen.
+
+## References
+
+- Domínguez Caparrós, José (2014). *Métrica española*. Madrid: UNED.
+- Paraíso, Isabel (2000). *La métrica española en su contexto románico*.
+  Madrid: Arco/Libros.
+- Rodríguez Fer, Claudio (1991). *Arte literaria*. Vigo: Edicións Xerais de
+  Galicia.
+- Jauralde Pou, Pablo (2020). *Métrica española*. Madrid: Cátedra.

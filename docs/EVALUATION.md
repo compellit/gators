@@ -240,9 +240,13 @@ predictions, but drops more correct types than that, so accuracy goes down.
 
 On the targeted poems, all 13 `seguidilla`, 9 `soledad`, 7 `sexta_rima` and
 6 `seguidilla_real` stanzas are right, and 7 of 9 `romance_arte_maior`. The
-errors are six 11-syllable quatrains with even-line assonance, annotated
-`no_type` and predicted `romance_arte_maior`, and two two-line stanzas of a
-`romance_arte_maior` that got no type.
+other two `romance_arte_maior` stanzas have two lines each and got no type.
+
+The remaining six errors are a single poem: hendecasyllabic quatrains with
+the same ó-o assonance in the even lines throughout. Gators tags them
+`romance_arte_maior`; they were annotated `no_type`, as quatrains rather than
+a romance laid out in quatrains. Counting them as `romance_arte_maior` would
+give 58 of 60 (96.7%).
 
 ### Coverage
 

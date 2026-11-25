@@ -89,7 +89,7 @@ and which work was preferred where they disagree.
 |---|---|---|---|---|
 | `haiku` | 3 | one, 3 lines | 5-7-5 | none |
 | `romance` | 4 or more, even | `romance` | 8 | assonant |
-| `romancillo` | 4 or more, even | `romancillo` | up to 8 | assonant |
+| `romancillo` | 4 or more, even | `romancillo` | up to 7 | assonant |
 | `romance_heroico` | 4 or more, even | `romance_arte_maior` | 9 or more | assonant |
 | `silva` | 2 or more | any | 7 and 11 | consonant |
 | `silva_arromanzada` | 4 or more | `silva_arromanzada` | 7 and 11 | assonant |

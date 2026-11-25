@@ -44,6 +44,7 @@
   },
   {
     "stanza_type": "soledad",
+    "notes": ["Loose definition as in Rodríguez Fer (p. 39)"],
     "meter": [
       8
     ],
